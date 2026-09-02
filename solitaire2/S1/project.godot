@@ -10,19 +10,13 @@ config_version=5
 
 [application]
 
-config/name="solitaire"
-run/main_scene="res://scenes/main.tscn"
+config/name="新建游戏项目"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
-
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=800
 
 [editor_plugins]
 
