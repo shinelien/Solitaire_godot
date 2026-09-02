@@ -1,0 +1,331 @@
+# WP-04 确定性最终清单 (deterministic final manifest)
+# 阶段: S1-CLEAN-GODOT-BASELINE | WP-04 终局交接
+# 生成命令: find <类路径> -type f [排除项] | LC_ALL=C sort | xargs sha256sum
+# 路径约定: ./ 相对路径 (与 WP-01/02/03 聚合口径一致, LC_ALL=C)
+# 本清单不列入自身(避免自引用); 确定性由重生成 diff=空 验证; 自身 sha256 由验证者复算, 不内嵌
+# 全部文件均只读披露; 未删除/改写任何工程、固定源或元数据文件
+
+## 类别1 原始/默认工程文件 (original/default project files) - 6 文件
+## 包含: .editorconfig .gitattributes .gitignore icon.svg icon.svg.import project.godot
+## 排除规则: 不含 .godot/** 与 docs/**; project.godot 为 ADR-006 权威字节基线 ef9dfc63 (未改写)
+3b2c749c8a940905a08f727d8be9017c9568a12421c0aee7e37e9543b3751b1b  ./.editorconfig
+21b01a606c9f85f18bb9230245f00ab104df7409cbb2fe9423f6751ca72ba754  ./.gitattributes
+d6194b1a176268740a0b7f153bd4926908b4a0955a9a311181c0200b4329bc94  ./.gitignore
+6c80384360a5b269d1054bfb27241258154e2cc8167c522016fdc1820e84e0f8  ./icon.svg
+80e27a2c8c55abff9a41ba160d1785c8b692aba0ff425653b32e7ae1c426b8ed  ./icon.svg.import
+ef9dfc63fdcbe8273eb9edceff9216f7e592bcdcd95f011603b494c2fcf9e4c9  ./project.godot
+
+## 类别2a MCP 固定源 addon (267 固定 Git 对象, 排除披露 .DS_Store)
+## 包含: addons/godot_ai/** 全部 267 个固定对象 (来自 6d5eaf3, 逐字节一致 mismatches=0)
+## 排除规则: addons/godot_ai/.DS_Store 为披露可再生元数据 -> 类别4; 禁止任何非元数据意外文件 (实测 0)
+f2afe4af4ec80c453ca34704bc61d5d24a9bd948d365ca22699cabb8b4a18308  ./addons/godot_ai/LICENSE
+696c7e4994cf412400bb2ab25cf45d73cfba5fb1a5cc77957efbde1d6719c705  ./addons/godot_ai/README.md
+4562253c4cffd4a5baccc8352212bca87750a2c014e07b1cda7ee5bbcb9a5a8d  ./addons/godot_ai/client_configurator.gd
+b11391096156780923df61e627d9241a691efd13330aaa0d69c44de3e91f9ccd  ./addons/godot_ai/client_configurator.gd.uid
+23042ee1ef57f72c102cadbfefdaf6cc2adf1d875a9f7e2f3c499dcbf74f91a8  ./addons/godot_ai/clients/_atomic_write.gd
+69d170b100e1477dc969d937664bf32e9f1a41448fbddae997616e4d549f857b  ./addons/godot_ai/clients/_atomic_write.gd.uid
+2200d5475fb7ccb0872925d20cdb2bbfe0d1d224dfe56b3684f394beb986794e  ./addons/godot_ai/clients/_base.gd
+6ad5fd0be314b164e5a501aaf4afff8c17d3c406e4931b3d490fa55ed9399d75  ./addons/godot_ai/clients/_base.gd.uid
+e4e0e1e514b0b1eb54704f4d6805f48eac0cab92f9f03b54e2b519bc4a8282b3  ./addons/godot_ai/clients/_cli_exec.gd
+0a011c6ccf204f647bb410e812452397b8d9d3f82e98e9c8c43255e8a8db43be  ./addons/godot_ai/clients/_cli_exec.gd.uid
+66ec387838fe5c574188ff6d57655ca30c32e992e445e7e1ab2fc957d1b3190c  ./addons/godot_ai/clients/_cli_finder.gd
+844ed9a1cb168c6fa4a2ad7369a0b9e2b317a8845780fa551f0ddeb31035d4c7  ./addons/godot_ai/clients/_cli_finder.gd.uid
+074dbd63b87dd8b6b5e4ea7b0800908e94e143e9562bcf36c88a20aae6eaee90  ./addons/godot_ai/clients/_cli_strategy.gd
+7ea94aa0a18f18001abe6c039d3f9101a20211dafe616bde1171de42e8878188  ./addons/godot_ai/clients/_cli_strategy.gd.uid
+5bbd0b4c7ffbab2e66d3fc4d08db0077a355d3e37230681aa09649573f9500fe  ./addons/godot_ai/clients/_dsh_strategy.gd
+b603679cc9d3071b0029da2200a85ecbe367bc9f03fb1e352eceb544ebe1f4a1  ./addons/godot_ai/clients/_dsh_strategy.gd.uid
+4fca1ada82e6418fc033e1c6ecb5dd31dafed3adcac88f395162a4057fa600db  ./addons/godot_ai/clients/_json_strategy.gd
+0d7613d1a25a2637491759c219cdad8610156f840258238df5728eb18523a49d  ./addons/godot_ai/clients/_json_strategy.gd.uid
+6f5594a5e85444a684a5e65d464b9f1e5dd102bf19672860824d087296f6beac  ./addons/godot_ai/clients/_manual_command.gd
+323e682575c1bf3b1841ec517b59888bf304b3ada97dfd861ec317b8f714635a  ./addons/godot_ai/clients/_manual_command.gd.uid
+bc3f01879b1469dc8a72e3025f698441e60f52207282c9fa978156c94fcf98bc  ./addons/godot_ai/clients/_path_template.gd
+b110326fea223f45902def5a53b35522f269ad55848718b7ddd143cd63293b86  ./addons/godot_ai/clients/_path_template.gd.uid
+eff2007ce54321db6210a8b806c11f04155b547bf9bc1d23810380b5fbefa1ac  ./addons/godot_ai/clients/_registry.gd
+0fb18ab129e0fba2eb85e7e5b784ce566c586b1711f76f8ab429610172a203ab  ./addons/godot_ai/clients/_registry.gd.uid
+7538317ccd0eed69dba32e2642271de23e5235c6dc2f8675b5c0395502ea4709  ./addons/godot_ai/clients/_toml_strategy.gd
+3f581fce945ceabf62ce7397f0da3c9a64888f7d071fe59edeec9126735c9837  ./addons/godot_ai/clients/_toml_strategy.gd.uid
+2ada091b7ce4e05ef7fcbcb697070f507b5e7a1b767a97bb747a6eed9f85e07a  ./addons/godot_ai/clients/_yaml_strategy.gd
+bee0844c9cd2c399c1105d4f741e804ac433a0dd89c338a63da9d00b1b983885  ./addons/godot_ai/clients/_yaml_strategy.gd.uid
+b7b34bac3b159947172c4be365dcc14b21fb16598d8a1da58415971460a27f2b  ./addons/godot_ai/clients/antigravity.gd
+d247b7f9da8ed483178c3f12e207494060181af364ef829951a6de2dec8fb482  ./addons/godot_ai/clients/antigravity.gd.uid
+4cb6e8364b2887bce8a55aa89c58228e300e1d397a263a17c8b017d44a937cb2  ./addons/godot_ai/clients/cherry_studio.gd
+bd5e747edf49a788fc4a60a1f6561ee25e6740ebdecef5b92bed276d481f5586  ./addons/godot_ai/clients/cherry_studio.gd.uid
+85eb4c98643899fc15875ad0bbf401a4b88b58c56d9a7428a4d9adaa6d898895  ./addons/godot_ai/clients/claude_code.gd
+18d1ebc89fe7cd71054545da54c04477465e69b8291d082f8c860abc77dd2c41  ./addons/godot_ai/clients/claude_code.gd.uid
+25cd87161a8985273b5ad3954b397a95af64ab205ecd8359c63da09a0efbc020  ./addons/godot_ai/clients/claude_desktop.gd
+e430bb213b5005f3182aca544fdade6c8a7e89128705907c11228f699eb27fc0  ./addons/godot_ai/clients/claude_desktop.gd.uid
+57b4814f810a2c3ead490e0250e4edf0efc213fc22240d4e571ec0ada83d340e  ./addons/godot_ai/clients/cline.gd
+c8d58f6b86221ef68289a090b836d31f4006d395c3f42ed3000fc027a020c06d  ./addons/godot_ai/clients/cline.gd.uid
+36847a1b5aa58b65078798b6455e444d85814e2450cf59f01155008960a9f630  ./addons/godot_ai/clients/codex.gd
+4bdcaae2f5f0c2e850430a7cc275d64bb84b880df8076a1cd9710dfb9fdc17e2  ./addons/godot_ai/clients/codex.gd.uid
+1e411c84b08152fcd2a853ef8870f0f001c1a050599e111f5961c714dd072ce8  ./addons/godot_ai/clients/cursor.gd
+3625853ad9bb909b2668f94f22a592231612d216c384a9a19e59f295eece2314  ./addons/godot_ai/clients/cursor.gd.uid
+1b57ab764443a77261e541dfd31410d4f759f4941407a0c402ff729cf30ba2c6  ./addons/godot_ai/clients/deepseek_harness.gd
+e9f7b2f0544a8c03f4e153af30e21a8c4e4a138814ea16e005416fdc127bc466  ./addons/godot_ai/clients/deepseek_harness.gd.uid
+c50dfb47e679b28d06cc37df36aefabcc5b86acf99f2111dbf76597d668994b2  ./addons/godot_ai/clients/gemini_cli.gd
+7af07715d59b73f3e69173d39364eb4103f5d84eeee312e13ed04fae4c5279d6  ./addons/godot_ai/clients/gemini_cli.gd.uid
+1ea4db9e8476580865e059011e71a67207ae856fe4c78a8a109ed1cdbfefc8dd  ./addons/godot_ai/clients/grok.gd
+e911f4916e044eea03744e3a3e9920d53d18db876a515e0f9415be6f76d3b89b  ./addons/godot_ai/clients/grok.gd.uid
+6b9b9ee624bce9413b3d34caaa343f541e62cd16cf718a267eefe881fcd146ee  ./addons/godot_ai/clients/hermes.gd
+331b1b1d2699ddc02ed293d674dae6b2d5b69ed5e29a94ce7b6662de6ec24a1e  ./addons/godot_ai/clients/hermes.gd.uid
+4833163802d97f22b8c74969d6814a06f430564a0bc5c9f75a407c0fdd90092d  ./addons/godot_ai/clients/kilo_code.gd
+73705b20213a8cdabde5c3207cbfd750acba3ecfdb12e5fc0ad2d32c861fdeee  ./addons/godot_ai/clients/kilo_code.gd.uid
+c77ccef7c351d13d08a7946001da11692d0dc85209382da7e0f522a2df2b049c  ./addons/godot_ai/clients/kimi_code.gd
+caeefab43e4177a581a0a527194db6580c308f640ff3755526b95602c7d284e1  ./addons/godot_ai/clients/kimi_code.gd.uid
+dcf72bc228c4fdce7752a9c31ebb426f43cd7fbdad7ae687796286e2f81a31c7  ./addons/godot_ai/clients/kiro.gd
+e36281df5685847acc757533d5ab4beb44391db897e123ebb0b377ce554e0ce5  ./addons/godot_ai/clients/kiro.gd.uid
+2e7231167b7ec13dbe65c54df5bad29f34e2a6772636d14bada82bb09eb18ec6  ./addons/godot_ai/clients/opencode.gd
+cebbf0729ea920db3266906f32279189520176bd10225ebbeec69882d97b9c09  ./addons/godot_ai/clients/opencode.gd.uid
+c7712a1fe4a4ccb96bf95e16bfbb68ea592b4bb6ad7b93d6f81a6b0299121e1d  ./addons/godot_ai/clients/pi.gd
+6ca88777d2a2a46d7ae8cb27c96650c24821c2db31efdaf14ec1c672770b13a7  ./addons/godot_ai/clients/pi.gd.uid
+70cb0bc80abb7cfa48b30ade5671d7ca04c0889f7ea11c407bcebe5a9536e32e  ./addons/godot_ai/clients/qwen_code.gd
+124a3efc1063037a79d1ef713b066808dff87f84b062779108e3df0dfe78c70a  ./addons/godot_ai/clients/qwen_code.gd.uid
+c0c95412abfe7b62443825ad05a5bd7a0505bca6727603d804d16cfd091b9736  ./addons/godot_ai/clients/roo_code.gd
+60128a673c0122f6cdc2562d2ad517805c4120b98ae24ebce02c5471a5a2b16b  ./addons/godot_ai/clients/roo_code.gd.uid
+ba61958144b083845973ca6d294686e1670ccdc848082772e0fe08a7273b675f  ./addons/godot_ai/clients/trae.gd
+69409fe3a502dd271d2abddbd97ac31187034b3f8aa409226116e2f1bc7199b8  ./addons/godot_ai/clients/trae.gd.uid
+3c31cc8f734819f769f5402425dc6dc020f6013f153e3b2fcebe2ea7d5fb6912  ./addons/godot_ai/clients/vscode.gd
+738e01d95a248402eeca40d764030a4a4063a246904475b49145c6c159d55ddf  ./addons/godot_ai/clients/vscode.gd.uid
+d427d65d22d3023a0066bcaeb5d9a5322a124a251c3195ee2509f66e66fb0422  ./addons/godot_ai/clients/vscode_insiders.gd
+4fd8b6a9a5e330f7428dac1adb0fd0e5406343febd8bafad0a7fe3e5d214cf88  ./addons/godot_ai/clients/vscode_insiders.gd.uid
+87d49075364217d4834a73eac2217f213704b47bb97417dd4270eaebdf004c54  ./addons/godot_ai/clients/windsurf.gd
+6b348d4a775be6af159c77bbc7ff5df86a921928f76a1920df97060c5f3c5901  ./addons/godot_ai/clients/windsurf.gd.uid
+32b79b243655f5d3c715d30eb2af0f6bbf1de65f519f7d9156011a8ee567db61  ./addons/godot_ai/clients/zed.gd
+737f5044ffdf88b5d9f00a52e69108378b4bf4dd404fe240b8865a1e13bd45cf  ./addons/godot_ai/clients/zed.gd.uid
+7df921898cc22132ccede27f20e25c23051c8cd9cf7d0ba8b09eb1cc0061bedd  ./addons/godot_ai/clients/zoo_code.gd
+9000f73477a13428779c8e1db0631291275fde02913148ec0094ced66bc0080b  ./addons/godot_ai/clients/zoo_code.gd.uid
+67e6ed7c093f5b9f783334b34d117b9f3f64dfa8db93155e0055e55c52c0caad  ./addons/godot_ai/connection.gd
+5bd784acd459f5d89ce2290026030f9bac4586f2ab9fa2ce6f680acbba6cd7ec  ./addons/godot_ai/connection.gd.uid
+9eee6724dfe81ac94e4c28c89365d9f23c63f0f93adb90bac1afca356997fbe0  ./addons/godot_ai/custom_tools/custom_tool_wrapper.gd
+ce5f3ecfd8794eac6ae799df6b73ca6f9ee74637820e99e31eec831ff00bdf70  ./addons/godot_ai/custom_tools/custom_tool_wrapper.gd.uid
+229fa14a9257878dd3dd7ad2628195c09ac9068680498105551540864e55cbd6  ./addons/godot_ai/custom_tools/mcp_call_context.gd
+197960618a07c1962b7ae9e2d6cffdfc7e38f66c3980be5f3922e5dbf8be55a2  ./addons/godot_ai/custom_tools/mcp_call_context.gd.uid
+c9edada47c56e4aea1735b668d9212dae0420a75ffc66ca4e974962bc8351df2  ./addons/godot_ai/custom_tools/mcp_custom_tool_spec.gd
+7472166e686079f1054ca3365154fa4d05db5a7fed8f137ce05d2f268b48f3b3  ./addons/godot_ai/custom_tools/mcp_custom_tool_spec.gd.uid
+f329eac25097a201c3d00f342ccdb5c9e4cd5bd758bc5504726abe2a6c5b3069  ./addons/godot_ai/custom_tools/mcp_service_locator.gd
+4b878baf63f39983325ac5435cb6fc456090a24610f5db7dfefe1d8aa344a9bf  ./addons/godot_ai/custom_tools/mcp_service_locator.gd.uid
+d9b69c3464dc09e4e1fa224f4cb8b4c928a9190d6d44bd2216c48e3026ea70dc  ./addons/godot_ai/custom_tools/mcp_tool_registry.gd
+1c6f5521d3757f347c4cd4171541328008245c9423500f379c4c9bd9ed0cf0fd  ./addons/godot_ai/custom_tools/mcp_tool_registry.gd.uid
+69d7ff6116b9030c35b2172193775a2dbd7c220fae547f2079f495bb574deb21  ./addons/godot_ai/debugger/mcp_debugger_plugin.gd
+be3050234c07a27e62be35eb521fb48d37037de4beefe88cbea9e2232051d75c  ./addons/godot_ai/debugger/mcp_debugger_plugin.gd.uid
+5c7f46bedd9d463a9f8bd9d6c78d417884d37a7830005432d7d08664f085001d  ./addons/godot_ai/dispatcher.gd
+66d99fb65718903951361405e5f161cab7aa44636aa080c0bb4c7eef774a10c6  ./addons/godot_ai/dispatcher.gd.uid
+53211903eb9a07ff8b06841c67acf3b821765e0d5f52aefafdd75186ae2e62b2  ./addons/godot_ai/dock_panels/log_viewer.gd
+0c49d5ca8c63cc2d29614dbc7cbc1dcdc046f4dd85ddfd46cda93c3b3246426c  ./addons/godot_ai/dock_panels/log_viewer.gd.uid
+9ec192cecf6f975e8bbf33eab70137a773254fce573461da6e418a12cd4ca11d  ./addons/godot_ai/dock_panels/port_picker_panel.gd
+c4c8bfff382983add25baf1000e1214a6c6d227cb9ae4dd9c94e078513b74cd1  ./addons/godot_ai/dock_panels/port_picker_panel.gd.uid
+e32fd58f473c4d9c974d866ada447058e1f71b933aadcf4b1ef6c6c4ad2a470a  ./addons/godot_ai/export/mcp_export_plugin.gd
+35c878e5453ee13abf3955993de021f7cb71b3c50c30a2b3dc84236959eb7e6e  ./addons/godot_ai/export/mcp_export_plugin.gd.uid
+f24931cfddfec7e0b311e9f53778a5ea7e75026c5a776a6ee75ef1d82050bb7d  ./addons/godot_ai/handlers/_node_validator.gd
+3d293beeb180ea1e5ed05a17655a9ba61498d49ddd3ade61608cd56613cc27bb  ./addons/godot_ai/handlers/_node_validator.gd.uid
+d9104c864b375304cf54d7d8825376bae3f606c7ab0956c302b8714968036a33  ./addons/godot_ai/handlers/_param_validators.gd
+f77bead393cdf61b23131c5151bd75b08f6671a2457cff7ea3c7cfe38278eb66  ./addons/godot_ai/handlers/_param_validators.gd.uid
+92ddc1dfd433a4aae7d4088a53a0cff36b0b196aaca9d0488e43b7f2614bbd97  ./addons/godot_ai/handlers/_property_errors.gd
+2b49d3d85542c5e0af947ab114fbb7f71885d0310f35a026411323df007c0a2c  ./addons/godot_ai/handlers/_property_errors.gd.uid
+22fbe4e5e08ede669e546e2a8f7ff2d61ecfc3e532ffc8443f95dfe31defb453  ./addons/godot_ai/handlers/animation_handler.gd
+47b49982ea7e09cddf957ab596d401b28b8838190a434e07c2afd02ad5381567  ./addons/godot_ai/handlers/animation_handler.gd.uid
+39cdcfb12975d194b6cd58c75d5aa4eb08d31aaa36558cb68c9e45198625f47b  ./addons/godot_ai/handlers/animation_presets.gd
+8678c72d4d8d9883c7f0282a80058f0d19c41aaf82d32e17215cf3378171c1bd  ./addons/godot_ai/handlers/animation_presets.gd.uid
+6bf7f8e3af25a4993699dd26b16142c0c785daadd04c4cb5eb27f0b9d0b0c03f  ./addons/godot_ai/handlers/animation_values.gd
+d251c65c53fa71891d10e420ed8ca06ac1ca308f853b6a758badad17acc90aa9  ./addons/godot_ai/handlers/animation_values.gd.uid
+4d999f5f91df121669c9d291c9ce4462a02c3f65964c7a01771b49bdc42bf23b  ./addons/godot_ai/handlers/api_handler.gd
+b22ddf4e5b697aab7099ce15d47c2086624997f8e86d2e93c92a585fe23eb5b8  ./addons/godot_ai/handlers/api_handler.gd.uid
+1489e6032e3b4cc6d902c6f80b91b0fc232d6e414260e5c61b6256fc34d864ab  ./addons/godot_ai/handlers/audio_handler.gd
+64b5a9af05623f153e788733749516412509423eb57b945146b0778cd867b146  ./addons/godot_ai/handlers/audio_handler.gd.uid
+f21b39b1a642ff797be67120799682304b876fd1d0af71f42c4d9861f45765a2  ./addons/godot_ai/handlers/autoload_handler.gd
+aa05d871c5800e244428010f2a19dc357f0f29b8a025b8c64614357c4db31956  ./addons/godot_ai/handlers/autoload_handler.gd.uid
+dba2d7d17759cc9220e6226c06fd0e7b59b1036b937fd78cdd1a4fc8b7821752  ./addons/godot_ai/handlers/batch_handler.gd
+e506e0940373f6e8dbf2c775e1bb690cb7c75b1d877f6e1a0d2493b2d364ce05  ./addons/godot_ai/handlers/batch_handler.gd.uid
+8dab8774731282df0b7f6c0bdcb4790bc096acd996af5658e76dea39324af119  ./addons/godot_ai/handlers/camera_handler.gd
+bd89c9cdb3c8834e74b6a8e2fcbf233b516f1c471309f28c21f0b020b9c31792  ./addons/godot_ai/handlers/camera_handler.gd.uid
+b9a3f6814f183ea15cfba625742496fdc6fc26f0952294cf89f526fab653085d  ./addons/godot_ai/handlers/camera_presets.gd
+68ef1f3fe020a144155eabe99b2c2c17feb113c095a41b3af57442dc5d36c471  ./addons/godot_ai/handlers/camera_presets.gd.uid
+874339098d173cf2f531dfd4a7a169c3eb50b892700018a932a96cd573f3256d  ./addons/godot_ai/handlers/camera_values.gd
+fa6f2ea8c1bb70167d06426cb01dd29ecd47d8b3cdfe9efa034cfdc16d95427a  ./addons/godot_ai/handlers/camera_values.gd.uid
+14dc5372195c8504a6d1b2463b3fa74342706022a607687066ddf58a5a78db94  ./addons/godot_ai/handlers/client_handler.gd
+2599d215b73e6a60b767aba1083a68da6203674c13bb131d29179e98eef029cf  ./addons/godot_ai/handlers/client_handler.gd.uid
+a718c9ca67c638e30ec9a6da2e072a75c74580aa389d4e11aad578257b41cea5  ./addons/godot_ai/handlers/control_draw_recipe_handler.gd
+ccb3400c75d59519bdcc4da1931831bae093ce327a9c5fd39938cb3710e37cf3  ./addons/godot_ai/handlers/control_draw_recipe_handler.gd.uid
+d0bf0ca7a598920c1e87e7d2e2b8480c6ddeeb111504b0a91250fcb1037ab9ed  ./addons/godot_ai/handlers/csg_handler.gd
+a593088c8622b9ac81d8a4790eccb1630e79ce57568a87b2c2f87edb6ba25aba  ./addons/godot_ai/handlers/csg_handler.gd.uid
+6e7ae00a8baa8b9187ed9b1086a8c7456261192c45cd95c030db4450f760b7ad  ./addons/godot_ai/handlers/curve_handler.gd
+7fec875de89cf7a634b5fa787d139c601face5e123df6134dc13eecd9e3f3285  ./addons/godot_ai/handlers/curve_handler.gd.uid
+0f2f3866f3d97029211538afd79a27e1df7d195538e4008eccbf3a64aba7e3b4  ./addons/godot_ai/handlers/editor_handler.gd
+d36224d3a7b803805c0e80ce017ea7dcdd395c360ccce81a102edf9b264cc499  ./addons/godot_ai/handlers/editor_handler.gd.uid
+e6a2325ffcebb85b22e77811d37c6a182090c297422814f6c0da9b8b1d918b9b  ./addons/godot_ai/handlers/environment_handler.gd
+88f573289f80073f1b7556c25c0c235762e9454c38973a71d57a3319e34da63e  ./addons/godot_ai/handlers/environment_handler.gd.uid
+9b03dda4b94b0a20fd7ed12c3237d4d450e6ddd4db257c182f69e51ccf9129c7  ./addons/godot_ai/handlers/filesystem_handler.gd
+3156268e89d4c2df4d58027620252304ade3622dfffa63621c9cdfa9ea4d8676  ./addons/godot_ai/handlers/filesystem_handler.gd.uid
+442b8613a5aff440b0be0f8a5e370a3ac67569a2ffd0579350d14d371fbbd502  ./addons/godot_ai/handlers/gridmap_handler.gd
+2d7826639c1a23d5b6b2949b4349200b11d4ebd633e1f3fb22b1207cccfab4c0  ./addons/godot_ai/handlers/gridmap_handler.gd.uid
+33653f5fd4c755e3652db7b1b92a94e0f39d88b6aabab3d43362bc66036b938d  ./addons/godot_ai/handlers/input_handler.gd
+33ec35e4bfce00cf0af9bb186a89b6d489690418209d6b3fccdd2d3e5e5a1fce  ./addons/godot_ai/handlers/input_handler.gd.uid
+b3a357832de0b0469cab3667a387606abda3e8effd628c5cd2b9109fa2127241  ./addons/godot_ai/handlers/material_handler.gd
+2ce5a5847745f8992c75e6634fa8292ad145bac78e97a75df6bc3ec5ff4f3c01  ./addons/godot_ai/handlers/material_handler.gd.uid
+cbcff9a52cd25d36e7f462f9b81e85df04d7570afc340f5f741d6a04d80c06b8  ./addons/godot_ai/handlers/material_presets.gd
+25ef884fb537b484f3509bd84558598661ed2f48cd1121893b18203aea55f114  ./addons/godot_ai/handlers/material_presets.gd.uid
+3d2be00ddf10d00694e061eaecac0dabad14ca9ff265f11f901b7cba918e54c2  ./addons/godot_ai/handlers/material_values.gd
+c610639c2977ceea714b5c0f9dd97251fd2a4b5b3a500d8ca34cff0b65f502ec  ./addons/godot_ai/handlers/material_values.gd.uid
+995c85f45213f462acef84f5bb414dc480a64eadfd77203b84102f9627fe0bd4  ./addons/godot_ai/handlers/node_handler.gd
+8a6a204c9cc207814aac0a20f3c2837c174dd8b7d0ba452f2a8694bceb8370bc  ./addons/godot_ai/handlers/node_handler.gd.uid
+75ca4a199ec65706932c70d987d692b77f0c858570135e28069794013a6d7f63  ./addons/godot_ai/handlers/particle_handler.gd
+e01cc4640e7f68f31ce6a709f5da2b00e1e14fb93d970101bd4df72be351890e  ./addons/godot_ai/handlers/particle_handler.gd.uid
+6a9d93719af847462f057a8ab58dfef61965dbc360f60f045093f4c30187267c  ./addons/godot_ai/handlers/particle_presets.gd
+67e6d4b02f715fdbc8abc9df4667176b7638658f46049d4c040d7ea5b6118b00  ./addons/godot_ai/handlers/particle_presets.gd.uid
+dc5d00ec054b1aaa4c7c6db2de82f5f18047e2b13bbe5f93ba27c83427ca722e  ./addons/godot_ai/handlers/particle_values.gd
+7843a953959bd04557fa586070f376ff1f9fb6ad6452d53fa6602dad80ff2059  ./addons/godot_ai/handlers/particle_values.gd.uid
+933c9060ba3d4bc4f5b3d85f5f54ead33441da3b232e62bee9bfb1380708406c  ./addons/godot_ai/handlers/physics_shape_handler.gd
+c338b89967011e02e6f143c3115da1c25793dcd2394a2e286f5a9f787f8c0d19  ./addons/godot_ai/handlers/physics_shape_handler.gd.uid
+c4f41e9d313856591fcf9453b2e233513b7cd06b99e588094a82db0e58cf45fc  ./addons/godot_ai/handlers/project_handler.gd
+d2de31aa9f55873f21af809e8933555f5975d208e4555f3e1b788e5d9aad53ca  ./addons/godot_ai/handlers/project_handler.gd.uid
+c996ce7ebe56af1715e56af2589550a3aedc962ff90466886d2b067844a288ee  ./addons/godot_ai/handlers/resource_handler.gd
+e57815d98359fcc777f4b5c05c0561299da4aff4c1ccf14add572e068dc53daf  ./addons/godot_ai/handlers/resource_handler.gd.uid
+acad60a894b82357b56c909f5c2b9e7cc0e747e2030d4d4796fe15bf344f6152  ./addons/godot_ai/handlers/scene_handler.gd
+7905d18048c92df68d4ad37c176ec366ffaff0f108d8aca733c48142a8f8aae1  ./addons/godot_ai/handlers/scene_handler.gd.uid
+2a8c53f7260fa3eb1d0e65e860706ddc9a0846fec5e64d5fda569cd5a3b137d3  ./addons/godot_ai/handlers/script_handler.gd
+4105d57bc4d5524fa01d0a38a227f03ce5ddf0944206c21f72169b030c33a56d  ./addons/godot_ai/handlers/script_handler.gd.uid
+9e2d377aab0362fbec27296a587632c279a2c2c9643a28e86b969a31a4bd5aff  ./addons/godot_ai/handlers/signal_handler.gd
+81475e35a53bccfb598d9679652169729ea2fa69f365f78005454bd1dd762210  ./addons/godot_ai/handlers/signal_handler.gd.uid
+39e41297c12f16625fe7d699664f40985f563e3caaa4412409f1a99b59c88134  ./addons/godot_ai/handlers/test_handler.gd
+e92068b687252be24be2b95b3b93eabf906282214b583059c2ec6a45f69fa29c  ./addons/godot_ai/handlers/test_handler.gd.uid
+a820a1a6de43294ce8d890e6e8e6260fbabcd0a2ff929d95e7634e805ed4a217  ./addons/godot_ai/handlers/texture_handler.gd
+3bdeafe73069a8f04b9486d8b6697e63c4971bb01f7bab619eaedded39722bf7  ./addons/godot_ai/handlers/texture_handler.gd.uid
+3472f16d0e869fd625e76c137098af78ae8065e345d0039b9b7e7af63d0ff9b2  ./addons/godot_ai/handlers/theme_handler.gd
+e1c87aa079ad87e7624994e2539414bddf2caadd180458fd49dafd0109982004  ./addons/godot_ai/handlers/theme_handler.gd.uid
+47744f3e89b0bb5e5730093283400a4486076fabce7cbc324bc5c9ecaff96bdf  ./addons/godot_ai/handlers/tilemap_handler.gd
+3c688fd5b5f2929b092a9d59c7a55c0878834287a78e18b333654c1f4c2421f2  ./addons/godot_ai/handlers/tilemap_handler.gd.uid
+03ab382e55f046058a19e76c0cc381e939749044b0e0820c65dbd3b87502dcd6  ./addons/godot_ai/handlers/tileset_handler.gd
+44eedb2ff0845c76c196b498a020e9aeb667cdb1b45e4da5813ea87a0b9b9ec7  ./addons/godot_ai/handlers/tileset_handler.gd.uid
+636deada816aa8ffa29d338e24c043ffd4e7ef83bc92b0b9a24b65e4bfbcb0cf  ./addons/godot_ai/handlers/ui_handler.gd
+a0e5f401b82ea94d81b4ec3b7a2a8905d47258335f728932c01bab75476b84ea  ./addons/godot_ai/handlers/ui_handler.gd.uid
+ebe2ceb45cf2ebaf4a8ac09861f2bc794712c82683ae3b81438fee66c508bc35  ./addons/godot_ai/mcp_dock.gd
+62248eebd93ecd7e65fae56ddb14ca23ec0b85989079a6e999bfd60c314712db  ./addons/godot_ai/mcp_dock.gd.uid
+021f54ebeda694bf583254af7cdcab0019b22adaea3425caa7253823c97a5ea7  ./addons/godot_ai/plugin.cfg
+40a91cd60b56e1eff4268177da0a9d54731cc822210001d8caba1e354403d885  ./addons/godot_ai/plugin.gd
+35a798ab044b50da51e1624b5aa951551b83aa45573ae2fa0ae378146cbb58c7  ./addons/godot_ai/plugin.gd.uid
+51ca515c420abb816991c5a730e9ee166b5296086cfad98c89c7abce68a0edff  ./addons/godot_ai/runtime/draw_recipe.gd
+7ae9a6fc4fe77482b2189b7421f024a35cb544e8b1368107e7f0f26598a778c8  ./addons/godot_ai/runtime/draw_recipe.gd.uid
+d4093bea61f6a8275ff752e85b2265e6f0834f420bbf08c3a59b62b57e7a06af  ./addons/godot_ai/runtime/editor_logger.gd
+587fd5ccabfe31b6a3c78742cb37fcfa696b6e6b9e27746f455a5e3547508542  ./addons/godot_ai/runtime/editor_logger.gd.uid
+d50ec080a3baab03033a2f161f67288650730ac736268f79660c52f2de94ddc6  ./addons/godot_ai/runtime/game_helper.gd
+2bb2be95830555d56ff38ad2bcfd69ef29b4a55348f879a9cb61b97b727558ff  ./addons/godot_ai/runtime/game_helper.gd.uid
+54f4657c2b9ca26b0c8152f21c5d48a2a71a7cb82c062973218172d507e989ac  ./addons/godot_ai/runtime/game_logger.gd
+e012598e90decb26fe0acee8a5c722e83ab52760470e74f13a91989c3a0f11b6  ./addons/godot_ai/runtime/game_logger.gd.uid
+cc1254c56343d69bd531610b25f99b57f4437fb5b10b1c64312247005bcc2c1d  ./addons/godot_ai/runtime/validation_logger.gd
+e1ec736f74292480f977c54421dcafb68c5def09ec2bf4b78569521b37bfd816  ./addons/godot_ai/runtime/validation_logger.gd.uid
+4c921cd4eabc0df186997a817215b2b0074463738961df7aa8ca06e889b6dfc0  ./addons/godot_ai/telemetry.gd
+641f5ee47d5f74c0591652a500324a81b03b8bd152d874caabceab1489d78920  ./addons/godot_ai/telemetry.gd.uid
+47363f95b07cff8d2dde46956a7dc46d1721ae5c4b5679633c0038ca0b0ea5cb  ./addons/godot_ai/testing/script_error_capture.gd
+99acfa0494027479551559fb293ad0770cf463042bf4c6974703b873916990f5  ./addons/godot_ai/testing/script_error_capture.gd.uid
+73f1a3efd4024bf6214128c5229c4307f6ee04532a0980defedcf5b3b46301fc  ./addons/godot_ai/testing/test_runner.gd
+af6daba585151379f5275a4dca4418521df77249d71f82050ba44135fd04650e  ./addons/godot_ai/testing/test_runner.gd.uid
+e157834797e6fec81d98664f3cafbb699a63c78ef8ccd83251cc4a7982643a4b  ./addons/godot_ai/testing/test_suite.gd
+20d26aae67a6df5b2c40d0f3bd513d1257d4adc8320d9f559f8a87c85cd19744  ./addons/godot_ai/testing/test_suite.gd.uid
+8629fb510f27b8b4f8c8d45d440eb19cedfafa754fa136ca572f9282d050ef87  ./addons/godot_ai/tool_catalog.gd
+a5067a52ef97b89d8c9d587679d661d0c5ca7d550e0eef3c3b8a18bb56f31f68  ./addons/godot_ai/tool_catalog.gd.uid
+2b6294ba64bfb2921255081ada9b15e9befa8752c1a3e25a3c79b99828a5e265  ./addons/godot_ai/update_reload_runner.gd
+6ba45a7412a6c2013eb25c0c6aa26055aaa88256a076ff1d058e7de24c465f6f  ./addons/godot_ai/update_reload_runner.gd.uid
+2decc72bb5e3a880a84b4ee4536050bf458f4f4e4987f3672319fa037e64ada5  ./addons/godot_ai/utils/allow_hosts.gd
+6c02022e576afca8d8487f87481b8618543df37030d9e0f19bfdf5d9d9c7b373  ./addons/godot_ai/utils/allow_hosts.gd.uid
+f0708952ed838349630efe705f70dcc878c86073ddb1d8f37aacd7b5c5b5eca7  ./addons/godot_ai/utils/class_introspection.gd
+f4cf97e1f9676bb5bfe0c3af123ef61678a7881b176cf4cd68114c5642ffe3a9  ./addons/godot_ai/utils/class_introspection.gd.uid
+0eaa9aa3e00274405091cb6d74dc1042341efe88048b6bf168955c5c1b873530  ./addons/godot_ai/utils/diagnostics_capture.gd
+811bc51627303add74eec6dcc72f85dc61aef633c0dc3231442d8eb4b7130fe9  ./addons/godot_ai/utils/diagnostics_capture.gd.uid
+f21b0a767b05bd1763f03d1b81e63ad36212071529c1e415b88d874deda0ad43  ./addons/godot_ai/utils/editor_log_buffer.gd
+acfbe64271596c496835b86f4b4c2642cd8675e85d456d4ea5e6a8422da5cd29  ./addons/godot_ai/utils/editor_log_buffer.gd.uid
+a6b507418afea889caaf8ae79b2d0c51eab67c77f21927923aaf4d7483423d2b  ./addons/godot_ai/utils/error_codes.gd
+df7b436601e68a12ecc38acbad7543bfe0fe6cb152c716b8f9dc7f70a417fe80  ./addons/godot_ai/utils/error_codes.gd.uid
+bc2306f4b27d5ae3d8b9a76a00a773382a943ec3df4ce412f92d10bdac336308  ./addons/godot_ai/utils/fuzzy_suggestions.gd
+07f5f545e8c14bd19b4fad4bc5d683fcf4268bb6adfc1eda5d30a1603bc36459  ./addons/godot_ai/utils/fuzzy_suggestions.gd.uid
+c3f9e9247ec8b70032bca8ce309c90c938238e859b82f11a7679ce736da55a52  ./addons/godot_ai/utils/game_log_buffer.gd
+2d288c2000132251bc1b969c654ca3b9b7593ffb8e32aabe5faa81c0a7d8303b  ./addons/godot_ai/utils/game_log_buffer.gd.uid
+4dd90b764e2eb631fec680c130d53d2696f39694d5fc114bef48f0748d0899dd  ./addons/godot_ai/utils/json_values.gd
+c52c80ff8b4fc6120879a598831139a5971fc98551aaac1aaf542f74ec8fed55  ./addons/godot_ai/utils/json_values.gd.uid
+d7df786a4437991f403715e6bbdd20bbc396009dc5baf48f7dfeacf75ab2b27b  ./addons/godot_ai/utils/log_backtrace.gd
+450dc80371aac8d4d974f042ecdedc15e0766a2442e8765fa298cb3dd18b6a20  ./addons/godot_ai/utils/log_backtrace.gd.uid
+81d8a9e24c73b745b3dc90b6b7990f4babada9687189bcffa4379d84f94fb919  ./addons/godot_ai/utils/log_buffer.gd
+cdbbcffb78756e9d9b68d19412110fd6e8fb7a8b2dcfe02d9490b2dd1151d1e1  ./addons/godot_ai/utils/log_buffer.gd.uid
+95d033d38539f88ae9737cec4788354238260cb53314ec8efa037863b88d52bd  ./addons/godot_ai/utils/mcp_adoption_label.gd
+6720efd543a8f55ed448f5e2a8216a9950adca1942714958932b1149920509cd  ./addons/godot_ai/utils/mcp_adoption_label.gd.uid
+ddf6c0eaab06e9bf9ba29d28fadb83cb81b383a2de9b4e5e5a02a4032e776e8f  ./addons/godot_ai/utils/mcp_client_refresh_state.gd
+509aec8279aced0e854c8e766e9719cd8a436d945e96ee2e1d223d9f16ea4c3d  ./addons/godot_ai/utils/mcp_client_refresh_state.gd.uid
+706e1e75ab71b8edb1ee3c1b1f97975ac34822c44b02844dd967b3a3dfda0a60  ./addons/godot_ai/utils/mcp_server_state.gd
+0454bc89b123487b8a90927318fa4ec91315971ff0e798395191bc5d225e6f8a  ./addons/godot_ai/utils/mcp_server_state.gd.uid
+f382b7fe7e61246b9afff82dd131653a728cb23727b48b54dd8a5c2b61e527ea  ./addons/godot_ai/utils/mcp_startup_path.gd
+570bec0886f6787fd3a74de10f76df90840b284a02f2edf4f4dfff956d7b2933  ./addons/godot_ai/utils/mcp_startup_path.gd.uid
+9399ba742fc8af571b6ceaa12504efef1a4fafbe6388f74c4e48a20e06ce43fe  ./addons/godot_ai/utils/path_validator.gd
+dbbce00244442b32cc776f39d815a4c09c5ce840f3da001d5aa5db37dd1fa0ef  ./addons/godot_ai/utils/path_validator.gd.uid
+fb62df4ca553b0eba42be492ad0a2e55b561d70257dad6f6781fccbb73529819  ./addons/godot_ai/utils/port_resolver.gd
+4f386419a069705d93a56b64395add29e23e9f74745934a515813c119eb96c70  ./addons/godot_ai/utils/port_resolver.gd.uid
+6d7a76d0e45cf5ac8426f9a16338d624e8a43a6db9934157f162f73e8452a9f0  ./addons/godot_ai/utils/resource_io.gd
+1759b54639494e1fd14b97a87cae668500555e0141148a9e2aea04d3d1d2b48e  ./addons/godot_ai/utils/resource_io.gd.uid
+ab457ce39833897d7448a01e4fe397e44cab022eb407c0b3384bf5bc2bbec7fd  ./addons/godot_ai/utils/scene_path.gd
+1d74b073f8cbc0778b3facbba2a7039553a657710f93899c2514104b221a6560  ./addons/godot_ai/utils/scene_path.gd.uid
+6655c7a62d8458656303dc97744f0122aa32b46506d5b6c8b921e599241b085b  ./addons/godot_ai/utils/screenshot_encode.gd
+010f223143d099028ccafba428f9cdb40c05d59b0a949dae49eab339bfb8b006  ./addons/godot_ai/utils/screenshot_encode.gd.uid
+cc044138ec37a1e5f8cbc8c9e00ac1dd50e7af64b3e49c41ee10283a40f898f5  ./addons/godot_ai/utils/server_lifecycle.gd
+546899b3a5d4024aac3b001ca634e8e74d74343faba27e491ac03af2c3fd6bb1  ./addons/godot_ai/utils/server_lifecycle.gd.uid
+0a75e33ee8f1c5a940c3b45888b82011d8d77dcbe97dcc54403b6a1c30fef089  ./addons/godot_ai/utils/server_version_check.gd
+b71827a9383a60c02e26d59c19530cfc65a2df0d523220780e5283a9a8573f82  ./addons/godot_ai/utils/server_version_check.gd.uid
+8e7409077186eeb15a4a88eeaceb79bacb01d9cfb72bbee4bae745e5c8bcce2f  ./addons/godot_ai/utils/settings.gd
+99e66f1dfe502b81097d3d83819bc211e42ef3b3a97bff4ffd3d672bf21b26dc  ./addons/godot_ai/utils/settings.gd.uid
+7bb5b56f3b5ec3ba4427b44ac5867005c01ac8a3d84735afd38479993e1f4d7f  ./addons/godot_ai/utils/structured_log_ring.gd
+5ff3dab0db39995b662e5aea73ae0223ba92f6a219a283141d29ef9bce6667a1  ./addons/godot_ai/utils/structured_log_ring.gd.uid
+a7e6fc7f4525aa64ceec15a7ab3eab6188f32f744fdd714ad1f4a819e9ede236  ./addons/godot_ai/utils/surfaced_error_tracker.gd
+09b485e56fdd3a69a42d9b74400816bd36943fe15d0781da3aefe4b51be0dc6b  ./addons/godot_ai/utils/surfaced_error_tracker.gd.uid
+d4d3e3ff88e16c49e243717d56c51081169ef0988d905ea5a3e6a4cd01cd123d  ./addons/godot_ai/utils/update_manager.gd
+2a2e8422a89307dc7c57711daa1aab0629b5a54ec7f108097a36c2273a0735d0  ./addons/godot_ai/utils/update_manager.gd.uid
+4b6a5ce720bf1914b7d033a258e662bfb54f7402c4a193b005f6a38521afc7b3  ./addons/godot_ai/utils/update_mixed_state.gd
+ed8d5d6740f1bcc183897ec4407487bea769160573353887d7811a8decf8ca3f  ./addons/godot_ai/utils/update_mixed_state.gd.uid
+2f75771088514910b48ff26269e64064a37984f50ba91284185cf3955985269b  ./addons/godot_ai/utils/uv_cache_cleanup.gd
+d209b2b5de32eb6cfeb7b18c8e785f26011d44326b43794478967da7705eace4  ./addons/godot_ai/utils/uv_cache_cleanup.gd.uid
+ce32633655dc27753df37a174bdb31cd905d5f580f89f7e2a1c19e3ba37ada57  ./addons/godot_ai/utils/variant_serializer.gd
+3954570c851e2a1c908b24dfe1e542c622feb5efb1ee5137bdf1a201cadafbbc  ./addons/godot_ai/utils/variant_serializer.gd.uid
+fbf0060529259bb97dbeb8a0a0f4dce8bbf0ab6a140b9e62170b67908763d14d  ./addons/godot_ai/utils/windows_port_reservation.gd
+f369812cbcfa0201ed23ca05081ad8981a0200f53a8ef7e4ba690d722bf13abb  ./addons/godot_ai/utils/windows_port_reservation.gd.uid
+47003ad23232ca2fa671df81abf9ca948cbaaa16a91e4855d33cb47c19b7937c  ./addons/godot_ai/vision_routing.gd
+47ddab7fc353d2a49c3dcf4bbaa5e0e9f05116f7c7fc6bc5ece12246ad0a1494  ./addons/godot_ai/vision_routing.gd.uid
+
+## 类别2b MCP 固定源 mcp_verify.tscn (另计 1)
+## 包含: mcp_verify.tscn (sha256 = 固定 Git 对象 6d5eaf3 一致)
+56a31e49b2312581b4f753529e6fa9b90ba9db2a000acdc69ef7b10f90bbc67f  mcp_verify.tscn
+
+## 类别3 SOL 治理/证据 (docs/sol/**) - 治理 6 + worker-order + 证据 md/png
+## 包含: 治理文件 决策记录/施工合同/项目状态/当前任务/证据索引/阶段结果 + worker-order + evidence/*.md + *.png
+## 排除规则: docs/.DS_Store -> 类别4; *.png.import Godot 侧车 -> 类别4; 本清单自身(自引用)
+9264bf5a86e8932e39aa12b94746b10f4843f38ce4f0dd497d741796ba25b7de  ./docs/sol/evidence/td_preinvestigation.md
+410cd3acf311d081177ba99db5bfff246e449444d8ee24cd2f864389ee604d22  ./docs/sol/evidence/wp01_baseline_review.md
+14684c6878deaec95705df56af66b701e66491f0077c1d1f51e112564c034a03  ./docs/sol/evidence/wp02_mcp_bootstrap.md
+8440f89646dc7b9b45844f8147ccd90405ac105635dc2c07dd7a7c566c3d6ba1  ./docs/sol/evidence/wp03_mcp_verify.md
+c98c458ca380799883d69670676c6ad2e9ec6bcefac4c1c5628ed11deb38bab8  ./docs/sol/evidence/wp03_viewport_2d_screenshot.png
+0e4d1d1a6730dd43917e1f8ccc683be36dd1fdd71722f6b0b47b4f56b0e30fa1  ./docs/sol/evidence/wp04_final_baseline.md
+ae906e7cbee31132dc8a4189f177c3ab7ea9d96fcda79f25f8040033bcf09c28  ./docs/sol/worker-order-s1-clean.md
+f2362235e0fedcca22873603028fd24c3ed9f4ab5eb0effcac18b7bf8347e228  ./docs/sol/决策记录.md
+2a679e14c763bbbf077157418faa3a5d826f3c813fa39b5372f7d0531277b3c8  ./docs/sol/当前任务.md
+4c8686b61c23920a533efdf0405961ba3331b44088e05f1503b6ae70e7098dac  ./docs/sol/施工合同.md
+46ba1fcf53d00bf5cb0aec107e3e7113577cc999e7b62be8c8e7d0053a72eb58  ./docs/sol/证据索引.md
+a0f82101fcb16a947f4f030c453fae30288e328c6ce92ea3a6d3c1d6800320f1  ./docs/sol/阶段结果.md
+2675ad6062aec17d3f02087718ab2e9960e215e343552f0fec56d0dd4997bd0b  ./docs/sol/项目状态.md
+
+## 类别4 可再生/编辑器元数据 (披露, 不删除, 不计入冻结源码/完整性计数)
+### 4a .DS_Store (macOS 可再生元数据)
+./addons/godot_ai/.DS_Store
+./docs/.DS_Store
+### 4b Godot 生成证据图 .import 侧车
+./docs/sol/evidence/wp03_viewport_2d_screenshot.png.import
+### 4c .godot/** 可再生缓存 (15 文件, 编辑器运行态可再生)
+.godot/.gdignore
+.godot/editor/editor_layout.cfg
+.godot/editor/editor_script_doc_cache.res
+.godot/editor/editor_script_doc_cache.res-folding-a7de57390d6e786984ca20c70a831128.cfg
+.godot/editor/filesystem_cache10
+.godot/editor/mcp_verify.tscn-folding-dc8db102396e8e9cf12b04ef1e79fb52.cfg
+.godot/editor/project_metadata.cfg
+.godot/editor/script_editor_cache.cfg
+.godot/global_script_class_cache.cfg
+.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex
+.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5
+.godot/imported/wp03_viewport_2d_screenshot.png-e9836362e0be7bc0deaf713e9ee68c09.ctex
+.godot/imported/wp03_viewport_2d_screenshot.png-e9836362e0be7bc0deaf713e9ee68c09.md5
+.godot/scene_groups_cache.cfg
+.godot/uid_cache.bin
