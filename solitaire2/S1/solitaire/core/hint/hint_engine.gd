@@ -152,6 +152,8 @@ static func _append_run_moves(out: Array, state: GameState, src_col: int) -> voi
 
 
 ## Longest top face-up suffix that is a valid descending alternating run.
+## Walking from the pile top downward, every next (lower) card must be exactly
+## one rank higher and of the opposite color.
 static func _face_up_valid_run_length(pile: CardPile) -> int:
 	if pile == null or pile.is_empty():
 		return 0
@@ -164,9 +166,9 @@ static func _face_up_valid_run_length(pile: CardPile) -> int:
 		var card := pile.card_at(i)
 		if card == null or not card.face_up:
 			break
-		if prev.rank != card.rank + 1:
+		if card.rank != prev.rank + 1:
 			break
-		if suit_is_red(prev.suit) == suit_is_red(card.suit):
+		if suit_is_red(card.suit) == suit_is_red(prev.suit):
 			break
 		length += 1
 		prev = card

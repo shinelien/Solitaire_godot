@@ -55,6 +55,15 @@ func test_move_factories_set_kind_coordinates_and_count() -> void:
 	assert_true(undo.is_undo(), "undo identity")
 	assert_false(draw.is_undo(), "draw not undo")
 
+	var replay := Move.replay()
+	assert_eq(replay.kind, Move.MoveKind.REPLAY, "replay kind")
+	assert_true(replay.is_boundary(), "replay is a boundary identity")
+	var new_deal := Move.new_deal()
+	assert_eq(new_deal.kind, Move.MoveKind.NEW_DEAL, "new deal kind")
+	assert_true(new_deal.is_boundary(), "new deal is a boundary identity")
+	assert_true(undo.is_boundary(), "undo is a boundary identity")
+	assert_false(draw.is_boundary(), "gameplay draw is not a boundary identity")
+
 
 func test_move_kind_name_roundtrip_all_kinds() -> void:
 	var moves := [
@@ -67,14 +76,16 @@ func test_move_kind_name_roundtrip_all_kinds() -> void:
 		Move.recycle_stock(),
 		Move.flip_tableau(0),
 		Move.undo(),
+		Move.replay(),
+		Move.new_deal(),
 	]
-	assert_eq(moves.size(), 9, "all MoveKind values have a factory")
+	assert_eq(moves.size(), 11, "all MoveKind values have a factory")
 	var seen: Dictionary = {}
 	for move in moves:
 		var name := Move.kind_name(move.kind)
 		assert_true(Move.kind_name(move.kind).length() > 0, "kind name non-empty")
 		seen[name] = true
-	assert_eq(seen.size(), 9, "all kind names distinct")
+	assert_eq(seen.size(), 11, "all kind names distinct")
 
 
 func test_move_key_stable_and_discriminating() -> void:
