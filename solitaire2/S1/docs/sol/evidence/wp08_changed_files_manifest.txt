@@ -1,0 +1,110 @@
+# WP-08 确定性变更清单 (deterministic WP-08 delta manifest) 修正 2
+# 范围: 相对父 Git root HEAD 3be833b (WP-07 施工完成) 的 WP-08 完整 delta
+# 父 Git root: /Volumes/Mac studio pro/solitaire/godot  |  pathspec: solitaire2/S1/  |  HEAD: 3be833b7b490fa742dc7bcd16eb05840358119dd
+# 行格式: <M|A>  <byte-count>  <sha256>  <./相对路径>  (M=已跟踪修改, A=相对 HEAD 新增/未跟踪)
+# 生成: LC_ALL=C; 类别内按路径排序; 行序 = 下列类别 1..10 顺序
+# 排除: .godot/** 再生缓存(61 文件) 不列入且不计入聚合(编辑器可再生, 见项目状态.md 披露项); .import 侧车为编辑器可再生副产物, 列入并标注
+# 本清单不列入自身(避免自引用); 确定性由重生成 diff=空 验证
+# 资产来源字节已对照 assets/legacy/MANIFEST.md 逐项核验(12/12 匹配); .import 侧车不属来源清单
+
+## 类别1 引擎配置与核心应用层已跟踪修改 (tracked modified) (M) - 3 文件
+M  3429  44fbbc1be8e9ab8186d6a73e6ac80953a6881a69d3d9eb03905ef1f4d04e5cad  ./project.godot
+M  7395  29626ea98349621ce28257618cd42af2b481d41ca26fd192184f5e9269da4f82  ./solitaire/application/game_session.gd
+M  1505  6c53a25a464198f2ff6ec4c46cb9238dacdc76b490d1123ae1f687b777325fc5  ./solitaire/application/game_session_result.gd
+
+## 类别2 docs/sol 治理文档已跟踪修改 (tracked modified) (M) - 3 文件
+M  2569  0bdd122dc69c5bb9364a30b81d60de62c11af725184d0a4bd5d730a982bb2fc9  ./docs/sol/当前任务.md
+M  7446  e006797c7b9a8dd0d1e61072a63ce90e9a387b0c09090ea1cec8c8d99bc10b4e  ./docs/sol/项目状态.md
+M  10037  7da9b822760e910b8bed567df49ecb56aea1a4ffe18f002941387a8bfbf14923  ./docs/sol/证据索引.md
+
+## 类别3 solitaire/presentation 新增源码 (.gd + .gd.uid) (A) - 20 文件
+A  3458  c098c695a5120643ae3721767e421aff429ce4a42765f675b668d5df9fd4d353  ./solitaire/presentation/controller/fixture_states.gd
+A  20  758c979ce15fd153f58ef3fc0ffe04793900a8381dccfa74c19a10ca423562a5  ./solitaire/presentation/controller/fixture_states.gd.uid
+A  5289  593b809db08fa2a2c8ff28b4194f12251e902dbac8c168ec8554bd9c09e3b7ec  ./solitaire/presentation/controller/input_interpreter.gd
+A  20  0c3eed807b1c7a8bfdcc491babbfe31260eca6711d3ccee38b8fae83bd4a7211  ./solitaire/presentation/controller/input_interpreter.gd.uid
+A  1498  b425fcfdb88bb0df0f5948b75ade6a96f73ae0c933bea06e683763b73f110bdc  ./solitaire/presentation/controller/snapshot_projector.gd
+A  20  b70866715e8ea7193d9bfa61505929748931b09079c4d020b545be5d0d707603  ./solitaire/presentation/controller/snapshot_projector.gd.uid
+A  22302  b3c66497cd308856a97a1e2fa89d05dfb73d062595ab25e241f9633a304a0076  ./solitaire/presentation/controller/solitaire_director.gd
+A  19  cbabf0c6308169ee95185b154cee841f14152ea9bb0f0977e3168f88bab9f49d  ./solitaire/presentation/controller/solitaire_director.gd.uid
+A  4936  195fad8d62bdc7aafd3c4c280b0257308d39d95423539b83a4f578cc1c6ccd74  ./solitaire/presentation/infrastructure/legacy_atlas.gd
+A  19  720f2e4e9e50d7bc06f5f572ada20605dd54f89c83bf2185b62da4e78c3a21f7  ./solitaire/presentation/infrastructure/legacy_atlas.gd.uid
+A  2474  e87a3617f67fb8bc4e9259d5913cc795c4318cc6724d2faf7d3899aea2c40974  ./solitaire/presentation/infrastructure/legacy_face_mapper.gd
+A  20  37fb9c29b75d541fca4b96ad9fec3c91321952d6c423b602c7eeb17a1c5e782a  ./solitaire/presentation/infrastructure/legacy_face_mapper.gd.uid
+A  2362  cd45e8c61bcf3a654d9db65898d2699190e67dc8f0ff4bf550a4390245f17011  ./solitaire/presentation/infrastructure/safe_area_layout.gd
+A  20  1d6ba4cc51a0be9d80905e29e9d34eadcc32b16a3827cd52aa6086beb6920832  ./solitaire/presentation/infrastructure/safe_area_layout.gd.uid
+A  2782  09b8264eeab39f5fbda450838dd061657608d95c0c8b63d9f29ba4070e110c47  ./solitaire/presentation/views/board_geometry.gd
+A  20  2df938e86aef8532f89f2191a707e81665d378a9a90dbf1d2bf8800488c0b9a4  ./solitaire/presentation/views/board_geometry.gd.uid
+A  11717  722a2e0e62f30778e6f027d9d0956ad5d4461d4b8c007c9a4e5b78706ec68644  ./solitaire/presentation/views/board_view.gd
+A  20  8d187617f61f83e7d71fb5773c2ec9660ee60f88d52ca5b5f6a27b54c65441a3  ./solitaire/presentation/views/board_view.gd.uid
+A  5579  8a3848fe292cec44b57396d547b1ae124e81ac126ea464a05b4af965523cc405  ./solitaire/presentation/views/card_view.gd
+A  19  073bbe65d43afa2daf94f0f265b417dbccc29328c548be4143ff69eca66ddcc5  ./solitaire/presentation/views/card_view.gd.uid
+
+## 类别4 tests 新增 (test_wp08_*) (A) - 4 文件
+A  14383  050810991ccc99add78aeb20b4a7cffc1b1fb769989abeaa41b53c0a6d5c09f6  ./tests/test_wp08_interaction.gd
+A  20  fdc9af22736ff134049e747eaa7e598f2bb483e66c30212f9162b6504e5a41c9  ./tests/test_wp08_interaction.gd.uid
+A  5048  ac07329383a8386541ef31a9bc1d0d3b3ea4aa3be99d1ff971096a4be8eb3aaf  ./tests/test_wp08_mapping.gd
+A  19  d8895e090a2a1e63f7515b9327cfb9ec4743966b9f43d4eb3b1a1e63fd740101  ./tests/test_wp08_mapping.gd.uid
+
+## 类别5 scenes 新增 (A) - 1 文件
+A  1365  cbb810d2717f85ed075e59a3c2b53fe0ad54317d2a9c300b0523f8ca40fee92c  ./scenes/main.tscn
+
+## 类别6 assets/legacy 资产来源字节 (来源清单+图片+音频, 不含 .import) (A) - 13 文件
+A  3398  4ee24590adb9902ca746fd0f6b33a69c2741737488a6d700f38d893358e2e818  ./assets/legacy/MANIFEST.md
+A  64100  bba89241c9e73e90a32cc4090bfa6716a3addda7cff2975e6f8ede31778664d0  ./assets/legacy/images/background-0.png
+A  6389  95d6cfb422ea8e7aa5b935a05c865d3008c73d91467c3e447239fbb8b9baffa1  ./assets/legacy/images/car_new_0_1.atlas
+A  589435  90ebafeaa6c5ec0b5aa50fd1c03cd98f4e56703baa787c775ba9b8bda9059e5c  ./assets/legacy/images/car_new_0_1.png
+A  11125  633952a8a78c74e053ef709b43f7ffeaf50c4b62db127c689c5df94e44d0130a  ./assets/legacy/images/car_new_0_6.atlas
+A  652247  1260aa2bce0e40c6d2099b81ee91c882d60356f6aac089e2077b5c27cf0fff85  ./assets/legacy/images/car_new_0_6.png
+A  27286  7d952b946ff4e610444e13362d49311174bac7df11a6017ebc3d8be2dcf72d16  ./assets/legacy/audio/auto.mp3
+A  249499  67bc858bb22b0e3c82bf251ec0ab96dcf28d6ada88ce093d1e2c00c4796edecb  ./assets/legacy/audio/autoplay.mp3
+A  52701  4082f13182865e7672b2923fc694f5246824c3243b1174a0f1a32481d17486c0  ./assets/legacy/audio/deal.mp3
+A  10652  2a465c43ed4d8cc0dde71d42ebb568cb2e9ee396abb194dbf90912764e0430e2  ./assets/legacy/audio/movecard.mp3
+A  1965  9eebca0da25a5bca77ade9825964484c37661329fb159167ded1f2cfb73f2268  ./assets/legacy/audio/nomove.mp3
+A  15261  635c27eae1cbebe241519763aef309ec3a38ef84e1cfbfe6d7d86b6d7ecb450c  ./assets/legacy/audio/undo.mp3
+A  196478  242efd6da27ee91129f7524c5223c483f28b9ba791902619ded7cddb30409668  ./assets/legacy/audio/victory.mp3
+
+## 类别7 assets/legacy 资产生成 .import 侧车 (可再生, 编辑器生成) (A) - 12 文件
+A  360  2fe053c821ac3bc51d7d04d5b9952079a657ff25717eebb2c2f88de92d75edb5  ./assets/legacy/audio/auto.mp3.import
+A  373  443211db7d19969a050b817da231fe303849cba034b207602c8cb872c58af458  ./assets/legacy/audio/autoplay.mp3.import
+A  360  6af0306bbdc88c5439269fe40bc5e719700607fe1527a054544d55e1b45a5134  ./assets/legacy/audio/deal.mp3.import
+A  372  209da94639998fa18e3e71caa272ec7225e6c9a372a752d66e6253c1c6fead07  ./assets/legacy/audio/movecard.mp3.import
+A  367  a6f70a0f75e231a5f35f695607dabc1ac8153334849bc4199d48018713446c12  ./assets/legacy/audio/nomove.mp3.import
+A  360  d73d1aaf265b433a214201efb59791cd7a51fefcf6a88f49189073b5fbeb3b77  ./assets/legacy/audio/undo.mp3.import
+A  370  f38936936e95bfbb551c54e843eb27dfabebaaab289185a11fbb475fa13d1eb0  ./assets/legacy/audio/victory.mp3.import
+A  961  8daaca1d7e54c04aca4f634768fa27a10672997f17effe2ae002a36f344208aa  ./assets/legacy/images/background-0.png.import
+A  393  d0ffe59629b92ae8c391a793e825005c069844faad5e5cae3812eeb7a17c9686  ./assets/legacy/images/car_new_0_1.atlas.import
+A  957  321dcfa2aa9635222942438bbb316b30154e578be7daed3d3b0082ec729ff174  ./assets/legacy/images/car_new_0_1.png.import
+A  392  550b6226800592e58d5384336967103376ea2bd0e3b2db9ee89d5c96e6ea4837  ./assets/legacy/images/car_new_0_6.atlas.import
+A  958  2ff52acb004b9737c1e1632646ad5e837c26c2ae592f9707ec8cf21840d65bcd  ./assets/legacy/images/car_new_0_6.png.import
+
+## 类别8 证据截图 png (docs/sol/evidence/wp08_*) (A) - 4 文件
+A  469443  cb6af9137bdb9afc88f4ff2989d9629bc27bb90d3d9ac3f6acfe07b4bdabd913  ./docs/sol/evidence/wp08_auto_won.png
+A  508133  0c6f509c7f4b9cdbb1cd0ddfdee6096c94f562b4691c161df83db88b0701966e  ./docs/sol/evidence/wp08_draw1_initial.png
+A  511843  6b371f03bdc0c4d53eef18bfce1228ca399a1ba9c568584ccf501498e0889ec2  ./docs/sol/evidence/wp08_draw3_waste.png
+A  494315  fb845ed22e0f9a2ba3d421ebdc66e05ca224d1f495d77c2f7885792e8d35c3f7  ./docs/sol/evidence/wp08_mid_hint.png
+
+## 类别9 证据截图 .import 侧车 (可再生, 编辑器生成) (A) - 4 文件
+A  961  012aee60cb612cdf2cb62697b112cbc23ec0b7508e6130c00d3b898d1068c79c  ./docs/sol/evidence/wp08_auto_won.png.import
+A  976  e7e8767b2c71f7dec587582be2a35083abb6bb934acc9caeefcc5bf0c7d5b9fa  ./docs/sol/evidence/wp08_draw1_initial.png.import
+A  970  f9cafd648aa4efa3bcbcd38058d7cd6d0970f4afd4a8f434b1e5ec44854e16d6  ./docs/sol/evidence/wp08_draw3_waste.png.import
+A  961  ad3d9cac204876671dce8064c070a76b3a7d54b671a761b4a690bb8144e3f4fa  ./docs/sol/evidence/wp08_mid_hint.png.import
+
+## 类别10 证据文档 (A) - 1 文件
+A  14566  9dc29c2cc52e717ac6ec4c458f477937cc6b79b0abcfb92faaccb2f291d33732  ./docs/sol/evidence/wp08_pure_2d_playable_loop.md
+
+## 汇总 (totals)
+- 行数 rows: 65  (M 已跟踪修改 6 + A 新增 59); 不含本清单自身
+- 类别分类计数:
+    类别1 引擎配置与核心应用层已跟踪修改 (tracked modified): 3
+    类别2 docs/sol 治理文档已跟踪修改 (tracked modified): 3
+    类别3 solitaire/presentation 新增源码 (.gd + .gd.uid): 20
+    类别4 tests 新增 (test_wp08_*): 4
+    类别5 scenes 新增: 1
+    类别6 assets/legacy 资产来源字节 (来源清单+图片+音频, 不含 .import): 13
+    类别7 assets/legacy 资产生成 .import 侧车 (可再生, 编辑器生成): 12
+    类别8 证据截图 png (docs/sol/evidence/wp08_*): 4
+    类别9 证据截图 .import 侧车 (可再生, 编辑器生成): 4
+    类别10 证据文档: 1
+- 聚合 SHA-256 (aggregate, 见定义): 8fb0dbf511148e27ecac6225ef9bac05df766699ea2412ba1947b361a7b73cee
+- 聚合定义: 对清单中除 `wp08_pure_2d_playable_loop.md`(引用聚合的文档) 与本清单自身之外的全部行, 按清单行序拼接 `sha256  byte-count  ./path` 行文本(每行尾追加 \n)后取 sha256; 共 64 行, 可按行序逐行重算复核
+- 本清单自身 SHA-256 由验证者复算, 不内嵌 (确定性由重生成 diff=空 保证)

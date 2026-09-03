@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dhehcb5mt8fno"]
+
+[ext_resource type="Texture2D" uid="uid://dfn71y324ex6p" path="res://assets/legacy/images/background-0.png" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://djsgrtktpcve5" path="res://solitaire/presentation/views/board_view.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://88wuxpoyvlp6" path="res://solitaire/presentation/controller/solitaire_director.gd" id="3_tbgi4"]
+
+[node name="Solitaire" type="Control" unique_id=524383561]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1311443257]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("1_sugp2")
+expand_mode = 1
+
+[node name="Board" type="Control" parent="." unique_id=1159230809]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2_jyhfs")
+
+[node name="UI" type="Control" parent="." unique_id=417339535]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="WinOverlay" type="Control" parent="." unique_id=1703777895]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sfx" type="AudioStreamPlayer" parent="." unique_id=241302909]
+
+[node name="Director" type="Node" parent="." unique_id=1293246027]
+script = ExtResource("3_tbgi4")

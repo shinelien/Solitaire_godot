@@ -12,6 +12,9 @@ const CODE_INDEX_OUT_OF_RANGE := "index_out_of_range"
 const CODE_INVALID_DRAW_COUNT := "invalid_draw_count"
 const CODE_INVALID_RECORD := "invalid_record"
 const CODE_IO_ERROR := "io_error"
+## Shared structural failure (e.g. a debug fixture that is not a valid
+## 52-card permutation); uses the same code string as MoveExecutionResult.
+const CODE_INVALID_STATE := "invalid_state"
 
 var ok: bool = false
 var error_code: String = CODE_OK

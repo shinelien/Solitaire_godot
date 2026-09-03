@@ -141,6 +141,53 @@ func new_deal() -> MoveExecutionResult:
 	return _adopt(result.batch)
 
 
+## Explicit, documented non-production seam (WP-08): builds a session whose
+## current state is a deep clone of a caller-supplied full 52-card GameState
+## (used only by the MCP runtime acceptance matrix to load controlled
+## near-win/mixed boards through the application layer). Every subsequent
+## transition still flows through MoveExecutor exactly like a real deal. Never
+## called by the player loop; identity is flagged as a synthetic debug deal.
+## Release boundary: hard-gated on the "editor" feature — outside the editor
+## this returns a typed failure and never constructs a debug session.
+static func debug_create_state(state: GameState, draw_mode: int) -> GameSessionResult:
+	if not OS.has_feature("editor"):
+		return GameSessionResult.failure(
+			GameSessionResult.CODE_INVALID_STATE,
+			"debug_create_state is editor-only and refused in a release build"
+		)
+	if state == null:
+		return GameSessionResult.failure(
+			GameSessionResult.CODE_INVALID_STATE,
+			"cannot build a debug session from a null state"
+		)
+	if draw_mode != GameState.DRAW1 and draw_mode != GameState.DRAW3:
+		return GameSessionResult.failure(
+			GameSessionResult.CODE_INVALID_DRAW_COUNT,
+			"draw_count must be 1 or 3"
+		)
+	if state.total_card_count() != 52:
+		return GameSessionResult.failure(
+			GameSessionResult.CODE_INVALID_STATE,
+			"debug state must hold all 52 cards (found %d)" % state.total_card_count()
+		)
+	var seen := PackedByteArray()
+	seen.resize(52)
+	for id in state.all_card_ids():
+		if id < 0 or id > 51 or seen[id] == 1:
+			return GameSessionResult.failure(
+				GameSessionResult.CODE_INVALID_STATE,
+				"debug state must be a full permutation of ids 0..51"
+			)
+		seen[id] = 1
+	var session := GameSession.new()
+	session._pool = "debug"
+	session._index = -1
+	session._draw_count = draw_mode
+	session._state = state.clone()
+	session._history.clear()
+	return GameSessionResult.success(session)
+
+
 # ----- read-only hints / plans (delegate to non-mutating services) -----
 
 func hint() -> HintResult:
