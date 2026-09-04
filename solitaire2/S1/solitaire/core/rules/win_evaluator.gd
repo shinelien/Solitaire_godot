@@ -1,16 +1,14 @@
 class_name WinEvaluator
 extends RefCounted
 
-## Strict win detection (pure, no Node deps). Foundation[4] are four dynamic
-## slots (matching the fixed reference's checkACardPos, which never binds a
-## slot index to a suit), so a win does NOT depend on which suit lives in which
-## slot. WON iff every one of the four slots holds exactly the 13 unique
-## physical identities of one complete suit run — A..K ascending, every card
-## face-up — and the four slots' suits are all distinct (which, with exactly 4
-## suits and 4 complete runs, means they are collectively {0,1,2,3}). Swapped
-## complete suits therefore win; duplicate-suit, mixed, short, unordered,
-## face-down or identity-malformed foundations do not. There is intentionally
-## no LOST/guess state: a deal only wins or stays in progress.
+## 严格胜利判定（纯函数，无 Node 依赖）。foundation[4] 是四个动态槽位
+## （与固定参考 checkACardPos 一致——槽位不绑定花色），因此胜利与
+## 哪个花色位于哪个槽无关。WON 当且仅当：四个槽各自恰好持有某完整
+## 花色 13 张唯一实体牌（A..K 升序且全部翻开），且四个槽花色互不相同
+## （4 花色 + 4 个完整序列意味着集体恰好是 {0,1,2,3}）。
+## 因此整组换槽的完整花色可判胜；重复花色、混色、不足、乱序、
+## 盖牌或身份损坏的基础堆均不能判胜。
+## 设计上不存在 LOST/猜测状态：一局要么胜利，要么继续。
 
 const FOUNDATION_FULL := 13
 const FOUNDATION_COUNT := 4
@@ -18,6 +16,7 @@ const RANK_COUNT := 13
 const SUIT_COUNT := 4
 
 
+## 胜利判定入口：四座基础堆各自为完整且互异花色的 A..K 全收牌时返回 true。
 static func is_won(state: GameState) -> bool:
 	if state == null:
 		return false
@@ -32,12 +31,10 @@ static func is_won(state: GameState) -> bool:
 	return seen_suits.size() == SUIT_COUNT
 
 
-## The slot must hold exactly the 13 physical identities suit*13..suit*13+12 in
-## A..K order (card at position p must be identity suit*13+p), every card
-## face-up. Returns the slot's suit on success, -1 otherwise. Because the check
-## binds the exact id/rank/suit per position, a duplicate-suit slot is
-## impossible to misread as a different suit and a partial/corrupt run is never
-## accepted.
+## 槽内必须是某花色的完整 13 张实体（位置 p 的牌 id 必须等于 suit*13+p，
+## 即按 A..K 升序），且每张都翻开。成功时返回该槽花色，否则返回 -1。
+## 由于逐位绑定精确 id/点数/花色，重复花色的槽不可能被误判为另一花色，
+## 不完整或损坏的序列也绝不会被接受。
 static func _complete_run_suit(pile: CardPile) -> int:
 	if pile == null or pile.size() != FOUNDATION_FULL:
 		return -1
@@ -62,8 +59,8 @@ static func _complete_run_suit(pile: CardPile) -> int:
 	return suit
 
 
-## Update a state's game_status to WON when the strict invariant holds.
-## Called by MoveExecutor after a successful batch; never mutates the board.
+## 当严格胜利不变量成立时，把 state.game_status 置为 WON。
+## 由 MoveExecutor 在成功批处理后调用；此函数不修改任何牌面数据。
 static func update_status(state: GameState) -> void:
 	if state == null:
 		return

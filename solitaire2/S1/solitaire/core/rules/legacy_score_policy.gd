@@ -1,24 +1,29 @@
 class_name LegacyScorePolicy
 extends RefCounted
 
-## Basic legacy scoring extracted from the fixed reference (SpriteManager.cpp
-## classically): applied by MoveExecutor AFTER a move passes RulesEngine, so
-## score can never influence legality. Tableau<->tableau, draw and recycle are
-## score-neutral. Undo uses a flat -2 with a floor at zero applied against the
-## restored pre-action score.
+## 从固定参考实现（SpriteManager.cpp 的经典规则）提取的基础旧版计分：
+## 仅在移动通过 RulesEngine 之后由 MoveExecutor 应用，因此计分绝不影响合法性。
+## tableau 列间移动、翻牌与整堆重翻不计分；
+## 撤销使用固定 -2，并对“还原后的动作前分数”施加 0 下限。
 
+## 送入 foundation 的加分（10 分/张）。
 const FOUNDATION_DELTA := 10
+## waste 顶牌移到 tableau 的加分（5 分/张）。
 const WASTE_TO_TABLEAU_DELTA := 5
+## foundation 顶牌退回 tableau 的扣分（-10 分/张）。
 const FOUNDATION_TO_TABLEAU_DELTA := -10
+## 系统自动翻牌（暴露盖牌）的加分（5 分/张）。
 const GENERATED_FLIP_DELTA := 5
+## 下列操作不计分。
 const TABLEAU_TO_TABLEAU_DELTA := 0
 const DRAW_DELTA := 0
 const RECYCLE_DELTA := 0
+## 撤销固定罚分。
 const UNDO_PENALTY := -2
 
 
-## Score change for one already-legal move kind. Tableau->tableau, stock draw
-## and recycle score 0; undo is not a RulesEngine move (see undo_score).
+## 单个“已通过合法性”移动种类的分数变化：
+## tableau 列间移动、翻牌与整堆重翻为 0；撤销不属于规则移动（见 undo_score）。
 static func move_delta(move: Move) -> int:
 	if move == null:
 		return 0
@@ -42,7 +47,7 @@ static func move_delta(move: Move) -> int:
 	return 0
 
 
-## Total score change of a whole executed batch (requested + generated flips).
+## 整批已执行移动的总分变化（含请求动作与系统自动生成的翻牌）。
 static func batch_delta(batch: MoveBatch) -> int:
 	if batch == null:
 		return 0
@@ -52,19 +57,18 @@ static func batch_delta(batch: MoveBatch) -> int:
 	return total
 
 
-## Legacy accumulator update: the fixed reference adds the delta to the running
-## score and floors the result at zero (GameViewHD::updateScore), so the score
-## never goes negative no matter how large a negative move delta is.
+## 旧版累加器更新：固定参考将增量加到当前分并截断到 0 下限
+## （GameViewHD::updateScore），因此无论扣分多大，总分都不会为负。
 static func apply_delta(score: int, delta: int) -> int:
 	return maxi(0, score + delta)
 
 
-## Apply a whole executed batch's delta to a running score (floored at zero).
+## 将整批执行移动的分数变化应用到累计分（下限为 0）。
 static func apply_batch(score: int, batch: MoveBatch) -> int:
 	return apply_delta(score, batch_delta(batch))
 
 
-## Undo penalty: the restored pre-action snapshot's score, minus 2, floored at
-## zero. Applied by the executor undo path, never inside RulesEngine.
+## 撤销扣分：还原后的“动作前分数”减 2，下限为 0。
+## 由执行器撤销路径调用，绝不进入 RulesEngine 内部。
 static func undo_score(pre_action_score: int) -> int:
 	return maxi(0, pre_action_score + UNDO_PENALTY)

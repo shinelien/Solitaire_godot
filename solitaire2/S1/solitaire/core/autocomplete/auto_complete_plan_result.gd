@@ -1,12 +1,11 @@
 class_name AutoCompletePlanResult
 extends RefCounted
 
-## Typed outcome of AutoCompletePlanner.plan (WP-07). Carries eligibility, the
-## deterministic ordered list of ordinary legal moves to apply, completion,
-## a typed stop reason, step/visited metrics and a snapshot of the simulated
-## final state. The planner never mutates the source GameState; `moves` are
-## immutable plan data and `final_state_snapshot()` hands back a fresh deep
-## clone so no caller can mutate the planner's result through this object.
+## AutoCompletePlanner.plan 的类型化结果（WP-07）：携带资格判定、
+## 确定性有序的普通合法移动列表、完成情况、类型化停止原因、
+## 步数/访问度量以及模拟终局快照。
+## 规划器绝不修改源 GameState；`moves` 是不可变计划数据，
+## final_state_snapshot() 返回全新深克隆，调用方无法经由本对象改动结果。
 
 const CODE_ELIGIBLE := "eligible"
 const CODE_INVALID_STATE := "invalid_state"
@@ -65,14 +64,15 @@ static func not_eligible(code: String, message: String) -> AutoCompletePlanResul
 	return result
 
 
-## Fresh deep clone of the simulated final state, or null when the planner did
-## not simulate (not eligible). Never the planner's internal object.
+## 返回模拟终局的深克隆；当规划器未模拟（不可执行）时返回 null。
+## 返回的绝不是规划器的内部对象。
 func final_state_snapshot() -> GameState:
 	if _final_state == null:
 		return null
 	return _final_state.clone()
 
 
+## 调试用字符串：不可执行时显示原因，可执行时显示完成度与统计。
 func _to_string() -> String:
 	if not eligible:
 		return "AutoCompletePlanResult(not eligible: %s %s)" % [eligibility_code, eligibility_message]

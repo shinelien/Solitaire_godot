@@ -1,12 +1,12 @@
 class_name DeterministicDealSelector
 extends RefCounted
 
-## Minimal deterministic next-deal index selector (pure, no Node deps, WP-07).
-## Chooses `(current_index + 1) mod pool_count` and never randomizes; it never
-## reads player state, history, DDA or analytics. Unknown/singleton/invalid
-## conditions return an explicit typed error instead of a fallback index.
-## Preserves the caller's pool and draw mode (the caller re-deals from the
-## returned index). No played-history sophistication lives here in S2.
+## 极简确定性“下一牌局”序号选择器（纯逻辑，无 Node 依赖，WP-07）。
+## 规则为 `(current_index + 1) mod pool_count`，绝不随机化；
+## 不读取玩家状态、历史、DDA 或统计数据。
+## 未知牌池/单张牌池/非法序号等情况返回显式类型化错误，绝不回退索引。
+## 保留调用方的牌池与翻牌模式（由调用方用返回的序号重新发牌）。
+## S2 中不做基于已玩历史的复杂选择。
 
 const CODE_OK := "ok"
 const CODE_INVALID_POOL_COUNT := "invalid_pool_count"
@@ -14,6 +14,8 @@ const CODE_SINGLETON_POOL := "singleton_pool"
 const CODE_INVALID_CURRENT_INDEX := "invalid_current_index"
 
 
+## 计算下一局序号。成功返回 {"ok": true, "next_index": int}；
+## 失败返回带稳定错误码的字典。
 static func next_index(current_index: int, pool_count: int) -> Dictionary:
 	if pool_count < 0:
 		return {

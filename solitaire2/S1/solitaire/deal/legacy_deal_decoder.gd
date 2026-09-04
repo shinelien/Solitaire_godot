@@ -1,12 +1,11 @@
 class_name LegacyDealDecoder
 extends RefCounted
 
-## Deterministic legacy bureau decoder (pure data, no Node deps).
-## A record is 52 ASCII bytes in 48..99; id = byte - 48 in [0,51].
-## cardIds = reverse(record); gameplay consumes cardIds FIFO, so the decoded
-## `ids` below are already the consumption order. Malformed input is rejected
-## with a typed code and NEVER falls back to randomization (legacy did; we
-## must not).
+## 确定性旧版牌库（bureau）解码器（纯数据，无 Node 依赖）。
+## 一条记录为 52 个 ASCII 字节，值域 48..99；id = 字节 - 48，范围 [0,51]。
+## cardIds = reverse(record)；游戏按 FIFO 消费 cardIds，
+## 因此解码出的 `ids` 已经是消费顺序。畸形输入以类型化错误码拒绝，
+## 绝不回退到随机发牌（旧版会随机化，我们不允许）。
 
 const CARD_COUNT := 52
 const RECORD_LENGTH := 52
@@ -23,8 +22,8 @@ const CODE_INVALID_ID_RANGE := "invalid_id_range"
 const CODE_FILE_LAYOUT := "file_layout"
 
 
-## Decode one 52-byte record. Returns {"ok": true, "ids": Array[int]} or
-## {"ok": false, "error_code": String, "error_message": String}.
+## 解码一条 52 字节记录。成功返回 {"ok": true, "ids": Array[int]}；
+## 失败返回 {"ok": false, "error_code": String, "error_message": String}。
 static func decode_bytes(record: PackedByteArray) -> Dictionary:
 	if record.size() != RECORD_LENGTH:
 		return _error(CODE_INVALID_LENGTH, "record length %d != 52" % record.size())
@@ -43,24 +42,25 @@ static func decode_bytes(record: PackedByteArray) -> Dictionary:
 			return _error(CODE_DUPLICATE_ID, "duplicate id %d at source index %d" % [card_id, CARD_COUNT - 1 - i])
 		seen[card_id] = 1
 		ids.append(card_id)
-	## 52 unique ids each in 0..51 is a complete permutation by pigeonhole.
+	## 52 个互异且都在 0..51 的 id，按抽屉原理即为完整排列，无需再校验。
 	return {"ok": true, "ids": ids}
 
 
-## Decode one record given as ASCII text (52 chars). Convenience over
-## decode_bytes; the text is not mutated.
+## 以 ASCII 文本（52 字符）形式解码一条记录。decode_bytes 的便捷封装；
+## 不修改文本本身。
 static func decode_record(text: String) -> Dictionary:
 	return decode_bytes(text.to_ascii_buffer())
 
 
+## 判断一条记录文本是否为合法记录（可用于批量预检）。
 static func is_valid_record(text: String) -> bool:
 	var result := decode_record(text)
 	return result.get("ok", false)
 
 
-## Validate a whole pool buffer: layout is fixed 53-byte records (52 chars +
-## LF), every record decodes. Returns ok / record_count / optional first error
-## {at_record, error_code}. Never randomizes.
+## 校验整个牌池文件缓冲：布局须为固定 53 字节记录（52 字符 + LF），
+## 且每条记录都能解码。返回 ok / record_count / 可选首个错误
+## {first_error_index, error_code}。绝不随机化。
 static func validate_pool_bytes(bytes: PackedByteArray) -> Dictionary:
 	if bytes.is_empty():
 		return _error(CODE_FILE_LAYOUT, "empty pool file")
@@ -88,5 +88,6 @@ static func validate_pool_bytes(bytes: PackedByteArray) -> Dictionary:
 	return {"ok": true, "record_count": record_count, "first_error_index": -1}
 
 
+## 统一构造解码错误结果。
 static func _error(code: String, message: String) -> Dictionary:
 	return {"ok": false, "error_code": code, "error_message": message}

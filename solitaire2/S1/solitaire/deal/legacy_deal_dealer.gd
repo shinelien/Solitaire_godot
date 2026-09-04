@@ -1,16 +1,15 @@
 class_name LegacyDealer
 extends RefCounted
 
-## Deterministic dealer (pure data, no Node deps): turns a legacy bureau record
-## into a dealt GameState snapshot (28-tableau + 24-stock, empty waste) or a
-## player-ready snapshot that additionally auto-draws draw_count cards (1 or 3)
-## from the stock top into the waste. Never randomizes; every failure path
-## returns an explicit LegacyDealResult.
+## 确定性发牌器（纯数据，无 Node 依赖）：把一条旧版 bureau 记录转换为
+## “已发牌”GameState 快照（28 张 tableau + 24 张 stock，waste 为空），
+## 或额外把 draw_count（1 或 3）张牌从 stock 顶自动翻入 waste 的
+## “玩家就绪”快照。绝不随机化；每条失败路径都返回显式 LegacyDealResult。
 
 const TABLEAU_COLUMNS := 7
 
 
-## Dealt snapshot from a named pool + index (reads the exported pool file).
+## 从命名牌池 + 序号读取记录并生成“已发牌”快照。
 static func deal_dealt(pool: String, index: int, draw_count: int) -> LegacyDealResult:
 	var record_result := LegacyDealRepository.get_record(pool, index)
 	if not record_result.get("ok", false):
@@ -24,7 +23,7 @@ static func deal_dealt(pool: String, index: int, draw_count: int) -> LegacyDealR
 	)
 
 
-## Player-ready snapshot from a named pool + index.
+## 从命名牌池 + 序号生成“玩家就绪”快照（发牌后自动翻牌）。
 static func deal_ready(pool: String, index: int, draw_count: int) -> LegacyDealResult:
 	var record_result := LegacyDealRepository.get_record(pool, index)
 	if not record_result.get("ok", false):
@@ -38,7 +37,7 @@ static func deal_ready(pool: String, index: int, draw_count: int) -> LegacyDealR
 	)
 
 
-## Dealt snapshot from an explicit 52-char record (source for provenance).
+## 从显式 52 字符记录生成“已发牌”快照（`source` 用于记录出处）。
 static func deal_dealt_from_record(
 	record: String,
 	pool: String,
@@ -61,7 +60,7 @@ static func deal_dealt_from_record(
 	return LegacyDealResult.success(state)
 
 
-## Player-ready snapshot from an explicit 52-char record.
+## 从显式 52 字符记录生成“玩家就绪”快照。
 static func deal_ready_from_record(
 	record: String,
 	pool: String,
@@ -77,6 +76,8 @@ static func deal_ready_from_record(
 	return LegacyDealResult.success(ready)
 
 
+## 核心建态逻辑：按列主序 1..7 摆放 tableau
+## （每列最后一张翻开），其余 24 张作为盖牌存入 stock。
 static func _build_dealt_state(
 	ids: Array[int],
 	pool: String,
@@ -108,9 +109,8 @@ static func _build_dealt_state(
 	return state
 
 
-## Pop up to draw_count cards off the stock top (array end) into the waste;
-## drawn cards are face-up. Stock tops are consumed in pop order, so the last
-## drawn card ends up as the waste top (playable end).
+## 从 stock 顶（数组末尾）弹出至多 draw_count 张翻开牌放入 waste。
+## 按弹出顺序消费，因此最后翻出的牌成为 waste 顶牌（可操作端）。
 static func _apply_initial_draw(state: GameState) -> void:
 	var n := mini(state.draw_count, state.stock.size())
 	for i in n:
@@ -121,6 +121,7 @@ static func _apply_initial_draw(state: GameState) -> void:
 		state.waste.add_top(card)
 
 
+## 把牌池读取错误字典转换为类型化 LegacyDealResult 失败。
 static func _result_from_record_error(record_result: Dictionary) -> LegacyDealResult:
 	var code: String = record_result.get("error_code", LegacyDealResult.CODE_IO_ERROR)
 	return LegacyDealResult.failure(code, record_result.get("error_message", ""))

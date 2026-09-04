@@ -1,34 +1,31 @@
 class_name HintEngine
 extends RefCounted
 
-## Deterministic, non-mutating classic-Klondike hint provider (pure service,
-## no Node deps, WP-07). Never mutates GameState/history and never returns a
-## move that RulesEngine would reject: every candidate is validated through
-## RulesEngine.validate before it may be returned.
+## 确定性、不修改状态的经典 Klondike 提示提供器（纯服务，无 Node 依赖，
+## WP-07）。绝不修改 GameState/历史，也绝不返回规则引擎会拒绝的移动：
+## 每个候选在返回前都经过 RulesEngine.validate 校验。
 ##
-## Total ordering (documented, tested):
-##   TIER 0  TIER_EXPOSE            a legal tableau move whose execution exposes
-##                                  a face-down card (auto-flip) — the only tier
-##                                  that reveals new cards
-##   TIER 1  TIER_TO_FOUNDATION     a legal tableau/waste top -> foundation move
-##                                  (source scan: tableau columns 0..6 then waste;
-##                                  destination: foundation slots 0..3 ascending)
-##   TIER 2  TIER_WASTE_TO_TABLEAU  waste top -> tableau column (columns ascending)
-##   TIER 3  TIER_TABLEAU_RUN       other legal non-exposing tableau run moves
-##   TIER 4  TIER_STOCK             DRAW_STOCK, or RECYCLE_STOCK when legal
-##   TIER 5  TIER_FOUNDATION_ROLLBACK  foundation top -> tableau (last-resort fallback)
-##   TIER 6  TIER_TRIVIAL           trivial King/full-run -> empty-column shifts
-##                                  that reveal nothing (only selected when no
-##                                  move in tiers 0..5 exists)
-## Among candidates of the same tier the first in the canonical enumeration
-## order wins. `all_legal_moves` returns every legal candidate grouped by tier
-## (ascending), deterministic for an identical state.
+## 总排序（已文档化并测试）：
+##   TIER 0  TIER_EXPOSE              执行后会暴露一张盖牌的合法 tableau 移动
+##                                    （自动翻牌）——唯一能翻开新牌的层级
+##   TIER 1  TIER_TO_FOUNDATION       tableau/waste 顶牌 → foundation 的合法移动
+##                                    （源扫描顺序：tableau 列 0..6 再 waste；
+##                                    目标：foundation 槽 0..3 升序）
+##   TIER 2  TIER_WASTE_TO_TABLEAU    waste 顶牌 → tableau 列（列升序）
+##   TIER 3  TIER_TABLEAU_RUN         其它合法且不暴露盖牌的 tableau 连牌移动
+##   TIER 4  TIER_STOCK               DRAW_STOCK，或合法时的 RECYCLE_STOCK
+##   TIER 5  TIER_FOUNDATION_ROLLBACK foundation 顶牌 → tableau（最后兜底）
+##   TIER 6  TIER_TRIVIAL             不暴露牌的 K/整串移入空列的琐碎移动
+##                                    （仅当层级 0..5 均无移动时选用）
+## 同一层级内按规范枚举顺序取第一个获胜。`all_legal_moves` 返回按层级
+## （升序）分组的全部合法候选；相同状态下的结果确定。
 
-## Suit -> color group; mirrors RulesEngine so expose checks stay in Core.
+## 花色 → 颜色组；与 RulesEngine 保持一致，使“是否暴露盖牌”检查留在 Core。
 static func suit_is_red(suit: int) -> bool:
 	return suit == 1 or suit == 3
 
 
+## 返回层级的稳定可读名称（用于日志与消息）。
 static func tier_name(tier: int) -> String:
 	match tier:
 		HintResult.TIER_EXPOSE:
@@ -48,6 +45,8 @@ static func tier_name(tier: int) -> String:
 	return "none"
 
 
+## 提示入口：对给定状态返回最高优先级（层级最小）的合法移动；
+## null/已胜利/无合法移动时返回对应的类型化失败。
 static func hint(state: GameState) -> HintResult:
 	if state == null:
 		return HintResult.failure(
@@ -69,8 +68,8 @@ static func hint(state: GameState) -> HintResult:
 	return HintResult.success(best.move, int(best.tier), tier_name(int(best.tier)))
 
 
-## Every legal hintable move, deterministic: grouped by tier ascending, within
-## a tier in canonical enumeration order. Read-only.
+## 返回全部可提示的合法移动（确定性）：按层级升序分组，
+## 同一层级内按规范枚举顺序排列。只读，不修改状态。
 static func all_legal_moves(state: GameState) -> Array[Move]:
 	if state == null or state.game_status == GameState.GameStatus.WON:
 		return []
@@ -81,8 +80,9 @@ static func all_legal_moves(state: GameState) -> Array[Move]:
 	return out
 
 
-# ----- ranking -----
+# ----- 分层排序 -----
 
+## 把候选按层级升序整理：从 TIER_EXPOSE 到 TIER_TRIVIAL 逐层收集。
 static func _ranked(state: GameState) -> Array:
 	var candidates := _enumerate(state)
 	if candidates.is_empty():
@@ -95,8 +95,8 @@ static func _ranked(state: GameState) -> Array:
 	return ranked
 
 
-## Canonical deterministic enumeration. Every entry is a Dictionary
-## {"tier": int, "move": Move} and every move already passed RulesEngine.
+## 规范、确定的候选枚举。每个元素是 Dictionary
+## {"tier": int, "move": Move}，且每个移动都已通过 RulesEngine 校验。
 static func _enumerate(state: GameState) -> Array:
 	var out: Array = []
 	for src_col in GameState.TABLEAU_COUNT:
@@ -134,9 +134,9 @@ static func _enumerate(state: GameState) -> Array:
 	return out
 
 
-## All legal tableau run moves (T2T) for one source column: for every target
-## column the (at most one) run count whose bottom card fits is emitted, so
-## every valid movable suffix of the face-up run is covered.
+## 枚举单个源列的全部合法 tableau 连牌移动（T2T）：
+## 对每个目标列，至多会找到一个连牌数量使其底牌符合收牌规则，
+## 从而覆盖翻开连牌的每个可移动后缀。
 static func _append_run_moves(out: Array, state: GameState, src_col: int) -> void:
 	var pile := state.tableau_pile(src_col)
 	var max_run := _face_up_valid_run_length(pile)
@@ -151,9 +151,9 @@ static func _append_run_moves(out: Array, state: GameState, src_col: int) -> voi
 				out.append({"tier": _classify(state, move), "move": move})
 
 
-## Longest top face-up suffix that is a valid descending alternating run.
-## Walking from the pile top downward, every next (lower) card must be exactly
-## one rank higher and of the opposite color.
+## 从堆顶向下计算最长、翻开、降序交替的合法连牌后缀长度。
+## 自顶牌向下逐张检查：下一张（更靠底）牌必须比当前牌大 1 点
+## 且颜色相反。
 static func _face_up_valid_run_length(pile: CardPile) -> int:
 	if pile == null or pile.is_empty():
 		return 0
@@ -176,6 +176,7 @@ static func _face_up_valid_run_length(pile: CardPile) -> int:
 	return length
 
 
+## 给一个（已通过合法性校验的）移动分配优先级层级，供排序使用。
 static func _classify(state: GameState, move: Move) -> int:
 	match move.kind:
 		Move.MoveKind.TABLEAU_TO_TABLEAU:

@@ -1,9 +1,9 @@
 class_name MoveValidationResult
 extends RefCounted
 
-## Typed, stable outcome of a RulesEngine legality check. RulesEngine never
-## mutates state; it only answers "is this move legal and why/why not" so the
-## MoveExecutor can make decisions without ever using score to decide legality.
+## 规则引擎合法性检查的类型化、稳定结果。规则引擎从不修改状态，
+## 只回答“该移动是否合法、为什么”；MoveExecutor 据此决策，
+## 且绝不用计分来决定合法性。
 
 const CODE_OK := "ok"
 const CODE_INVALID_STATE := "invalid_state"
@@ -29,11 +29,15 @@ const CODE_NOT_FACE_DOWN := "not_face_down"
 const CODE_ALREADY_WON := "already_won"
 const CODE_INVALID_DRAW_COUNT := "invalid_draw_count"
 
+## 是否合法（true=通过）。
 var ok: bool = false
+## 失败时返回的稳定错误码；通过时为 CODE_OK。
 var error_code: String = CODE_OK
+## 失败时的可读原因说明。
 var error_message: String = ""
 
 
+## 构造“合法通过”结果。
 static func success() -> MoveValidationResult:
 	var result := MoveValidationResult.new()
 	result.ok = true
@@ -41,6 +45,7 @@ static func success() -> MoveValidationResult:
 	return result
 
 
+## 构造“非法失败”结果：携带稳定错误码与原因消息。
 static func failure(code: String, message: String) -> MoveValidationResult:
 	var result := MoveValidationResult.new()
 	result.ok = false
@@ -49,6 +54,7 @@ static func failure(code: String, message: String) -> MoveValidationResult:
 	return result
 
 
+## 调试用字符串：通过显示 ok，失败显示错误码与消息。
 func _to_string() -> String:
 	if ok:
 		return "MoveValidationResult(ok)"
