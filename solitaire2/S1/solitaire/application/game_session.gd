@@ -202,6 +202,12 @@ func hint() -> HintResult:
 	return HintEngine.hint(_state)
 
 
+## 对当前状态求最多 max_count 个按智能度排序的提示候选（只读），
+## 供 UI 在局面不变时循环展示不同建议。
+func hint_options(max_count: int = 3) -> Array[Move]:
+	return HintEngine.hint_options(_state, max_count)
+
+
 ## 对当前状态规划自动完成步骤（只读）。
 func plan_auto_complete() -> AutoCompletePlanResult:
 	return AutoCompletePlanner.plan(_state)

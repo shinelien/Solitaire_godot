@@ -155,7 +155,7 @@ func test_priority_run_beats_stock_draw_and_trivial() -> void:
 func test_priority_draw_and_recycle_when_only_stock_action() -> void:
 	var draw_state := CardStateTestkit.make_state()
 	draw_state.tableau[0] = _col([[5, false]])
-	draw_state.stock = CardStateTestkit.down([20, 21, 22])
+	draw_state.stock = CardStateTestkit.down([_s(1, 5), _s(2, 6), _s(0, 1)])
 	var hd := HintEngine.hint(draw_state)
 	assert_true(hd.ok, "draw hint present")
 	assert_eq(hd.tier, HintResult.TIER_STOCK, "draw tier")
@@ -163,22 +163,70 @@ func test_priority_draw_and_recycle_when_only_stock_action() -> void:
 
 	var recycle_state := CardStateTestkit.make_state()
 	recycle_state.tableau[0] = _col([[5, false]])
-	recycle_state.waste = CardStateTestkit.up([_s(1, 5)])
+	recycle_state.waste = CardStateTestkit.up([_s(1, 13), _s(1, 5)])
 	var hr := HintEngine.hint(recycle_state)
 	assert_true(hr.ok, "recycle hint present")
 	assert_eq(hr.tier, HintResult.TIER_STOCK, "recycle tier")
 	assert_eq(hr.move.kind, Move.MoveKind.RECYCLE_STOCK, "recycle kind")
 
 
-func test_priority_trivial_only_when_nothing_else_legal() -> void:
+func test_stock_hint_refused_when_draw_or_recycle_cannot_unlock_a_card() -> void:
+	var draw_state := CardStateTestkit.make_state()
+	draw_state.tableau[0] = _col([[5, false]])
+	draw_state.stock = CardStateTestkit.down([_s(1, 5), _s(2, 6), _s(3, 7)])
+	var hd := HintEngine.hint(draw_state)
+	assert_false(hd.ok, "pointless draw is not a useful hint")
+	assert_eq(hd.code, HintResult.CODE_NO_LEGAL_MOVE, "typed no-move reason")
+
+	var recycle_state := CardStateTestkit.make_state()
+	recycle_state.tableau[0] = _col([[5, false]])
+	recycle_state.waste = CardStateTestkit.up([_s(1, 5)])
+	var hr := HintEngine.hint(recycle_state)
+	assert_false(hr.ok, "pointless recycle is not a useful hint")
+	assert_eq(hr.code, HintResult.CODE_NO_LEGAL_MOVE, "typed no-move reason")
+
+
+func test_hint_options_cycle_deduped_ranked_candidates() -> void:
+	var state := CardStateTestkit.make_state()
+	state.tableau[0] = _col([[3, false], [_s(0, 13), true], [_s(1, 12), true], [_s(0, 11), true]])
+	state.tableau[1] = CardPile.new()
+	state.tableau[2] = _col([[_s(1, 1), true]])
+	var options := HintEngine.hint_options(state, 3)
+	assert_true(options.size() >= 2, "expose move plus foundation move available")
+	assert_eq(options[0].kind, Move.MoveKind.TABLEAU_TO_TABLEAU, "expose run is first option")
+	assert_eq(options[0].count, 3, "whole run exposure kept as the zone's best candidate")
+	assert_eq(options[1].kind, Move.MoveKind.TABLEAU_TO_FOUNDATION, "foundation move is the next option")
+	var h := HintEngine.hint(state)
+	assert_true(h.ok, "hint matches first option")
+	assert_eq(h.move.key(), options[0].key(), "hint picks the top useful option")
+
+
+func test_trivial_king_shifts_are_not_offered_as_hints() -> void:
 	var state := CardStateTestkit.make_state()
 	state.tableau[0] = _col([[_s(0, 13), true]])
 	state.tableau[1] = CardPile.new()
 	state.tableau[2] = _col([[_s(1, 13), true]])
 	var h := HintEngine.hint(state)
-	assert_true(h.ok, "trivial king shift is still a legal hint")
-	assert_eq(h.tier, HintResult.TIER_TRIVIAL, "only trivial shift available")
-	assert_eq(h.move.kind, Move.MoveKind.TABLEAU_TO_TABLEAU, "king shift kind")
+	assert_false(h.ok, "pure king-to-empty reshuffle is not a meaningful hint")
+	assert_eq(h.code, HintResult.CODE_NO_LEGAL_MOVE, "typed no-move reason")
+	assert_true(
+		HintEngine.all_legal_moves(state).size() >= 1,
+		"reshuffle stays legal for all_legal_moves even though not hinted"
+	)
+
+
+func test_foundation_rollback_is_not_offered_as_hint() -> void:
+	var state := CardStateTestkit.make_state()
+	state.foundation[0] = CardStateTestkit.foundation_of(1, 1)
+	state.tableau[0] = _col([[_s(0, 2), true]])
+	var h := HintEngine.hint(state)
+	assert_false(h.ok, "moving a foundation card back to tableau is not a meaningful hint")
+	assert_eq(h.code, HintResult.CODE_NO_LEGAL_MOVE, "typed no-move reason")
+	var rollback_seen := false
+	for m in HintEngine.all_legal_moves(state):
+		if m.kind == Move.MoveKind.FOUNDATION_TO_TABLEAU:
+			rollback_seen = true
+	assert_true(rollback_seen, "rollback stays legal in all_legal_moves")
 
 
 func test_dynamic_foundation_slots_in_hint() -> void:

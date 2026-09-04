@@ -28,11 +28,16 @@ var controller_release: Callable = Callable()
 var controller_double: Callable = Callable()
 
 var _zones: Dictionary = {}
+## Per-card board rects keyed "kind:index:card_index"; used by precise hint
+## overlays so the source highlight covers the actual moved card(s)/run.
+var _card_rects: Dictionary = {}
+## Drop landing rect keyed "kind:index": for a non-empty pile it is the top
+## card rect; for an empty tableau/foundation it is the empty slot rect.
+var _drop_rects: Dictionary = {}
 var _stock_zone: Control = null
 var _stock_callback: Callable = Callable()
 var _drag_layer: Control = null
-var _ghost: CardView = null
-var _ghost_badge: Label = null
+var _ghost_cards: Array[CardView] = []
 var _ghost_size := Vector2(BoardGeometry.CARD_W, BoardGeometry.CARD_H)
 var _hint_layer: Control = null
 
@@ -48,6 +53,8 @@ func clear_board() -> void:
 		remove_child(child)
 		child.queue_free()
 	_zones.clear()
+	_card_rects.clear()
+	_drop_rects.clear()
 	_stock_zone = null
 	_hint_layer = null
 
@@ -95,8 +102,11 @@ func _build_foundation(data: Dictionary) -> void:
 		var x := start + slot * (_card_w() + TOP_ROW_CARD_GAP)
 		if cards.is_empty():
 			_draw_slot_placeholder(x, ROW_Y, Color(1, 1, 1, 0.06), _slot_label("F%d" % (slot + 1)))
+			_drop_rects[_zone_key("foundation", slot)] = Rect2(x, ROW_Y, _card_w(), _card_h())
 		else:
 			_draw_stack(x, ROW_Y, cards, FOUNDATION_FAN, "foundation", slot, 6)
+			## The foundation top card sits at the slot origin; older cards fan right.
+			_drop_rects[_zone_key("foundation", slot)] = Rect2(x, ROW_Y, _card_w(), _card_h())
 		_zones[_zone_key("foundation", slot)] = Rect2(x, ROW_Y, _card_w(), _card_h())
 
 
@@ -140,6 +150,7 @@ func _build_tableau(data: Dictionary) -> void:
 		var x := _tableau_x(col)
 		if cards.is_empty():
 			_draw_slot_placeholder(x, TAB_TOP, Color(1, 1, 1, 0.05), "")
+			_drop_rects[_zone_key("tableau", col)] = Rect2(x, TAB_TOP, _card_w(), _card_h())
 		else:
 			var flags: Array = []
 			for card in cards:
@@ -152,6 +163,9 @@ func _build_tableau(data: Dictionary) -> void:
 				var card: Dictionary = cards[i]
 				var view := _make_card(card, positions[i], x, "tableau", col, i)
 				add_child(view)
+				var rect := Rect2(view.position, view.size)
+				_card_rects[_card_key("tableau", col, i)] = rect
+				_drop_rects[_zone_key("tableau", col)] = rect
 		_zones[_zone_key("tableau", col)] = Rect2(x, TAB_TOP, _card_w(), maxi(_card_h(), _tab_bottom() - TAB_TOP))
 
 
@@ -187,6 +201,7 @@ func _draw_stack(x: int, y: int, cards: Array, fan: int, kind: String, index: in
 		var card: Dictionary = cards[i]
 		var x_offset := (cards.size() - 1 - i) * step
 		var view := _make_card(card, y, x + x_offset, kind, index, i)
+		_card_rects[_card_key(kind, index, i)] = Rect2(view.position, view.size)
 		add_child(view)
 
 
@@ -214,6 +229,10 @@ func _draw_slot_placeholder(x: int, y: int, _color: Color, label_text: String) -
 
 func _slot_label(text: String) -> String:
 	return text
+
+
+func _card_key(kind: String, index: int, card_index: int) -> String:
+	return "%s:%d:%d" % [kind, index, card_index]
 
 
 func _zone_key(kind: String, index: int) -> String:
@@ -268,37 +287,40 @@ func _build_drag_layer() -> void:
 	add_child(_drag_layer)
 
 
-func begin_ghost(card_id: int, run_count: int, local_pos: Vector2) -> void:
+## Drag ghost now carries the whole run suffix (`card_ids`, clicked card
+## first), so moving a middle card visibly drags every card stacked below it
+## (matching the legacy reference which moves the whole sequence).
+func begin_ghost(card_ids: Array, local_pos: Vector2) -> void:
 	end_ghost()
-	_ghost = CardView.new()
-	_ghost.set_size(_ghost_size)
-	_ghost.configure(card_id, true, _textures_for(card_id), {})
-	_ghost.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_drag_layer.add_child(_ghost)
-	if run_count > 1:
-		_ghost_badge = Label.new()
-		_ghost_badge.text = "x%d" % run_count
-		_ghost_badge.add_theme_font_size_override("font_size", 26)
-		_ghost_badge.modulate = Color(1, 1, 1, 0.9)
-		_drag_layer.add_child(_ghost_badge)
+	if card_ids.is_empty():
+		return
+	for id in card_ids:
+		var view := CardView.new()
+		view.set_size(_ghost_size)
+		view.configure(int(id), true, _textures_for(int(id)), {})
+		view.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_drag_layer.add_child(view)
+		_ghost_cards.append(view)
 	move_ghost(local_pos)
 
 
 func move_ghost(local_pos: Vector2) -> void:
-	if _ghost == null:
+	if _ghost_cards.is_empty():
 		return
-	_ghost.set_position(local_pos + Vector2(18, 18) - _ghost_size / 2)
-	if _ghost_badge != null:
-		_ghost_badge.set_position(local_pos + Vector2(18, 18) + Vector2(_ghost_size.x / 2, -8))
+	var top := local_pos + Vector2(18, 18) - _ghost_size / 2
+	var drop := (_ghost_cards.size() - 1) * BoardGeometry.FAN_OPEN
+	var overflow := top.y + _ghost_size.y + drop - (size.y - 4.0)
+	if overflow > 0.0:
+		top.y -= overflow
+	for i in _ghost_cards.size():
+		_ghost_cards[i].set_position(top + Vector2(0, i * BoardGeometry.FAN_OPEN))
 
 
 func end_ghost() -> void:
-	if _ghost != null:
-		_ghost.queue_free()
-		_ghost = null
-	if _ghost_badge != null:
-		_ghost_badge.queue_free()
-		_ghost_badge = null
+	for view in _ghost_cards:
+		if is_instance_valid(view):
+			view.queue_free()
+	_ghost_cards.clear()
 
 
 # ----- hint highlight overlays (read-only feedback) -----
@@ -361,11 +383,32 @@ func hint_overlay_colors() -> Array:
 
 
 func _rect_for_move_source(source: Dictionary) -> Rect2:
-	return _zones.get(_zone_key(source.get("kind", ""), int(source.get("index", -1))), Rect2())
+	var kind: String = source.get("kind", "")
+	var index := int(source.get("index", -1))
+	var zone: Rect2 = _zones.get(_zone_key(kind, index), Rect2())
+	if kind != "tableau" or not source.has("card_index"):
+		return zone
+	## Precise source highlight: only the moved run suffix, never the whole
+	## column. Director sends card_index of the run bottom + run count.
+	var start := int(source.get("card_index", -1))
+	var count := maxi(1, int(source.get("count", 1)))
+	var merged := Rect2()
+	var found := false
+	for i in range(start, start + count):
+		var rect: Rect2 = _card_rects.get(_card_key(kind, index, i), Rect2())
+		if rect.has_area():
+			merged = rect if not found else merged.merge(rect)
+			found = true
+	return merged if merged.has_area() else zone
 
 
 func _rect_for_move_target(target: Dictionary) -> Rect2:
-	return _zones.get(_zone_key(target.get("kind", ""), int(target.get("index", -1))), Rect2())
+	var kind: String = target.get("kind", "")
+	var index := int(target.get("index", -1))
+	var drop: Rect2 = _drop_rects.get(_zone_key(kind, index), Rect2())
+	if drop.has_area():
+		return drop
+	return _zones.get(_zone_key(kind, index), Rect2())
 
 
 func _make_overlay(rect: Rect2, color: Color) -> ColorRect:

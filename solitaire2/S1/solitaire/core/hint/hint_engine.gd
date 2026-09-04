@@ -14,11 +14,12 @@ extends RefCounted
 ##   TIER 2  TIER_WASTE_TO_TABLEAU    waste 顶牌 → tableau 列（列升序）
 ##   TIER 3  TIER_TABLEAU_RUN         其它合法且不暴露盖牌的 tableau 连牌移动
 ##   TIER 4  TIER_STOCK               DRAW_STOCK，或合法时的 RECYCLE_STOCK
-##   TIER 5  TIER_FOUNDATION_ROLLBACK foundation 顶牌 → tableau（最后兜底）
+##   TIER 5  TIER_FOUNDATION_ROLLBACK foundation 顶牌 → tableau
 ##   TIER 6  TIER_TRIVIAL             不暴露牌的 K/整串移入空列的琐碎移动
-##                                    （仅当层级 0..5 均无移动时选用）
-## 同一层级内按规范枚举顺序取第一个获胜。`all_legal_moves` 返回按层级
-## （升序）分组的全部合法候选；相同状态下的结果确定。
+## 层级 0..4 只用于分类全部合法候选；**hint/hint_options 只提供真正有
+## 正向作用**的移动：送基、翻开盖牌、接龙落位、能解锁落牌的翻牌/重翻。
+## ROLLBACK 与 TRIVIAL 属于“挪动但没有进展”，不作为建议（`all_legal_moves`
+## 仍完整返回，供自动/其它调用方使用）。相同状态下的结果确定。
 
 ## 花色 → 颜色组；与 RulesEngine 保持一致，使“是否暴露盖牌”检查留在 Core。
 static func suit_is_red(suit: int) -> bool:
@@ -45,8 +46,9 @@ static func tier_name(tier: int) -> String:
 	return "none"
 
 
-## 提示入口：对给定状态返回最高优先级（层级最小）的合法移动；
-## null/已胜利/无合法移动时返回对应的类型化失败。
+## 提示入口：对给定状态返回最高优先级（层级最小）且有正向作用的合法
+## 移动；null/已胜利/无有效移动时返回对应的类型化失败。翻牌/重置只在
+## 后续轮次确实可能翻出可落 A/K 的牌时才给出，避免提示无意义的洗牌。
 static func hint(state: GameState) -> HintResult:
 	if state == null:
 		return HintResult.failure(
@@ -64,8 +66,15 @@ static func hint(state: GameState) -> HintResult:
 			HintResult.CODE_NO_LEGAL_MOVE,
 			"no legal hintable move exists in this state"
 		)
-	var best: Dictionary = ranked[0]
-	return HintResult.success(best.move, int(best.tier), tier_name(int(best.tier)))
+	var options := hint_options(state, 1)
+	if options.is_empty():
+		return HintResult.failure(
+			HintResult.CODE_NO_LEGAL_MOVE,
+			"no useful hintable move remains (draw/recycle would not unlock a card, or only reshuffles/rollbacks are legal)"
+		)
+	var move: Move = options[0]
+	var tier := _classify(state, move)
+	return HintResult.success(move, tier, tier_name(tier))
 
 
 ## 返回全部可提示的合法移动（确定性）：按层级升序分组，
@@ -77,6 +86,35 @@ static func all_legal_moves(state: GameState) -> Array[Move]:
 	var out: Array[Move] = []
 	for entry in ranked:
 		out.append(entry.move)
+	return out
+
+
+## 供 UI 循环展示的有用提示候选（确定性）：按提示层级升序取最多
+## max_count 个，过滤“翻牌/重置后仍无牌可落”的 stock 建议，并按
+## “效果等价”去重（同一个源移到任意空 tableau 列 / 空 foundation
+## 槽效果相同，只保留第一个）。只读。
+static func hint_options(state: GameState, max_count: int = 3) -> Array[Move]:
+	var out: Array[Move] = []
+	if state == null or state.game_status == GameState.GameStatus.WON:
+		return out
+	if max_count <= 0:
+		return out
+	var ranked := _ranked(state)
+	var seen := {}
+	for entry in ranked:
+		if out.size() >= max_count:
+			break
+		var move: Move = entry.move
+		var tier := int(entry.tier)
+		if tier == HintResult.TIER_STOCK and not _stock_can_unlock(state):
+			continue
+		if tier == HintResult.TIER_FOUNDATION_ROLLBACK or tier == HintResult.TIER_TRIVIAL:
+			continue
+		var hint_key := _hint_key(state, move)
+		if seen.has(hint_key):
+			continue
+		seen[hint_key] = true
+		out.append(move)
 	return out
 
 
@@ -174,6 +212,55 @@ static func _face_up_valid_run_length(pile: CardPile) -> int:
 		prev = card
 		i -= 1
 	return length
+
+
+## 判断翻牌/整堆重翻之后，stock/waste 里是否确实存在后续可落到
+## foundation 或 tableau 的牌（与旧参考 getTips 的“无有效移动”判断
+## 一致，保守扫描；不修改原状态）。用临时克隆把每张候选牌放到 waste
+## 顶再走 RulesEngine 校验，提示层自身不重复实现收牌规则。
+static func _stock_can_unlock(state: GameState) -> bool:
+	var candidates: Array = []
+	candidates.append_array(state.stock.cards_snapshot())
+	candidates.append_array(state.waste.cards_snapshot())
+	if candidates.is_empty():
+		return false
+	var probe := state.clone()
+	for card: CardData in candidates:
+		probe.waste = CardPile.new()
+		probe.waste.add_top(CardData.new(card.id, true))
+		for slot in GameState.FOUNDATION_COUNT:
+			var wf := Move.waste_to_foundation(slot)
+			if RulesEngine.validate(probe, wf).ok:
+				return true
+		for col in GameState.TABLEAU_COUNT:
+			var wt := Move.waste_to_tableau(col)
+			if RulesEngine.validate(probe, wt).ok:
+				return true
+	return false
+
+
+## 提示去重键：把“移到任意空列/空基”这类效果等价的建议折叠为一个，
+## 避免 UI 循环提示同一手牌的不同空位。
+static func _hint_key(state: GameState, move: Move) -> String:
+	var src := "%s:%s[%d]" % [
+		Move.kind_name(move.kind),
+		Move.location_name(move.source_location),
+		move.source_index,
+	]
+	match move.kind:
+		Move.MoveKind.TABLEAU_TO_TABLEAU:
+			var dst := state.tableau_pile(move.target_index)
+			if dst != null and dst.is_empty():
+				return "%s->empty-tableau:x%d" % [src, move.count]
+		Move.MoveKind.TABLEAU_TO_FOUNDATION, Move.MoveKind.WASTE_TO_FOUNDATION:
+			var slot := state.foundation_pile(move.target_index)
+			if slot != null and slot.is_empty():
+				return "%s->empty-foundation" % src
+	return "%s->%s[%d]" % [
+		src,
+		Move.location_name(move.target_location),
+		move.target_index,
+	]
 
 
 ## 给一个（已通过合法性校验的）移动分配优先级层级，供排序使用。

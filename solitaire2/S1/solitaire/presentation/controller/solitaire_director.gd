@@ -10,6 +10,9 @@ extends Node
 ## piles directly and never duplicates rule legality: attempted moves are
 ## validated by MoveExecutor inside the session. CardView/BoardView only
 ## render/forward; all game semantics stay in Core/Application.
+## A tap (release without drag) or double-tap on a waste/tableau card
+## auto-targets it via InputInterpreter.auto_find_move: foundation slots
+## first, then a legal tableau run position (legacy reference order).
 ##
 ## `mcp_debug_load_fixture()` is an explicit, documented non-production seam
 ## used only by MCP runtime acceptance to load controlled boards through the
@@ -50,6 +53,8 @@ var _buttons: Dictionary = {}
 var _press: Dictionary = {}
 var _drag_active := false
 var _hint_timer := -1.0
+var _hint_queue: Array[Move] = []
+var _hint_queue_index := -1
 var _auto_moves: Array[Move] = []
 var _auto_index := 0
 var _auto_active := false
@@ -285,6 +290,9 @@ func _refresh() -> void:
 	if _session == null:
 		return
 	_state = _session.state_snapshot()
+	_hint_queue.clear()
+	_hint_queue_index = -1
+	_hint_timer = -1.0
 	if _state != null and _state.game_status != GameState.GameStatus.WON:
 		_hide_win()
 	if _board == null:
@@ -365,14 +373,18 @@ func _on_hint() -> void:
 	_stop_auto("已停止自动")
 	if _session == null:
 		return
-	var hint := _session.hint()
-	if not hint.ok or hint.move == null:
-		_msg = "提示: %s" % hint.message
+	if _hint_queue.is_empty():
+		_hint_queue = _session.hint_options(3)
+		_hint_queue_index = -1
+	if _hint_queue.is_empty():
+		_msg = "提示: 没有找到合适的提示"
 		_update_labels()
 		return
-	_msg = "提示: %s" % hint.move.description()
-	var source := _source_of_move(hint.move)
-	var target := _target_of_move(hint.move)
+	_hint_queue_index = (_hint_queue_index + 1) % _hint_queue.size()
+	var move: Move = _hint_queue[_hint_queue_index]
+	_msg = "提示 %d/%d: %s" % [_hint_queue_index + 1, _hint_queue.size(), move.description()]
+	var source := _source_of_move(move)
+	var target := _target_of_move(move)
 	if _board != null:
 		_board.show_hint(source, target)
 	_hint_timer = Time.get_ticks_msec() / 1000.0 + HINT_SECONDS
@@ -460,18 +472,27 @@ func _on_card_press(view: CardView, _global_pos: Vector2) -> void:
 func _on_card_double(view: CardView, _global_pos: Vector2) -> void:
 	if _session == null or _state == null:
 		return
+	if not view.source.get("kind", "") in ["waste", "tableau"]:
+		return
+	_try_auto_place(view.source)
+
+
+## Shared auto-target entry for a single tap and a double tap: resolve the
+## best legal destination through Core (InputInterpreter + RulesEngine).
+func _try_auto_place(source: Dictionary) -> void:
+	if _session == null or _state == null:
+		return
 	_press = {}
 	if _drag_active:
 		_end_drag()
-	if not view.source.get("kind", "") in ["waste", "tableau"]:
+	if not source.get("kind", "") in ["waste", "tableau"]:
 		return
-	var move := InputInterpreter.double_click_move(_state, view.source)
+	var move := InputInterpreter.auto_find_move(_state, source)
 	if move == null:
-		_msg = "该顶牌不能送到基牌区"
+		_msg = "没有可放的位置"
 		_play_sound(SND_NOMOVE)
 		_update_labels()
 		return
-	_msg = "双击: %s" % move.description()
 	_commit(move)
 
 
@@ -503,6 +524,11 @@ func _on_card_release(_view: CardView, global_pos: Vector2) -> void:
 			_update_labels()
 			return
 		_commit(move)
+		return
+	## Tap without drag: let the tapped card auto-find its destination.
+	var source: Dictionary = press.get("source", {})
+	if source.get("kind", "") in ["waste", "tableau"]:
+		_try_auto_place(source)
 
 
 func _commit(move: Move) -> void:
@@ -578,7 +604,7 @@ func _start_drag(at_pos: Vector2) -> void:
 	if desc.is_empty():
 		return
 	if _board != null:
-		_board.begin_ghost(desc.card_id, desc.run_count, at_pos - _board_origin())
+		_board.begin_ghost(desc.card_ids, at_pos - _board_origin())
 	_drag_active = true
 
 
@@ -608,7 +634,11 @@ func _drag_source_desc(source: Dictionary) -> Dictionary:
 	var card := pile.card_at(ci)
 	if card == null or not card.face_up:
 		return {}
-	return {"card_id": card.id, "run_count": pile.size() - ci}
+	var cards := pile.cards_snapshot()
+	var card_ids: Array = []
+	for i in range(ci, pile.size()):
+		card_ids.append(cards[i].id)
+	return {"card_id": card.id, "run_count": card_ids.size(), "card_ids": card_ids}
 
 
 func _end_drag() -> void:
@@ -679,7 +709,14 @@ func _play_sound(path: String) -> void:
 func _source_of_move(move: Move) -> Dictionary:
 	match move.source_location:
 		Move.Location.LOC_TABLEAU:
-			return {"kind": "tableau", "index": move.source_index}
+			var desc := {"kind": "tableau", "index": move.source_index}
+			var pile := _state.tableau_pile(move.source_index) if _state != null else null
+			if pile != null and not pile.is_empty() and move.count > 0:
+				var start := pile.size() - move.count
+				if start >= 0:
+					desc["card_index"] = start
+					desc["count"] = move.count
+			return desc
 		Move.Location.LOC_WASTE:
 			return {"kind": "waste", "index": -1}
 		Move.Location.LOC_FOUNDATION:

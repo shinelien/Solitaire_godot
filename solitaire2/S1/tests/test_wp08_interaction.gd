@@ -93,6 +93,77 @@ func test_double_click_translation_uses_core_legal_moves() -> void:
 	assert_true(buried == null, "buried card has no double-click foundation move")
 
 
+func test_auto_find_prefers_foundation_over_tableau_attach() -> void:
+	var state := GameState.new()
+	state.tableau_pile(0).add_top(CardData.new(fid(1, 1), true))
+	state.tableau_pile(1).add_top(CardData.new(fid(0, 2), true))
+	var move := InputInterpreter.auto_find_move(
+		state, {"kind": "tableau", "index": 0, "card_index": 0}
+	)
+	assert_true(move != null, "heart ace has a destination")
+	assert_eq(move.kind, Move.MoveKind.TABLEAU_TO_FOUNDATION, "foundation slot wins over tableau attach")
+	assert_eq(move.target_index, 0, "ace targets the first empty foundation slot")
+
+
+func test_auto_find_tableau_top_attaches_to_tableau_run() -> void:
+	var state := GameState.new()
+	state.tableau_pile(0).add_top(CardData.new(fid(1, 6), true))
+	state.tableau_pile(1).add_top(CardData.new(fid(0, 7), true))
+	var move := InputInterpreter.auto_find_move(
+		state, {"kind": "tableau", "index": 0, "card_index": 0}
+	)
+	assert_true(move != null, "heart 6 can attach under spade 7")
+	assert_eq(move.kind, Move.MoveKind.TABLEAU_TO_TABLEAU, "tableau-to-tableau found when no foundation slot matches")
+	assert_eq(move.source_index, 0, "run source column")
+	assert_eq(move.target_index, 1, "run target column")
+	assert_eq(move.count, 1, "column top moves as a single card")
+
+
+func test_auto_find_waste_attaches_to_tableau_run() -> void:
+	var state := GameState.new()
+	state.waste.add_top(CardData.new(fid(1, 6), true))
+	state.tableau_pile(0).add_top(CardData.new(fid(0, 7), true))
+	var move := InputInterpreter.auto_find_move(
+		state, {"kind": "waste", "index": -1, "card_index": 0}
+	)
+	assert_true(move != null, "waste heart 6 can attach under spade 7")
+	assert_eq(move.kind, Move.MoveKind.WASTE_TO_TABLEAU, "waste-to-tableau found when no foundation slot matches")
+	assert_eq(move.target_index, 0, "waste attaches to tableau column 0")
+
+
+func test_auto_find_buried_tableau_card_moves_legal_run_suffix() -> void:
+	var state := GameState.new()
+	state.tableau_pile(0).add_top(CardData.new(fid(1, 9), true))
+	state.tableau_pile(0).add_top(CardData.new(fid(0, 8), true))
+	state.tableau_pile(0).add_top(CardData.new(fid(1, 7), true))
+	state.tableau_pile(1).add_top(CardData.new(fid(1, 9), true))
+	var move := InputInterpreter.auto_find_move(
+		state, {"kind": "tableau", "index": 0, "card_index": 1}
+	)
+	assert_true(move != null, "spade 8 suffix can attach under heart 9")
+	assert_eq(move.kind, Move.MoveKind.TABLEAU_TO_TABLEAU, "run suffix move kind")
+	assert_eq(move.source_index, 0, "run suffix source column")
+	assert_eq(move.target_index, 1, "run suffix target column")
+	assert_eq(move.count, 2, "clicked card plus the legal cards above it move together")
+
+
+func test_auto_find_rejects_face_down_and_other_kinds() -> void:
+	var state := GameState.new()
+	state.tableau_pile(0).add_top(CardData.new(fid(1, 6), false))
+	var face_down := InputInterpreter.auto_find_move(
+		state, {"kind": "tableau", "index": 0, "card_index": 0}
+	)
+	assert_true(face_down == null, "face-down card is never auto-targeted")
+	assert_true(
+		InputInterpreter.auto_find_move(state, {"kind": "stock", "index": -1, "card_index": -1}) == null,
+		"stock source is not auto-targeted (stock click deals)"
+	)
+	assert_true(
+		InputInterpreter.auto_find_move(state, {"kind": "foundation", "index": 0, "card_index": 0}) == null,
+		"foundation source is not auto-targeted"
+	)
+
+
 func test_illegal_drop_is_zero_mutation() -> void:
 	var created := GameSession.debug_create_state(FixtureStates.ops_state(), GameState.DRAW1)
 	assert_true(created.ok, "debug session created")
@@ -255,6 +326,91 @@ func test_repeated_hints_do_not_stack_overlays() -> void:
 	board.clear_hint()
 
 
+func test_hint_top_card_overlay_is_card_height_not_full_column() -> void:
+	var board := BoardView.new()
+	board.set_size(Vector2(1080, 1920))
+	var empty: Array = []
+	var tableau: Array = []
+	for col in 7:
+		if col == 0:
+			tableau.append([
+				{"id": fid(0, 13), "face_up": true},
+				{"id": fid(1, 12), "face_up": true},
+			])
+		else:
+			tableau.append(empty.duplicate())
+	var foundation: Array = []
+	for slot in 4:
+		foundation.append(empty.duplicate())
+	board.render({
+		"draw_count": GameState.DRAW1,
+		"score": 0,
+		"move_count": 0,
+		"stock_passes": 0,
+		"status": "IN_PROGRESS",
+		"stock": empty.duplicate(),
+		"waste": empty.duplicate(),
+		"tableau": tableau,
+		"foundation": foundation,
+	})
+	var zone := board.zone_rect("tableau", 0)
+	board.show_hint(
+		{"kind": "tableau", "index": 0, "card_index": 1, "count": 1},
+		{"kind": "tableau", "index": 1}
+	)
+	var rects := board.hint_overlay_rects()
+	assert_eq(rects.size(), 2, "source and drop overlays rendered")
+	assert_eq(rects[0].size.y, float(BoardGeometry.CARD_H), "top-card hint covers only the playable card, not the column")
+	assert_true(rects[0].position.y > zone.position.y, "source highlight starts at the card, below the column top")
+	assert_eq(rects[1].size.y, float(BoardGeometry.CARD_H), "empty-column drop target is the slot height")
+	assert_true(rects[1].size.y < zone.size.y, "drop target is not the full-height column")
+	board.clear_hint()
+
+
+func test_hint_run_source_overlay_spans_only_moved_cards() -> void:
+	var board := BoardView.new()
+	board.set_size(Vector2(1080, 1920))
+	var empty: Array = []
+	var tableau: Array = []
+	for col in 7:
+		if col == 0:
+			tableau.append([
+				{"id": 3, "face_up": false},
+				{"id": fid(0, 13), "face_up": true},
+				{"id": fid(1, 12), "face_up": true},
+				{"id": fid(0, 11), "face_up": true},
+			])
+		else:
+			tableau.append(empty.duplicate())
+	var foundation: Array = []
+	for slot in 4:
+		foundation.append(empty.duplicate())
+	board.render({
+		"draw_count": GameState.DRAW1,
+		"score": 0,
+		"move_count": 0,
+		"stock_passes": 0,
+		"status": "IN_PROGRESS",
+		"stock": empty.duplicate(),
+		"waste": empty.duplicate(),
+		"tableau": tableau,
+		"foundation": foundation,
+	})
+	board.show_hint(
+		{"kind": "tableau", "index": 0, "card_index": 2, "count": 2},
+		{"kind": "tableau", "index": 1}
+	)
+	var rects := board.hint_overlay_rects()
+	assert_eq(rects.size(), 2, "run source and drop overlays rendered")
+	assert_eq(
+		rects[0].size.y,
+		float(BoardGeometry.CARD_H + BoardGeometry.FAN_OPEN),
+		"run hint spans only the moved Q+J suffix"
+	)
+	assert_true(rects[0].position.y > float(BoardView.TAB_TOP), "run overlay starts at the moved card, not the covered column bottom")
+	board.clear_hint()
+
+
 func test_debug_create_state_refuses_invalid_permutations() -> void:
 	var not52 := GameSession.debug_create_state(GameState.new(), GameState.DRAW1)
 	assert_false(not52.ok, "empty state is refused")
@@ -294,3 +450,25 @@ func test_board_geometry_full_card_is_visible_in_available_band() -> void:
 	assert_true(single.valid, "single open card fits")
 	assert_eq(single.used, BoardGeometry.CARD_H, "single card uses one full card height")
 	assert_false(single.compressed, "never compressed for a single card")
+
+
+func test_drag_ghost_carries_whole_run_suffix() -> void:
+	var board := BoardView.new()
+	_render_empty_board(board)
+	var run_ids: Array = [1, 14, 27]
+	board.begin_ghost(run_ids, Vector2(540, 500))
+	assert_eq(board._ghost_cards.size(), 3, "ghost shows clicked card plus every card stacked below it")
+	assert_true(board._ghost_cards[0].position.y < board._ghost_cards[1].position.y, "run fans downward like the tableau")
+	assert_eq(
+		board._ghost_cards[1].position.y - board._ghost_cards[0].position.y,
+		float(BoardGeometry.FAN_OPEN),
+		"open-card ghost gap matches the tableau fan"
+	)
+	board.move_ghost(Vector2(540, 1850))
+	var last: CardView = board._ghost_cards[board._ghost_cards.size() - 1]
+	assert_true(
+		last.position.y + last.size.y <= board.size.y,
+		"run ghost is clamped inside the board"
+	)
+	board.end_ghost()
+	assert_eq(board._ghost_cards.size(), 0, "end_ghost releases every run card")
