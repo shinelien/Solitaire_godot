@@ -1,0 +1,191 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/img/BeiJing2.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_bgshadow.png" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/scene7_0.tscn" id="4"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 16.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_top/Image_3:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 16.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-0.0024, 960.0), Vector2(-0.0024, 960.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 1379
+metadata/action_tag = 0
+
+[node name="Panel_4" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_4"
+metadata/cocos_tag = 5465
+metadata/action_tag = 1743324143
+color = Color(0.58824, 0.78431, 1.0, 0.4)
+
+[node name="desktop2_1" type="TextureRect" parent="Panel_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.5
+offset_top = -64.0002
+offset_right = 1012.5
+offset_bottom = 1983.9998
+pivot_offset = Vector2(472.5, 1024.0)
+scale = Vector2(1.145, 1.25)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "desktop2_1"
+metadata/cocos_tag = 1460
+metadata/action_tag = 1511189331
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_top" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top"
+metadata/cocos_tag = 1403
+metadata/action_tag = -1753332377
+
+[node name="Image_3" type="TextureRect" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0024
+offset_top = 960.0
+offset_right = 1079.9976
+offset_bottom = 2121.984
+pivot_offset = Vector2(540.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 187
+metadata/action_tag = -978378331
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_3_0" type="TextureRect" parent="Panel_top/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0012
+offset_top = -0.116
+offset_right = 1079.9988
+offset_bottom = 1278.884
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3_0"
+metadata/cocos_tag = 188
+metadata/action_tag = -759340050
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="spine0" type="Control" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -35.964
+offset_top = -201.6001
+offset_right = -35.964
+offset_bottom = -201.6001
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "spine0"
+metadata/cocos_tag = 469
+metadata/action_tag = 712132262
+
+[node name="spine1" type="Control" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -234.684
+offset_top = 1832.832
+offset_right = -234.684
+offset_bottom = 1832.832
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = -1.07093
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "spine1"
+metadata/cocos_tag = 470
+metadata/action_tag = -54340973
+
+[node name="spine2" type="Control" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1443.312
+offset_top = 566.4
+offset_right = 1443.312
+offset_bottom = 566.4
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "spine2"
+metadata/cocos_tag = 471
+metadata/action_tag = -954202590
+
+[node name="Particle_1" type="Control" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -178.956
+offset_top = -235.0081
+offset_right = -178.956
+offset_bottom = -235.0081
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(2.0, 2.0)
+rotation = -2.60964
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 189
+metadata/action_tag = -499511516
+
+[node name="Emitter" parent="Panel_top/Particle_1" instance=ExtResource("4")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

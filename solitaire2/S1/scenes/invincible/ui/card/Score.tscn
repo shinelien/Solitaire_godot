@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="2"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_gre2x.fnt" id="3"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_red2x.fnt" id="5"]
+
+[sub_resource type="Animation" id="Anim_start0"]
+resource_name = "start0"
+length = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_Addpoints:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(24.0, -70.0), Vector2(24.0, -93.73321), Vector2(24.0, -103.31973), Vector2(24.0, -110.50699), Vector2(24.0, -116.42308), Vector2(24.0, -121.50788), Vector2(24.0, -125.98834), Vector2(24.0, -130.0), Vector2(24.0, -133.63159), Vector2(24.0, -136.945), Vector2(24.0, -139.98542), Vector2(24.0, -142.78708), Vector2(24.0, -145.37661), Vector2(24.0, -147.77519), Vector2(24.0, -150.0), Vector2(24.0, -152.06518), Vector2(24.0, -153.98251), Vector2(24.0, -155.76189), Vector2(24.0, -157.41176), Vector2(24.0, -158.93933), Vector2(24.0, -160.35079), Vector2(24.0, -161.65151), Vector2(24.0, -162.84615), Vector2(24.0, -163.93876), Vector2(24.0, -164.93284), Vector2(24.0, -165.83148), Vector2(24.0, -166.63734), Vector2(24.0, -167.35271), Vector2(24.0, -167.97959), Vector2(24.0, -168.51966), Vector2(24.0, -168.97433), Vector2(24.0, -169.34479), Vector2(24.0, -169.63198), Vector2(24.0, -169.8366), Vector2(24.0, -169.95918), Vector2(24.0, -170.0), Vector2(24.0, -170.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_Addpoints:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.97143), Color(1, 1, 1, 0.94286), Color(1, 1, 1, 0.91429), Color(1, 1, 1, 0.88571), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.82857), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.77143), Color(1, 1, 1, 0.74286), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.68571), Color(1, 1, 1, 0.65714), Color(1, 1, 1, 0.62857), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.54286), Color(1, 1, 1, 0.51429), Color(1, 1, 1, 0.48571), Color(1, 1, 1, 0.45714), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.37143), Color(1, 1, 1, 0.34286), Color(1, 1, 1, 0.31429), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.25714), Color(1, 1, 1, 0.22857), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.17143), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.11429), Color(1, 1, 1, 0.08571), Color(1, 1, 1, 0.05714), Color(1, 1, 1, 0.02857), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_Addpoints:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.8, 0.8), Vector2(0.79714, 0.79714), Vector2(0.79429, 0.79429), Vector2(0.79143, 0.79143), Vector2(0.78857, 0.78857), Vector2(0.78571, 0.78571), Vector2(0.78286, 0.78286), Vector2(0.78, 0.78), Vector2(0.77714, 0.77714), Vector2(0.77429, 0.77429), Vector2(0.77143, 0.77143), Vector2(0.76857, 0.76857), Vector2(0.76571, 0.76571), Vector2(0.76286, 0.76286), Vector2(0.76, 0.76), Vector2(0.75714, 0.75714), Vector2(0.75429, 0.75429), Vector2(0.75143, 0.75143), Vector2(0.74857, 0.74857), Vector2(0.74571, 0.74571), Vector2(0.74286, 0.74286), Vector2(0.74, 0.74), Vector2(0.73714, 0.73714), Vector2(0.73429, 0.73429), Vector2(0.73143, 0.73143), Vector2(0.72857, 0.72857), Vector2(0.72571, 0.72571), Vector2(0.72286, 0.72286), Vector2(0.72, 0.72), Vector2(0.71714, 0.71714), Vector2(0.71429, 0.71429), Vector2(0.71143, 0.71143), Vector2(0.70857, 0.70857), Vector2(0.70571, 0.70571), Vector2(0.70286, 0.70286), Vector2(0.7, 0.7), Vector2(0.7, 0.7)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_Minuspoints:position")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(20.0, -70.0), Vector2(20.0, -70.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_Minuspoints:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_Minuspoints:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_start1"]
+resource_name = "start1"
+length = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_Addpoints:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(24.0, -170.0), Vector2(24.0, -170.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_Addpoints:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_Addpoints:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.7, 0.7), Vector2(0.7, 0.7)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_Minuspoints:position")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(20.0, -70.0), Vector2(20.0, -76.66309), Vector2(20.0, -82.94554), Vector2(20.0, -88.85854), Vector2(20.0, -94.41329), Vector2(20.0, -99.62099), Vector2(20.0, -104.49283), Vector2(20.0, -109.04), Vector2(20.0, -113.2737), Vector2(20.0, -117.20513), Vector2(20.0, -120.84548), Vector2(20.0, -124.20595), Vector2(20.0, -127.29773), Vector2(20.0, -130.13201), Vector2(20.0, -132.72), Vector2(20.0, -135.07289), Vector2(20.0, -137.20187), Vector2(20.0, -139.11813), Vector2(20.0, -140.83289), Vector2(20.0, -142.35732), Vector2(20.0, -143.70262), Vector2(20.0, -144.88), Vector2(20.0, -145.90064), Vector2(20.0, -146.77574), Vector2(20.0, -147.5165), Vector2(20.0, -148.13411), Vector2(20.0, -148.63977), Vector2(20.0, -149.04466), Vector2(20.0, -149.36), Vector2(20.0, -149.59697), Vector2(20.0, -149.76676), Vector2(20.0, -149.88058), Vector2(20.0, -149.94962), Vector2(20.0, -149.98507), Vector2(20.0, -149.99813), Vector2(20.0, -150.0), Vector2(20.0, -150.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_Minuspoints:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.97143), Color(1, 1, 1, 0.94286), Color(1, 1, 1, 0.91429), Color(1, 1, 1, 0.88571), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.82857), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.77143), Color(1, 1, 1, 0.74286), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.68571), Color(1, 1, 1, 0.65714), Color(1, 1, 1, 0.62857), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.54286), Color(1, 1, 1, 0.51429), Color(1, 1, 1, 0.48571), Color(1, 1, 1, 0.45714), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.37143), Color(1, 1, 1, 0.34286), Color(1, 1, 1, 0.31429), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.25714), Color(1, 1, 1, 0.22857), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.17143), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.11429), Color(1, 1, 1, 0.08571), Color(1, 1, 1, 0.05714), Color(1, 1, 1, 0.02857), Color(1, 1, 1, 0.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_Minuspoints:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.01667, 1.0), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"start0": SubResource("Anim_start0"),
+"start1": SubResource("Anim_start1")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 665
+metadata/action_tag = 0
+
+[node name="Node_Addpoints" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 24.0
+offset_top = -167.9796
+offset_right = 24.0
+offset_bottom = -167.9796
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.72, 0.72)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.91373)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_Addpoints"
+metadata/cocos_tag = 667
+metadata/action_tag = 1137670573
+
+[node name="Text_add" type="Label" parent="Node_Addpoints"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -33.5
+offset_top = -45.0
+offset_right = 33.5
+offset_bottom = 45.0
+pivot_offset = Vector2(33.5, 45.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_add"
+metadata/cocos_tag = 666
+metadata/action_tag = -1048380709
+script = ExtResource("4")
+design_size = Vector2(67.0, 90.0)
+design_center = Vector2(0.0, 0.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "5"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_1" type="Label" parent="Node_Addpoints/Text_add"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -67.0
+offset_top = -2.0
+offset_right = 5.0
+offset_bottom = 88.0
+pivot_offset = Vector2(36.0, 45.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 51
+metadata/action_tag = 716669894
+script = ExtResource("4")
+design_size = Vector2(72.0, 90.0)
+design_center = Vector2(-31.0, 43.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_Minuspoints" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 20.0
+offset_top = -70.0
+offset_right = 20.0
+offset_bottom = -70.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_Minuspoints"
+metadata/cocos_tag = 668
+metadata/action_tag = 159174186
+
+[node name="Text_minus" type="Label" parent="Node_Minuspoints"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -33.5
+offset_top = -45.0
+offset_right = 33.5
+offset_bottom = 45.0
+pivot_offset = Vector2(33.5, 45.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_minus"
+metadata/cocos_tag = 669
+metadata/action_tag = 750174317
+script = ExtResource("4")
+design_size = Vector2(67.0, 90.0)
+design_center = Vector2(0.0, 0.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "5"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

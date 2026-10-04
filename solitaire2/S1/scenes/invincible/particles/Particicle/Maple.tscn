@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/invincible/particle_textures/Maple.png" id="1"]
+[sub_resource type="Gradient" id="Color"]
+colors = PackedColorArray(0.84846, 0.906965, 0.884501, 1.0, 0.937075, 0.967411, 0.912779, 0.8)
+[sub_resource type="Curve" id="Size"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1.0), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Rotation"]
+_data = [Vector2(0, 0.277778), 0.0, 0.0, 0, 0, Vector2(1, 0.166667), 0.0, 0.0, 0, 0]
+[sub_resource type="CanvasItemMaterial" id="Blend"]
+blend_mode = 0
+[node name="Particles" type="CPUParticles2D"]
+material = SubResource("Blend")
+amount = 4
+lifetime = 9.0
+lifetime_randomness = 0.444444
+texture = ExtResource("1")
+emission_shape = 3
+emission_rect_extents = Vector2(240.0, 50.0)
+direction = Vector2(1.0, -0.0)
+spread = 48.764557
+gravity = Vector2(10.0, 40.0)
+initial_velocity_min = 0.0
+initial_velocity_max = 15.0
+radial_accel_min = -30.0
+radial_accel_max = -10.0
+tangential_accel_min = -20.0
+tangential_accel_max = 20.0
+scale_amount_min = 0.375
+scale_amount_max = 0.625
+scale_amount_curve = SubResource("Size")
+color_ramp = SubResource("Color")
+angle_min = 0.0
+angle_max = 360.0
+angle_curve = SubResource("Rotation")
+local_coords = false
+one_shot = false

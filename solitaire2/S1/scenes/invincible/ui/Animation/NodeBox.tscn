@@ -1,0 +1,252 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_0.png" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Start_BG.tscn" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_1.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_2.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_3.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_4.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_5.png" id="8"]
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 1.03333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Box/Panel_1/Particle_crownlight:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.91667, 0.93333, 0.95, 0.96667, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.4826, -0.0035), Vector2(1.4826, 0.324), Vector2(1.4826, 0.6515), Vector2(1.4826, 0.979), Vector2(1.4826, 1.3065), Vector2(1.4826, 1.3065)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_Box/Panel_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.9, 1.03333), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_Box:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-130.9985, 16.0), Vector2(-130.9985, -38.6), Vector2(-130.9985, -90.4), Vector2(-130.9985, -139.4), Vector2(-130.9985, -185.6), Vector2(-130.9985, -229.0), Vector2(-130.9985, -269.6), Vector2(-130.9985, -307.4), Vector2(-130.9985, -342.4), Vector2(-130.9985, -374.6), Vector2(-130.9985, -404.0), Vector2(-130.9985, -430.6), Vector2(-130.9985, -454.4), Vector2(-130.9985, -475.4), Vector2(-130.9985, -493.6), Vector2(-130.9985, -509.0), Vector2(-130.9985, -521.6), Vector2(-130.9985, -531.4), Vector2(-130.9985, -538.4), Vector2(-130.9985, -542.6), Vector2(-130.9985, -544.0), Vector2(-130.9985, -537.76094), Vector2(-130.9985, -519.04375), Vector2(-130.9985, -487.84844), Vector2(-130.9985, -444.175), Vector2(-130.9985, -388.02344), Vector2(-130.9985, -319.39375), Vector2(-130.9985, -238.28594), Vector2(-130.9985, -243.7), Vector2(-130.9985, -273.76094), Vector2(-130.9985, -291.34375), Vector2(-130.9985, -296.44844), Vector2(-130.9985, -289.075), Vector2(-130.9985, -269.22344), Vector2(-130.9985, -236.89375), Vector2(-130.9985, -223.02344), Vector2(-130.9985, -233.8), Vector2(-130.9985, -232.09844), Vector2(-130.9985, -217.91875), Vector2(-130.9985, -219.10469), Vector2(-130.9985, -214.0), Vector2(-130.9985, -214.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_Box:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.001, 0.001), Vector2(0.14715, 0.14715), Vector2(0.28581, 0.28581), Vector2(0.41697, 0.41697), Vector2(0.54064, 0.54064), Vector2(0.65681, 0.65681), Vector2(0.76549, 0.76549), Vector2(0.86667, 0.86667), Vector2(0.96036, 0.96036), Vector2(1.04655, 1.04655), Vector2(1.12525, 1.12525), Vector2(1.19645, 1.19645), Vector2(1.26016, 1.26016), Vector2(1.31637, 1.31637), Vector2(1.36509, 1.36509), Vector2(1.40631, 1.40631), Vector2(1.44004, 1.44004), Vector2(1.46627, 1.46627), Vector2(1.48501, 1.48501), Vector2(1.49625, 1.49625), Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Box:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.83333, 0.88333, 0.93333, 0.98333, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_Box:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_Box:rotation")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 1.03333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.78333, 0.83333, 0.88333, 0.93333, 0.98333, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "values": [{"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"0\", \"Tween\": \"False\", \"Value\": \"box0\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"47\", \"Tween\": \"False\", \"Value\": \"box0\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"50\", \"Tween\": \"False\", \"Value\": \"box1\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"53\", \"Tween\": \"False\", \"Value\": \"box2\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"56\", \"Tween\": \"False\", \"Value\": \"box3\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"59\", \"Tween\": \"False\", \"Value\": \"box4\"}"]}, {"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"62\", \"Tween\": \"False\", \"Value\": \"box5\"}"]}]}
+[sub_resource type="Animation" id="Anim_Start1"]
+resource_name = "Start1"
+length = 0.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Box/Panel_1/Particle_crownlight:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.4826, 1.3065), Vector2(1.4826, 1.3065)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_Box/Panel_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_Box:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-130.9985, 16.0), Vector2(-130.9985, -38.6), Vector2(-130.9985, -90.4), Vector2(-130.9985, -139.4), Vector2(-130.9985, -185.6), Vector2(-130.9985, -229.0), Vector2(-130.9985, -269.6), Vector2(-130.9985, -307.4), Vector2(-130.9985, -342.4), Vector2(-130.9985, -374.6), Vector2(-130.9985, -404.0), Vector2(-130.9985, -430.6), Vector2(-130.9985, -454.4), Vector2(-130.9985, -475.4), Vector2(-130.9985, -493.6), Vector2(-130.9985, -509.0), Vector2(-130.9985, -521.6), Vector2(-130.9985, -531.4), Vector2(-130.9985, -538.4), Vector2(-130.9985, -542.6), Vector2(-130.9985, -544.0), Vector2(-130.9985, -537.76094), Vector2(-130.9985, -519.04375), Vector2(-130.9985, -487.84844), Vector2(-130.9985, -444.175), Vector2(-130.9985, -388.02344), Vector2(-130.9985, -319.39375), Vector2(-130.9985, -238.28594), Vector2(-130.9985, -243.7), Vector2(-130.9985, -273.76094), Vector2(-130.9985, -291.34375), Vector2(-130.9985, -296.44844), Vector2(-130.9985, -289.075), Vector2(-130.9985, -269.22344), Vector2(-130.9985, -236.89375), Vector2(-130.9985, -223.02344), Vector2(-130.9985, -233.8), Vector2(-130.9985, -232.09844), Vector2(-130.9985, -217.91875), Vector2(-130.9985, -219.10469), Vector2(-130.9985, -214.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_Box:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.001, 0.001), Vector2(0.14715, 0.14715), Vector2(0.28581, 0.28581), Vector2(0.41697, 0.41697), Vector2(0.54064, 0.54064), Vector2(0.65681, 0.65681), Vector2(0.76549, 0.76549), Vector2(0.86667, 0.86667), Vector2(0.96036, 0.96036), Vector2(1.04655, 1.04655), Vector2(1.12525, 1.12525), Vector2(1.19645, 1.19645), Vector2(1.26016, 1.26016), Vector2(1.31637, 1.31637), Vector2(1.36509, 1.36509), Vector2(1.40631, 1.40631), Vector2(1.44004, 1.44004), Vector2(1.46627, 1.46627), Vector2(1.48501, 1.48501), Vector2(1.49625, 1.49625), Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Box:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("2")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_Box:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_Box:rotation")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+[sub_resource type="Animation" id="Anim_Start2"]
+resource_name = "Start2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Box/Panel_1/Particle_crownlight:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.03333, 0.05, 0.06667, 0.08333, 0.1), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.4826, 1.3065), Vector2(1.4826, -0.0035), Vector2(1.4826, 0.324), Vector2(1.4826, 0.6515), Vector2(1.4826, 0.979), Vector2(1.4826, 1.3065)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_Box/Panel_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.03333, 0.1), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_Box:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.08333, 0.1), "transitions": PackedFloat32Array(1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-130.9985, -214.0), Vector2(-130.9985, -216.5), Vector2(-130.9985, -219.0), Vector2(-130.9985, -216.5), Vector2(-130.9985, -214.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_Box:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Box:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.1), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("4"), ExtResource("5")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_Box:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_Box:rotation")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.1), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, -0.01745, -0.03491, -0.01745, 0.0, 0.0]}
+[sub_resource type="Animation" id="Anim_Start3"]
+resource_name = "Start3"
+length = 1.71667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Box/Panel_1/Particle_crownlight:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.4826, 1.3065), Vector2(1.4826, 1.3065)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_Box/Panel_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_Box:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 1.71667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-130.9985, -214.0), Vector2(-130.9985, -222.0), Vector2(-130.9985, -230.0), Vector2(-130.9985, -238.0), Vector2(-130.9985, -246.0), Vector2(-130.9985, -254.0), Vector2(-130.9985, -246.0), Vector2(-130.9985, -238.0), Vector2(-130.9985, -230.0), Vector2(-130.9985, -222.0), Vector2(-130.9985, -214.0), Vector2(-130.9985, -214.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_Box:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Box:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("5"), ExtResource("5")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_Box:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_Box:rotation")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 1.71667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, -0.00107, -0.00427, -0.00951, -0.01667, -0.02556, -0.03597, -0.04765, -0.0603, -0.07361, -0.08727, -0.07156, -0.05585, -0.04014, -0.02443, -0.00873, 0.00698, 0.02269, 0.0384, 0.05411, 0.06981, 0.04072, 0.01164, -0.01745, -0.00582, 0.00582, 0.01745, 0.01164, 0.00582, 0.0, 0.0]}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "values": [{"method": &"timeline_event", "args": ["Sprite_Box","FrameEvent","{\"FrameIndex\": \"150\", \"Tween\": \"False\", \"Value\": \"Box2\"}"]}]}
+[sub_resource type="Animation" id="Anim_Loop"]
+resource_name = "Loop"
+length = 1.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_Box/Panel_1/Particle_crownlight:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.4826, 1.3065), Vector2(1.4826, 1.3065)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_Box/Panel_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_Box:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 1.9), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-130.9985, -214.0), Vector2(-130.9985, -213.965), Vector2(-130.9985, -213.86), Vector2(-130.9985, -213.685), Vector2(-130.9985, -213.44), Vector2(-130.9985, -213.125), Vector2(-130.9985, -212.74), Vector2(-130.9985, -212.285), Vector2(-130.9985, -211.76), Vector2(-130.9985, -211.165), Vector2(-130.9985, -210.5), Vector2(-130.9985, -209.835), Vector2(-130.9985, -209.24), Vector2(-130.9985, -208.715), Vector2(-130.9985, -208.26), Vector2(-130.9985, -207.875), Vector2(-130.9985, -207.56), Vector2(-130.9985, -207.315), Vector2(-130.9985, -207.14), Vector2(-130.9985, -207.035), Vector2(-130.9985, -207.0), Vector2(-130.9985, -207.06), Vector2(-130.9985, -207.24), Vector2(-130.9985, -207.54), Vector2(-130.9985, -207.96), Vector2(-130.9985, -208.5), Vector2(-130.9985, -209.16), Vector2(-130.9985, -209.94), Vector2(-130.9985, -210.84), Vector2(-130.9985, -211.86), Vector2(-130.9985, -213.0), Vector2(-130.9985, -214.14), Vector2(-130.9985, -215.16), Vector2(-130.9985, -216.06), Vector2(-130.9985, -216.84), Vector2(-130.9985, -217.5), Vector2(-130.9985, -218.04), Vector2(-130.9985, -218.46), Vector2(-130.9985, -218.76), Vector2(-130.9985, -218.94), Vector2(-130.9985, -219.0), Vector2(-130.9985, -218.9654), Vector2(-130.9985, -218.86159), Vector2(-130.9985, -218.68858), Vector2(-130.9985, -218.44637), Vector2(-130.9985, -218.13495), Vector2(-130.9985, -217.75433), Vector2(-130.9985, -217.3045), Vector2(-130.9985, -216.78547), Vector2(-130.9985, -216.21453), Vector2(-130.9985, -215.6955), Vector2(-130.9985, -215.24567), Vector2(-130.9985, -214.86505), Vector2(-130.9985, -214.55363), Vector2(-130.9985, -214.31142), Vector2(-130.9985, -214.13841), Vector2(-130.9985, -214.0346), Vector2(-130.9985, -214.0), Vector2(-130.9985, -214.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite_Box:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.9), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.5, 1.5), Vector2(1.497, 1.494), Vector2(1.494, 1.488), Vector2(1.491, 1.482), Vector2(1.488, 1.476), Vector2(1.485, 1.47), Vector2(1.482, 1.464), Vector2(1.479, 1.458), Vector2(1.476, 1.452), Vector2(1.473, 1.446), Vector2(1.47, 1.44), Vector2(1.467, 1.434), Vector2(1.464, 1.428), Vector2(1.461, 1.422), Vector2(1.458, 1.416), Vector2(1.455, 1.41), Vector2(1.452, 1.404), Vector2(1.449, 1.398), Vector2(1.446, 1.392), Vector2(1.443, 1.386), Vector2(1.44, 1.38), Vector2(1.443, 1.3935), Vector2(1.446, 1.407), Vector2(1.449, 1.4205), Vector2(1.452, 1.434), Vector2(1.455, 1.4475), Vector2(1.458, 1.461), Vector2(1.461, 1.4745), Vector2(1.464, 1.488), Vector2(1.467, 1.5015), Vector2(1.47, 1.515), Vector2(1.473, 1.5285), Vector2(1.476, 1.542), Vector2(1.479, 1.5555), Vector2(1.482, 1.569), Vector2(1.485, 1.5825), Vector2(1.488, 1.596), Vector2(1.491, 1.6095), Vector2(1.494, 1.623), Vector2(1.497, 1.6365), Vector2(1.5, 1.65), Vector2(1.50035, 1.64948), Vector2(1.50138, 1.64792), Vector2(1.50311, 1.64533), Vector2(1.50554, 1.6417), Vector2(1.50865, 1.63702), Vector2(1.51246, 1.63131), Vector2(1.51696, 1.62457), Vector2(1.52215, 1.61678), Vector2(1.52803, 1.60796), Vector2(1.5346, 1.5981), Vector2(1.54187, 1.5872), Vector2(1.54983, 1.57526), Vector2(1.55848, 1.56228), Vector2(1.56782, 1.54827), Vector2(1.57785, 1.53322), Vector2(1.58858, 1.51713), Vector2(1.6, 1.5), Vector2(1.59977, 1.5), Vector2(1.5991, 1.5), Vector2(1.59797, 1.5), Vector2(1.59642, 1.5), Vector2(1.59444, 1.5), Vector2(1.59206, 1.5), Vector2(1.5893, 1.5), Vector2(1.58619, 1.5), Vector2(1.58274, 1.5), Vector2(1.579, 1.5), Vector2(1.575, 1.5), Vector2(1.57077, 1.5), Vector2(1.56635, 1.5), Vector2(1.56179, 1.5), Vector2(1.55712, 1.5), Vector2(1.55238, 1.5), Vector2(1.54762, 1.5), Vector2(1.54288, 1.5), Vector2(1.53821, 1.5), Vector2(1.53365, 1.5), Vector2(1.52923, 1.5), Vector2(1.525, 1.5), Vector2(1.521, 1.5), Vector2(1.51726, 1.5), Vector2(1.51381, 1.5), Vector2(1.5107, 1.5), Vector2(1.50794, 1.5), Vector2(1.50556, 1.5), Vector2(1.50358, 1.5), Vector2(1.50203, 1.5), Vector2(1.5009, 1.5), Vector2(1.50023, 1.5), Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Box:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("2")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_Box:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_Box:rotation")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0"),
+"Start1": SubResource("Anim_Start1"),
+"Start2": SubResource("Anim_Start2"),
+"Start3": SubResource("Anim_Start3"),
+"Loop": SubResource("Anim_Loop")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 483
+metadata/action_tag = 0
+
+[node name="Sprite_Box" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -130.9985
+offset_top = -214.0
+offset_right = 131.0015
+offset_bottom = 0.0
+pivot_offset = Vector2(131.0, 214.0)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_Box"
+metadata/cocos_tag = 504
+metadata/action_tag = -92749041
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_1" type="ColorRect" parent="Sprite_Box"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -113.2192
+offset_top = -98.3534
+offset_right = 256.5874
+offset_bottom = 118.3998
+pivot_offset = Vector2(184.9033, 216.7532)
+scale = Vector2(1.0, 1.0)
+rotation = -0.03626
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 331
+metadata/action_tag = -457396064
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Particle_crownlight" type="Control" parent="Sprite_Box/Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 223.2803
+offset_top = 220.2677
+offset_right = 223.2803
+offset_bottom = 220.2677
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.4826, 1.3065)
+rotation = 0.01698
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_crownlight"
+metadata/cocos_tag = 332
+metadata/action_tag = 564574559
+
+[node name="Emitter" parent="Sprite_Box/Panel_1/Particle_crownlight" instance=ExtResource("3")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

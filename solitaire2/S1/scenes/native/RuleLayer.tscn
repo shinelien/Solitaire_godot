@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_1.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_bg.png" id="2"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/master/img/btn0.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/master/img/btn1.png" id="5"]
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 576.000000
+offset_bottom = 1024.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_rule" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -0.000200
+offset_top = 0.000000
+offset_right = 575.999800
+offset_bottom = 1024.000000
+pivot_offset = Vector2(0.000000, 1024.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="img_set_bg_0" type="NinePatchRect" parent="panel_rule"]
+layout_mode = 0
+offset_left = 23.000000
+offset_top = 108.300050
+offset_right = 553.000000
+offset_bottom = 903.912950
+pivot_offset = Vector2(265.000000, 397.806450)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 30
+patch_margin_right = 30
+patch_margin_top = 90
+patch_margin_bottom = 60
+
+[node name="Image_13" type="NinePatchRect" parent="panel_rule"]
+layout_mode = 0
+offset_left = 43.000000
+offset_top = 191.066600
+offset_right = 533.000000
+offset_bottom = 821.066600
+pivot_offset = Vector2(245.000000, 0.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+patch_margin_left = 25
+patch_margin_right = 25
+patch_margin_top = 51
+patch_margin_bottom = 51
+
+[node name="Text_1" type="Label" parent="panel_rule"]
+layout_mode = 0
+offset_left = 232.000000
+offset_top = 127.360000
+offset_right = 344.000000
+offset_bottom = 159.360000
+pivot_offset = Vector2(56.000000, 16.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "游戏规则"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="scrollView_rule" type="ScrollContainer" parent="panel_rule"]
+layout_mode = 0
+offset_left = 52.999900
+offset_top = 218.760000
+offset_right = 522.999900
+offset_bottom = 784.760000
+pivot_offset = Vector2(235.000000, 283.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Content" type="Control" parent="panel_rule/scrollView_rule"]
+custom_minimum_size = Vector2(500.000000, 1800.000000)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="text_rule" type="Label" parent="panel_rule/scrollView_rule/Content"]
+layout_mode = 0
+offset_left = 10.805500
+offset_top = 0.000000
+offset_right = 460.805500
+offset_bottom = 1368.000000
+pivot_offset = Vector2(225.000000, 0.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.701961, 0.745098, 0.701961, 1.000000)
+text = "纸牌接龙只用一副牌玩，共52张，无大小王。游戏目标是翻开所有纸牌并挪至收牌区。收牌区一共有四列牌叠（每套花色各一列），在屏幕上以矩形框环绕的字母A来表示。需按升序排列（从A到K）。玩牌区一共有七列牌叠，需按降序排列（从K到A），且红黑花色交替。你可以在不同列之间移动部分或全部牌叠，只要他们降序排列并且花色交错。只有K或者K开头的一列牌可以移动填补到空白列。手牌区一共有一列牌叠。手牌区的牌是还没有移动到收牌区和玩牌区的牌。根据翻三张选项的设置，你可以一次翻一张牌或三张牌，无限次地反复翻开手牌区所有的牌。按空白手牌区以再次并多次翻开手牌区的牌。手牌区的牌被翻开后会自动放到废牌区。你可以移动废牌区的顶牌到收牌区或玩牌区相应的位置。你可以从废牌区、收牌区和玩牌区拖拽一张或一串纸牌，然后放置到玩牌区禾收牌区。双击一张牌可以直接将其移动到收牌区相应位置，前提是该移动必须为合法移动。单击手牌区将翻开一张或三张牌到废牌区（取决于你的选项设置）。不是所以的游戏都可以接龙成功。翻一张牌的模式比翻三张牌的模式更容易成功。标准计分：每一局游戏开局时计分为0分。每向收牌区添加一张牌可以得10分。将纸牌从手牌区移动到玩牌区的某列可得5分。在玩牌区的某列翻开每张牌可得5分。每从收牌区移动一张牌到玩牌区减15分。每一次还原操作减2分，除此之外，该还原操作所取消的移动也不得计分。当翻三张牌选项打开时，第三次翻牌后每翻完一遍手牌区所有的牌减20分。当翻三张牌选项关闭时，每翻完一遍手牌区所有的牌减100分。如果是计时游戏，每玩10秒减2分。如果接龙成功将获得奖励。奖励的金额取决于接龙成功所用时间的长短。时间越短奖励越高。奖励金额根据以下公式计算：200,000/(接龙成功所用的秒数)如果接龙时间少于25秒，奖励将和25秒相同。提示：提示功能可以帮助玩家识别可以移动的牌。点击“提示”键激活提示功能，提示功能只显示被认为对接龙成功有助益的移动。"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="btn_close" type="TextureButton" parent="panel_rule"]
+layout_mode = 0
+offset_left = 173.000000
+offset_top = 824.968000
+offset_right = 403.000000
+offset_bottom = 878.968000
+pivot_offset = Vector2(115.000000, 27.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+ignore_texture_size = true
+stretch_mode = 0

@@ -1,0 +1,997 @@
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020Goldbanner.tscn" id="2"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_icon.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Previewicon1.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020StarBox0.tscn" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Normal.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Press.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Disable.png" id="12"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/Node_bag.tscn" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Previewicon5.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_gift1.png" id="15"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Level_tishi.png" id="16"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_icon0.png" id="17"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Challenge_Challenge3.png" id="19"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_draw2.png" id="20"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Magic_card1.png" id="21"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Magic_card4.png" id="22"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Magic_card5.png" id="23"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_tips.png" id="24"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/Node_lunpan.tscn" id="25"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 10.95
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_home/Button_Set/Ui_Homesetting1_1:rotation")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [6.28319, 6.28319]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_home/Button_Sign_AD/Particle_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_home/Button_Sign_AD/Particle_1_0:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_home/Button_fanPai/Particle_1:visible")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_home/Button_fanPai/Particle_1_0:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_home/Button_LunPan/Particle_1:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_home/Button_LunPan/Particle_1_0:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 10.95), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 2054
+metadata/action_tag = 0
+
+[node name="Panel_home" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.001
+offset_top = 0.0006
+offset_right = 1079.999
+offset_bottom = 1920.0006
+pivot_offset = Vector2(540.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_home"
+metadata/cocos_tag = 2071
+metadata/action_tag = 2015859816
+
+[node name="Node_2" type="Control" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 192.0
+offset_right = 540.0
+offset_bottom = 192.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_2"
+metadata/cocos_tag = 75
+metadata/action_tag = 1831630759
+
+[node name="FileNode_top" parent="Panel_home" instance=ExtResource("2")]
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 0.0
+offset_right = 540.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_top"
+metadata/cocos_tag = 22394
+metadata/action_tag = -1097664071
+
+[node name="Button_share" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 3.9
+offset_top = 437.2
+offset_right = 123.9
+offset_bottom = 561.2
+pivot_offset = Vector2(60.0, 62.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_share"
+metadata/cocos_tag = 1138
+metadata/action_tag = -343698784
+script = ExtResource("3")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="img_icon_12_0" type="TextureRect" parent="Panel_home/Button_share"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 65.5
+offset_top = 36.94
+offset_right = 174.5
+offset_bottom = 163.94
+pivot_offset = Vector2(54.5, 63.5)
+scale = Vector2(0.35, 0.35)
+rotation = 0.05236
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_icon_12_0"
+metadata/cocos_tag = 5516
+metadata/action_tag = -485282306
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_15_0" type="Label" parent="Panel_home/Button_share"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 6.5
+offset_top = 123.82
+offset_right = 113.5
+offset_bottom = 168.82
+pivot_offset = Vector2(53.5, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15_0"
+metadata/cocos_tag = 5517
+metadata/action_tag = -1679607037
+script = ExtResource("6")
+design_size = Vector2(107.0, 45.0)
+design_center = Vector2(60.0, 146.32)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Share"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_Dailytasks" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 959.6281
+offset_top = 435.7
+offset_right = 1079.6281
+offset_bottom = 562.7
+pivot_offset = Vector2(60.0, 63.5)
+scale = Vector2(0.97, 0.97)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Dailytasks"
+metadata/cocos_tag = 1139
+metadata/action_tag = -586193342
+script = ExtResource("3")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("7")
+texture_disabled = ExtResource("7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_15_0" type="Label" parent="Panel_home/Button_Dailytasks"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 18.5
+offset_top = 118.47
+offset_right = 101.5
+offset_bottom = 163.47
+pivot_offset = Vector2(41.5, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15_0"
+metadata/cocos_tag = 5515
+metadata/action_tag = -1824247544
+script = ExtResource("6")
+design_size = Vector2(83.0, 45.0)
+design_center = Vector2(60.0, 140.97)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Task"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="main_tips1_1" type="TextureRect" parent="Panel_home/Button_Dailytasks"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -2.99
+offset_right = 35.0
+offset_bottom = 36.01
+pivot_offset = Vector2(17.0, 19.5)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "main_tips1_1"
+metadata/cocos_tag = 157
+metadata/action_tag = 265962155
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="FileNode_StarBox" parent="Panel_home" instance=ExtResource("9")]
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 259.2001
+offset_right = 540.0
+offset_bottom = 259.2001
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_StarBox"
+metadata/cocos_tag = 2758
+metadata/action_tag = -833367925
+
+[node name="Button_Set" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 0.0
+offset_top = 150.2
+offset_right = 200.0
+offset_bottom = 368.2
+pivot_offset = Vector2(0.0, 109.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Set"
+metadata/cocos_tag = 4612
+metadata/action_tag = 762293888
+script = ExtResource("3")
+scale9_margins = Vector4(35.0, 35.0, 62.0, 62.0)
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("11")
+texture_disabled = ExtResource("12")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Ui_Homesetting1_1" type="TextureRect" parent="Panel_home/Button_Set"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 58.0
+offset_top = 30.44
+offset_right = 142.0
+offset_bottom = 113.44
+pivot_offset = Vector2(42.0, 41.5)
+scale = Vector2(1.0, 1.0)
+rotation = 6.28319
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_Homesetting1_1"
+metadata/cocos_tag = 501
+metadata/action_tag = 1270366128
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_setting" type="Label" parent="Panel_home/Button_Set"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 43.5
+offset_top = 131.6
+offset_right = 156.5
+offset_bottom = 173.6
+pivot_offset = Vector2(56.5, 21.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_setting"
+metadata/cocos_tag = 7494
+metadata/action_tag = 384350596
+script = ExtResource("6")
+design_size = Vector2(113.0, 42.0)
+design_center = Vector2(100.0, 152.6)
+design_font_size = 36
+bitmap_font = false
+fit_box = false
+text = "Setting"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_Mybag" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 880.0
+offset_top = 150.2
+offset_right = 1080.0
+offset_bottom = 368.2
+pivot_offset = Vector2(200.0, 109.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Mybag"
+metadata/cocos_tag = 1141
+metadata/action_tag = 546382473
+script = ExtResource("3")
+scale9_margins = Vector4(35.0, 35.0, 62.0, 62.0)
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("11")
+texture_disabled = ExtResource("12")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_MyBag" parent="Panel_home/Button_Mybag" instance=ExtResource("13")]
+mouse_filter = 2
+offset_left = 100.0
+offset_top = 63.0
+offset_right = 100.0
+offset_bottom = 63.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.86, 0.86)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_MyBag"
+metadata/cocos_tag = 5511
+metadata/action_tag = -1917239970
+
+[node name="Text_setting_0" type="Label" parent="Panel_home/Button_Mybag"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.5
+offset_top = 131.6
+offset_right = 132.5
+offset_bottom = 173.6
+pivot_offset = Vector2(32.5, 21.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_setting_0"
+metadata/cocos_tag = 502
+metadata/action_tag = 1913158891
+script = ExtResource("6")
+design_size = Vector2(65.0, 42.0)
+design_center = Vector2(100.0, 152.6)
+design_font_size = 36
+bitmap_font = false
+fit_box = false
+text = "Bag"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_Sign" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 946.116
+offset_top = 647.6
+offset_right = 1090.116
+offset_bottom = 811.6
+pivot_offset = Vector2(72.0, 82.0)
+scale = Vector2(0.83, 0.83)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Sign"
+metadata/cocos_tag = 1142
+metadata/action_tag = 1662766908
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("14")
+texture_disabled = ExtResource("14")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_15" type="Label" parent="Panel_home/Button_Sign"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 40.5
+offset_top = 151.34
+offset_right = 103.5
+offset_bottom = 196.34
+pivot_offset = Vector2(31.5, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15"
+metadata/cocos_tag = 5514
+metadata/action_tag = 720220865
+script = ExtResource("6")
+design_size = Vector2(63.0, 45.0)
+design_center = Vector2(72.0, 173.84)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Gift"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="main_tips1_1_0" type="TextureRect" parent="Panel_home/Button_Sign"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.6
+offset_top = 1.82
+offset_right = 38.6
+offset_bottom = 40.82
+pivot_offset = Vector2(17.0, 19.5)
+scale = Vector2(1.75, 1.75)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "main_tips1_1_0"
+metadata/cocos_tag = 158
+metadata/action_tag = -1098781115
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_Sign_AD" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -5.2
+offset_top = 678.7999
+offset_right = 134.8
+offset_bottom = 818.7999
+pivot_offset = Vector2(70.0, 70.0)
+scale = Vector2(0.87, 0.87)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Sign_AD"
+metadata/cocos_tag = 7395
+metadata/action_tag = -1307057375
+texture_normal = ExtResource("15")
+texture_pressed = ExtResource("15")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Image_1" type="TextureRect" parent="Panel_home/Button_Sign_AD"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 9.5
+offset_top = 124.8
+offset_right = 130.5
+offset_bottom = 174.8
+pivot_offset = Vector2(60.5, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 194
+metadata/action_tag = 1313309012
+texture = ExtResource("16")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_15" type="Label" parent="Panel_home/Button_Sign_AD/Image_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 21.5
+offset_top = 2.5
+offset_right = 99.5
+offset_bottom = 47.5
+pivot_offset = Vector2(39.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15"
+metadata/cocos_tag = 7396
+metadata/action_tag = -1206543547
+script = ExtResource("6")
+design_size = Vector2(78.0, 45.0)
+design_center = Vector2(60.5, 25.0)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "1:50"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_icon0_528_0" type="TextureRect" parent="Panel_home/Button_Sign_AD"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -62.7
+offset_top = 26.216
+offset_right = 82.3
+offset_bottom = 168.216
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.33, 0.33)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_icon0_528_0"
+metadata/cocos_tag = 193
+metadata/action_tag = 479992960
+texture = ExtResource("17")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_icon0_528" type="TextureRect" parent="Panel_home/Button_Sign_AD"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -45.9
+offset_top = 28.316
+offset_right = 99.1
+offset_bottom = 170.316
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.41, 0.41)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_icon0_528"
+metadata/cocos_tag = 7405
+metadata/action_tag = -1740283703
+texture = ExtResource("17")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Particle_1" type="Control" parent="Panel_home/Button_Sign_AD"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 52.0465
+offset_top = 20.1688
+offset_right = 52.0465
+offset_bottom = 20.1688
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 7403
+metadata/action_tag = -1731857768
+
+[node name="Emitter" parent="Panel_home/Button_Sign_AD/Particle_1" instance=ExtResource("18")]
+
+[node name="Particle_1_0" type="Control" parent="Panel_home/Button_Sign_AD"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.2962
+offset_top = 94.2978
+offset_right = 96.2962
+offset_bottom = 94.2978
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1_0"
+metadata/cocos_tag = 7404
+metadata/action_tag = 1947766177
+
+[node name="Emitter" parent="Panel_home/Button_Sign_AD/Particle_1_0" instance=ExtResource("18")]
+
+[node name="Button_fanPai" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -4.0
+offset_top = 899.784
+offset_right = 146.0
+offset_bottom = 1049.784
+pivot_offset = Vector2(75.0, 75.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_fanPai"
+metadata/cocos_tag = 6526
+metadata/action_tag = 340936432
+script = ExtResource("3")
+scale9_margins = Vector4(0.0, 0.0, 0.0, 0.0)
+texture_normal = ExtResource("19")
+texture_pressed = ExtResource("19")
+texture_disabled = ExtResource("19")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_15" type="Label" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 22.5
+offset_top = 141.0
+offset_right = 127.5
+offset_bottom = 186.0
+pivot_offset = Vector2(52.5, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15"
+metadata/cocos_tag = 6527
+metadata/action_tag = 1726496071
+script = ExtResource("6")
+design_size = Vector2(105.0, 45.0)
+design_center = Vector2(75.0, 163.5)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Lucky"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_draw2_1" type="TextureRect" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -83.5
+offset_top = -242.0
+offset_right = 181.5
+offset_bottom = 143.0
+pivot_offset = Vector2(132.5, 385.0)
+scale = Vector2(0.3, 0.3)
+rotation = -0.10471
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_draw2_1"
+metadata/cocos_tag = 6528
+metadata/action_tag = 706282289
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_card1_4" type="TextureRect" parent="Panel_home/Button_fanPai/Ui_draw2_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 109.5
+offset_top = 168.0
+offset_right = 155.5
+offset_bottom = 217.0
+pivot_offset = Vector2(23.0, 24.5)
+scale = Vector2(3.0, 3.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_card1_4"
+metadata/cocos_tag = 6531
+metadata/action_tag = 900833311
+texture = ExtResource("21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Ui_draw2_1_0" type="TextureRect" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -28.5
+offset_top = -244.0
+offset_right = 236.5
+offset_bottom = 141.0
+pivot_offset = Vector2(132.5, 385.0)
+scale = Vector2(0.3, 0.3)
+rotation = 0.20944
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_draw2_1_0"
+metadata/cocos_tag = 6529
+metadata/action_tag = 1655886557
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_card4_7" type="TextureRect" parent="Panel_home/Button_fanPai/Ui_draw2_1_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 109.5
+offset_top = 168.0
+offset_right = 155.5
+offset_bottom = 217.0
+pivot_offset = Vector2(23.0, 24.5)
+scale = Vector2(3.0, 3.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_card4_7"
+metadata/cocos_tag = 6534
+metadata/action_tag = 2057912720
+texture = ExtResource("22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Ui_draw2_1_0_0" type="TextureRect" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -54.5
+offset_top = -251.0
+offset_right = 210.5
+offset_bottom = 134.0
+pivot_offset = Vector2(132.5, 385.0)
+scale = Vector2(0.35, 0.35)
+rotation = 0.05236
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_draw2_1_0_0"
+metadata/cocos_tag = 6530
+metadata/action_tag = 888424965
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_card5_8" type="TextureRect" parent="Panel_home/Button_fanPai/Ui_draw2_1_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 95.0
+offset_top = 157.5
+offset_right = 170.0
+offset_bottom = 227.5
+pivot_offset = Vector2(37.5, 35.0)
+scale = Vector2(3.0, 3.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_card5_8"
+metadata/cocos_tag = 6535
+metadata/action_tag = -1506067827
+texture = ExtResource("23")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="main_tips_1" type="TextureRect" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 106.0
+offset_top = -22.5
+offset_right = 168.0
+offset_bottom = 48.5
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "main_tips_1"
+metadata/cocos_tag = 191
+metadata/action_tag = -2115246651
+texture = ExtResource("24")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_1" type="Label" parent="Panel_home/Button_fanPai/main_tips_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 19.24
+offset_top = 3.82
+offset_right = 45.24
+offset_bottom = 55.82
+pivot_offset = Vector2(13.0, 26.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_1"
+metadata/cocos_tag = 192
+metadata/action_tag = -1658714710
+script = ExtResource("6")
+design_size = Vector2(26.0, 52.0)
+design_center = Vector2(32.24, 29.82)
+design_font_size = 45
+bitmap_font = false
+fit_box = false
+text = "3"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 52.0465
+offset_top = 30.1688
+offset_right = 52.0465
+offset_bottom = 30.1688
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 7393
+metadata/action_tag = 366260789
+
+[node name="Emitter" parent="Panel_home/Button_fanPai/Particle_1" instance=ExtResource("18")]
+
+[node name="Particle_1_0" type="Control" parent="Panel_home/Button_fanPai"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.2962
+offset_top = 104.2978
+offset_right = 96.2962
+offset_bottom = 104.2978
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1_0"
+metadata/cocos_tag = 7394
+metadata/action_tag = -1360586651
+
+[node name="Emitter" parent="Panel_home/Button_fanPai/Particle_1_0" instance=ExtResource("18")]
+
+[node name="Button_LunPan" type="TextureButton" parent="Panel_home"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -4.0
+offset_top = 899.784
+offset_right = 146.0
+offset_bottom = 1049.784
+pivot_offset = Vector2(75.0, 75.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_LunPan"
+metadata/cocos_tag = 7406
+metadata/action_tag = -287286053
+texture_normal = ExtResource("19")
+texture_pressed = ExtResource("19")
+texture_disabled = ExtResource("19")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_LunPan" parent="Panel_home/Button_LunPan" instance=ExtResource("25")]
+mouse_filter = 2
+offset_left = 75.0
+offset_top = 72.0
+offset_right = 75.0
+offset_bottom = 72.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.85, 0.85)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_LunPan"
+metadata/cocos_tag = 10983
+metadata/action_tag = 791232559
+
+[node name="Text_15" type="Label" parent="Panel_home/Button_LunPan"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 15.0
+offset_top = 141.0
+offset_right = 135.0
+offset_bottom = 186.0
+pivot_offset = Vector2(60.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_15"
+metadata/cocos_tag = 7407
+metadata/action_tag = 2083164908
+script = ExtResource("6")
+design_size = Vector2(120.0, 45.0)
+design_center = Vector2(75.0, 163.5)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "大转盘"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Panel_home/Button_LunPan"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 52.0465
+offset_top = 30.1688
+offset_right = 52.0465
+offset_bottom = 30.1688
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 7409
+metadata/action_tag = -1205535800
+
+[node name="Emitter" parent="Panel_home/Button_LunPan/Particle_1" instance=ExtResource("18")]
+
+[node name="Particle_1_0" type="Control" parent="Panel_home/Button_LunPan"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.2962
+offset_top = 104.2978
+offset_right = 96.2962
+offset_bottom = 104.2978
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1_0"
+metadata/cocos_tag = 7410
+metadata/action_tag = 397949475
+
+[node name="Emitter" parent="Panel_home/Button_LunPan/Particle_1_0" instance=ExtResource("18")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

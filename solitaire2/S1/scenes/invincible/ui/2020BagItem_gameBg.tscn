@@ -1,0 +1,521 @@
+[gd_scene load_steps=24 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop1.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop2.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock0.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock1.png" id="6"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="7"]
+[ext_resource type="Font" path="res://assets/invincible/font/2021font0.fnt" id="8"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_icon_youke.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow0.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow1.png" id="12"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Money/Gold_0.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_red0.png" id="15"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_red1.png" id="16"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="17"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Normal.png" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Press.png" id="19"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Disable.png" id="20"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_tips1.png" id="21"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 17706
+metadata/action_tag = 0
+
+[node name="panel_Changjing" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -150.0
+offset_top = -190.0
+offset_right = 150.0
+offset_bottom = 100.0
+pivot_offset = Vector2(150.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_Changjing"
+metadata/cocos_tag = 8476
+metadata/action_tag = -1573488554
+
+[node name="Button_gameBgA" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -5.0
+offset_top = 10.005
+offset_right = 305.0
+offset_bottom = 390.005
+pivot_offset = Vector2(155.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_gameBgA"
+metadata/cocos_tag = 8477
+metadata/action_tag = 1293026850
+script = ExtResource("2")
+scale9_margins = Vector4(101.0, 101.0, 69.0, 77.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_disabled = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel_1" type="Control" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 7.6
+offset_right = 302.0
+offset_bottom = 358.6
+pivot_offset = Vector2(147.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 172
+metadata/action_tag = -1666028941
+
+[node name="Node_fish" type="Control" parent="panel_Changjing/Button_gameBgA/Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 147.0
+offset_top = 182.52
+offset_right = 147.0
+offset_bottom = 182.52
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_fish"
+metadata/cocos_tag = 274
+metadata/action_tag = -833265012
+
+[node name="ui_Lock0_Changjing" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 94.5
+offset_top = 109.3
+offset_right = 215.5
+offset_bottom = 202.3
+pivot_offset = Vector2(60.5, 46.5)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock0_Changjing"
+metadata/cocos_tag = 95
+metadata/action_tag = -90814730
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock1_2" type="TextureRect" parent="panel_Changjing/Button_gameBgA/ui_Lock0_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 95.79
+offset_right = 113.0
+offset_bottom = 188.79
+pivot_offset = Vector2(52.5, 46.5)
+scale = Vector2(1.46, 1.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock1_2"
+metadata/cocos_tag = 96
+metadata/action_tag = -1456327947
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_npc_num" type="Label" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 106.5
+offset_top = 46.6
+offset_right = 234.5
+offset_bottom = 120.6
+pivot_offset = Vector2(64.0, 37.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_npc_num"
+metadata/cocos_tag = 564
+metadata/action_tag = -1280677724
+script = ExtResource("9")
+design_size = Vector2(128.0, 74.0)
+design_center = Vector2(170.5, 83.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "15.1"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Sprite_npc" type="TextureRect" parent="panel_Changjing/Button_gameBgA/BitmapFontLabel_npc_num"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -85.64
+offset_top = -0.9848
+offset_right = -16.64
+offset_bottom = 64.0152
+pivot_offset = Vector2(69.0, 32.5)
+scale = Vector2(1.11, 1.11)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_npc"
+metadata/cocos_tag = 563
+metadata/action_tag = 2066492459
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_gameBg" type="Label" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 84.814
+offset_top = 17.004
+offset_right = 224.814
+offset_bottom = 57.004
+pivot_offset = Vector2(70.0, 20.16)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_gameBg"
+metadata/cocos_tag = 402
+metadata/action_tag = -2118193014
+script = ExtResource("9")
+design_size = Vector2(140.0, 40.0)
+design_center = Vector2(154.814, 37.004)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "等级l50"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_gameBg" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -15.0
+offset_top = 266.7
+offset_right = 315.0
+offset_bottom = 388.7
+pivot_offset = Vector2(165.0, 61.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_gameBg"
+metadata/cocos_tag = 10626
+metadata/action_tag = 1043434800
+texture_normal = ExtResource("11")
+texture_pressed = ExtResource("12")
+texture_disabled = ExtResource("12")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_3" type="Label" parent="panel_Changjing/Button_gameBg"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 66.6
+offset_top = 12.5586
+offset_right = 276.6
+offset_bottom = 102.5586
+pivot_offset = Vector2(105.0, 45.0)
+scale = Vector2(0.78, 0.78)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_3"
+metadata/cocos_tag = 780
+metadata/action_tag = 1073565115
+script = ExtResource("9")
+design_size = Vector2(210.0, 90.0)
+design_center = Vector2(171.6, 57.5586)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "9800"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Money_Gold_0_32" type="TextureRect" parent="panel_Changjing/Button_gameBg"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 19.49
+offset_top = 23.99
+offset_right = 85.49
+offset_bottom = 90.99
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.01, 1.01)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_0_32"
+metadata/cocos_tag = 779
+metadata/action_tag = 1528668880
+texture = ExtResource("14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_gameSell" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -15.0
+offset_top = 266.7
+offset_right = 315.0
+offset_bottom = 388.7
+pivot_offset = Vector2(165.0, 61.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_gameSell"
+metadata/cocos_tag = 655
+metadata/action_tag = -1114240651
+texture_normal = ExtResource("15")
+texture_pressed = ExtResource("16")
+texture_disabled = ExtResource("16")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_sell" type="Label" parent="panel_Changjing/Button_gameSell"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 124.736
+offset_top = -371.7626
+offset_right = 204.736
+offset_bottom = -331.7626
+pivot_offset = Vector2(40.0, 20.0)
+scale = Vector2(1.37, 1.37)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_sell"
+metadata/cocos_tag = 656
+metadata/action_tag = 401104290
+script = ExtResource("9")
+design_size = Vector2(80.0, 40.0)
+design_center = Vector2(164.736, -351.7626)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "出售"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Money_Gold_0_32_0" type="TextureRect" parent="panel_Changjing/Button_gameSell"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 32.1296
+offset_top = 22.7
+offset_right = 98.1296
+offset_bottom = 89.7
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.88, 0.88)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_0_32_0"
+metadata/cocos_tag = 782
+metadata/action_tag = 1818624657
+texture = ExtResource("14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_sell" type="Label" parent="panel_Changjing/Button_gameSell"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 73.2
+offset_top = 13.56
+offset_right = 283.2
+offset_bottom = 103.56
+pivot_offset = Vector2(105.0, 45.0)
+scale = Vector2(0.78, 0.78)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_sell"
+metadata/cocos_tag = 415
+metadata/action_tag = -659045093
+script = ExtResource("9")
+design_size = Vector2(210.0, 90.0)
+design_center = Vector2(178.2, 58.56)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "9800"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_rare" type="Label" parent="panel_Changjing/Button_gameSell"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 281.4
+offset_top = -301.92
+offset_right = 365.4
+offset_bottom = -273.92
+pivot_offset = Vector2(42.0, 14.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "Text_rare"
+metadata/cocos_tag = 91
+metadata/action_tag = 1900093468
+script = ExtResource("9")
+design_size = Vector2(84.0, 28.0)
+design_center = Vector2(323.4, -287.92)
+design_font_size = 28
+bitmap_font = false
+fit_box = false
+text = "RRRRRR"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="panel_Changjing/Button_gameSell/Text_rare"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 42.0
+offset_top = 14.0
+offset_right = 42.0
+offset_bottom = 14.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 92
+metadata/action_tag = 1943760644
+
+[node name="Emitter" parent="panel_Changjing/Button_gameSell/Text_rare/Particle_1" instance=ExtResource("17")]
+
+[node name="Button_zengjia" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 449.6169
+offset_top = 90.5739
+offset_right = 495.6169
+offset_bottom = 126.5739
+pivot_offset = Vector2(23.0, 18.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_zengjia"
+metadata/cocos_tag = 2862
+metadata/action_tag = 134897595
+script = ExtResource("2")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("18")
+texture_pressed = ExtResource("19")
+texture_disabled = ExtResource("20")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_jianshao" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 541.9779
+offset_top = 90.812
+offset_right = 587.9779
+offset_bottom = 126.812
+pivot_offset = Vector2(23.0, 18.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_jianshao"
+metadata/cocos_tag = 2863
+metadata/action_tag = 577976834
+script = ExtResource("2")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("18")
+texture_pressed = ExtResource("19")
+texture_disabled = ExtResource("20")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="img_new_gameBg" type="TextureRect" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 11.0
+offset_top = 4.114
+offset_right = 73.0
+offset_bottom = 75.114
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_new_gameBg"
+metadata/cocos_tag = 8488
+metadata/action_tag = -1324116453
+texture = ExtResource("21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

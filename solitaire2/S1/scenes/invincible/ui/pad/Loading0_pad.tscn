@@ -1,0 +1,358 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/img/BeiJing11.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_icon0.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_logo5.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="7"]
+
+[sub_resource type="Animation" id="Anim_start"]
+resource_name = "start"
+length = 1.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/BeiJing11_1:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.63333, 1.65, 1.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(194.0, -157.982), Vector2(194.18366, -155.39846), Vector2(194.36727, -152.81556), Vector2(194.55079, -150.23393), Vector2(194.73417, -147.65422), Vector2(194.91738, -145.07705), Vector2(195.10035, -142.50306), Vector2(195.28306, -139.9329), Vector2(195.46545, -137.36719), Vector2(195.64747, -134.80657), Vector2(195.82909, -132.25166), Vector2(196.01026, -129.7031), Vector2(196.19094, -127.16152), Vector2(196.37107, -124.62755), Vector2(196.55062, -122.1018), Vector2(196.72954, -119.58491), Vector2(196.90778, -117.07749), Vector2(197.08531, -114.58016), Vector2(197.26208, -112.09354), Vector2(197.43804, -109.61825), Vector2(197.61315, -107.15488), Vector2(197.78737, -104.70406), Vector2(197.96066, -102.26639), Vector2(198.13297, -99.84246), Vector2(198.30426, -97.43287), Vector2(198.47449, -95.03823), Vector2(198.64361, -92.65911), Vector2(198.81159, -90.29612), Vector2(198.97838, -87.94982), Vector2(199.14394, -85.62081), Vector2(199.30824, -83.30964), Vector2(199.47122, -81.0169), Vector2(199.63286, -78.74316), Vector2(199.7931, -76.48896), Vector2(199.95192, -74.25487), Vector2(200.10926, -72.04144), Vector2(200.2651, -69.84921), Vector2(200.41939, -67.67873), Vector2(200.5721, -65.53053), Vector2(200.72319, -63.40514), Vector2(200.87262, -61.30308), Vector2(201.02035, -59.22488), Vector2(201.16635, -57.17105), Vector2(201.31059, -55.14209), Vector2(201.45302, -53.1385), Vector2(201.59361, -51.16079), Vector2(201.73232, -49.20942), Vector2(201.86913, -47.2849), Vector2(202.004, -45.38769), Vector2(202.13689, -43.51826), Vector2(202.26778, -41.67708), Vector2(202.39662, -39.86459), Vector2(202.52339, -38.08124), Vector2(202.64806, -36.32748), Vector2(202.7706, -34.60373), Vector2(202.89097, -32.91043), Vector2(203.00915, -31.24798), Vector2(203.1251, -29.61681), Vector2(203.23881, -28.0173), Vector2(203.35023, -26.44987), Vector2(203.45935, -24.91488), Vector2(203.56613, -23.41273), Vector2(203.67056, -21.94379), Vector2(203.77259, -20.50841), Vector2(203.87222, -19.10694), Vector2(203.96941, -17.73975), Vector2(204.06414, -16.40715), Vector2(204.15639, -15.10949), Vector2(204.24613, -13.84708), Vector2(204.33334, -12.62023), Vector2(204.418, -11.42925), Vector2(204.5001, -10.27442), Vector2(204.5796, -9.15605), Vector2(204.65649, -8.07439), Vector2(204.73075, -7.02972), Vector2(204.80237, -6.02229), Vector2(204.87132, -5.05236), Vector2(204.93759, -4.12017), Vector2(205.00115, -3.22593), Vector2(205.06201, -2.36988), Vector2(205.12013, -1.55222), Vector2(205.17551, -0.77316), Vector2(205.22814, -0.03289), Vector2(205.27799, 0.6684), Vector2(205.32506, 1.33056), Vector2(205.36934, 1.9534), Vector2(205.41081, 2.53679), Vector2(205.44946, 3.08057), Vector2(205.4853, 3.58461), Vector2(205.51829, 4.04878), Vector2(205.54845, 4.47298), Vector2(205.57575, 4.85709), Vector2(205.6002, 5.20103), Vector2(205.62179, 5.5047), Vector2(205.64051, 5.76803), Vector2(205.65636, 5.99096), Vector2(205.66933, 6.17344), Vector2(205.67942, 6.31541), Vector2(205.68663, 6.41684), Vector2(205.69096, 6.47771), Vector2(205.6924, 6.498)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/BeiJing11_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.69412), Color(1, 1, 1, 0.69412)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/BeiJing11_1:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.82, 1.91), Vector2(1.82, 1.91)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_1:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_2/fish_icon0_4:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1159.511, -409.2771), Vector2(1158.82343, -409.08503), Vector2(1156.76071, -408.50884), Vector2(1153.32285, -407.54851), Vector2(1148.50984, -406.20405), Vector2(1142.32169, -404.47545), Vector2(1134.75839, -402.36273), Vector2(1125.81994, -399.86587), Vector2(1115.50636, -396.98489), Vector2(1103.81762, -393.71977), Vector2(1090.75374, -390.07051), Vector2(1076.31472, -386.03713), Vector2(1060.50055, -381.61962), Vector2(1043.31124, -376.81797), Vector2(1024.74678, -371.63219), Vector2(1004.80717, -366.06228), Vector2(983.49242, -360.10824), Vector2(960.80253, -353.77007), Vector2(936.73749, -347.04776), Vector2(911.29731, -339.94133), Vector2(884.48198, -332.45076), Vector2(856.2915, -324.57606), Vector2(826.72588, -316.31723), Vector2(795.78511, -307.67426), Vector2(763.4692, -298.64717), Vector2(729.77815, -289.23594), Vector2(694.71195, -279.44058), Vector2(658.2706, -269.26109), Vector2(620.7979, -258.79351), Vector2(584.35655, -248.61402), Vector2(549.29035, -238.81866), Vector2(515.5993, -229.40743), Vector2(483.28339, -220.38034), Vector2(452.34262, -211.73737), Vector2(422.777, -203.47854), Vector2(394.58652, -195.60384), Vector2(367.77119, -188.11327), Vector2(342.33101, -181.00684), Vector2(318.26597, -174.28453), Vector2(295.57608, -167.94636), Vector2(274.26133, -161.99232), Vector2(254.32172, -156.42241), Vector2(235.75726, -151.23663), Vector2(218.56795, -146.43498), Vector2(202.75378, -142.01747), Vector2(188.31476, -137.98409), Vector2(175.25088, -134.33483), Vector2(163.56214, -131.06971), Vector2(153.24856, -128.18873), Vector2(144.31011, -125.69187), Vector2(136.74681, -123.57915), Vector2(130.55866, -121.85055), Vector2(125.74565, -120.50609), Vector2(122.30779, -119.54576), Vector2(120.24507, -118.96957), Vector2(119.5575, -118.7775), Vector2(119.5575, -118.7775)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_2/fish_icon0_4:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 1.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.08), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0.32), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0.52), Color(1, 1, 1, 0.56), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.68), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.76), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.84), Color(1, 1, 1, 0.88), Color(1, 1, 1, 0.92), Color(1, 1, 1, 0.96), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_2/Node_1/LoadingBar_percent:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_2/Node_1/Text_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_2/Node_1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_2:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.0, 40.0), Vector2(0.0, 47.85348), Vector2(0.0, 55.70393), Vector2(0.0, 63.54832), Vector2(0.0, 71.38364), Vector2(0.0, 79.20686), Vector2(0.0, 87.01496), Vector2(0.0, 94.80494), Vector2(0.0, 102.57379), Vector2(0.0, 110.31851), Vector2(0.0, 118.03613), Vector2(0.0, 125.72366), Vector2(0.0, 133.37815), Vector2(0.0, 140.99663), Vector2(0.0, 148.57618), Vector2(0.0, 156.11387), Vector2(0.0, 163.6068), Vector2(0.0, 171.05207), Vector2(0.0, 178.44682), Vector2(0.0, 185.7882), Vector2(0.0, 193.07337), Vector2(0.0, 200.29953), Vector2(0.0, 207.4639), Vector2(0.0, 214.5637), Vector2(0.0, 221.5962), Vector2(0.0, 228.55869), Vector2(0.0, 235.4485), Vector2(0.0, 242.26295), Vector2(0.0, 248.99943), Vector2(0.0, 255.65533), Vector2(0.0, 262.22809), Vector2(0.0, 268.71518), Vector2(0.0, 275.1141), Vector2(0.0, 281.42238), Vector2(0.0, 287.63758), Vector2(0.0, 293.75731), Vector2(0.0, 299.77922), Vector2(0.0, 305.70098), Vector2(0.0, 311.5203), Vector2(0.0, 317.23495), Vector2(0.0, 322.84271), Vector2(0.0, 328.34144), Vector2(0.0, 333.729), Vector2(0.0, 339.00333), Vector2(0.0, 344.16239), Vector2(0.0, 349.20418), Vector2(0.0, 354.12677), Vector2(0.0, 358.92826), Vector2(0.0, 363.6068), Vector2(0.0, 368.16058), Vector2(0.0, 372.58784), Vector2(0.0, 376.88689), Vector2(0.0, 381.05607), Vector2(0.0, 385.09375), Vector2(0.0, 388.9984), Vector2(0.0, 392.76851), Vector2(0.0, 396.40261), Vector2(0.0, 399.89931), Vector2(0.0, 403.25727), Vector2(0.0, 406.47518), Vector2(0.0, 409.55181), Vector2(0.0, 412.48597), Vector2(0.0, 415.27653), Vector2(0.0, 417.92242), Vector2(0.0, 420.42261), Vector2(0.0, 422.77613), Vector2(0.0, 424.98209), Vector2(0.0, 427.03964), Vector2(0.0, 428.94797), Vector2(0.0, 430.70635), Vector2(0.0, 432.31411), Vector2(0.0, 433.77063), Vector2(0.0, 435.07534), Vector2(0.0, 436.22774), Vector2(0.0, 437.22738), Vector2(0.0, 438.07389), Vector2(0.0, 438.76693), Vector2(0.0, 439.30624), Vector2(0.0, 439.69161), Vector2(0.0, 439.9229), Vector2(0.0, 440.0), Vector2(0.0, 440.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 1.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="Animation" id="Anim_out"]
+resource_name = "out"
+length = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/BeiJing11_1:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(205.6924, 6.498), Vector2(205.6924, 6.498)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/BeiJing11_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.69412), Color(1, 1, 1, 0.64784), Color(1, 1, 1, 0.60157), Color(1, 1, 1, 0.55529), Color(1, 1, 1, 0.50902), Color(1, 1, 1, 0.46275), Color(1, 1, 1, 0.41647), Color(1, 1, 1, 0.3702), Color(1, 1, 1, 0.32392), Color(1, 1, 1, 0.27765), Color(1, 1, 1, 0.23137), Color(1, 1, 1, 0.1851), Color(1, 1, 1, 0.13882), Color(1, 1, 1, 0.09255), Color(1, 1, 1, 0.04627), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/BeiJing11_1:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.82, 1.91), Vector2(1.82009, 1.91009), Vector2(1.82035, 1.91037), Vector2(1.82079, 1.91083), Vector2(1.8214, 1.91147), Vector2(1.8222, 1.9123), Vector2(1.82317, 1.91332), Vector2(1.82432, 1.91453), Vector2(1.82566, 1.91594), Vector2(1.82718, 1.91753), Vector2(1.82889, 1.91933), Vector2(1.8308, 1.92133), Vector2(1.8329, 1.92353), Vector2(1.8352, 1.92595), Vector2(1.83771, 1.92858), Vector2(1.84043, 1.93144), Vector2(1.84338, 1.93453), Vector2(1.84655, 1.93785), Vector2(1.84995, 1.94143), Vector2(1.8536, 1.94526), Vector2(1.85751, 1.94936), Vector2(1.86169, 1.95375), Vector2(1.86615, 1.95843), Vector2(1.87092, 1.96343), Vector2(1.876, 1.96876), Vector2(1.88143, 1.97445), Vector2(1.88722, 1.98053), Vector2(1.89341, 1.98703), Vector2(1.90004, 1.99398), Vector2(1.90715, 2.00145), Vector2(1.9148, 2.00947), Vector2(1.92305, 2.01813), Vector2(1.932, 2.02752), Vector2(1.94176, 2.03776), Vector2(1.9525, 2.04903), Vector2(1.96445, 2.06156), Vector2(1.97795, 2.07574), Vector2(1.99361, 2.09217), Vector2(2.01257, 2.11206), Vector2(2.03778, 2.13852), Vector2(2.1, 2.2038), Vector2(2.1, 2.2038)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_1:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_2/fish_icon0_4:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(119.5575, -118.7775), Vector2(119.5575, -118.7775)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_2/fish_icon0_4:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_2/Node_1/LoadingBar_percent:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.96), Color(1, 1, 1, 0.92), Color(1, 1, 1, 0.88), Color(1, 1, 1, 0.84), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.76), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.68), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.56), Color(1, 1, 1, 0.52), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.32), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.08), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_2/Node_1/Text_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_2/Node_1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.96), Color(1, 1, 1, 0.92), Color(1, 1, 1, 0.88), Color(1, 1, 1, 0.84), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.76), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.68), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.56), Color(1, 1, 1, 0.52), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.32), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.08), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_2:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 1.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.0, 440.0), Vector2(0.0, 440.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.96), Color(1, 1, 1, 0.92), Color(1, 1, 1, 0.88), Color(1, 1, 1, 0.84), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.76), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.68), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.56), Color(1, 1, 1, 0.52), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.32), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.08), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+[sub_resource type="Animation" id="Anim_idle"]
+resource_name = "idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/BeiJing11_1:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(205.6924, 6.498)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/BeiJing11_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.69412)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/BeiJing11_1:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.82, 1.91)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_1:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_2/fish_icon0_4:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(119.5575, -118.7775)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_2/fish_icon0_4:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_2/Node_1/LoadingBar_percent:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_2/Node_1/Text_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_2/Node_1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_2:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, 440.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"start": SubResource("Anim_start"),
+"out": SubResource("Anim_out"),
+"idle": SubResource("Anim_idle")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1440.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 2
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -255.024
+offset_right = 1080.0
+offset_bottom = 1695.024
+pivot_offset = Vector2(540.0, 975.024)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 539
+metadata/action_tag = 1698427837
+color = Color(0.0, 0.0, 0.0, 1.0)
+
+[node name="BeiJing11_1" type="TextureRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 194.0
+offset_top = -157.982
+offset_right = 886.0
+offset_bottom = 1342.018
+pivot_offset = Vector2(346.0, 750.0)
+scale = Vector2(1.82, 1.91)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.69412)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BeiJing11_1"
+metadata/cocos_tag = 1205
+metadata/action_tag = 814098492
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_2" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 40.0
+offset_right = 1080.0
+offset_bottom = 240.0
+pivot_offset = Vector2(0.0, 200.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_2"
+metadata/cocos_tag = 4820
+metadata/action_tag = -1160758467
+
+[node name="fish_icon0_4" type="TextureRect" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1159.511
+offset_top = -409.2771
+offset_right = 1307.511
+offset_bottom = -296.2771
+pivot_offset = Vector2(67.0588, 58.5114)
+scale = Vector2(1.3003, 1.3148)
+rotation = -0.15089
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "fish_icon0_4"
+metadata/cocos_tag = 4821
+metadata/action_tag = -485648861
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_logo5_2" type="TextureRect" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 302.5
+offset_top = -34.0
+offset_right = 777.5
+offset_bottom = 214.0
+pivot_offset = Vector2(237.5, 124.0)
+scale = Vector2(1.77, 1.77)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_logo5_2"
+metadata/cocos_tag = 543
+metadata/action_tag = -821070754
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_1" type="Control" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 378.0
+offset_right = 540.0
+offset_bottom = 378.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 591
+metadata/action_tag = 1184271417
+
+[node name="LoadingBar_percent" type="TextureProgressBar" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -347.5
+offset_top = -20.0
+offset_right = 347.5
+offset_bottom = 20.0
+pivot_offset = Vector2(347.5, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.56471, 0.93333, 0.56471, 1.0)
+metadata/cocos_name = "LoadingBar_percent"
+metadata/cocos_tag = 707
+metadata/action_tag = -1322784655
+value = 100.0
+nine_patch_stretch = true
+
+[node name="Text_2" type="Label" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 75.278
+offset_top = 69.1722
+offset_right = 110.278
+offset_bottom = 139.1722
+pivot_offset = Vector2(0.0, 34.776)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_2"
+metadata/cocos_tag = 545
+metadata/action_tag = -1689474682
+script = ExtResource("6")
+design_size = Vector2(35.0, 70.0)
+design_center = Vector2(92.778, 104.1722)
+design_font_size = 70
+bitmap_font = false
+fit_box = false
+text = "%"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_percent" type="Label" parent="Panel_2/Node_1/Text_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -112.7725
+offset_top = -6.675
+offset_right = -13.7725
+offset_bottom = 83.325
+pivot_offset = Vector2(99.0, 45.0)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_percent"
+metadata/cocos_tag = 1146
+metadata/action_tag = 1189167280
+script = ExtResource("6")
+design_size = Vector2(99.0, 90.0)
+design_center = Vector2(-63.2725, 38.325)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "50"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

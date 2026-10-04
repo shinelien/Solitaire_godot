@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/invincible/particle_textures/game_bg0.png" id="1"]
+[sub_resource type="Gradient" id="Color"]
+colors = PackedColorArray(0.610822, 0.972666, 0.694047, 0.924229, 0.607555, 1.0, 0.705753, 0.865475)
+[sub_resource type="Curve" id="Size"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.274667), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Rotation"]
+_data = [Vector2(0, 0.0), 0.0, 0.0, 0, 0, Vector2(1, 0.0), 0.0, 0.0, 0, 0]
+[sub_resource type="CanvasItemMaterial" id="Blend"]
+blend_mode = 0
+[node name="Particles" type="CPUParticles2D"]
+material = SubResource("Blend")
+amount = 6
+lifetime = 4.0
+lifetime_randomness = 0.0
+texture = ExtResource("1")
+emission_shape = 3
+emission_rect_extents = Vector2(400.0, 700.0)
+direction = Vector2(1.0, -0.0)
+spread = 360.0
+gravity = Vector2(0.0, -0.0)
+initial_velocity_min = 5.9
+initial_velocity_max = 6.1
+radial_accel_min = 0.0
+radial_accel_max = 0.0
+tangential_accel_min = 0.0
+tangential_accel_max = 0.0
+scale_amount_min = 0.185781
+scale_amount_max = 0.751719
+scale_amount_curve = SubResource("Size")
+color_ramp = SubResource("Color")
+angle_min = 0.0
+angle_max = 360.0
+angle_curve = SubResource("Rotation")
+local_coords = false
+one_shot = false

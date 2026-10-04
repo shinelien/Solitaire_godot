@@ -1,0 +1,234 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Daily_Daily2.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_lanyuan4.png" id="3"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/font/ui_num0.fnt" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_WG3.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_1.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_2.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_3.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_4.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/guangif_5.png" id="13"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image_root/Daily_Daily4_1:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 1.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.9, 0.9), Vector2(0.92094, 0.92094), Vector2(0.94185, 0.94185), Vector2(0.96272, 0.96272), Vector2(0.9835, 0.9835), Vector2(1.00419, 1.00419), Vector2(1.02475, 1.02475), Vector2(1.04515, 1.04515), Vector2(1.06538, 1.06538), Vector2(1.08541, 1.08541), Vector2(1.10521, 1.10521), Vector2(1.12476, 1.12476), Vector2(1.14404, 1.14404), Vector2(1.16302, 1.16302), Vector2(1.18168, 1.18168), Vector2(1.2, 1.2), Vector2(1.21795, 1.21795), Vector2(1.23552, 1.23552), Vector2(1.25267, 1.25267), Vector2(1.2694, 1.2694), Vector2(1.28567, 1.28567), Vector2(1.30148, 1.30148), Vector2(1.3168, 1.3168), Vector2(1.3316, 1.3316), Vector2(1.34589, 1.34589), Vector2(1.35963, 1.35963), Vector2(1.37281, 1.37281), Vector2(1.38541, 1.38541), Vector2(1.39742, 1.39742), Vector2(1.40883, 1.40883), Vector2(1.41962, 1.41962), Vector2(1.42977, 1.42977), Vector2(1.43928, 1.43928), Vector2(1.44813, 1.44813), Vector2(1.45631, 1.45631), Vector2(1.46382, 1.46382), Vector2(1.47063, 1.47063), Vector2(1.47676, 1.47676), Vector2(1.48218, 1.48218), Vector2(1.48689, 1.48689), Vector2(1.49088, 1.49088), Vector2(1.49416, 1.49416), Vector2(1.49671, 1.49671), Vector2(1.49854, 1.49854), Vector2(1.49963, 1.49963), Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image_root/Daily_Daily4_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 1.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.8), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.97143), Color(1, 1, 1, 0.94286), Color(1, 1, 1, 0.91429), Color(1, 1, 1, 0.88571), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.82857), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.77143), Color(1, 1, 1, 0.74286), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.68571), Color(1, 1, 1, 0.65714), Color(1, 1, 1, 0.62857), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.54286), Color(1, 1, 1, 0.51429), Color(1, 1, 1, 0.48571), Color(1, 1, 1, 0.45714), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.37143), Color(1, 1, 1, 0.34286), Color(1, 1, 1, 0.31429), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.25714), Color(1, 1, 1, 0.22857), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.17143), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.11429), Color(1, 1, 1, 0.08571), Color(1, 1, 1, 0.05714), Color(1, 1, 1, 0.02857), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Image_root/Daily_Daily4_1_0:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.9, 0.9), Vector2(0.92094, 0.92094), Vector2(0.94185, 0.94185), Vector2(0.96272, 0.96272), Vector2(0.9835, 0.9835), Vector2(1.00419, 1.00419), Vector2(1.02475, 1.02475), Vector2(1.04515, 1.04515), Vector2(1.06538, 1.06538), Vector2(1.08541, 1.08541), Vector2(1.10521, 1.10521), Vector2(1.12476, 1.12476), Vector2(1.14404, 1.14404), Vector2(1.16302, 1.16302), Vector2(1.18168, 1.18168), Vector2(1.2, 1.2), Vector2(1.21795, 1.21795), Vector2(1.23552, 1.23552), Vector2(1.25267, 1.25267), Vector2(1.2694, 1.2694), Vector2(1.28567, 1.28567), Vector2(1.30148, 1.30148), Vector2(1.3168, 1.3168), Vector2(1.3316, 1.3316), Vector2(1.34589, 1.34589), Vector2(1.35963, 1.35963), Vector2(1.37281, 1.37281), Vector2(1.38541, 1.38541), Vector2(1.39742, 1.39742), Vector2(1.40883, 1.40883), Vector2(1.41962, 1.41962), Vector2(1.42977, 1.42977), Vector2(1.43928, 1.43928), Vector2(1.44813, 1.44813), Vector2(1.45631, 1.45631), Vector2(1.46382, 1.46382), Vector2(1.47063, 1.47063), Vector2(1.47676, 1.47676), Vector2(1.48218, 1.48218), Vector2(1.48689, 1.48689), Vector2(1.49088, 1.49088), Vector2(1.49416, 1.49416), Vector2(1.49671, 1.49671), Vector2(1.49854, 1.49854), Vector2(1.49963, 1.49963), Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Image_root/Daily_Daily4_1_0:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.8), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.97143), Color(1, 1, 1, 0.94286), Color(1, 1, 1, 0.91429), Color(1, 1, 1, 0.88571), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.82857), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.77143), Color(1, 1, 1, 0.74286), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.68571), Color(1, 1, 1, 0.65714), Color(1, 1, 1, 0.62857), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.54286), Color(1, 1, 1, 0.51429), Color(1, 1, 1, 0.48571), Color(1, 1, 1, 0.45714), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.37143), Color(1, 1, 1, 0.34286), Color(1, 1, 1, 0.31429), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.25714), Color(1, 1, 1, 0.22857), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.17143), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.11429), Color(1, 1, 1, 0.08571), Color(1, 1, 1, 0.05714), Color(1, 1, 1, 0.02857), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Image_root/Node_cown/Sprite_1:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("8"), ExtResource("8")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Image_root/Node_cown/Sprite_1:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_start"]
+resource_name = "start"
+length = 0.58333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image_root/Daily_Daily4_1:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.58333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image_root/Daily_Daily4_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.58333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Image_root/Daily_Daily4_1_0:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.58333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.5, 1.5), Vector2(1.5, 1.5)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Image_root/Daily_Daily4_1_0:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.58333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Image_root/Node_cown/Sprite_1:texture")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.08333, 0.16667, 0.25, 0.33333, 0.41667, 0.58333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13"), ExtResource("13")]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Image_root/Node_cown/Sprite_1:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.45, 0.58333), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, false]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop"),
+"start": SubResource("Anim_start")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 269
+metadata/action_tag = 0
+
+[node name="Image_root" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -55.0
+offset_top = -55.0
+offset_right = 55.0
+offset_bottom = 55.0
+pivot_offset = Vector2(55.0, 55.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_root"
+metadata/cocos_tag = 270
+metadata/action_tag = -683657868
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Daily_Daily4_1" type="TextureRect" parent="Image_root"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 10.5
+offset_top = 9.4
+offset_right = 99.5
+offset_bottom = 98.4
+pivot_offset = Vector2(44.5, 44.5)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Daily_Daily4_1"
+metadata/cocos_tag = 2008
+metadata/action_tag = -1553922272
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Daily_Daily4_1_0" type="TextureRect" parent="Image_root"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 10.5
+offset_top = 9.4
+offset_right = 99.5
+offset_bottom = 98.4
+pivot_offset = Vector2(44.5, 44.5)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Daily_Daily4_1_0"
+metadata/cocos_tag = 2010
+metadata/action_tag = -1374067233
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_day" type="Label" parent="Image_root"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 44.3
+offset_top = 31.7
+offset_right = 61.3
+offset_bottom = 71.7
+pivot_offset = Vector2(8.5, 20.0)
+scale = Vector2(1.31, 1.31)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_day"
+metadata/cocos_tag = 271
+metadata/action_tag = 1881511693
+script = ExtResource("6")
+design_size = Vector2(17.0, 40.0)
+design_center = Vector2(52.8, 51.7)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "1"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_cown" type="Control" parent="Image_root"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 55.0
+offset_top = 55.0
+offset_right = 55.0
+offset_bottom = 55.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.91, 0.91)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_cown"
+metadata/cocos_tag = 2707
+metadata/action_tag = -117737818
+
+[node name="Sprite_cown" type="TextureRect" parent="Image_root/Node_cown"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -48.0
+offset_top = -54.0
+offset_right = 48.0
+offset_bottom = 38.0
+pivot_offset = Vector2(48.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_cown"
+metadata/cocos_tag = 1921
+metadata/action_tag = -1729961666
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_1" type="TextureRect" parent="Image_root/Node_cown"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -48.0
+offset_top = -54.0
+offset_right = 48.0
+offset_bottom = 38.0
+pivot_offset = Vector2(48.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_1"
+metadata/cocos_tag = 2743
+metadata/action_tag = -551049618
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

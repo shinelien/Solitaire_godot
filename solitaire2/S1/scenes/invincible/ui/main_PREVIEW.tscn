@@ -1,0 +1,441 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/ImageFile.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Previewicon6.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="4"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_unlockQuarter/Node_sprite/Ui_Previewicon6_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.76667, 1.78333, 1.8, 1.81667, 1.83333, 1.85, 1.86667, 1.88333, 1.9, 1.91667, 2.1, 2.11667, 2.13333, 2.15, 2.16667, 2.18333, 2.2, 2.21667, 2.23333, 2.25, 2.26667, 2.28333, 2.3, 2.31667, 2.33333, 2.35, 2.36667, 2.38333, 2.4, 2.41667, 2.6, 2.61667, 2.63333, 2.65, 2.66667, 2.68333, 2.7, 2.71667, 2.73333, 2.75, 2.93333, 2.95, 2.96667, 2.98333, 3.0, 3.01667, 3.03333, 3.05, 3.06667, 3.08333, 3.1, 3.11667, 3.13333, 3.15, 3.16667, 3.18333, 3.2, 3.21667, 3.23333, 3.25, 3.43333, 3.45, 3.46667, 3.48333, 3.5, 3.51667, 3.53333, 3.55, 3.56667, 3.58333, 3.76667, 3.78333, 3.8, 3.81667, 3.83333, 3.85, 3.86667, 3.88333, 3.9, 3.91667, 3.93333, 3.95, 3.96667, 3.98333, 4.0, 4.01667, 4.03333, 4.05, 4.06667, 4.08333, 4.26667, 4.28333, 4.3, 4.31667, 4.33333, 4.35, 4.36667, 4.38333, 4.4, 4.41667, 4.6, 4.61667, 4.63333, 4.65, 4.66667, 4.68333, 4.7, 4.71667, 4.73333, 4.75, 4.76667, 4.78333, 4.8, 4.81667, 4.83333, 4.85, 4.86667, 4.88333, 4.9, 4.91667, 5.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "values": [{"method": &"timeline_event", "args": ["Node_unlockQuarter/Sprite_flopPoker","FrameEvent","{\"FrameIndex\": \"0\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_unlockQuarter/Sprite_flopPoker:rotation")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 5.0), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [-0.43633, -0.43633]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_unlockQuarter:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.63333, 1.65, 1.66667, 1.68333, 1.7, 1.71667, 1.73333, 1.75, 1.76667, 1.78333, 1.8, 1.81667, 1.83333, 1.85, 1.86667, 1.88333, 1.9, 1.91667, 1.93333, 1.95, 1.96667, 1.98333, 2.0, 2.01667, 2.03333, 2.05, 2.06667, 2.08333, 2.1, 2.11667, 2.13333, 2.15, 2.16667, 2.18333, 2.2, 2.21667, 2.23333, 2.25, 2.26667, 2.28333, 2.3, 2.31667, 2.33333, 2.35, 2.36667, 2.38333, 2.4, 2.41667, 2.43333, 2.45, 2.46667, 2.48333, 2.5, 2.51667, 2.53333, 2.55, 2.56667, 2.58333, 2.6, 2.61667, 2.63333, 2.65, 2.66667, 2.68333, 2.7, 2.71667, 2.73333, 2.75, 2.76667, 2.78333, 2.8, 2.81667, 2.83333, 2.85, 2.86667, 2.88333, 2.9, 2.91667, 2.93333, 2.95, 2.96667, 2.98333, 3.0, 3.01667, 3.03333, 3.05, 3.06667, 3.08333, 3.1, 3.11667, 3.13333, 3.15, 3.16667, 3.18333, 3.2, 3.21667, 3.23333, 3.25, 3.26667, 3.28333, 3.3, 3.31667, 3.33333, 3.35, 3.36667, 3.38333, 3.4, 3.41667, 3.43333, 3.45, 3.46667, 3.48333, 3.5, 3.51667, 3.53333, 3.55, 3.56667, 3.58333, 3.6, 3.61667, 3.63333, 3.65, 3.66667, 3.68333, 3.7, 3.71667, 3.73333, 3.75, 3.76667, 3.78333, 3.8, 3.81667, 3.83333, 3.85, 3.86667, 3.88333, 3.9, 3.91667, 3.93333, 3.95, 3.96667, 3.98333, 4.0, 4.01667, 4.03333, 4.05, 4.06667, 4.08333, 4.1, 4.11667, 4.13333, 4.15, 4.16667, 4.18333, 4.2, 4.21667, 4.23333, 4.25, 4.26667, 4.28333, 4.3, 4.31667, 4.33333, 4.35, 4.36667, 4.38333, 4.4, 4.41667, 4.43333, 4.45, 4.46667, 4.48333, 4.5, 4.51667, 4.53333, 4.55, 4.56667, 4.58333, 4.6, 4.61667, 4.63333, 4.65, 4.66667, 4.68333, 4.7, 4.71667, 4.73333, 4.75, 4.76667, 4.78333, 4.8, 4.81667, 4.83333, 4.85, 4.86667, 4.88333, 4.9, 4.91667, 4.93333, 4.95, 4.96667, 4.98333, 5.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.9984, 1.0), Vector2(0.9936, 1.0), Vector2(0.9856, 1.0), Vector2(0.9744, 1.0), Vector2(0.96, 1.0), Vector2(0.9424, 1.0), Vector2(0.9216, 1.0), Vector2(0.8976, 1.0), Vector2(0.8704, 1.0), Vector2(0.84, 1.0), Vector2(0.8064, 1.0), Vector2(0.7696, 1.0), Vector2(0.7296, 1.0), Vector2(0.6864, 1.0), Vector2(0.64, 1.0), Vector2(0.5904, 1.0), Vector2(0.5376, 1.0), Vector2(0.4816, 1.0), Vector2(0.4224, 1.0), Vector2(0.36, 1.0), Vector2(0.2944, 1.0), Vector2(0.2256, 1.0), Vector2(0.1536, 1.0), Vector2(0.0784, 1.0), Vector2(0.0, 1.0), Vector2(-0.0784, 1.0), Vector2(-0.1536, 1.0), Vector2(-0.2256, 1.0), Vector2(-0.2944, 1.0), Vector2(-0.36, 1.0), Vector2(-0.4224, 1.0), Vector2(-0.4816, 1.0), Vector2(-0.5376, 1.0), Vector2(-0.5904, 1.0), Vector2(-0.64, 1.0), Vector2(-0.6864, 1.0), Vector2(-0.7296, 1.0), Vector2(-0.7696, 1.0), Vector2(-0.8064, 1.0), Vector2(-0.84, 1.0), Vector2(-0.8704, 1.0), Vector2(-0.8976, 1.0), Vector2(-0.9216, 1.0), Vector2(-0.9424, 1.0), Vector2(-0.96, 1.0), Vector2(-0.9744, 1.0), Vector2(-0.9856, 1.0), Vector2(-0.9936, 1.0), Vector2(-0.9984, 1.0), Vector2(-1.0, 1.0), Vector2(-0.99803, 1.0), Vector2(-0.99211, 1.0), Vector2(-0.98229, 1.0), Vector2(-0.96858, 1.0), Vector2(-0.95106, 1.0), Vector2(-0.92978, 1.0), Vector2(-0.90483, 1.0), Vector2(-0.87631, 1.0), Vector2(-0.84433, 1.0), Vector2(-0.80902, 1.0), Vector2(-0.77051, 1.0), Vector2(-0.72897, 1.0), Vector2(-0.68455, 1.0), Vector2(-0.63742, 1.0), Vector2(-0.58779, 1.0), Vector2(-0.53583, 1.0), Vector2(-0.48175, 1.0), Vector2(-0.42578, 1.0), Vector2(-0.36812, 1.0), Vector2(-0.30902, 1.0), Vector2(-0.24869, 1.0), Vector2(-0.18738, 1.0), Vector2(-0.12533, 1.0), Vector2(-0.06279, 1.0), Vector2(-0.0, 1.0), Vector2(0.06279, 1.0), Vector2(0.12533, 1.0), Vector2(0.18738, 1.0), Vector2(0.24869, 1.0), Vector2(0.30902, 1.0), Vector2(0.36812, 1.0), Vector2(0.42578, 1.0), Vector2(0.48175, 1.0), Vector2(0.53583, 1.0), Vector2(0.58779, 1.0), Vector2(0.63742, 1.0), Vector2(0.68455, 1.0), Vector2(0.72897, 1.0), Vector2(0.77051, 1.0), Vector2(0.80902, 1.0), Vector2(0.84433, 1.0), Vector2(0.87631, 1.0), Vector2(0.90483, 1.0), Vector2(0.92978, 1.0), Vector2(0.95106, 1.0), Vector2(0.96858, 1.0), Vector2(0.98229, 1.0), Vector2(0.99211, 1.0), Vector2(0.99803, 1.0), Vector2(1.0, 1.0), Vector2(0.99803, 1.0), Vector2(0.99211, 1.0), Vector2(0.98229, 1.0), Vector2(0.96858, 1.0), Vector2(0.95106, 1.0), Vector2(0.92978, 1.0), Vector2(0.90483, 1.0), Vector2(0.87631, 1.0), Vector2(0.84433, 1.0), Vector2(0.80902, 1.0), Vector2(0.77051, 1.0), Vector2(0.72897, 1.0), Vector2(0.68455, 1.0), Vector2(0.63742, 1.0), Vector2(0.58779, 1.0), Vector2(0.53583, 1.0), Vector2(0.48175, 1.0), Vector2(0.42578, 1.0), Vector2(0.36812, 1.0), Vector2(0.30902, 1.0), Vector2(0.24869, 1.0), Vector2(0.18738, 1.0), Vector2(0.12533, 1.0), Vector2(0.06279, 1.0), Vector2(0.0, 1.0), Vector2(-0.06279, 1.0), Vector2(-0.12533, 1.0), Vector2(-0.18738, 1.0), Vector2(-0.24869, 1.0), Vector2(-0.30902, 1.0), Vector2(-0.36812, 1.0), Vector2(-0.42578, 1.0), Vector2(-0.48175, 1.0), Vector2(-0.53583, 1.0), Vector2(-0.58779, 1.0), Vector2(-0.63742, 1.0), Vector2(-0.68455, 1.0), Vector2(-0.72897, 1.0), Vector2(-0.77051, 1.0), Vector2(-0.80902, 1.0), Vector2(-0.84433, 1.0), Vector2(-0.87631, 1.0), Vector2(-0.90483, 1.0), Vector2(-0.92978, 1.0), Vector2(-0.95106, 1.0), Vector2(-0.96858, 1.0), Vector2(-0.98229, 1.0), Vector2(-0.99211, 1.0), Vector2(-0.99803, 1.0), Vector2(-1.0, 1.0), Vector2(-0.99803, 1.0), Vector2(-0.99211, 1.0), Vector2(-0.98229, 1.0), Vector2(-0.96858, 1.0), Vector2(-0.95106, 1.0), Vector2(-0.92978, 1.0), Vector2(-0.90483, 1.0), Vector2(-0.87631, 1.0), Vector2(-0.84433, 1.0), Vector2(-0.80902, 1.0), Vector2(-0.77051, 1.0), Vector2(-0.72897, 1.0), Vector2(-0.68455, 1.0), Vector2(-0.63742, 1.0), Vector2(-0.58779, 1.0), Vector2(-0.53583, 1.0), Vector2(-0.48175, 1.0), Vector2(-0.42578, 1.0), Vector2(-0.36812, 1.0), Vector2(-0.30902, 1.0), Vector2(-0.24869, 1.0), Vector2(-0.18738, 1.0), Vector2(-0.12533, 1.0), Vector2(-0.06279, 1.0), Vector2(-0.0, 1.0), Vector2(0.06279, 1.0), Vector2(0.12533, 1.0), Vector2(0.18738, 1.0), Vector2(0.24869, 1.0), Vector2(0.30902, 1.0), Vector2(0.36812, 1.0), Vector2(0.42578, 1.0), Vector2(0.48175, 1.0), Vector2(0.53583, 1.0), Vector2(0.58779, 1.0), Vector2(0.63742, 1.0), Vector2(0.68455, 1.0), Vector2(0.72897, 1.0), Vector2(0.77051, 1.0), Vector2(0.80902, 1.0), Vector2(0.84433, 1.0), Vector2(0.87631, 1.0), Vector2(0.90483, 1.0), Vector2(0.92978, 1.0), Vector2(0.95106, 1.0), Vector2(0.96858, 1.0), Vector2(0.98229, 1.0), Vector2(0.99211, 1.0), Vector2(0.99803, 1.0), Vector2(1.0, 1.0), Vector2(0.99803, 1.0), Vector2(0.99211, 1.0), Vector2(0.98229, 1.0), Vector2(0.96858, 1.0), Vector2(0.95106, 1.0), Vector2(0.92978, 1.0), Vector2(0.90483, 1.0), Vector2(0.87631, 1.0), Vector2(0.84433, 1.0), Vector2(0.80902, 1.0), Vector2(0.77051, 1.0), Vector2(0.72897, 1.0), Vector2(0.68455, 1.0), Vector2(0.63742, 1.0), Vector2(0.58779, 1.0), Vector2(0.53583, 1.0), Vector2(0.48175, 1.0), Vector2(0.42578, 1.0), Vector2(0.36812, 1.0), Vector2(0.30902, 1.0), Vector2(0.24869, 1.0), Vector2(0.18738, 1.0), Vector2(0.12533, 1.0), Vector2(0.06279, 1.0), Vector2(0.0, 1.0), Vector2(-0.06279, 1.0), Vector2(-0.12533, 1.0), Vector2(-0.18738, 1.0), Vector2(-0.24869, 1.0), Vector2(-0.30902, 1.0), Vector2(-0.36812, 1.0), Vector2(-0.42578, 1.0), Vector2(-0.48175, 1.0), Vector2(-0.53583, 1.0), Vector2(-0.58779, 1.0), Vector2(-0.63742, 1.0), Vector2(-0.68455, 1.0), Vector2(-0.72897, 1.0), Vector2(-0.77051, 1.0), Vector2(-0.80902, 1.0), Vector2(-0.84433, 1.0), Vector2(-0.87631, 1.0), Vector2(-0.90483, 1.0), Vector2(-0.92978, 1.0), Vector2(-0.95106, 1.0), Vector2(-0.96858, 1.0), Vector2(-0.98229, 1.0), Vector2(-0.99211, 1.0), Vector2(-0.99803, 1.0), Vector2(-1.0, 1.0), Vector2(-0.99803, 1.0), Vector2(-0.99211, 1.0), Vector2(-0.98229, 1.0), Vector2(-0.96858, 1.0), Vector2(-0.95106, 1.0), Vector2(-0.92978, 1.0), Vector2(-0.90483, 1.0), Vector2(-0.87631, 1.0), Vector2(-0.84433, 1.0), Vector2(-0.80902, 1.0), Vector2(-0.77051, 1.0), Vector2(-0.72897, 1.0), Vector2(-0.68455, 1.0), Vector2(-0.63742, 1.0), Vector2(-0.58779, 1.0), Vector2(-0.53583, 1.0), Vector2(-0.48175, 1.0), Vector2(-0.42578, 1.0), Vector2(-0.36812, 1.0), Vector2(-0.30902, 1.0), Vector2(-0.24869, 1.0), Vector2(-0.18738, 1.0), Vector2(-0.12533, 1.0), Vector2(-0.06279, 1.0), Vector2(-0.0, 1.0), Vector2(0.06279, 1.0), Vector2(0.12533, 1.0), Vector2(0.18738, 1.0), Vector2(0.24869, 1.0), Vector2(0.30902, 1.0), Vector2(0.36812, 1.0), Vector2(0.42578, 1.0), Vector2(0.48175, 1.0), Vector2(0.53583, 1.0), Vector2(0.58779, 1.0), Vector2(0.63742, 1.0), Vector2(0.68455, 1.0), Vector2(0.72897, 1.0), Vector2(0.77051, 1.0), Vector2(0.80902, 1.0), Vector2(0.84433, 1.0), Vector2(0.87631, 1.0), Vector2(0.90483, 1.0), Vector2(0.92978, 1.0), Vector2(0.95106, 1.0), Vector2(0.96858, 1.0), Vector2(0.98229, 1.0), Vector2(0.99211, 1.0), Vector2(0.99803, 1.0), Vector2(1.0, 1.0)]}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.83333, 1.25, 1.66667, 2.08333, 2.5, 2.91667, 3.33333, 3.75, 4.16667, 4.58333, 5.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "values": [{"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"0\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"25\", \"Tween\": \"False\", \"Value\": \"event_back\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"50\", \"Tween\": \"False\", \"Value\": \"\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"75\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"100\", \"Tween\": \"False\", \"Value\": \"\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"125\", \"Tween\": \"False\", \"Value\": \"event_back\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"150\", \"Tween\": \"False\", \"Value\": \"\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"175\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"200\", \"Tween\": \"False\", \"Value\": \"\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"225\", \"Tween\": \"False\", \"Value\": \"event_back\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"250\", \"Tween\": \"False\", \"Value\": \"\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"275\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}, {"method": &"timeline_event", "args": ["Node_unlockQuarter","FrameEvent","{\"FrameIndex\": \"300\", \"Tween\": \"False\", \"Value\": \"event_front\"}"]}]}
+[sub_resource type="Animation" id="Anim_Levelup0"]
+resource_name = "Levelup0"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_unlockQuarter/Node_sprite/Ui_Previewicon6_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_unlockQuarter/Sprite_flopPoker:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_unlockQuarter:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Levelup1"]
+resource_name = "Levelup1"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_unlockQuarter/Node_sprite/Ui_Previewicon6_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_unlockQuarter/Sprite_flopPoker:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_unlockQuarter:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Levelup2"]
+resource_name = "Levelup2"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_unlockQuarter/Node_sprite/Ui_Previewicon6_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_unlockQuarter/Sprite_flopPoker:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_unlockQuarter:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Levelup3"]
+resource_name = "Levelup3"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_unlockQuarter/Node_sprite/Ui_Previewicon6_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_unlockQuarter/Sprite_flopPoker:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_unlockQuarter:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop"),
+"Levelup0": SubResource("Anim_Levelup0"),
+"Levelup1": SubResource("Anim_Levelup1"),
+"Levelup2": SubResource("Anim_Levelup2"),
+"Levelup3": SubResource("Anim_Levelup3")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 500.0
+offset_bottom = 500.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 2883
+metadata/action_tag = 0
+
+[node name="Image_1_0" type="NinePatchRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 78.0
+offset_top = 80.0
+offset_right = 455.0
+offset_bottom = 213.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.91, 2.58)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1_0"
+metadata/cocos_tag = 2898
+metadata/action_tag = 2076307923
+texture = ExtResource("2")
+patch_margin_left = 1
+patch_margin_right = 1
+patch_margin_top = 11
+patch_margin_bottom = 11
+
+[node name="Node_unlockQuarter" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 251.3088
+offset_top = 251.7694
+offset_right = 251.3088
+offset_bottom = 251.7694
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_unlockQuarter"
+metadata/cocos_tag = 3121
+metadata/action_tag = 2072907829
+
+[node name="Node_sprite" type="Control" parent="Node_unlockQuarter"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = -0.43633
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_sprite"
+metadata/cocos_tag = 2404
+metadata/action_tag = -14615677
+
+[node name="Ui_Previewicon6_1" type="TextureRect" parent="Node_unlockQuarter/Node_sprite"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+pivot_offset = Vector2(40.0, 60.0)
+scale = Vector2(1.77, 1.77)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_Previewicon6_1"
+metadata/cocos_tag = 1675
+metadata/action_tag = -181366494
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_flopPoker" type="TextureRect" parent="Node_unlockQuarter"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = -0.43633
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_flopPoker"
+metadata/cocos_tag = 3120
+metadata/action_tag = -1333149933
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview0_13" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 75.0
+offset_top = 77.0
+offset_right = 121.0
+offset_bottom = 123.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview0_13"
+metadata/cocos_tag = 2884
+metadata/action_tag = 144192931
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 46.0
+offset_top = -4.0
+offset_right = 92.0
+offset_bottom = 42.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14"
+metadata/cocos_tag = 2886
+metadata/action_tag = -1669152718
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.0
+offset_top = 0.0007
+offset_right = 50.0
+offset_bottom = 46.0007
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 1.5708
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0"
+metadata/cocos_tag = 2887
+metadata/action_tag = 5534802
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_1" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 195.0
+offset_top = -4.0
+offset_right = 241.0
+offset_bottom = 42.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_1"
+metadata/cocos_tag = 2888
+metadata/action_tag = 1731326259
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview0_13_0" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 292.1
+offset_top = -4.0001
+offset_right = 338.1
+offset_bottom = 41.9999
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview0_13_0"
+metadata/cocos_tag = 2889
+metadata/action_tag = 214199847
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0_0" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.0
+offset_top = 142.0
+offset_right = 50.0
+offset_bottom = 188.0
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 1.5708
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0_0"
+metadata/cocos_tag = 2890
+metadata/action_tag = -1401407148
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview0_13_0_0" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 334.0
+offset_right = 46.0
+offset_bottom = 380.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview0_13_0_0"
+metadata/cocos_tag = 2891
+metadata/action_tag = -699636508
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0_1" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 53.0
+offset_top = 334.0
+offset_right = 99.0
+offset_bottom = 380.0
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0_1"
+metadata/cocos_tag = 2892
+metadata/action_tag = -1144735226
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0_0_0" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 195.0
+offset_top = 334.0
+offset_right = 241.0
+offset_bottom = 380.0
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0_0_0"
+metadata/cocos_tag = 2893
+metadata/action_tag = -9596398
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview0_13_0_1" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 292.1
+offset_top = 334.0
+offset_right = 338.1
+offset_bottom = 380.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview0_13_0_1"
+metadata/cocos_tag = 2894
+metadata/action_tag = 554601341
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0_2" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 368.5
+offset_top = 0.0001
+offset_right = 414.5
+offset_bottom = 46.0001
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 1.5708
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0_2"
+metadata/cocos_tag = 2895
+metadata/action_tag = -1797468788
+scale = Vector2(-1, 1)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_preview1_14_0_0_1" type="TextureRect" parent="ui_preview0_13"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 368.5
+offset_top = 142.0
+offset_right = 414.5
+offset_bottom = 188.0
+pivot_offset = Vector2(0.0, 46.0)
+scale = Vector2(1.0, 1.0)
+rotation = 1.5708
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_preview1_14_0_0_1"
+metadata/cocos_tag = 2896
+metadata/action_tag = 1181218005
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

@@ -1,0 +1,525 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/scenebubble.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020Goldbanner.tscn" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_btn0.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_dating3.png" id="5"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="6"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close1.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/ui_shell4.png" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Node_Drawshell.tscn" id="11"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="15"]
+
+[sub_resource type="Animation" id="Anim_Start2"]
+resource_name = "Start2"
+length = 1.68333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.01719), Color(1, 1, 1, 0.03439), Color(1, 1, 1, 0.05158), Color(1, 1, 1, 0.06878), Color(1, 1, 1, 0.08597), Color(1, 1, 1, 0.10317), Color(1, 1, 1, 0.12036), Color(1, 1, 1, 0.13756), Color(1, 1, 1, 0.15475), Color(1, 1, 1, 0.17195), Color(1, 1, 1, 0.18914), Color(1, 1, 1, 0.20633), Color(1, 1, 1, 0.22353), Color(1, 1, 1, 0.24072), Color(1, 1, 1, 0.25792), Color(1, 1, 1, 0.27511), Color(1, 1, 1, 0.29231), Color(1, 1, 1, 0.3095), Color(1, 1, 1, 0.3267), Color(1, 1, 1, 0.34389), Color(1, 1, 1, 0.36109), Color(1, 1, 1, 0.37828), Color(1, 1, 1, 0.39548), Color(1, 1, 1, 0.41267), Color(1, 1, 1, 0.42986), Color(1, 1, 1, 0.44706), Color(1, 1, 1, 0.44706)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_7/Particle_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.25, 1.68333), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_7/Image_24/Image_24_0_0:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.4, 0.8), Vector2(0.39285, 0.79506), Vector2(0.37597, 0.78342), Vector2(0.35625, 0.76981), Vector2(0.34055, 0.75898), Vector2(0.33575, 0.75567), Vector2(0.34872, 0.76462), Vector2(0.38634, 0.79058), Vector2(0.45549, 0.83828), Vector2(0.56304, 0.91248), Vector2(0.71585, 1.01791), Vector2(0.92082, 1.15932), Vector2(1.16918, 1.33068), Vector2(1.37415, 1.47209), Vector2(1.52696, 1.57752), Vector2(1.63451, 1.65172), Vector2(1.70366, 1.69942), Vector2(1.74128, 1.72538), Vector2(1.75425, 1.73433), Vector2(1.74945, 1.73102), Vector2(1.73375, 1.72019), Vector2(1.71403, 1.70658), Vector2(1.69715, 1.69494), Vector2(1.69, 1.69), Vector2(1.69, 1.69)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_7/Image_24/Image_24_0_0:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.04348), Color(1, 1, 1, 0.08696), Color(1, 1, 1, 0.13043), Color(1, 1, 1, 0.17391), Color(1, 1, 1, 0.21739), Color(1, 1, 1, 0.26087), Color(1, 1, 1, 0.30435), Color(1, 1, 1, 0.34783), Color(1, 1, 1, 0.3913), Color(1, 1, 1, 0.43478), Color(1, 1, 1, 0.47826), Color(1, 1, 1, 0.52174), Color(1, 1, 1, 0.56522), Color(1, 1, 1, 0.6087), Color(1, 1, 1, 0.65217), Color(1, 1, 1, 0.69565), Color(1, 1, 1, 0.73913), Color(1, 1, 1, 0.78261), Color(1, 1, 1, 0.82609), Color(1, 1, 1, 0.86957), Color(1, 1, 1, 0.91304), Color(1, 1, 1, 0.95652), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_7/Image_24/Text_10:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_7/Image_24:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.4, 0.8), Vector2(0.39667, 0.79889), Vector2(0.38882, 0.79627), Vector2(0.37965, 0.79322), Vector2(0.37235, 0.79078), Vector2(0.37011, 0.79004), Vector2(0.37615, 0.79205), Vector2(0.39365, 0.79788), Vector2(0.42581, 0.8086), Vector2(0.47583, 0.82528), Vector2(0.54691, 0.84897), Vector2(0.64224, 0.88075), Vector2(0.75776, 0.91925), Vector2(0.85309, 0.95103), Vector2(0.92417, 0.97472), Vector2(0.97419, 0.9914), Vector2(1.00635, 1.00212), Vector2(1.02385, 1.00795), Vector2(1.02989, 1.00996), Vector2(1.02765, 1.00922), Vector2(1.02035, 1.00678), Vector2(1.01118, 1.00373), Vector2(1.00333, 1.00111), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_7/Image_24:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.04348), Color(1, 1, 1, 0.08696), Color(1, 1, 1, 0.13043), Color(1, 1, 1, 0.17391), Color(1, 1, 1, 0.21739), Color(1, 1, 1, 0.26087), Color(1, 1, 1, 0.30435), Color(1, 1, 1, 0.34783), Color(1, 1, 1, 0.3913), Color(1, 1, 1, 0.43478), Color(1, 1, 1, 0.47826), Color(1, 1, 1, 0.52174), Color(1, 1, 1, 0.56522), Color(1, 1, 1, 0.6087), Color(1, 1, 1, 0.65217), Color(1, 1, 1, 0.69565), Color(1, 1, 1, 0.73913), Color(1, 1, 1, 0.78261), Color(1, 1, 1, 0.82609), Color(1, 1, 1, 0.86957), Color(1, 1, 1, 0.91304), Color(1, 1, 1, 0.95652), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_7/Panel_9/Button_reward1:position")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(625.7275, 1790.3315), Vector2(626.29096, 1697.77154), Vector2(626.83214, 1608.8702), Vector2(627.35147, 1523.55912), Vector2(627.84936, 1441.76994), Vector2(628.32622, 1363.43428), Vector2(628.78248, 1288.48377), Vector2(629.21855, 1216.85005), Vector2(629.63484, 1148.46475), Vector2(630.03178, 1083.25949), Vector2(630.40977, 1021.16592), Vector2(630.76924, 962.11567), Vector2(631.1106, 906.04035), Vector2(631.43426, 852.87162), Vector2(631.74065, 802.54109), Vector2(632.03017, 754.9804), Vector2(632.30325, 710.12119), Vector2(632.5603, 667.89508), Vector2(632.80174, 628.2337), Vector2(633.02798, 591.06869), Vector2(633.23944, 556.33169), Vector2(633.43653, 523.95431), Vector2(633.61968, 493.86819), Vector2(633.7893, 466.00497), Vector2(633.9458, 440.29627), Vector2(634.0896, 416.67373), Vector2(634.22112, 395.06899), Vector2(634.34077, 375.41366), Vector2(634.44897, 357.63938), Vector2(634.54614, 341.67779), Vector2(634.63268, 327.46052), Vector2(634.70903, 314.91919), Vector2(634.77559, 303.98544), Vector2(634.83278, 294.59091), Vector2(634.88101, 286.66722), Vector2(634.92071, 280.146), Vector2(634.95229, 274.95889), Vector2(634.97616, 271.03752), Vector2(634.99274, 268.31352), Vector2(635.00245, 266.71852), Vector2(635.0057, 266.18415), Vector2(635.00291, 266.64205), Vector2(634.9945, 268.02385), Vector2(634.98088, 270.26117), Vector2(634.96247, 273.28566), Vector2(634.93968, 277.02894), Vector2(634.91294, 281.42264), Vector2(634.88265, 286.3984), Vector2(634.84923, 291.88784), Vector2(634.8131, 297.82261), Vector2(634.77468, 304.13432), Vector2(634.73438, 310.75462), Vector2(634.69262, 317.61513), Vector2(634.64981, 324.64749), Vector2(634.60637, 331.78333), Vector2(634.56272, 338.95428), Vector2(634.51927, 346.09196), Vector2(634.47643, 353.12802), Vector2(634.43464, 359.99409), Vector2(634.39429, 366.62179), Vector2(634.35581, 372.94276), Vector2(634.31962, 378.88863), Vector2(634.28612, 384.39103), Vector2(634.25574, 389.3816), Vector2(634.22889, 393.79196), Vector2(634.20599, 397.55375), Vector2(634.18746, 400.59859), Vector2(634.1737, 402.85813), Vector2(634.16515, 404.26399), Vector2(634.1622, 404.7478), Vector2(634.1622, 404.7478)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_7/Panel_9/Button_reward2:position")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(66.4641, 1812.7859), Vector2(68.40709, 1683.17671), Vector2(70.24404, 1560.64049), Vector2(71.97772, 1444.99354), Vector2(73.61087, 1336.05215), Vector2(75.14626, 1233.63262), Vector2(76.58662, 1137.55125), Vector2(77.93473, 1047.62435), Vector2(79.19333, 963.66821), Vector2(80.36517, 885.49912), Vector2(81.45301, 812.93339), Vector2(82.45961, 745.78732), Vector2(83.38771, 683.8772), Vector2(84.24007, 627.01933), Vector2(85.01945, 575.03002), Vector2(85.7286, 527.72556), Vector2(86.37027, 484.92225), Vector2(86.94721, 446.43638), Vector2(87.46219, 412.08427), Vector2(87.91795, 381.6822), Vector2(88.31725, 355.04648), Vector2(88.66284, 331.9934), Vector2(88.95748, 312.33926), Vector2(89.20392, 295.90037), Vector2(89.40491, 282.49301), Vector2(89.56321, 271.9335), Vector2(89.68157, 264.03812), Vector2(89.76274, 258.62318), Vector2(89.80949, 255.50498), Vector2(89.82456, 254.49981), Vector2(89.8107, 255.42397), Vector2(89.77068, 258.09377), Vector2(89.70724, 262.32549), Vector2(89.62314, 267.93545), Vector2(89.52113, 274.73994), Vector2(89.40397, 282.55525), Vector2(89.27441, 291.19769), Vector2(89.13521, 300.48355), Vector2(88.98911, 310.22914), Vector2(88.83888, 320.25075), Vector2(88.68726, 330.36468), Vector2(88.53701, 340.38723), Vector2(88.39088, 350.1347), Vector2(88.25163, 359.42339), Vector2(88.12202, 368.06959), Vector2(88.00479, 375.88961), Vector2(87.9027, 382.69975), Vector2(87.8185, 388.31629), Vector2(87.75495, 392.55555), Vector2(87.7148, 395.23382), Vector2(87.7008, 396.1674), Vector2(87.7008, 396.1674)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_7/Panel_9/Button_reward3:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(314.4309, 1777.178), Vector2(317.45545, 1645.54619), Vector2(320.33524, 1520.21433), Vector2(323.07356, 1401.03937), Vector2(325.6737, 1287.87822), Vector2(328.13894, 1180.58781), Vector2(330.47258, 1079.02507), Vector2(332.6779, 983.04692), Vector2(334.75819, 892.51028), Vector2(336.71673, 807.27209), Vector2(338.55682, 727.18928), Vector2(340.28174, 652.11876), Vector2(341.89478, 581.91746), Vector2(343.39922, 516.44231), Vector2(344.79836, 455.55024), Vector2(346.09547, 399.09816), Vector2(347.29386, 346.94302), Vector2(348.3968, 298.94173), Vector2(349.40758, 254.95121), Vector2(350.3295, 214.82841), Vector2(351.16583, 178.43023), Vector2(351.91987, 145.61361), Vector2(352.5949, 116.23548), Vector2(353.19421, 90.15275), Vector2(353.72109, 67.22237), Vector2(354.17882, 47.30124), Vector2(354.5707, 30.2463), Vector2(354.90001, 15.91448), Vector2(355.17003, 4.1627), Vector2(355.38406, -5.15212), Vector2(355.54538, -12.17304), Vector2(355.65728, -17.04315), Vector2(355.72305, -19.90551), Vector2(355.74598, -20.9032), Vector2(355.72934, -20.17929), Vector2(355.67644, -17.87686), Vector2(355.59055, -14.13898), Vector2(355.47497, -9.10872), Vector2(355.33298, -2.92916), Vector2(355.16787, 4.25662), Vector2(354.98293, 12.30556), Vector2(354.78144, 21.07458), Vector2(354.56669, 30.4206), Vector2(354.34198, 40.20056), Vector2(354.11058, 50.27137), Vector2(353.87578, 60.48997), Vector2(353.64088, 70.71328), Vector2(353.40915, 80.79822), Vector2(353.18389, 90.60173), Vector2(352.96839, 99.98072), Vector2(352.76593, 108.79213), Vector2(352.57979, 116.89288), Vector2(352.41328, 124.1399), Vector2(352.26966, 130.39011), Vector2(352.15224, 135.50044), Vector2(352.0643, 139.32781), Vector2(352.00912, 141.72916), Vector2(351.99, 142.5614), Vector2(351.99, 142.5614)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_7/Panel_9/Button_reward4:position")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(625.7275, 1790.3315), Vector2(625.85375, 1642.13145), Vector2(625.97436, 1500.55861), Vector2(626.08944, 1365.47254), Vector2(626.19912, 1236.73282), Vector2(626.30351, 1114.19902), Vector2(626.40273, 997.73071), Vector2(626.4969, 887.18747), Vector2(626.58614, 782.42887), Vector2(626.67058, 683.31448), Vector2(626.75033, 589.70387), Vector2(626.82551, 501.45662), Vector2(626.89624, 418.4323), Vector2(626.96264, 340.49049), Vector2(627.02483, 267.49074), Vector2(627.08293, 199.29265), Vector2(627.13705, 135.75578), Vector2(627.18733, 76.73969), Vector2(627.23387, 22.10398), Vector2(627.27681, -28.2918), Vector2(627.31625, -74.58806), Vector2(627.35231, -116.92524), Vector2(627.38513, -155.44377), Vector2(627.41481, -190.28406), Vector2(627.44148, -221.58655), Vector2(627.46525, -249.49167), Vector2(627.48625, -274.13984), Vector2(627.50459, -295.67149), Vector2(627.5204, -314.22705), Vector2(627.53379, -329.94694), Vector2(627.54489, -342.97159), Vector2(627.55381, -353.44143), Vector2(627.56067, -361.49688), Vector2(627.56559, -367.27838), Vector2(627.5687, -370.92635), Vector2(627.57011, -372.58122), Vector2(627.56994, -372.38341), Vector2(627.56832, -370.47336), Vector2(627.56535, -366.99148), Vector2(627.56116, -362.07822), Vector2(627.55588, -355.87398), Vector2(627.54961, -348.51921), Vector2(627.54249, -340.15433), Vector2(627.53462, -330.91976), Vector2(627.52613, -320.95594), Vector2(627.51714, -310.40328), Vector2(627.50777, -299.40223), Vector2(627.49814, -288.0932), Vector2(627.48836, -276.61662), Vector2(627.47856, -265.11292), Vector2(627.46885, -253.72253), Vector2(627.45937, -242.58587), Vector2(627.45022, -231.84338), Vector2(627.44152, -221.63547), Vector2(627.4334, -212.10258), Vector2(627.42597, -203.38514), Vector2(627.41936, -195.62356), Vector2(627.41368, -188.95828), Vector2(627.40906, -183.52973), Vector2(627.4056, -179.47833), Vector2(627.40345, -176.94451), Vector2(627.4027, -176.0687), Vector2(627.4027, -176.0687)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_7/Panel_9/Button_reward5:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(77.6632, 1689.4855), Vector2(79.16563, 1500.4169), Vector2(80.57695, 1322.81442), Vector2(81.89978, 1156.34622), Vector2(83.13678, 1000.68043), Vector2(84.29057, 855.48522), Vector2(85.3638, 720.42874), Vector2(86.35909, 595.17913), Vector2(87.27909, 479.40456), Vector2(88.12644, 372.77317), Vector2(88.90376, 274.95311), Vector2(89.61371, 185.61254), Vector2(90.2589, 104.4196), Vector2(90.84199, 31.04246), Vector2(91.36561, -34.85075), Vector2(91.8324, -93.59186), Vector2(92.24499, -145.51272), Vector2(92.60602, -190.94519), Vector2(92.91812, -230.22111), Vector2(93.18394, -263.67233), Vector2(93.40611, -291.6307), Vector2(93.58727, -314.42806), Vector2(93.73005, -332.39627), Vector2(93.8371, -345.86717), Vector2(93.91105, -355.1726), Vector2(93.95453, -360.64443), Vector2(93.97018, -362.6145), Vector2(93.96065, -361.41464), Vector2(93.92856, -357.37673), Vector2(93.87656, -350.83259), Vector2(93.80728, -342.11408), Vector2(93.72335, -331.55305), Vector2(93.62743, -319.48134), Vector2(93.52213, -306.23081), Vector2(93.41011, -292.1333), Vector2(93.29399, -277.52066), Vector2(93.17641, -262.72474), Vector2(93.06002, -248.07738), Vector2(92.94744, -233.91044), Vector2(92.84132, -220.55576), Vector2(92.74428, -208.34519), Vector2(92.65898, -197.61058), Vector2(92.58805, -188.68378), Vector2(92.53411, -181.89664), Vector2(92.49982, -177.58099), Vector2(92.4878, -176.0687), Vector2(92.4878, -176.0687)]}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/keys = {"times": PackedFloat32Array(0.25), "transitions": PackedFloat32Array(1), "values": [{"method": &"timeline_event", "args": ["Panel_7/Panel_9","FrameEvent","{\"FrameIndex\": \"15\", \"Tween\": \"False\", \"Value\": \"panel_29Show\"}"]}]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_7:modulate")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 1.68333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start2": SubResource("Anim_Start2")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 176
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -189.984
+offset_right = 1080.0
+offset_bottom = 2109.984
+pivot_offset = Vector2(540.0, 1149.984)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 1875
+metadata/action_tag = 907474117
+color = Color(0.20784, 0.36078, 0.46667, 1.0)
+
+[node name="Panel_7" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_7"
+metadata/cocos_tag = 1478
+metadata/action_tag = 2084437091
+
+[node name="Particle_1" type="Control" parent="Panel_7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 1516.8
+offset_right = 540.0
+offset_bottom = 1516.8
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 3244
+metadata/action_tag = -1040127052
+
+[node name="Emitter" parent="Panel_7/Particle_1" instance=ExtResource("2")]
+
+[node name="FileNode_top" parent="Panel_7" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 0.0
+offset_right = 540.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_top"
+metadata/cocos_tag = 1048
+metadata/action_tag = -62902460
+
+[node name="Image_24" type="NinePatchRect" parent="Panel_7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 90.0
+offset_top = 165.0002
+offset_right = 990.0
+offset_bottom = 365.0002
+pivot_offset = Vector2(450.0, 100.0)
+scale = Vector2(0.4, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_24"
+metadata/cocos_tag = 16462
+metadata/action_tag = -1165086250
+texture = ExtResource("4")
+patch_margin_left = 13
+patch_margin_right = 13
+patch_margin_top = 13
+patch_margin_bottom = 13
+
+[node name="Image_24_0_0" type="TextureRect" parent="Panel_7/Image_24"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 250.0
+offset_top = 63.74
+offset_right = 450.0
+offset_bottom = 174.74
+pivot_offset = Vector2(200.0, 55.5)
+scale = Vector2(0.4, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_24_0_0"
+metadata/cocos_tag = 3035
+metadata/action_tag = -974626672
+scale = Vector2(-1, 1)
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_24_0" type="TextureRect" parent="Panel_7/Image_24/Image_24_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.5
+offset_top = 0.0
+offset_right = 199.5
+offset_bottom = 111.0
+pivot_offset = Vector2(200.0, 55.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_24_0"
+metadata/cocos_tag = 3032
+metadata/action_tag = -1526464973
+scale = Vector2(-1, 1)
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_10" type="Label" parent="Panel_7/Image_24"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 268.5
+offset_top = 53.5
+offset_right = 631.5
+offset_bottom = 118.5
+pivot_offset = Vector2(181.5, 32.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_10"
+metadata/cocos_tag = 16461
+metadata/action_tag = 1184299250
+script = ExtResource("7")
+design_size = Vector2(363.0, 65.0)
+design_center = Vector2(450.0, 86.0)
+design_font_size = 65
+bitmap_font = false
+fit_box = false
+text = "Lucky Coin!"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_close" type="TextureButton" parent="Panel_7/Image_24"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 744.59
+offset_top = 89.06
+offset_right = 848.59
+offset_bottom = 219.06
+pivot_offset = Vector2(52.0, 65.0)
+scale = Vector2(1.12, 1.12)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_close"
+metadata/cocos_tag = 12504
+metadata/action_tag = 724178900
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("9")
+texture_disabled = ExtResource("9")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel_9" type="Control" parent="Panel_7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0026
+offset_top = 632.2
+offset_right = 1080.0026
+offset_bottom = 1902.2
+pivot_offset = Vector2(540.0, 635.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_9"
+metadata/cocos_tag = 1548
+metadata/action_tag = 138042281
+
+[node name="Button_reward1" type="TextureButton" parent="Panel_7/Panel_9"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 625.7275
+offset_top = 1790.3315
+offset_right = 975.7275
+offset_bottom = 2140.3315
+pivot_offset = Vector2(175.0, 175.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_reward1"
+metadata/cocos_tag = 1
+metadata/action_tag = -970732726
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_1" parent="Panel_7/Panel_9/Button_reward1" instance=ExtResource("11")]
+mouse_filter = 2
+offset_left = 175.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 175.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_1"
+metadata/cocos_tag = 4483
+metadata/action_tag = -1549309847
+
+[node name="Button_reward2" type="TextureButton" parent="Panel_7/Panel_9"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 66.4641
+offset_top = 1812.7859
+offset_right = 416.4641
+offset_bottom = 2162.7859
+pivot_offset = Vector2(175.0, 175.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_reward2"
+metadata/cocos_tag = 2
+metadata/action_tag = -878499063
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_2" parent="Panel_7/Panel_9/Button_reward2" instance=ExtResource("11")]
+mouse_filter = 2
+offset_left = 175.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 175.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_2"
+metadata/cocos_tag = 8262
+metadata/action_tag = 1988123333
+
+[node name="Button_reward3" type="TextureButton" parent="Panel_7/Panel_9"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 314.4309
+offset_top = 1777.178
+offset_right = 664.4309
+offset_bottom = 2127.178
+pivot_offset = Vector2(175.0, 175.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_reward3"
+metadata/cocos_tag = 3
+metadata/action_tag = -1800065135
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_3" parent="Panel_7/Panel_9/Button_reward3" instance=ExtResource("11")]
+mouse_filter = 2
+offset_left = 175.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 175.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_3"
+metadata/cocos_tag = 8336
+metadata/action_tag = 873586297
+
+[node name="Button_reward4" type="TextureButton" parent="Panel_7/Panel_9"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 625.7275
+offset_top = 1790.3315
+offset_right = 975.7275
+offset_bottom = 2140.3315
+pivot_offset = Vector2(175.0, 175.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_reward4"
+metadata/cocos_tag = 4
+metadata/action_tag = -699892374
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_4" parent="Panel_7/Panel_9/Button_reward4" instance=ExtResource("11")]
+mouse_filter = 2
+offset_left = 175.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 175.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_4"
+metadata/cocos_tag = 8410
+metadata/action_tag = -1170258038
+
+[node name="Button_reward5" type="TextureButton" parent="Panel_7/Panel_9"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 77.6632
+offset_top = 1689.4855
+offset_right = 427.6632
+offset_bottom = 2039.4855
+pivot_offset = Vector2(175.0, 175.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_reward5"
+metadata/cocos_tag = 5
+metadata/action_tag = 2119446824
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_5" parent="Panel_7/Panel_9/Button_reward5" instance=ExtResource("11")]
+mouse_filter = 2
+offset_left = 175.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 175.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_5"
+metadata/cocos_tag = 8484
+metadata/action_tag = -1841760766
+
+[node name="Button_get" type="TextureButton" parent="Panel_7"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 340.0
+offset_top = 1528.6
+offset_right = 740.0
+offset_bottom = 1658.6
+pivot_offset = Vector2(200.0, 65.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_get"
+metadata/cocos_tag = 5021
+metadata/action_tag = -171163446
+script = ExtResource("12")
+scale9_margins = Vector4(70.0, 87.0, 0.0, 0.0)
+texture_normal = ExtResource("13")
+texture_pressed = ExtResource("14")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_13" type="Label" parent="Panel_7/Button_get"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 140.0
+offset_top = 35.0
+offset_right = 260.0
+offset_bottom = 95.0
+pivot_offset = Vector2(60.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_13"
+metadata/cocos_tag = 5022
+metadata/action_tag = 1049557351
+script = ExtResource("7")
+design_size = Vector2(120.0, 60.0)
+design_center = Vector2(200.0, 65.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "领取"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

@@ -1,0 +1,345 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/scene_icon2.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/scene_icon3.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/scene_icon0.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/scene_icon1.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/scene_icon4.png" id="7"]
+
+[sub_resource type="Animation" id="Anim_in"]
+resource_name = "in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_bulid/Node_/Button_build:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-47.6612, -237.0688), Vector2(-47.6612, -237.0688)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_bulid/Node_/Button_build:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_bulid/Node_/Button_build:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0625), Color(1, 1, 1, 0.125), Color(1, 1, 1, 0.1875), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3125), Color(1, 1, 1, 0.375), Color(1, 1, 1, 0.4375), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.5625), Color(1, 1, 1, 0.625), Color(1, 1, 1, 0.6875), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8125), Color(1, 1, 1, 0.875), Color(1, 1, 1, 0.9375), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_bulid/Node_/Sprite_complete:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.23, 1.23), Vector2(1.23, 1.23)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_bulid/Node_:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.001, 0.001), Vector2(0.17881, 0.17881), Vector2(0.33719, 0.33719), Vector2(0.47718, 0.47718), Vector2(0.5998, 0.5998), Vector2(0.7061, 0.7061), Vector2(0.79711, 0.79711), Vector2(0.87387, 0.87387), Vector2(0.93741, 0.93741), Vector2(0.98878, 0.98878), Vector2(1.029, 1.029), Vector2(1.05912, 1.05912), Vector2(1.08016, 1.08016), Vector2(1.09318, 1.09318), Vector2(1.0992, 1.0992), Vector2(1.09925, 1.09925), Vector2(1.09439, 1.09439), Vector2(1.08563, 1.08563), Vector2(1.07402, 1.07402), Vector2(1.0606, 1.0606), Vector2(1.0464, 1.0464), Vector2(1.03246, 1.03246), Vector2(1.01981, 1.01981), Vector2(1.0095, 1.0095), Vector2(1.00255, 1.00255), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_bulid/Node_:position")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.0, 0.0), Vector2(0.0, 0.0)]}
+[sub_resource type="Animation" id="Anim_start"]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_bulid/Node_/Button_build:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-47.6612, -237.0688), Vector2(-47.6612, -235.66892), Vector2(-47.6612, -234.26904), Vector2(-47.6612, -232.86916), Vector2(-47.6612, -231.46928), Vector2(-47.6612, -230.0694), Vector2(-47.6612, -228.66952), Vector2(-47.6612, -227.26964), Vector2(-47.6612, -225.86976), Vector2(-47.6612, -224.46988), Vector2(-47.6612, -223.07), Vector2(-47.6612, -226.27), Vector2(-47.6612, -229.47), Vector2(-47.6612, -232.67), Vector2(-47.6612, -235.87), Vector2(-47.6612, -239.07), Vector2(-47.6612, -242.27), Vector2(-47.6612, -245.47), Vector2(-47.6612, -248.67), Vector2(-47.6612, -251.87), Vector2(-47.6612, -255.07), Vector2(-47.6612, -253.26988), Vector2(-47.6612, -251.46976), Vector2(-47.6612, -249.66964), Vector2(-47.6612, -247.86952), Vector2(-47.6612, -246.0694), Vector2(-47.6612, -244.26928), Vector2(-47.6612, -242.46916), Vector2(-47.6612, -240.66904), Vector2(-47.6612, -238.86892), Vector2(-47.6612, -237.0688)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_bulid/Node_/Button_build:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.99853, 0.99608), Vector2(0.99427, 0.98472), Vector2(0.98763, 0.96702), Vector2(0.97927, 0.94472), Vector2(0.97, 0.92), Vector2(0.96073, 0.89528), Vector2(0.95237, 0.87298), Vector2(0.94573, 0.85528), Vector2(0.94147, 0.84392), Vector2(0.94, 0.84), Vector2(0.93902, 0.84514), Vector2(0.93618, 0.86005), Vector2(0.93176, 0.88328), Vector2(0.92618, 0.91255), Vector2(0.92, 0.945), Vector2(0.91382, 0.97745), Vector2(0.90824, 1.00672), Vector2(0.90382, 1.02995), Vector2(0.90098, 1.04486), Vector2(0.9, 1.05), Vector2(0.90245, 1.04878), Vector2(0.90955, 1.04523), Vector2(0.92061, 1.03969), Vector2(0.93455, 1.03273), Vector2(0.95, 1.025), Vector2(0.96545, 1.01727), Vector2(0.97939, 1.01031), Vector2(0.99045, 1.00477), Vector2(0.99755, 1.00122), Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_bulid/Node_/Button_build:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_bulid/Node_/Sprite_complete:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.23, 1.23), Vector2(1.23, 1.23)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_bulid/Node_:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_bulid/Node_:position")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.0, 0.0), Vector2(0.0, 0.0)]}
+[sub_resource type="Animation" id="Anim_start1"]
+resource_name = "start1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_bulid/Node_/Button_build:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-47.6612, -237.0688), Vector2(-47.6612, -235.66892), Vector2(-47.6612, -234.26904), Vector2(-47.6612, -232.86916), Vector2(-47.6612, -231.46928), Vector2(-47.6612, -230.0694), Vector2(-47.6612, -228.66952), Vector2(-47.6612, -227.26964), Vector2(-47.6612, -225.86976), Vector2(-47.6612, -224.46988), Vector2(-47.6612, -223.07), Vector2(-47.6612, -226.27), Vector2(-47.6612, -229.47), Vector2(-47.6612, -232.67), Vector2(-47.6612, -235.87), Vector2(-47.6612, -239.07), Vector2(-47.6612, -242.27), Vector2(-47.6612, -245.47), Vector2(-47.6612, -248.67), Vector2(-47.6612, -251.87), Vector2(-47.6612, -255.07), Vector2(-47.6612, -253.26988), Vector2(-47.6612, -251.46976), Vector2(-47.6612, -249.66964), Vector2(-47.6612, -247.86952), Vector2(-47.6612, -246.0694), Vector2(-47.6612, -244.26928), Vector2(-47.6612, -242.46916), Vector2(-47.6612, -240.66904), Vector2(-47.6612, -238.86892), Vector2(-47.6612, -237.0688)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_bulid/Node_/Button_build:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 0.99608), Vector2(1.0, 0.98472), Vector2(1.0, 0.96702), Vector2(1.0, 0.94472), Vector2(1.0, 0.92), Vector2(1.0, 0.89528), Vector2(1.0, 0.87298), Vector2(1.0, 0.85528), Vector2(1.0, 0.84392), Vector2(1.0, 0.84), Vector2(0.99755, 0.84685), Vector2(0.99045, 0.86674), Vector2(0.97939, 0.89771), Vector2(0.96545, 0.93674), Vector2(0.95, 0.98), Vector2(0.93455, 1.02326), Vector2(0.92061, 1.06229), Vector2(0.90955, 1.09326), Vector2(0.90245, 1.11315), Vector2(0.9, 1.12), Vector2(0.90245, 1.11706), Vector2(0.90955, 1.10854), Vector2(0.92061, 1.09527), Vector2(0.93455, 1.07854), Vector2(0.95, 1.06), Vector2(0.96545, 1.04146), Vector2(0.97939, 1.02473), Vector2(0.99045, 1.01146), Vector2(0.99755, 1.00294), Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_bulid/Node_/Button_build:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_bulid/Node_/Sprite_complete:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.01, 0.01), Vector2(0.61915, 0.61915), Vector2(1.06165, 1.06165), Vector2(1.36163, 1.36163), Vector2(1.54325, 1.54325), Vector2(1.63067, 1.63067), Vector2(1.64803, 1.64803), Vector2(1.6195, 1.6195), Vector2(1.56921, 1.56921), Vector2(1.52133, 1.52133), Vector2(1.5, 1.5), Vector2(1.473, 1.473), Vector2(1.446, 1.446), Vector2(1.419, 1.419), Vector2(1.392, 1.392), Vector2(1.365, 1.365), Vector2(1.338, 1.338), Vector2(1.311, 1.311), Vector2(1.284, 1.284), Vector2(1.257, 1.257), Vector2(1.23, 1.23)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_bulid/Node_:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_bulid/Node_:position")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.0, 0.0), Vector2(0.0, 2.6), Vector2(0.0, 5.2), Vector2(0.0, 7.8), Vector2(0.0, 10.4), Vector2(0.0, 13.0), Vector2(0.0, 6.57143), Vector2(0.0, 0.14286), Vector2(0.0, -6.28571), Vector2(0.0, -12.71429), Vector2(0.0, -19.14286), Vector2(0.0, -25.57143), Vector2(0.0, -32.0), Vector2(0.0, -30.0), Vector2(0.0, -28.0), Vector2(0.0, -26.0), Vector2(0.0, -24.0), Vector2(0.0, -22.0), Vector2(0.0, -20.0), Vector2(0.0, -18.0), Vector2(0.0, -16.0), Vector2(0.0, -14.0), Vector2(0.0, -12.0), Vector2(0.0, -10.0), Vector2(0.0, -8.0), Vector2(0.0, -6.0), Vector2(0.0, -4.0), Vector2(0.0, -2.0), Vector2(0.0, 0.0), Vector2(0.0, 0.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"in": SubResource("Anim_in"),
+"start": SubResource("Anim_start"),
+"start1": SubResource("Anim_start1")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 0
+metadata/action_tag = 0
+
+[node name="Node_bg" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_bg"
+metadata/cocos_tag = 2246
+metadata/action_tag = 1135369102
+
+[node name="Node_Shadows" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_Shadows"
+metadata/cocos_tag = 1598
+metadata/action_tag = -1995335527
+
+[node name="Node_Fish" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_Fish"
+metadata/cocos_tag = 1416
+metadata/action_tag = -58434444
+
+[node name="Node_fishStartPoi" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 979.992
+offset_top = 39.936
+offset_right = 979.992
+offset_bottom = 39.936
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_fishStartPoi"
+metadata/cocos_tag = 3274
+metadata/action_tag = -1911346
+
+[node name="Node_siliao" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_siliao"
+metadata/cocos_tag = 25
+metadata/action_tag = -720237614
+
+[node name="Node_bulid" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_bulid"
+metadata/cocos_tag = 14
+metadata/action_tag = 724531071
+
+[node name="Node_" type="Control" parent="Node_bulid"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.001, 0.001)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_"
+metadata/cocos_tag = 2514
+metadata/action_tag = 674098196
+
+[node name="Button_build" type="TextureButton" parent="Node_bulid/Node_"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -47.6612
+offset_top = -237.0688
+offset_right = 134.3388
+offset_bottom = -41.0688
+pivot_offset = Vector2(91.0, 98.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_build"
+metadata/cocos_tag = 2509
+metadata/action_tag = -2008050546
+script = ExtResource("2")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("3")
+texture_disabled = ExtResource("3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fish_ui_scene_icon3_4" type="TextureRect" parent="Node_bulid/Node_/Button_build"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 32.4714
+offset_top = 152.4955
+offset_right = 100.4714
+offset_bottom = 243.4955
+pivot_offset = Vector2(34.0, 45.5)
+scale = Vector2(0.4136, 0.4136)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "fish_ui_scene_icon3_4"
+metadata/cocos_tag = 2510
+metadata/action_tag = 1717286512
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_chanZi" type="TextureRect" parent="Node_bulid/Node_/Button_build"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 33.1496
+offset_top = 31.3684
+offset_right = 157.1496
+offset_bottom = 136.3684
+pivot_offset = Vector2(62.0, 52.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_chanZi"
+metadata/cocos_tag = 2511
+metadata/action_tag = -1180447204
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_chuiZi" type="TextureRect" parent="Node_bulid/Node_/Button_build"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 46.276
+offset_top = 36.27
+offset_right = 138.276
+offset_bottom = 134.27
+pivot_offset = Vector2(46.0, 49.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_chuiZi"
+metadata/cocos_tag = 2512
+metadata/action_tag = 1854628209
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="fish_ui_scene_icon4_5" type="TextureRect" parent="Node_bulid/Node_/Button_build"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.7866
+offset_top = 89.0689
+offset_right = 127.7866
+offset_bottom = 154.0689
+pivot_offset = Vector2(38.0, 32.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "fish_ui_scene_icon4_5"
+metadata/cocos_tag = 2513
+metadata/action_tag = 1619172172
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_complete" type="TextureRect" parent="Node_bulid/Node_"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.7711
+offset_top = -148.8402
+offset_right = 84.7711
+offset_bottom = -83.8402
+pivot_offset = Vector2(38.0, 32.5)
+scale = Vector2(1.23, 1.23)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_complete"
+metadata/cocos_tag = 4784
+metadata/action_tag = 1663494251
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

@@ -1,0 +1,1451 @@
+[gd_scene load_steps=24 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/pay_bg0.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/pay_bg1.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/pay_hot1.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/pay_hot0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/pay_bg2.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Money/Gold_2.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_gift4.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_gold0.png" id="12"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="15"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue0.png" id="16"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue1.png" id="17"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close0.png" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close1.png" id="19"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020Goldbanner.tscn" id="20"]
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.91667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_bg_0:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_top_0/Panel_Gold/gold0:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(31.5001, 292.4), Vector2(31.5001, 278.94055), Vector2(31.5001, 265.50821), Vector2(31.5001, 252.13002), Vector2(31.5001, 238.83293), Vector2(31.5001, 225.64372), Vector2(31.5001, 212.58895), Vector2(31.5001, 199.6949), Vector2(31.5001, 186.98755), Vector2(31.5001, 174.49249), Vector2(31.5001, 162.23488), Vector2(31.5001, 150.2394), Vector2(31.5001, 138.53022), Vector2(31.5001, 127.13091), Vector2(31.5001, 116.06442), Vector2(31.5001, 105.35306), Vector2(31.5001, 95.01838), Vector2(31.5001, 85.08121), Vector2(31.5001, 75.56154), Vector2(31.5001, 66.47856), Vector2(31.5001, 57.85056), Vector2(31.5001, 49.6949), Vector2(31.5001, 42.02802), Vector2(31.5001, 34.86536), Vector2(31.5001, 28.22134), Vector2(31.5001, 22.10934), Vector2(31.5001, 16.54167), Vector2(31.5001, 11.52954), Vector2(31.5001, 7.08305), Vector2(31.5001, 3.21114), Vector2(31.5001, -0.07837), Vector2(31.5001, -2.77888), Vector2(31.5001, -4.88493), Vector2(31.5001, -6.39229), Vector2(31.5001, -7.29792), Vector2(31.5001, -7.6), Vector2(31.5001, -7.6)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_top_0/Panel_Gold/gold0:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.5, 0.5), Vector2(0.55679, 0.55679), Vector2(0.6097, 0.6097), Vector2(0.65887, 0.65887), Vector2(0.70441, 0.70441), Vector2(0.74646, 0.74646), Vector2(0.78514, 0.78514), Vector2(0.82058, 0.82058), Vector2(0.8529, 0.8529), Vector2(0.88223, 0.88223), Vector2(0.9087, 0.9087), Vector2(0.93244, 0.93244), Vector2(0.95357, 0.95357), Vector2(0.97221, 0.97221), Vector2(0.9885, 0.9885), Vector2(1.00256, 1.00256), Vector2(1.01451, 1.01451), Vector2(1.02449, 1.02449), Vector2(1.03263, 1.03263), Vector2(1.03904, 1.03904), Vector2(1.04385, 1.04385), Vector2(1.04719, 1.04719), Vector2(1.04919, 1.04919), Vector2(1.04998, 1.04998), Vector2(1.04968, 1.04968), Vector2(1.04841, 1.04841), Vector2(1.04631, 1.04631), Vector2(1.04349, 1.04349), Vector2(1.0401, 1.0401), Vector2(1.03625, 1.03625), Vector2(1.03207, 1.03207), Vector2(1.02768, 1.02768), Vector2(1.02323, 1.02323), Vector2(1.01882, 1.01882), Vector2(1.01458, 1.01458), Vector2(1.01066, 1.01066), Vector2(1.00716, 1.00716), Vector2(1.00422, 1.00422), Vector2(1.00196, 1.00196), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_top_0/Panel_Gold/gold0:visible")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.91667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_top_0/Panel_Gold/gold1:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(31.5001, 614.8), Vector2(31.5001, 605.82704), Vector2(31.5001, 596.87215), Vector2(31.5001, 587.95336), Vector2(31.5001, 579.08864), Vector2(31.5001, 570.29584), Vector2(31.5001, 561.59266), Vector2(31.5001, 552.99663), Vector2(31.5001, 544.52507), Vector2(31.5001, 536.19503), Vector2(31.5001, 528.0233), Vector2(31.5001, 520.02631), Vector2(31.5001, 512.2202), Vector2(31.5001, 504.62066), Vector2(31.5001, 497.24301), Vector2(31.5001, 490.1021), Vector2(31.5001, 483.21232), Vector2(31.5001, 476.58754), Vector2(31.5001, 470.2411), Vector2(31.5001, 464.18578), Vector2(31.5001, 458.43378), Vector2(31.5001, 452.99668), Vector2(31.5001, 447.88543), Vector2(31.5001, 443.11033), Vector2(31.5001, 438.68098), Vector2(31.5001, 434.60632), Vector2(31.5001, 430.89454), Vector2(31.5001, 427.55312), Vector2(31.5001, 424.58879), Vector2(31.5001, 422.00752), Vector2(31.5001, 419.81452), Vector2(31.5001, 418.01418), Vector2(31.5001, 416.61015), Vector2(31.5001, 415.60524), Vector2(31.5001, 415.00149), Vector2(31.5001, 414.8001), Vector2(31.5001, 414.8001)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_top_0/Panel_Gold/gold1:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.5, 0.5), Vector2(0.55679, 0.55679), Vector2(0.6097, 0.6097), Vector2(0.65887, 0.65887), Vector2(0.70441, 0.70441), Vector2(0.74646, 0.74646), Vector2(0.78514, 0.78514), Vector2(0.82058, 0.82058), Vector2(0.8529, 0.8529), Vector2(0.88223, 0.88223), Vector2(0.9087, 0.9087), Vector2(0.93244, 0.93244), Vector2(0.95357, 0.95357), Vector2(0.97221, 0.97221), Vector2(0.9885, 0.9885), Vector2(1.00256, 1.00256), Vector2(1.01451, 1.01451), Vector2(1.02449, 1.02449), Vector2(1.03263, 1.03263), Vector2(1.03904, 1.03904), Vector2(1.04385, 1.04385), Vector2(1.04719, 1.04719), Vector2(1.04919, 1.04919), Vector2(1.04998, 1.04998), Vector2(1.04968, 1.04968), Vector2(1.04841, 1.04841), Vector2(1.04631, 1.04631), Vector2(1.04349, 1.04349), Vector2(1.0401, 1.0401), Vector2(1.03625, 1.03625), Vector2(1.03207, 1.03207), Vector2(1.02768, 1.02768), Vector2(1.02323, 1.02323), Vector2(1.01882, 1.01882), Vector2(1.01458, 1.01458), Vector2(1.01066, 1.01066), Vector2(1.00716, 1.00716), Vector2(1.00422, 1.00422), Vector2(1.00196, 1.00196), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_top_0/Panel_Gold/gold1:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.91667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_top_0/Panel_Gold/gold2:position")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(31.5, 1037.2), Vector2(31.5, 1036.79743), Vector2(31.5, 1035.59296), Vector2(31.5, 1033.59629), Vector2(31.5, 1030.82349), Vector2(31.5, 1027.29689), Vector2(31.5, 1023.04488), Vector2(31.5, 1018.1017), Vector2(31.5, 1012.50715), Vector2(31.5, 1006.30626), Vector2(31.5, 999.54898), Vector2(31.5, 992.2897), Vector2(31.5, 984.58687), Vector2(31.5, 976.5025), Vector2(31.5, 968.1017), Vector2(31.5, 959.45209), Vector2(31.5, 950.62333), Vector2(31.5, 941.68648), Vector2(31.5, 932.71352), Vector2(31.5, 923.77667), Vector2(31.5, 914.94791), Vector2(31.5, 906.2983), Vector2(31.5, 897.8975), Vector2(31.5, 889.81313), Vector2(31.5, 882.1103), Vector2(31.5, 874.85102), Vector2(31.5, 868.09374), Vector2(31.5, 861.89285), Vector2(31.5, 856.2983), Vector2(31.5, 851.35512), Vector2(31.5, 847.10311), Vector2(31.5, 843.57651), Vector2(31.5, 840.80371), Vector2(31.5, 838.80704), Vector2(31.5, 837.60257), Vector2(31.5, 837.2), Vector2(31.5, 837.2)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_top_0/Panel_Gold/gold2:scale")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.5, 0.5), Vector2(0.55679, 0.55679), Vector2(0.6097, 0.6097), Vector2(0.65887, 0.65887), Vector2(0.70441, 0.70441), Vector2(0.74646, 0.74646), Vector2(0.78514, 0.78514), Vector2(0.82058, 0.82058), Vector2(0.8529, 0.8529), Vector2(0.88223, 0.88223), Vector2(0.9087, 0.9087), Vector2(0.93244, 0.93244), Vector2(0.95357, 0.95357), Vector2(0.97221, 0.97221), Vector2(0.9885, 0.9885), Vector2(1.00256, 1.00256), Vector2(1.01451, 1.01451), Vector2(1.02449, 1.02449), Vector2(1.03263, 1.03263), Vector2(1.03904, 1.03904), Vector2(1.04385, 1.04385), Vector2(1.04719, 1.04719), Vector2(1.04919, 1.04919), Vector2(1.04998, 1.04998), Vector2(1.04968, 1.04968), Vector2(1.04841, 1.04841), Vector2(1.04631, 1.04631), Vector2(1.04349, 1.04349), Vector2(1.0401, 1.0401), Vector2(1.03625, 1.03625), Vector2(1.03207, 1.03207), Vector2(1.02768, 1.02768), Vector2(1.02323, 1.02323), Vector2(1.01882, 1.01882), Vector2(1.01458, 1.01458), Vector2(1.01066, 1.01066), Vector2(1.00716, 1.00716), Vector2(1.00422, 1.00422), Vector2(1.00196, 1.00196), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_top_0/Panel_Gold/gold2:visible")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.91667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_top_0/Panel_Gold/Button_More:position")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(240.0, 1506.0), Vector2(240.0, 1492.93695), Vector2(240.0, 1479.9097), Vector2(240.0, 1466.95396), Vector2(240.0, 1454.10524), Vector2(240.0, 1441.39877), Vector2(240.0, 1428.86936), Vector2(240.0, 1416.55136), Vector2(240.0, 1404.47853), Vector2(240.0, 1392.68397), Vector2(240.0, 1381.2), Vector2(240.0, 1370.0581), Vector2(240.0, 1359.2888), Vector2(240.0, 1348.92163), Vector2(240.0, 1338.985), Vector2(240.0, 1329.50615), Vector2(240.0, 1320.51105), Vector2(240.0, 1312.02437), Vector2(240.0, 1304.06936), Vector2(240.0, 1296.66783), Vector2(240.0, 1289.84006), Vector2(240.0, 1283.60477), Vector2(240.0, 1277.97905), Vector2(240.0, 1272.97833), Vector2(240.0, 1268.61629), Vector2(240.0, 1264.90491), Vector2(240.0, 1261.85436), Vector2(240.0, 1259.47299), Vector2(240.0, 1257.76733), Vector2(240.0, 1256.74207), Vector2(240.0, 1256.4)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_top_0/Panel_Gold/Button_More:modulate")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.03333), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.23333), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.36667), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.43333), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.56667), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.63333), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.76667), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 0.96667), Color(1, 1, 1, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_top_0/Panel_Gold/Button_More:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.91667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_top_0:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.91667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_top_0:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.91667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="Animation" id="Anim_more"]
+resource_name = "more"
+length = 1.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_bg_0:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_top_0/Panel_Gold/gold0:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(31.5001, -7.6), Vector2(31.5001, -7.6)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_top_0/Panel_Gold/gold0:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_top_0/Panel_Gold/gold0:visible")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_top_0/Panel_Gold/gold1:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(31.5001, 414.8001), Vector2(31.5001, 414.8001)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_top_0/Panel_Gold/gold1:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_top_0/Panel_Gold/gold1:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_top_0/Panel_Gold/gold2:position")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(31.5, 837.2), Vector2(31.5, 837.2)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_top_0/Panel_Gold/gold2:scale")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_top_0/Panel_Gold/gold2:visible")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_top_0/Panel_Gold/Button_More:position")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(240.0, 1256.4), Vector2(240.0, 1256.4)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_top_0/Panel_Gold/Button_More:modulate")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_top_0/Panel_Gold/Button_More:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_top_0:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_top_0:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 1.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0"),
+"more": SubResource("Anim_more")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 17339
+metadata/action_tag = 0
+
+[node name="Panel_bg_0" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -240.0
+offset_right = 1080.0
+offset_bottom = 2160.0
+pivot_offset = Vector2(540.0, 1200.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_bg_0"
+metadata/cocos_tag = 10631
+metadata/action_tag = 253604801
+color = Color(0.0, 0.0, 0.0, 0.4)
+
+[node name="Panel_top_0" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top_0"
+metadata/cocos_tag = 17670
+metadata/action_tag = -158556688
+
+[node name="ListView_bg" type="ScrollContainer" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 0.0
+offset_top = 288.0
+offset_right = 1080.0
+offset_bottom = 1928.0
+pivot_offset = Vector2(540.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ListView_bg"
+metadata/cocos_tag = 1590
+metadata/action_tag = 1966696813
+
+[node name="Content" type="Control" parent="Panel_top_0/ListView_bg"]
+custom_minimum_size = Vector2(1080.0, 1640.0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel_Gold" type="ColorRect" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 313.6
+offset_right = 1080.0
+offset_bottom = 1913.6
+pivot_offset = Vector2(540.0, 800.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_Gold"
+metadata/cocos_tag = 3491
+metadata/action_tag = -431211882
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="gold0" type="NinePatchRect" parent="Panel_top_0/Panel_Gold"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 31.5001
+offset_top = 292.4
+offset_right = 1048.5001
+offset_bottom = 704.4
+pivot_offset = Vector2(508.5, 206.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "gold0"
+metadata/cocos_tag = 61
+metadata/action_tag = 1337151933
+texture = ExtResource("2")
+patch_margin_left = 104
+patch_margin_right = 104
+patch_margin_top = 116
+patch_margin_bottom = 64
+
+[node name="pay_bg1_2" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 15.5
+offset_top = -4.12
+offset_right = 1001.5
+offset_bottom = 127.88
+pivot_offset = Vector2(493.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_bg1_2"
+metadata/cocos_tag = 747
+metadata/action_tag = 382819318
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="pay_hot1_6" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 728.1
+offset_top = 77.8
+offset_right = 899.1
+offset_bottom = 251.8
+pivot_offset = Vector2(85.5, 87.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.22689
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_hot1_6"
+metadata/cocos_tag = 754
+metadata/action_tag = 45189156
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_eWai" type="Label" parent="Panel_top_0/Panel_Gold/gold0/pay_hot1_6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.5
+offset_top = 92.62
+offset_right = 119.5
+offset_bottom = 126.62
+pivot_offset = Vector2(34.0, 17.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_eWai"
+metadata/cocos_tag = 756
+metadata/action_tag = 989460393
+script = ExtResource("6")
+design_size = Vector2(68.0, 34.0)
+design_center = Vector2(85.5, 109.62)
+design_font_size = 34
+bitmap_font = false
+fit_box = false
+text = "额外"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_4" type="Label" parent="Panel_top_0/Panel_Gold/gold0/pay_hot1_6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 27.45
+offset_top = 14.16
+offset_right = 126.45
+offset_bottom = 104.16
+pivot_offset = Vector2(49.5, 45.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_4"
+metadata/cocos_tag = 757
+metadata/action_tag = 2102005162
+script = ExtResource("6")
+design_size = Vector2(99.0, 90.0)
+design_center = Vector2(76.95, 59.16)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "50"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_7_0" type="Label" parent="Panel_top_0/Panel_Gold/gold0/pay_hot1_6/BitmapFontLabel_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 98.8
+offset_top = 5.0
+offset_right = 138.8
+offset_bottom = 85.0
+pivot_offset = Vector2(20.0, 40.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_7_0"
+metadata/cocos_tag = 758
+metadata/action_tag = 1796084066
+script = ExtResource("6")
+design_size = Vector2(40.0, 80.0)
+design_center = Vector2(118.8, 45.0)
+design_font_size = 80
+bitmap_font = false
+fit_box = false
+text = "%"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="pay_hot0_5" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 613.9656
+offset_top = 21.65
+offset_right = 722.9656
+offset_bottom = 69.65
+pivot_offset = Vector2(54.5, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_hot0_5"
+metadata/cocos_tag = 753
+metadata/action_tag = 2066930119
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 56.45
+offset_top = 245.88
+offset_right = 655.45
+offset_bottom = 363.88
+pivot_offset = Vector2(299.5, 59.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_4"
+metadata/cocos_tag = 748
+metadata/action_tag = 995086472
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_gold0" type="Label" parent="Panel_top_0/Panel_Gold/gold0/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 195.5
+offset_top = 12.82
+offset_right = 403.5
+offset_bottom = 102.82
+pivot_offset = Vector2(104.0, 45.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_gold0"
+metadata/cocos_tag = 749
+metadata/action_tag = 561248166
+script = ExtResource("6")
+design_size = Vector2(208.0, 90.0)
+design_center = Vector2(299.5, 57.82)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "1440"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_gold0_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.8
+offset_top = 25.5
+offset_right = 152.8
+offset_bottom = 92.5
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_gold0_4"
+metadata/cocos_tag = 751
+metadata/action_tag = -897221550
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_gold0" type="Label" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 396.0
+offset_top = 20.32
+offset_right = 621.0
+offset_bottom = 70.32
+pivot_offset = Vector2(112.5, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_gold0"
+metadata/cocos_tag = 65
+metadata/action_tag = 1450815564
+script = ExtResource("6")
+design_size = Vector2(225.0, 50.0)
+design_center = Vector2(508.5, 45.32)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "限购1次！"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_new0" type="Control" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new0"
+metadata/cocos_tag = 5629
+metadata/action_tag = 1794684980
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0/Node_new0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 143.3205
+offset_top = -319.8955
+offset_right = 556.3205
+offset_bottom = -152.8955
+pivot_offset = Vector2(206.5, 83.5)
+scale = Vector2(1.11, 1.11)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 64
+metadata/action_tag = -1184210832
+texture = ExtResource("11")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_new1" type="Control" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new1"
+metadata/cocos_tag = 5635
+metadata/action_tag = -1846420906
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold0/Node_new1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 277.3205
+offset_top = -307.3955
+offset_right = 422.3205
+offset_bottom = -165.3955
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.96, 0.96)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 5636
+metadata/action_tag = 343753907
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_buy0" type="TextureButton" parent="Panel_top_0/Panel_Gold/gold0"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 663.6
+offset_top = 243.88
+offset_right = 963.6
+offset_bottom = 365.88
+pivot_offset = Vector2(150.0, 61.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_buy0"
+metadata/cocos_tag = 0
+metadata/action_tag = -1178515931
+script = ExtResource("13")
+scale9_margins = Vector4(113.0, 80.0, 60.0, 60.0)
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_buy0" type="Label" parent="Panel_top_0/Panel_Gold/gold0/Button_buy0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 68.5
+offset_top = 16.0
+offset_right = 255.5
+offset_bottom = 106.0
+pivot_offset = Vector2(93.5, 45.0)
+scale = Vector2(0.74, 0.74)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_buy0"
+metadata/cocos_tag = 60
+metadata/action_tag = 1463003280
+script = ExtResource("6")
+design_size = Vector2(187.0, 90.0)
+design_center = Vector2(162.0, 61.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "4.99"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_fuHao0" type="Label" parent="Panel_top_0/Panel_Gold/gold0/Button_buy0/BitmapFontLabel_buy0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -53.74
+offset_top = -6.332
+offset_right = -3.74
+offset_bottom = 93.668
+pivot_offset = Vector2(50.0, 50.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_fuHao0"
+metadata/cocos_tag = 62
+metadata/action_tag = -196458088
+script = ExtResource("6")
+design_size = Vector2(50.0, 100.0)
+design_center = Vector2(-28.74, 43.668)
+design_font_size = 100
+bitmap_font = false
+fit_box = false
+text = "$"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="gold1" type="NinePatchRect" parent="Panel_top_0/Panel_Gold"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 31.5001
+offset_top = 614.8
+offset_right = 1048.5001
+offset_bottom = 1026.8
+pivot_offset = Vector2(508.5, 206.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "gold1"
+metadata/cocos_tag = 774
+metadata/action_tag = -2100766895
+texture = ExtResource("2")
+patch_margin_left = 104
+patch_margin_right = 104
+patch_margin_top = 116
+patch_margin_bottom = 64
+
+[node name="pay_bg1_2" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 15.5
+offset_top = -4.12
+offset_right = 1001.5
+offset_bottom = 127.88
+pivot_offset = Vector2(493.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_bg1_2"
+metadata/cocos_tag = 775
+metadata/action_tag = -894811109
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="pay_hot0_5" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 613.9656
+offset_top = 21.65
+offset_right = 722.9656
+offset_bottom = 69.65
+pivot_offset = Vector2(54.5, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_hot0_5"
+metadata/cocos_tag = 780
+metadata/action_tag = 274882324
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 56.45
+offset_top = 245.88
+offset_right = 655.45
+offset_bottom = 363.88
+pivot_offset = Vector2(299.5, 59.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_4"
+metadata/cocos_tag = 781
+metadata/action_tag = -2007779016
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_gold1" type="Label" parent="Panel_top_0/Panel_Gold/gold1/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 222.0
+offset_top = 12.82
+offset_right = 377.0
+offset_bottom = 102.82
+pivot_offset = Vector2(77.5, 45.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_gold1"
+metadata/cocos_tag = 782
+metadata/action_tag = -523376511
+script = ExtResource("6")
+design_size = Vector2(155.0, 90.0)
+design_center = Vector2(299.5, 57.82)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "240"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_gold0_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.8
+offset_top = 25.5
+offset_right = 152.8
+offset_bottom = 92.5
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_gold0_4"
+metadata/cocos_tag = 783
+metadata/action_tag = 252959369
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_gold1" type="Label" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 458.5
+offset_top = 20.32
+offset_right = 558.5
+offset_bottom = 70.32
+pivot_offset = Vector2(50.0, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_gold1"
+metadata/cocos_tag = 784
+metadata/action_tag = 1480206543
+script = ExtResource("6")
+design_size = Vector2(100.0, 50.0)
+design_center = Vector2(508.5, 45.32)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "热销"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_new0" type="Control" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new0"
+metadata/cocos_tag = 5632
+metadata/action_tag = -47698860
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1/Node_new0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 277.3205
+offset_top = -307.3955
+offset_right = 422.3205
+offset_bottom = -165.3955
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.96, 0.96)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 785
+metadata/action_tag = 2072256859
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_new1" type="Control" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new1"
+metadata/cocos_tag = 5643
+metadata/action_tag = -431479034
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold1/Node_new1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 277.3205
+offset_top = -307.3955
+offset_right = 422.3205
+offset_bottom = -165.3955
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.96, 0.96)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 5644
+metadata/action_tag = -1344188635
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_buy1" type="TextureButton" parent="Panel_top_0/Panel_Gold/gold1"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 663.6
+offset_top = 243.88
+offset_right = 963.6
+offset_bottom = 365.88
+pivot_offset = Vector2(150.0, 61.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_buy1"
+metadata/cocos_tag = 1
+metadata/action_tag = 63018742
+script = ExtResource("13")
+scale9_margins = Vector4(113.0, 80.0, 60.0, 60.0)
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_buy1" type="Label" parent="Panel_top_0/Panel_Gold/gold1/Button_buy1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 69.0
+offset_top = 16.0
+offset_right = 255.0
+offset_bottom = 106.0
+pivot_offset = Vector2(93.0, 45.0)
+scale = Vector2(0.74, 0.74)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_buy1"
+metadata/cocos_tag = 787
+metadata/action_tag = 658480656
+script = ExtResource("6")
+design_size = Vector2(186.0, 90.0)
+design_center = Vector2(162.0, 61.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "0.99"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_fuHao1" type="Label" parent="Panel_top_0/Panel_Gold/gold1/Button_buy1/BitmapFontLabel_buy1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -53.72
+offset_top = -6.332
+offset_right = -3.72
+offset_bottom = 93.668
+pivot_offset = Vector2(50.0, 50.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_fuHao1"
+metadata/cocos_tag = 788
+metadata/action_tag = -102562983
+script = ExtResource("6")
+design_size = Vector2(50.0, 100.0)
+design_center = Vector2(-28.72, 43.668)
+design_font_size = 100
+bitmap_font = false
+fit_box = false
+text = "$"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="gold2" type="NinePatchRect" parent="Panel_top_0/Panel_Gold"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 31.5
+offset_top = 1037.2
+offset_right = 1048.5
+offset_bottom = 1449.2
+pivot_offset = Vector2(508.5, 206.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "gold2"
+metadata/cocos_tag = 789
+metadata/action_tag = -1488744776
+texture = ExtResource("2")
+patch_margin_left = 104
+patch_margin_right = 104
+patch_margin_top = 116
+patch_margin_bottom = 64
+
+[node name="pay_bg1_2" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 15.5
+offset_top = -4.12
+offset_right = 1001.5
+offset_bottom = 127.88
+pivot_offset = Vector2(493.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_bg1_2"
+metadata/cocos_tag = 790
+metadata/action_tag = 548021301
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="pay_hot0_5" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 613.9656
+offset_top = 21.65
+offset_right = 722.9656
+offset_bottom = 69.65
+pivot_offset = Vector2(54.5, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "pay_hot0_5"
+metadata/cocos_tag = 791
+metadata/action_tag = -1531861036
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 56.45
+offset_top = 245.88
+offset_right = 655.45
+offset_bottom = 363.88
+pivot_offset = Vector2(299.5, 59.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_4"
+metadata/cocos_tag = 792
+metadata/action_tag = 1172389018
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_gold2" type="Label" parent="Panel_top_0/Panel_Gold/gold2/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 224.0
+offset_top = 12.82
+offset_right = 375.0
+offset_bottom = 102.82
+pivot_offset = Vector2(75.5, 45.0)
+scale = Vector2(0.9, 0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_gold2"
+metadata/cocos_tag = 793
+metadata/action_tag = 200567763
+script = ExtResource("6")
+design_size = Vector2(151.0, 90.0)
+design_center = Vector2(299.5, 57.82)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "720"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_gold0_4" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.8
+offset_top = 25.5
+offset_right = 152.8
+offset_bottom = 92.5
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_gold0_4"
+metadata/cocos_tag = 794
+metadata/action_tag = 1726665948
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_gold2" type="Label" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 458.5
+offset_top = 20.32
+offset_right = 558.5
+offset_bottom = 70.32
+pivot_offset = Vector2(50.0, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_gold2"
+metadata/cocos_tag = 795
+metadata/action_tag = -1853660285
+script = ExtResource("6")
+design_size = Vector2(100.0, 50.0)
+design_center = Vector2(508.5, 45.32)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "热销"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_new0" type="Control" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new0"
+metadata/cocos_tag = 5637
+metadata/action_tag = 1049955044
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2/Node_new0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 277.3205
+offset_top = -307.3955
+offset_right = 422.3205
+offset_bottom = -165.3955
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.96, 0.96)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 5638
+metadata/action_tag = -1564170342
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_new1" type="Control" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 412.0
+offset_right = 0.0
+offset_bottom = 412.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_new1"
+metadata/cocos_tag = 5640
+metadata/action_tag = 19853045
+
+[node name="btn1_ad0_1_0" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2/Node_new1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 198.24
+offset_top = -312.78
+offset_right = 343.24
+offset_bottom = -170.78
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1_0"
+metadata/cocos_tag = 5641
+metadata/action_tag = 1867223615
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="btn1_ad0_1" type="TextureRect" parent="Panel_top_0/Panel_Gold/gold2/Node_new1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 264.781
+offset_top = -299.43
+offset_right = 409.781
+offset_bottom = -157.43
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.92, 0.92)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_ad0_1"
+metadata/cocos_tag = 5642
+metadata/action_tag = 1128043921
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_buy2" type="TextureButton" parent="Panel_top_0/Panel_Gold/gold2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 663.6
+offset_top = 243.88
+offset_right = 963.6
+offset_bottom = 365.88
+pivot_offset = Vector2(150.0, 61.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_buy2"
+metadata/cocos_tag = 2
+metadata/action_tag = -130597528
+script = ExtResource("13")
+scale9_margins = Vector4(113.0, 80.0, 60.0, 60.0)
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_buy2" type="Label" parent="Panel_top_0/Panel_Gold/gold2/Button_buy2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 68.5
+offset_top = 16.0
+offset_right = 255.5
+offset_bottom = 106.0
+pivot_offset = Vector2(93.5, 45.0)
+scale = Vector2(0.74, 0.74)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_buy2"
+metadata/cocos_tag = 798
+metadata/action_tag = 1760269616
+script = ExtResource("6")
+design_size = Vector2(187.0, 90.0)
+design_center = Vector2(162.0, 61.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "4.99"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_fuHao2" type="Label" parent="Panel_top_0/Panel_Gold/gold2/Button_buy2/BitmapFontLabel_buy2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -53.74
+offset_top = -6.332
+offset_right = -3.74
+offset_bottom = 93.668
+pivot_offset = Vector2(50.0, 50.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_fuHao2"
+metadata/cocos_tag = 799
+metadata/action_tag = -471364645
+script = ExtResource("6")
+design_size = Vector2(50.0, 100.0)
+design_center = Vector2(-28.74, 43.668)
+design_font_size = 100
+bitmap_font = false
+fit_box = false
+text = "$"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_More" type="TextureButton" parent="Panel_top_0/Panel_Gold"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 240.0
+offset_top = 1506.0
+offset_right = 840.0
+offset_bottom = 1694.0
+pivot_offset = Vector2(300.0, 94.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_More"
+metadata/cocos_tag = 800
+metadata/action_tag = -2108772600
+script = ExtResource("13")
+scale9_margins = Vector4(73.0, 73.0, 0.0, 0.0)
+texture_normal = ExtResource("16")
+texture_pressed = ExtResource("17")
+texture_disabled = ExtResource("17")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_More" type="Label" parent="Panel_top_0/Panel_Gold/Button_More"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 180.0
+offset_top = 60.24
+offset_right = 420.0
+offset_bottom = 120.24
+pivot_offset = Vector2(120.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_More"
+metadata/cocos_tag = 801
+metadata/action_tag = -693618599
+script = ExtResource("6")
+design_size = Vector2(240.0, 60.0)
+design_center = Vector2(300.0, 90.24)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "显示更多"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_Gold" type="Control" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1920.0
+offset_right = 0.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_Gold"
+metadata/cocos_tag = 2290
+metadata/action_tag = -1323604410
+
+[node name="Button_close" type="TextureButton" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 966.764
+offset_top = 146.392
+offset_right = 1070.764
+offset_bottom = 276.392
+pivot_offset = Vector2(52.0, 65.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_close"
+metadata/cocos_tag = 17738
+metadata/action_tag = -2120118098
+texture_normal = ExtResource("18")
+texture_pressed = ExtResource("19")
+texture_disabled = ExtResource("19")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_store" type="Label" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 470.0
+offset_top = 176.2001
+offset_right = 610.0
+offset_bottom = 246.2001
+pivot_offset = Vector2(70.0, 35.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_store"
+metadata/cocos_tag = 752
+metadata/action_tag = -1420017748
+script = ExtResource("6")
+design_size = Vector2(140.0, 70.0)
+design_center = Vector2(540.0, 211.2001)
+design_font_size = 70
+bitmap_font = false
+fit_box = false
+text = "商店"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Panel_view_gold" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -1162.6953
+offset_top = 531.2747
+offset_right = -142.6953
+offset_bottom = 911.2747
+pivot_offset = Vector2(0.0, 380.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_view_gold"
+metadata/cocos_tag = 2435
+metadata/action_tag = -1288759255
+
+[node name="FileNode_1" parent="." instance=ExtResource("20")]
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 0.0
+offset_right = 540.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_1"
+metadata/cocos_tag = 19618
+metadata/action_tag = -1680913855
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

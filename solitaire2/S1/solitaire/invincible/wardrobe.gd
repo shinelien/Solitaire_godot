@@ -1,0 +1,204 @@
+class_name InvincibleWardrobe
+extends Node
+var game: InvincibleGame
+var dialog: InvincibleScene
+var current_tab := "back"
+var preview: AudioStreamPlayer
+var shop: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/invincible/data/shop2021.json"))
+
+func configure(owner_game: InvincibleGame, view: InvincibleScene) -> void:
+	game = owner_game
+	dialog = view
+	preview = AudioStreamPlayer.new()
+	add_child(preview)
+	for name in ["Panel_view_bg", "Panel_view_Changjing", "Panel_view_zhengmian", "Panel_view_magic", "Panel_view_music", "Panel_teach", "Panel_confirm", "FileNode_BagItem1"]:
+		game.hide_node(dialog, name)
+	for pair in [["Button_tab3", "back"], ["Button_tab2", "face"], ["Button_tab4", "magic"], ["Button_tab5", "music"]]:
+		var button := dialog.find_child(pair[0], true, false) as TextureButton
+		button.set_meta("local_action", func(): show_tab(pair[1]))
+	show_tab("back")
+
+func show_tab(tab: String) -> void:
+	current_tab = tab
+	preview.stop()
+	for pair in [["Button_tab3", "back"], ["Button_tab2", "face"], ["Button_tab4", "magic"], ["Button_tab5", "music"]]:
+		(dialog.find_child(pair[0], true, false) as TextureButton).disabled = tab == pair[1]
+	var scroller := dialog.find_child("ListView_bg", true, false) as ScrollContainer
+	scroller.scroll_vertical = 0
+	var content := scroller.get_node("Content") as Control
+	for child in content.get_children():
+		content.remove_child(child)
+		child.queue_free()
+	var count := 35 if tab == "back" else 6 if tab == "face" else 20 if tab == "music" else 1
+	var columns := 3 if tab == "back" else 2 if tab == "face" else 1
+	var height := 400 if tab == "back" else 450 if tab == "face" else 210 if tab == "music" else 660
+	content.custom_minimum_size = Vector2(scroller.size.x, ceilf(float(count) / columns) * height)
+	for index in count:
+		var item := game.scene("2020BagItem_cardBg" if tab == "back" else "2020BagItem_cardFace" if tab == "face" else "2020BagItem_music" if tab == "music" else "2020BagItem_magic")
+		content.add_child(item)
+		item.position = Vector2((index % columns + .5) * scroller.size.x / columns, (index / columns + .5) * height)
+		if tab == "back":
+			back_item(item, index)
+		elif tab == "face":
+			face_item(item, index)
+		elif tab == "music":
+			music_item(item, index)
+		else:
+			(item.find_child("panel_Magic", true, false) as CanvasItem).show()
+			game.text(item, "Text_MagicNum", "x%d" % game.profile.magic)
+			(item.find_child("Button_magic", true, false) as TextureButton).pressed.connect(magic_shop)
+
+func show_node(view: Node, name: String, value: bool) -> void:
+	var node := view.find_child(name, true, false) as CanvasItem
+	if node != null:
+		node.visible = value
+
+func back_item(item: InvincibleScene, index: int) -> void:
+	show_node(item, "panel_item", true)
+	show_node(item, "img_new_bg", false)
+	var image := item.find_child("img_card_bg", true, false) as TextureRect
+	var center := image.position + image.size / 2
+	image.texture = load("res://assets/invincible/frames/card_bg_%d.png" % index)
+	image.size = image.texture.get_size()
+	image.position = center - image.size / 2
+	image.pivot_offset = image.size / 2
+	var owned: bool = index in game.profile.skin_owned.back
+	var unlocked := game.profile.level >= int(shop.CardBg[index].unlock)
+	show_node(item, "Button_buy", not owned)
+	show_node(item, "Button_card_bg", owned)
+	show_node(item, "Sprite_used_bg", int(game.profile.settings.back) == index)
+	show_node(item, "ui_Lock0_Changjing", not unlocked)
+	show_node(item, "Text_buy", not unlocked)
+	show_node(item, "BitmapFontLabel_1", unlocked)
+	game.text(item, "Text_card_bg", "使用")
+	game.text(item, "BitmapFontLabel_1", str(int(shop.CardBg[index].price)))
+	game.text(item, "Text_buy", "%d级解锁" % int(shop.CardBg[index].unlock))
+	var buy := item.find_child("Button_buy", true, false) as TextureButton
+	buy.disabled = not unlocked
+	buy.pressed.connect(func(): purchase("back", index))
+	for name in ["Button_card_bg", "Button_card_bgA"]:
+		(item.find_child(name, true, false) as TextureButton).pressed.connect(func():
+			if index in game.profile.skin_owned.back:
+				game.profile.settings.back = index
+				game.profile.save()
+				game.board.set_skins(game.profile)
+				show_tab("back"))
+
+func purchase(kind: String, index: int) -> void:
+	var result := game.profile.buy_skin(kind, index)
+	game.message("已获得" if result.ok else str(result.reason))
+	show_tab(kind)
+
+func face_item(item: InvincibleScene, index: int) -> void:
+	show_node(item, "panel_zhengmian", true)
+	show_node(item, "img_new_face", false)
+	show_node(item, "Image_used_face", int(game.profile.settings.face) == index)
+	var count := game.profile.face_count(index)
+	game.text(item, "Text_faceNum", "%d/52" % count)
+	(item.find_child("LoadingBar_face", true, false) as TextureProgressBar).value = count * 100.0 / 52
+	for pair in [["img_card_face1", 11], ["img_card_face2", 12]]:
+		var placeholder := item.find_child(pair[0], true, false) as Control
+		placeholder.self_modulate.a = 0
+		var card := InvincibleCard.new()
+		placeholder.add_child(card)
+		card.position = placeholder.size / 2
+		card.configure(pair[1], index, 0)
+		card.show_face(true, false)
+	(item.find_child("Button_zhengmian", true, false) as TextureButton).pressed.connect(func(): face_details(index))
+
+func face_details(style: int) -> void:
+	var detail := game.open_dialog("2020BagItem_1", "Start")
+	detail.position = Vector2(540, 960)
+	game.hide_node(detail, "Panel_card")
+	game.hide_node(detail, "Button_3")
+	var scroller := detail.find_child("ListView_card", true, false) as ScrollContainer
+	var content := scroller.get_node("Content") as Control
+	content.custom_minimum_size = Vector2(scroller.size.x, 13 * 320)
+	game.text(detail, "Text_cardNum", "%d/52" % game.profile.face_count(style))
+	(detail.find_child("LoadingBar_card", true, false) as TextureProgressBar).value = game.profile.face_count(style) * 100.0 / 52
+	var use_all := detail.find_child("Button_card_item1_get", true, false) as TextureButton
+	game.text(detail, "Text_card_item1_get", "使用已获得的牌")
+	use_all.disabled = game.profile.face_count(style) == 0
+	use_all.set_meta("local_action", func():
+		game.profile.settings.face = style
+		for id in 52:
+			if game.profile.owns_face(style, id):
+				game.profile.face_choices[str(id)] = style
+		game.profile.save()
+		game.board.set_skins(game.profile)
+		game.close_dialog()
+		show_tab("face"))
+	for id in 52:
+		var item := game.scene("2021BagItem_cardFace")
+		content.add_child(item)
+		item.position = Vector2((id % 4 + .5) * scroller.size.x / 4, (id / 4 + .5) * 320)
+		game.hide_node(item, "Sprite_face")
+		var card := InvincibleCard.new()
+		item.add_child(card)
+		card.position = Vector2(0, -30)
+		card.configure(id, style, 0)
+		card.show_face(true, false)
+		var owned := game.profile.owns_face(style, id)
+		card.modulate.a = 1.0 if owned else .2
+		var use := item.find_child("Button_card_face", true, false) as TextureButton
+		use.disabled = not owned
+		show_node(item, "Sprite_used_bg", owned and game.profile.card_style(id) == style)
+		use.pressed.connect(func():
+			game.profile.face_choices[str(id)] = style
+			game.profile.save()
+			game.board.set_skins(game.profile)
+			game.close_dialog()
+			face_details(style))
+
+func music_item(item: InvincibleScene, index: int) -> void:
+	game.text(item, "Text_music", "音乐 %02d" % (index + 1))
+	game.text(item, "Text_use", "使用")
+	var owned: bool = index in game.profile.skin_owned.music
+	var unlocked := game.profile.level >= int(shop.Music[index].unlock)
+	show_node(item, "Button_buy", not owned)
+	show_node(item, "Button_music", owned)
+	show_node(item, "ui_Lock0_music", not unlocked)
+	show_node(item, "Sprite_used_music", int(game.profile.settings.music_track) == index)
+	show_node(item, "Image_new_music", false)
+	game.text(item, "BitmapFontLabel_1", str(int(shop.Music[index].price)))
+	game.text(item, "Text_buy", "%d级解锁" % int(shop.Music[index].unlock) if not unlocked else "")
+	var buy := item.find_child("Button_buy", true, false) as TextureButton
+	buy.disabled = not unlocked
+	buy.pressed.connect(func(): purchase("music", index))
+	(item.find_child("Button_music_on", true, false) as TextureButton).pressed.connect(func():
+		game.audio.stop()
+		preview.stream = load("res://assets/invincible/music/bgm%d.mp3" % index)
+		preview.play())
+	(item.find_child("Button_music", true, false) as TextureButton).pressed.connect(func():
+		game.profile.settings.music_track = index
+		game.profile.save()
+		show_tab("music")
+		game.play_music())
+
+func magic_shop() -> void:
+	var view := game.open_dialog("AD_magic", "loop")
+	game.text(view, "Text_title", "获得魔法棒")
+	game.text(view, "Text_miaoshu", "获得 1 根魔法棒")
+	game.text(view, "text_1000", "70")
+	game.text(view, "text_guankan", "领取")
+	game.text(view, "text_guankan0", "免费领取")
+	game.text(view, "Text_xianZhi", "%d/50" % int(game.profile.statistics.get("magic_purchases", 0)))
+	var buy := view.find_child("btn_1000gold", true, false) as TextureButton
+	if buy != null:
+		buy.disabled = game.profile.coins < 70 or int(game.profile.statistics.get("magic_purchases", 0)) >= 50
+		buy.set_meta("local_action", func():
+			if game.profile.coins < 70 or int(game.profile.statistics.get("magic_purchases", 0)) >= 50:
+				return
+			game.profile.coins -= 70
+			game.profile.magic += 1
+			game.profile.statistics.magic_purchases = int(game.profile.statistics.get("magic_purchases", 0)) + 1
+			game.profile.save()
+			game.close_dialog()
+			show_tab("magic")
+			game.message("已获得 1 根魔法棒"))
+	for name in ["btn_guankan", "btn_guankan0"]:
+		var button := view.find_child(name, true, false) as TextureButton
+		if button != null:
+			button.set_meta("local_action", func():
+				game.ads.request_rewarded("magic")
+				game.message("广告尚未接入，暂时无法领取"))

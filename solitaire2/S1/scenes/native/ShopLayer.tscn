@@ -1,0 +1,385 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_1.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_bg.png" id="2"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_close.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_icon_bg.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_icon.png" id="6"]
+[ext_resource type="Script" path="res://solitaire/native/atlas_number.gd" id="7"]
+[ext_resource type="Texture2D" path="res://assets/master/Default/TextAtlas.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_add.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_shop_bg_4.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_shop_text1.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_shop_text2.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_shop_text3.png" id="13"]
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 576.000000
+offset_bottom = 1024.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_shop" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 0.000000
+offset_right = 576.000000
+offset_bottom = 1024.000000
+pivot_offset = Vector2(0.000000, 1024.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="img_shop" type="Control" parent="panel_shop"]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 112.000000
+offset_right = 576.000000
+offset_bottom = 912.000000
+pivot_offset = Vector2(288.000000, 400.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="img_shop_bg" type="NinePatchRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 13.000000
+offset_top = -2.000000
+offset_right = 563.000000
+offset_bottom = 818.000000
+pivot_offset = Vector2(275.000000, 410.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 40
+patch_margin_right = 40
+patch_margin_top = 60
+patch_margin_bottom = 60
+
+[node name="Image_35" type="NinePatchRect" parent="panel_shop/img_shop/img_shop_bg"]
+layout_mode = 0
+offset_left = 5.000000
+offset_top = 134.398900
+offset_right = 545.000000
+offset_bottom = 324.398900
+pivot_offset = Vector2(270.000000, 95.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+patch_margin_left = 25
+patch_margin_right = 25
+patch_margin_top = 51
+patch_margin_bottom = 51
+
+[node name="Image_35_0" type="NinePatchRect" parent="panel_shop/img_shop/img_shop_bg"]
+layout_mode = 0
+offset_left = 5.000000
+offset_top = 364.148900
+offset_right = 545.000000
+offset_bottom = 554.148900
+pivot_offset = Vector2(270.000000, 95.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+patch_margin_left = 25
+patch_margin_right = 25
+patch_margin_top = 51
+patch_margin_bottom = 51
+
+[node name="Image_35_0_0" type="NinePatchRect" parent="panel_shop/img_shop/img_shop_bg"]
+layout_mode = 0
+offset_left = 5.000000
+offset_top = 593.800000
+offset_right = 545.000000
+offset_bottom = 783.800000
+pivot_offset = Vector2(270.000000, 95.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+patch_margin_left = 25
+patch_margin_right = 25
+patch_margin_top = 51
+patch_margin_bottom = 51
+
+[node name="text_title" type="Label" parent="panel_shop/img_shop/img_shop_bg"]
+layout_mode = 0
+offset_left = 221.500000
+offset_top = 10.300000
+offset_right = 328.500000
+offset_bottom = 55.300000
+pivot_offset = Vector2(53.500000, 22.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "商店"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_shop_close" type="TextureButton" parent="panel_shop/img_shop/img_shop_bg"]
+layout_mode = 0
+offset_left = 11.500000
+offset_top = 11.300000
+offset_right = 54.500000
+offset_bottom = 54.300000
+pivot_offset = Vector2(21.500000, 21.500000)
+mouse_filter = 0
+scale = Vector2(0.800000, 0.800000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="img_btn_coin" type="NinePatchRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 397.870700
+offset_top = 8.332200
+offset_right = 549.870700
+offset_bottom = 50.227800
+pivot_offset = Vector2(76.000000, 20.947800)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("5")
+patch_margin_left = 41
+patch_margin_right = 41
+patch_margin_top = 10
+patch_margin_bottom = 10
+
+[node name="Image_7" type="TextureRect" parent="panel_shop/img_shop/img_btn_coin"]
+layout_mode = 0
+offset_left = 98.827500
+offset_top = -9.678200
+offset_right = 159.827500
+offset_bottom = 53.321800
+pivot_offset = Vector2(30.500000, 31.500000)
+mouse_filter = 2
+scale = Vector2(0.550000, 0.550000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="atlasLabel_coin" type="Control" parent="panel_shop/img_shop/img_btn_coin"]
+layout_mode = 0
+offset_left = 54.693000
+offset_top = 14.173100
+offset_right = 96.693000
+offset_bottom = 32.173100
+pivot_offset = Vector2(21.000000, 9.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 0.000000, 1.000000)
+script = ExtResource("7")
+text = "100"
+glyph_size = Vector2(14.000000, 18.000000)
+first_character = "."
+atlas = ExtResource("8")
+
+[node name="btn_add" type="TextureButton" parent="panel_shop/img_shop/img_btn_coin"]
+layout_mode = 0
+offset_left = 6.800000
+offset_top = 5.947800
+offset_right = 38.800000
+offset_bottom = 35.947800
+pivot_offset = Vector2(16.000000, 15.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("9")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="scrollView_bg" type="ScrollContainer" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 25.500000
+offset_top = 137.399000
+offset_right = 550.500000
+offset_bottom = 317.399000
+pivot_offset = Vector2(262.500000, 180.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="Content" type="Control" parent="panel_shop/img_shop/scrollView_bg"]
+custom_minimum_size = Vector2(576.000000, 180.000000)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="scrollView_face" type="ScrollContainer" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 25.500000
+offset_top = 367.149000
+offset_right = 550.500000
+offset_bottom = 547.149000
+pivot_offset = Vector2(262.500000, 180.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="Content" type="Control" parent="panel_shop/img_shop/scrollView_face"]
+custom_minimum_size = Vector2(576.000000, 180.000000)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="scrollView_cardbg" type="ScrollContainer" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 25.500000
+offset_top = 596.000000
+offset_right = 550.500000
+offset_bottom = 776.000000
+pivot_offset = Vector2(262.500000, 180.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="Content" type="Control" parent="panel_shop/img_shop/scrollView_cardbg"]
+custom_minimum_size = Vector2(576.000000, 180.000000)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Image_17" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 121.500000
+offset_top = 92.000000
+offset_right = 454.500000
+offset_bottom = 140.000000
+pivot_offset = Vector2(166.500000, 24.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_18" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 740.532800
+offset_top = 118.081900
+offset_right = 826.532800
+offset_bottom = 150.081900
+pivot_offset = Vector2(43.000000, 16.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("11")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_17_0" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 121.500000
+offset_top = 320.000000
+offset_right = 454.500000
+offset_bottom = 368.000000
+pivot_offset = Vector2(166.500000, 24.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_18_0" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 742.032800
+offset_top = 345.083200
+offset_right = 825.032800
+offset_bottom = 373.083200
+pivot_offset = Vector2(41.500000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_17_0_0" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 121.500000
+offset_top = 548.000000
+offset_right = 454.500000
+offset_bottom = 596.000000
+pivot_offset = Vector2(166.500000, 24.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_18_0_0" type="TextureRect" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 742.032800
+offset_top = 569.583200
+offset_right = 825.032800
+offset_bottom = 598.583200
+pivot_offset = Vector2(41.500000, 14.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("13")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_title1" type="Label" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 250.500000
+offset_top = 102.000000
+offset_right = 325.500000
+offset_bottom = 130.000000
+pivot_offset = Vector2(37.500000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "牌背景"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_title2" type="Label" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 168.198400
+offset_top = 330.000000
+offset_right = 400.198400
+offset_bottom = 358.000000
+pivot_offset = Vector2(116.000000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "牌正面"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_title3" type="Label" parent="panel_shop/img_shop"]
+layout_mode = 0
+offset_left = 174.732800
+offset_top = 558.000000
+offset_right = 398.732800
+offset_bottom = 586.000000
+pivot_offset = Vector2(112.000000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "牌背面"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1

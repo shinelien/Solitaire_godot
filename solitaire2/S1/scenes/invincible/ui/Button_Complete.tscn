@@ -1,0 +1,143 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="5"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="6"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/btn.tscn" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn0.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn1.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn2.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn3.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn4.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn5.png" id="14"]
+
+[sub_resource type="Animation" id="Anim_Start"]
+resource_name = "Start"
+length = 0.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button_auto/Sprite_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.03333, 0.11667, 0.16667, 0.21667, 0.26667, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13"), ExtResource("14"), ExtResource("14")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button_auto/Sprite_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.16601), Color(1, 1, 1, 0.33203), Color(1, 1, 1, 0.49804), Color(1, 1, 1, 0.42689), Color(1, 1, 1, 0.35574), Color(1, 1, 1, 0.28459), Color(1, 1, 1, 0.21345), Color(1, 1, 1, 0.1423), Color(1, 1, 1, 0.07115), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Button_auto:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.7, 0.7), Vector2(0.72272, 0.72272), Vector2(0.78477, 0.78477), Vector2(0.86955, 0.86955), Vector2(0.95432, 0.95432), Vector2(1.01638, 1.01638), Vector2(1.0391, 1.0391), Vector2(1.03623, 1.03623), Vector2(1.02796, 1.02796), Vector2(1.0153, 1.0153), Vector2(0.99977, 0.99977), Vector2(0.98323, 0.98323), Vector2(0.9677, 0.9677), Vector2(0.95504, 0.95504), Vector2(0.94677, 0.94677), Vector2(0.9439, 0.9439), Vector2(0.94527, 0.94527), Vector2(0.94926, 0.94926), Vector2(0.95546, 0.95546), Vector2(0.96328, 0.96328), Vector2(0.97195, 0.97195), Vector2(0.98062, 0.98062), Vector2(0.98844, 0.98844), Vector2(0.99464, 0.99464), Vector2(0.99863, 0.99863), Vector2(1.0, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start": SubResource("Anim_Start")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 11597
+metadata/action_tag = 0
+
+[node name="Button_auto" type="TextureButton" parent="."]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -260.0001
+offset_top = -103.0002
+offset_right = 259.9999
+offset_bottom = 102.9998
+pivot_offset = Vector2(260.0, 103.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_auto"
+metadata/cocos_tag = 11599
+metadata/action_tag = 1092217225
+script = ExtResource("2")
+scale9_margins = Vector4(100.0, 100.0, 0.0, 0.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_disabled = ExtResource("5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_autoComplete" type="Label" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 32.5
+offset_top = 59.76
+offset_right = 487.5
+offset_bottom = 129.76
+pivot_offset = Vector2(227.5, 35.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_autoComplete"
+metadata/cocos_tag = 11600
+metadata/action_tag = 1244309549
+script = ExtResource("7")
+design_size = Vector2(455.0, 70.0)
+design_center = Vector2(260.0, 94.76)
+design_font_size = 70
+bitmap_font = false
+fit_box = false
+text = "Auto Complete"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 260.0
+offset_top = 41.1999
+offset_right = 260.0
+offset_bottom = 41.1999
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.4, 1.4)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 3866
+metadata/action_tag = -2082689654
+
+[node name="Emitter" parent="Button_auto/Particle_1" instance=ExtResource("8")]
+
+[node name="Sprite_1" type="TextureRect" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 55.5
+offset_top = 53.88
+offset_right = 464.5
+offset_bottom = 143.88
+pivot_offset = Vector2(204.5, 45.0)
+scale = Vector2(1.2266, 2.008)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_1"
+metadata/cocos_tag = 3696
+metadata/action_tag = 1381793942
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

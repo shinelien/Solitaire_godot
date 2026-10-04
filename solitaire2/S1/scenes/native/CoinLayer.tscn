@@ -1,0 +1,380 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_1.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_title.png" id="2"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_close.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_coins.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_bg.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_ads.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_btn_bg2.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_icon.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_gift.png" id="10"]
+[ext_resource type="Script" path="res://solitaire/native/atlas_number.gd" id="11"]
+[ext_resource type="Texture2D" path="res://assets/master/img/shijian_2.png" id="12"]
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 576.000000
+offset_bottom = 1024.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_coin" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 0.000000
+offset_right = 576.000000
+offset_bottom = 1024.000000
+pivot_offset = Vector2(0.000000, 1024.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="img_coin" type="Control" parent="panel_coin"]
+layout_mode = 0
+offset_left = 88.000000
+offset_top = 317.000000
+offset_right = 488.000000
+offset_bottom = 707.000000
+pivot_offset = Vector2(200.000000, 195.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="img_coin_bg" type="NinePatchRect" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = -50.000000
+offset_top = -57.018000
+offset_right = 450.000000
+offset_bottom = 374.144500
+pivot_offset = Vector2(250.000000, 0.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 6
+patch_margin_right = 6
+patch_margin_top = 5
+patch_margin_bottom = 5
+
+[node name="Image_4" type="TextureRect" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = 3.000000
+offset_top = -199.200000
+offset_right = 397.000000
+offset_bottom = 19.800000
+pivot_offset = Vector2(197.000000, 109.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_title" type="Label" parent="panel_coin/img_coin/Image_4"]
+layout_mode = 0
+offset_left = 143.500000
+offset_top = 130.800000
+offset_right = 250.500000
+offset_bottom = 175.800000
+pivot_offset = Vector2(53.500000, 22.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "商店"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_coin_close" type="TextureButton" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = -43.000000
+offset_top = -54.800000
+offset_right = 11.000000
+offset_bottom = 0.200000
+pivot_offset = Vector2(27.000000, 27.500000)
+mouse_filter = 0
+scale = Vector2(0.800000, 0.800000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Image_17" type="TextureRect" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = 131.500000
+offset_top = 21.143900
+offset_right = 268.500000
+offset_bottom = 126.143900
+pivot_offset = Vector2(68.500000, 52.500000)
+mouse_filter = 2
+scale = Vector2(0.850000, 0.850000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_7" type="Label" parent="panel_coin/img_coin/Image_17"]
+layout_mode = 0
+offset_left = -91.000000
+offset_top = 109.000000
+offset_right = 228.000000
+offset_bottom = 141.000000
+pivot_offset = Vector2(159.500000, 16.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "免费获取金币"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panel_ads" type="NinePatchRect" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = -25.000000
+offset_top = 155.008000
+offset_right = 425.000000
+offset_bottom = 225.008000
+pivot_offset = Vector2(225.000000, 35.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("6")
+patch_margin_left = 20
+patch_margin_right = 20
+patch_margin_top = 20
+patch_margin_bottom = 20
+
+[node name="Image_14" type="TextureRect" parent="panel_coin/img_coin/panel_ads"]
+layout_mode = 0
+offset_left = 367.000000
+offset_top = -10.600000
+offset_right = 443.000000
+offset_bottom = 69.400000
+pivot_offset = Vector2(38.000000, 40.000000)
+mouse_filter = 2
+scale = Vector2(0.600000, 0.600000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="btn_ads" type="TextureButton" parent="panel_coin/img_coin/panel_ads"]
+layout_mode = 0
+offset_left = 15.252000
+offset_top = 9.100000
+offset_right = 135.252000
+offset_bottom = 49.100000
+pivot_offset = Vector2(56.748000, 20.300000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text_ads" type="Label" parent="panel_coin/img_coin/panel_ads/btn_ads"]
+layout_mode = 0
+offset_left = 42.500000
+offset_top = 9.500000
+offset_right = 77.500000
+offset_bottom = 30.500000
+pivot_offset = Vector2(17.500000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.101961, 0.101961, 0.101961, 1.000000)
+text = "领取"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_three" type="Label" parent="panel_coin/img_coin/panel_ads"]
+layout_mode = 0
+offset_left = 221.500000
+offset_top = 6.000000
+offset_right = 310.500000
+offset_bottom = 29.000000
+pivot_offset = Vector2(89.000000, 11.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.964706, 0.807843, 0.305882, 1.000000)
+text = "观看视频"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Image_18" type="TextureRect" parent="panel_coin/img_coin/panel_ads"]
+layout_mode = 0
+offset_left = 246.936400
+offset_top = 9.100000
+offset_right = 307.936400
+offset_bottom = 72.100000
+pivot_offset = Vector2(30.500000, 31.500000)
+mouse_filter = 2
+scale = Vector2(0.380000, 0.380000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_three_des" type="Label" parent="panel_coin/img_coin/panel_ads"]
+layout_mode = 0
+offset_left = 220.407000
+offset_top = 30.100000
+offset_right = 261.407000
+offset_bottom = 51.100000
+pivot_offset = Vector2(41.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "+500"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panel_freecoin" type="NinePatchRect" parent="panel_coin/img_coin"]
+layout_mode = 0
+offset_left = -25.000000
+offset_top = 230.200000
+offset_right = 425.000000
+offset_bottom = 300.200000
+pivot_offset = Vector2(225.000000, 35.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("6")
+patch_margin_left = 20
+patch_margin_right = 20
+patch_margin_top = 20
+patch_margin_bottom = 20
+
+[node name="Image_14" type="TextureRect" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 369.000000
+offset_top = -14.100000
+offset_right = 441.000000
+offset_bottom = 72.900000
+pivot_offset = Vector2(36.000000, 43.500000)
+mouse_filter = 2
+scale = Vector2(0.550000, 0.550000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_left" type="Label" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 195.500000
+offset_top = 6.000000
+offset_right = 310.500000
+offset_bottom = 29.000000
+pivot_offset = Vector2(115.000000, 11.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.964706, 0.807843, 0.305882, 1.000000)
+text = "免费金币"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Image_18_0" type="TextureRect" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 247.610200
+offset_top = 9.156700
+offset_right = 308.610200
+offset_bottom = 72.156700
+pivot_offset = Vector2(29.414200, 31.443300)
+mouse_filter = 2
+scale = Vector2(0.380000, 0.380000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_three_des_0" type="Label" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 220.407000
+offset_top = 30.100000
+offset_right = 261.407000
+offset_bottom = 51.100000
+pivot_offset = Vector2(41.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "+500"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_freecoin" type="TextureButton" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 15.240000
+offset_top = 9.400000
+offset_right = 135.240000
+offset_bottom = 49.400000
+pivot_offset = Vector2(60.000000, 20.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text_freecoin" type="Label" parent="panel_coin/img_coin/panel_freecoin/btn_freecoin"]
+layout_mode = 0
+offset_left = 42.500000
+offset_top = 9.500000
+offset_right = 77.500000
+offset_bottom = 30.500000
+pivot_offset = Vector2(17.500000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.101961, 0.101961, 0.101961, 1.000000)
+text = "领取"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_free" type="Label" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 49.149700
+offset_top = 12.703200
+offset_right = 113.149700
+offset_bottom = 30.703200
+pivot_offset = Vector2(32.000000, 9.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+visible = false
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "免费领取"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="atlasLabel_time" type="Control" parent="panel_coin/img_coin/panel_freecoin"]
+layout_mode = 0
+offset_left = 33.021000
+offset_top = 30.626100
+offset_right = 129.021000
+offset_bottom = 50.626100
+pivot_offset = Vector2(48.643200, 9.350000)
+mouse_filter = 2
+scale = Vector2(0.800000, 0.800000)
+visible = false
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("11")
+text = "00/00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("12")

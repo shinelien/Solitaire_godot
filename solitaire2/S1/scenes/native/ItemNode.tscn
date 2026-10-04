@@ -1,0 +1,165 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_item_kuan2.png" id="1"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="2"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_icon.png" id="3"]
+[ext_resource type="Script" path="res://solitaire/native/atlas_number.gd" id="4"]
+[ext_resource type="Texture2D" path="res://assets/master/Default/TextAtlas.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_item_bg.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_item_light.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/master/img/card_bg_0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_new.png" id="9"]
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.000000
+offset_bottom = 0.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_item" type="Control" parent="."]
+layout_mode = 0
+offset_left = -62.500000
+offset_top = -87.500000
+offset_right = 62.500000
+offset_bottom = 87.500000
+pivot_offset = Vector2(62.500000, 87.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="Image_3" type="NinePatchRect" parent="panel_item"]
+layout_mode = 0
+offset_left = 2.500000
+offset_top = 1.000000
+offset_right = 122.500000
+offset_bottom = 181.000000
+pivot_offset = Vector2(60.000000, 90.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 30
+patch_margin_right = 30
+patch_margin_top = 20
+patch_margin_bottom = 50
+
+[node name="text_item" type="Label" parent="panel_item/Image_3"]
+layout_mode = 0
+offset_left = 19.960000
+offset_top = 137.000000
+offset_right = 101.960000
+offset_bottom = 160.000000
+pivot_offset = Vector2(41.000000, 11.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "使用中"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="img_coin" type="TextureRect" parent="panel_item/Image_3"]
+layout_mode = 0
+offset_left = 17.604800
+offset_top = 134.542600
+offset_right = 45.604800
+offset_bottom = 162.542600
+pivot_offset = Vector2(14.000000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="atlasLabel_num" type="Control" parent="panel_item/Image_3/img_coin"]
+layout_mode = 0
+offset_left = 31.476700
+offset_top = 5.261000
+offset_right = 87.476700
+offset_bottom = 23.261000
+pivot_offset = Vector2(28.000000, 9.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("4")
+text = "1000"
+glyph_size = Vector2(14.000000, 18.000000)
+first_character = "."
+atlas = ExtResource("5")
+
+[node name="Image_2" type="NinePatchRect" parent="panel_item"]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 0.000000
+offset_right = 125.000000
+offset_bottom = 175.000000
+pivot_offset = Vector2(62.500000, 87.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+visible = false
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("6")
+patch_margin_left = 33
+patch_margin_right = 33
+patch_margin_top = 44
+patch_margin_bottom = 44
+
+[node name="img_light_1" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+offset_left = 4.000000
+offset_top = 25.202500
+offset_right = 121.000000
+offset_bottom = 128.202500
+pivot_offset = Vector2(58.500000, 51.500000)
+mouse_filter = 2
+scale = Vector2(1.500000, 1.500000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_light_2" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+offset_left = 4.000000
+offset_top = 25.202500
+offset_right = 121.000000
+offset_bottom = 128.202500
+pivot_offset = Vector2(58.500000, 51.500000)
+mouse_filter = 2
+scale = Vector2(1.500000, 1.500000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_card" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+offset_left = 4.000000
+offset_top = -16.801700
+offset_right = 126.000000
+offset_bottom = 165.198300
+pivot_offset = Vector2(61.000000, 91.000000)
+mouse_filter = 0
+scale = Vector2(0.550000, 0.550000)
+rotation = -0.261826
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_new" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+offset_left = -6.000000
+offset_top = -2.500000
+offset_right = 56.000000
+offset_bottom = 28.500000
+pivot_offset = Vector2(31.000000, 15.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0

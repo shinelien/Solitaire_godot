@@ -1,0 +1,298 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_bg1.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_icon0.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_bg0.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close0.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close1.png" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020BagItem_1.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/2020Goldbanner.tscn" id="8"]
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.33333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_bg_0:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_top_0:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.8, 0.8), Vector2(0.85716, 0.85716), Vector2(0.90389, 0.90389), Vector2(0.94116, 0.94116), Vector2(0.96993, 0.96993), Vector2(0.99116, 0.99116), Vector2(1.00581, 1.00581), Vector2(1.01483, 1.01483), Vector2(1.0192, 1.0192), Vector2(1.01987, 1.01987), Vector2(1.0178, 1.0178), Vector2(1.01395, 1.01395), Vector2(1.00929, 1.00929), Vector2(1.00477, 1.00477), Vector2(1.00135, 1.00135), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_top_0:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 17339
+metadata/action_tag = 0
+
+[node name="Panel_bg_0" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -240.0
+offset_right = 1080.0
+offset_bottom = 2160.0
+pivot_offset = Vector2(540.0, 1200.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_bg_0"
+metadata/cocos_tag = 10631
+metadata/action_tag = 253604801
+color = Color(0.0, 0.0, 0.0, 0.4)
+
+[node name="Panel_top_0" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.432
+offset_top = 0.0
+offset_right = 1080.432
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top_0"
+metadata/cocos_tag = 17670
+metadata/action_tag = -158556688
+
+[node name="Node_6" type="Control" parent="Panel_top_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 960.0
+offset_right = 540.0
+offset_bottom = 960.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_6"
+metadata/cocos_tag = 12582
+metadata/action_tag = 274363392
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_top_0/Node_6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -362.0
+offset_top = -588.6508
+offset_right = 362.0
+offset_bottom = -419.6508
+pivot_offset = Vector2(362.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 7672
+metadata/action_tag = -1659407269
+texture = ExtResource("2")
+patch_margin_left = 238
+patch_margin_right = 238
+patch_margin_top = 55
+patch_margin_bottom = 55
+
+[node name="fish_ui_fish_ui_icon0_2" type="TextureRect" parent="Panel_top_0/Node_6/Image_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 294.3789
+offset_top = 33.3513
+offset_right = 426.3789
+offset_bottom = 139.3513
+pivot_offset = Vector2(66.0, 53.0)
+scale = Vector2(1.3, 1.3)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "fish_ui_fish_ui_icon0_2"
+metadata/cocos_tag = 7673
+metadata/action_tag = 2031608978
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_1" type="Control" parent="Panel_top_0/Node_6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 0.0
+offset_bottom = 1.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 5406
+metadata/action_tag = 1420488742
+
+[node name="Image_1" type="NinePatchRect" parent="Panel_top_0/Node_6/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -500.0
+offset_top = -620.0
+offset_right = 500.0
+offset_bottom = 620.0
+pivot_offset = Vector2(500.0, 620.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 0.95686, 0.89804, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 5408
+metadata/action_tag = -1854127681
+texture = ExtResource("4")
+patch_margin_left = 89
+patch_margin_right = 93
+patch_margin_top = 105
+patch_margin_bottom = 109
+
+[node name="Panel_3" type="ColorRect" parent="Panel_top_0/Node_6/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -500.0
+offset_top = -620.0
+offset_right = 500.0
+offset_bottom = 620.0
+pivot_offset = Vector2(500.0, 620.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_3"
+metadata/cocos_tag = 5409
+metadata/action_tag = -1536178186
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Panel_teach" type="ColorRect" parent="Panel_top_0/Node_6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -540.0
+offset_top = -1050.0
+offset_right = 540.0
+offset_bottom = 1050.0
+pivot_offset = Vector2(540.0, 1050.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_teach"
+metadata/cocos_tag = 727
+metadata/action_tag = -1804961099
+color = Color(0.0, 0.0, 0.0, 0.4)
+
+[node name="ListView_bg" type="ScrollContainer" parent="Panel_top_0/Node_6"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -465.0
+offset_top = -567.0
+offset_right = 465.0
+offset_bottom = 585.0
+pivot_offset = Vector2(465.0, 576.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ListView_bg"
+metadata/cocos_tag = 17671
+metadata/action_tag = 323230182
+
+[node name="Content" type="Control" parent="Panel_top_0/Node_6/ListView_bg"]
+custom_minimum_size = Vector2(930.0, 1152.0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Button_close" type="TextureButton" parent="Panel_top_0/Node_6"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 434.0
+offset_top = -642.0
+offset_right = 538.0
+offset_bottom = -512.0
+pivot_offset = Vector2(52.0, 65.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_close"
+metadata/cocos_tag = 17738
+metadata/action_tag = -2120118098
+texture_normal = ExtResource("5")
+texture_pressed = ExtResource("6")
+texture_disabled = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FileNode_BagItem1" parent="Panel_top_0/Node_6" instance=ExtResource("7")]
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_BagItem1"
+metadata/cocos_tag = 7461
+metadata/action_tag = 1815772597
+
+[node name="Panel_view_Changjing" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -1320.8748
+offset_top = 868.6528
+offset_right = -390.8748
+offset_bottom = 1278.6528
+pivot_offset = Vector2(0.0, 410.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_view_Changjing"
+metadata/cocos_tag = 2435
+metadata/action_tag = -1288759255
+
+[node name="FileNode_1" parent="." instance=ExtResource("8")]
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 0.0
+offset_right = 540.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_1"
+metadata/cocos_tag = 19618
+metadata/action_tag = -1680913855
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

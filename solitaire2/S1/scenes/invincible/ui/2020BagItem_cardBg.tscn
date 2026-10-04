@@ -1,0 +1,335 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop1.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop2.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/store_choice0.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_tips1.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="10"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="11"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow0.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow1.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow2.png" id="15"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="16"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Money/Gold_6.png" id="17"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock0.png" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock1.png" id="19"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 17706
+metadata/action_tag = 0
+
+[node name="panel_item" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -137.5
+offset_top = -138.0
+offset_right = 137.5
+offset_bottom = 138.0
+pivot_offset = Vector2(137.5, 138.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_item"
+metadata/cocos_tag = 17716
+metadata/action_tag = -1011117886
+
+[node name="Button_card_bgA" type="TextureButton" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -17.5
+offset_top = -52.0
+offset_right = 292.5
+offset_bottom = 328.0
+pivot_offset = Vector2(155.0, 190.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_card_bgA"
+metadata/cocos_tag = 5577
+metadata/action_tag = 790110602
+script = ExtResource("2")
+scale9_margins = Vector4(60.0, 60.0, 60.0, 44.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("3")
+texture_disabled = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="img_card_bg" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 114.5
+offset_top = 79.12
+offset_right = 160.5
+offset_bottom = 125.12
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_card_bg"
+metadata/cocos_tag = 471
+metadata/action_tag = -682715173
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_used_bg" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 211.2049
+offset_top = -34.4568
+offset_right = 269.2049
+offset_bottom = 25.5432
+pivot_offset = Vector2(26.8076, 28.302)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_used_bg"
+metadata/cocos_tag = 81
+metadata/action_tag = -1406551942
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_new_bg" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -9.275
+offset_top = -52.474
+offset_right = 52.725
+offset_bottom = 18.526
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_new_bg"
+metadata/cocos_tag = 17720
+metadata/action_tag = -915469845
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_card_bg" type="TextureButton" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -32.5
+offset_top = 192.92
+offset_right = 307.5
+offset_bottom = 314.92
+pivot_offset = Vector2(170.0, 61.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_card_bg"
+metadata/cocos_tag = 6090
+metadata/action_tag = -1664510086
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("9")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_card_bg" type="Label" parent="panel_item/Button_card_bg"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 25.40055
+offset_top = 12.12675
+offset_right = 314.59945
+offset_bottom = 104.99325
+pivot_offset = Vector2(144.59945, 46.43325)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_card_bg"
+metadata/cocos_tag = 6098
+metadata/action_tag = 2127440628
+script = ExtResource("12")
+design_size = Vector2(289.1989, 92.8665)
+design_center = Vector2(170.0, 58.56)
+design_font_size = 60
+bitmap_font = false
+fit_box = true
+text = "使用"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_buy" type="TextureButton" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -32.5
+offset_top = 192.92
+offset_right = 307.5
+offset_bottom = 314.92
+pivot_offset = Vector2(170.0, 61.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_buy"
+metadata/cocos_tag = 2050
+metadata/action_tag = -567995687
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = ExtResource("13")
+texture_pressed = ExtResource("14")
+texture_disabled = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="panel_item/Button_buy"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 113.5
+offset_top = 13.56
+offset_right = 260.5
+offset_bottom = 103.56
+pivot_offset = Vector2(73.5, 45.0)
+scale = Vector2(0.71, 0.71)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 2051
+metadata/action_tag = -1977111709
+script = ExtResource("12")
+design_size = Vector2(147.0, 90.0)
+design_center = Vector2(187.0, 58.56)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "150"
+theme_override_fonts/font = ExtResource("16")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_icon_top_gold" type="TextureRect" parent="panel_item/Button_buy/BitmapFontLabel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -96.1659
+offset_top = 16.063
+offset_right = -30.1659
+offset_bottom = 83.063
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.25, 1.25)
+rotation = 0.05236
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_icon_top_gold"
+metadata/cocos_tag = 2052
+metadata/action_tag = -1453253704
+scale = Vector2(-1, 1)
+texture = ExtResource("17")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_buy" type="Label" parent="panel_item/Button_buy"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 98.0
+offset_top = 34.56
+offset_right = 242.0
+offset_bottom = 82.56
+pivot_offset = Vector2(72.0, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_buy"
+metadata/cocos_tag = 2055
+metadata/action_tag = -1728556769
+script = ExtResource("12")
+design_size = Vector2(144.0, 48.0)
+design_center = Vector2(170.0, 58.56)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "100000"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="ui_Lock0_Changjing" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 77.0
+offset_top = 37.404
+offset_right = 198.0
+offset_bottom = 130.404
+pivot_offset = Vector2(60.5, 46.5)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock0_Changjing"
+metadata/cocos_tag = 1991
+metadata/action_tag = 1937864054
+texture = ExtResource("18")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock1_2" type="TextureRect" parent="panel_item/ui_Lock0_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 95.79
+offset_right = 113.0
+offset_bottom = 188.79
+pivot_offset = Vector2(52.5, 46.5)
+scale = Vector2(1.46, 1.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock1_2"
+metadata/cocos_tag = 1992
+metadata/action_tag = 1179201461
+texture = ExtResource("19")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

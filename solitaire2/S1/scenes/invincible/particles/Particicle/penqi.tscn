@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Texture2D" path="res://assets/invincible/particle_textures/penqi.png" id="1"]
+[sub_resource type="Gradient" id="Color"]
+colors = PackedColorArray(0.33536, 0.333371, 0.336891, 0.0, 0.892036, 0.886733, 0.896112, 0.05)
+[sub_resource type="Curve" id="Size"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1.0), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Rotation"]
+_data = [Vector2(0, 0.0), 0.0, 0.0, 0, 0, Vector2(1, 0.0), 0.0, 0.0, 0, 0]
+[sub_resource type="CanvasItemMaterial" id="Blend"]
+blend_mode = 0
+[node name="Particles" type="CPUParticles2D"]
+material = SubResource("Blend")
+amount = 500
+lifetime = 5.2
+lifetime_randomness = 0.076923
+texture = ExtResource("1")
+emission_shape = 3
+emission_rect_extents = Vector2(2.0, 40.0)
+direction = Vector2(1.0, -0.0)
+spread = 20.0
+gravity = Vector2(20.0, -0.0)
+initial_velocity_min = 0.0
+initial_velocity_max = 130.0
+radial_accel_min = 0.0
+radial_accel_max = 0.0
+tangential_accel_min = 0.0
+tangential_accel_max = 0.0
+scale_amount_min = 1.069182
+scale_amount_max = 1.446541
+scale_amount_curve = SubResource("Size")
+color_ramp = SubResource("Color")
+angle_min = 0.0
+angle_max = 360.0
+angle_curve = SubResource("Rotation")
+local_coords = false
+one_shot = false

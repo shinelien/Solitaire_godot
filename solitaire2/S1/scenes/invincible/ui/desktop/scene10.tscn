@@ -1,0 +1,140 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/game_bg0.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/bubble2.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/bubble_UI.tscn" id="5"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 16.66667
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 1379
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 5597
+metadata/action_tag = 1305397427
+color = Color(0.58824, 0.78431, 1.0, 0.4)
+
+[node name="Sprite_1" type="TextureRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 194.0
+offset_top = 210.0
+offset_right = 886.0
+offset_bottom = 1710.0
+pivot_offset = Vector2(346.0, 750.0)
+scale = Vector2(1.57, 1.56)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_1"
+metadata/cocos_tag = 873
+metadata/action_tag = 1034079597
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Particle_1" type="Control" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 960.0
+offset_right = 540.0
+offset_bottom = 960.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 874
+metadata/action_tag = -2010353019
+
+[node name="Emitter" parent="Panel_1/Particle_1" instance=ExtResource("3")]
+
+[node name="Panel_top" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top"
+metadata/cocos_tag = 1403
+metadata/action_tag = -1753332377
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Particle_1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -351.5982
+offset_top = 875.6245
+offset_right = -351.5982
+offset_bottom = 875.6245
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 7
+metadata/action_tag = -649305459
+
+[node name="Emitter" parent="Particle_1" instance=ExtResource("4")]
+
+[node name="Particle_2" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -212.2042
+offset_top = 871.1262
+offset_right = -212.2042
+offset_bottom = 871.1262
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_2"
+metadata/cocos_tag = 8
+metadata/action_tag = -712459371
+
+[node name="Emitter" parent="Particle_2" instance=ExtResource("5")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

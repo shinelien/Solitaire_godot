@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/ImageFile.png" id="2"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_root/Image_1:rotation")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, 0.10472, 0.20944, 0.31416, 0.41888, 0.5236, 0.62832, 0.73304, 0.83776, 0.94248, 1.0472, 1.15192, 1.25664, 1.36136, 1.46608, 1.5708, 1.67552, 1.78024, 1.88496, 1.98968, 2.0944, 2.19911, 2.30383, 2.40855, 2.51327, 2.61799, 2.72271, 2.82743, 2.93215, 3.03687, 3.14159, 3.24631, 3.35103, 3.45575, 3.56047, 3.66519, 3.76991, 3.87463, 3.97935, 4.08407, 4.18879, 4.29351, 4.39823, 4.50295, 4.60767, 4.71239, 4.81711, 4.92183, 5.02655, 5.13127, 5.23599, 5.34071, 5.44543, 5.55015, 5.65487, 5.75959, 5.86431, 5.96903, 6.07375, 6.17847, 6.28319]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 55
+metadata/action_tag = 0
+
+[node name="Panel_root" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_root"
+metadata/cocos_tag = 56
+metadata/action_tag = -1561383056
+color = Color(0.58824, 0.78431, 1.0, 0.4)
+
+[node name="Image_1" type="TextureRect" parent="Panel_root"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 517.0
+offset_top = 937.0
+offset_right = 563.0
+offset_bottom = 983.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 57
+metadata/action_tag = 1046585954
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

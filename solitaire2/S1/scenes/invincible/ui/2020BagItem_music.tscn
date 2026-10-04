@@ -1,0 +1,406 @@
+[gd_scene load_steps=24 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop1.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop2.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_music.png" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/Node_music.tscn" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow0.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow1.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_yellow2.png" id="14"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="15"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Money/Gold_6.png" id="16"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/store_choice0.png" id="17"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_7day5.png" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock0.png" id="19"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Lock1.png" id="20"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_tips1.png" id="21"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 17706
+metadata/action_tag = 0
+
+[node name="panel_Music" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -422.5
+offset_top = -90.0
+offset_right = 422.5
+offset_bottom = 90.0
+pivot_offset = Vector2(422.5, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_Music"
+metadata/cocos_tag = 15172
+metadata/action_tag = -1338897877
+
+[node name="Button_music_on" type="TextureButton" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 845.0
+offset_bottom = 180.0
+pivot_offset = Vector2(422.5, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_music_on"
+metadata/cocos_tag = 15173
+metadata/action_tag = 1393244964
+script = ExtResource("2")
+scale9_margins = Vector4(98.0, 98.0, 33.0, 52.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_disabled = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_music" type="Label" parent="panel_Music/Button_music_on"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.3
+offset_top = 65.0
+offset_right = 293.3
+offset_bottom = 115.0
+pivot_offset = Vector2(0.0, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_music"
+metadata/cocos_tag = 15801
+metadata/action_tag = -2134238813
+script = ExtResource("6")
+design_size = Vector2(175.0, 50.0)
+design_center = Vector2(205.8, 90.0)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "Music01"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_music_237" type="TextureRect" parent="panel_Music/Button_music_on"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 18.832
+offset_top = 14.998
+offset_right = 125.832
+offset_bottom = 150.998
+pivot_offset = Vector2(53.5, 68.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.40143
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_music_237"
+metadata/cocos_tag = 106
+metadata/action_tag = 1548894340
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="FileNode_music" parent="panel_Music/Button_music_on/Ui_music_237" instance=ExtResource("8")]
+mouse_filter = 2
+offset_left = 53.5
+offset_top = 68.0
+offset_right = 53.5
+offset_bottom = 68.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_music"
+metadata/cocos_tag = 16677
+metadata/action_tag = 352606402
+
+[node name="Button_music" type="TextureButton" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 545.8615
+offset_top = 11.4
+offset_right = 816.8615
+offset_bottom = 161.4
+pivot_offset = Vector2(271.0, 75.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_music"
+metadata/cocos_tag = 16690
+metadata/action_tag = 962130060
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("10")
+texture_disabled = ExtResource("11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_use" type="Label" parent="panel_Music/Button_music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 75.5
+offset_top = 45.0
+offset_right = 195.5
+offset_bottom = 105.0
+pivot_offset = Vector2(60.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_use"
+metadata/cocos_tag = 16691
+metadata/action_tag = -1827572089
+script = ExtResource("6")
+design_size = Vector2(120.0, 60.0)
+design_center = Vector2(135.5, 75.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "使用"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_buy" type="TextureButton" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 545.8615
+offset_top = 11.4
+offset_right = 816.8615
+offset_bottom = 161.4
+pivot_offset = Vector2(271.0, 75.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_buy"
+metadata/cocos_tag = 729
+metadata/action_tag = 891645933
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = ExtResource("12")
+texture_pressed = ExtResource("13")
+texture_disabled = ExtResource("14")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="panel_Music/Button_buy"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -4.45
+offset_top = 27.0
+offset_right = 302.55
+offset_bottom = 117.0
+pivot_offset = Vector2(153.5, 45.0)
+scale = Vector2(0.55, 0.55)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 1882
+metadata/action_tag = 1649078374
+script = ExtResource("6")
+design_size = Vector2(307.0, 90.0)
+design_center = Vector2(149.05, 72.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "100001"
+theme_override_fonts/font = ExtResource("15")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_icon_top_gold" type="TextureRect" parent="panel_Music/Button_buy/BitmapFontLabel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -69.7479
+offset_top = 16.963
+offset_right = -3.7479
+offset_bottom = 83.963
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.22, 1.22)
+rotation = 0.05236
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_icon_top_gold"
+metadata/cocos_tag = 1881
+metadata/action_tag = -1501398311
+scale = Vector2(-1, 1)
+texture = ExtResource("16")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_buy" type="Label" parent="panel_Music/Button_buy"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 63.5
+offset_top = 48.0
+offset_right = 207.5
+offset_bottom = 96.0
+pivot_offset = Vector2(72.0, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_buy"
+metadata/cocos_tag = 2078
+metadata/action_tag = 1289652001
+script = ExtResource("6")
+design_size = Vector2(144.0, 48.0)
+design_center = Vector2(135.5, 72.0)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "100000"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Sprite_used_music" type="TextureRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 10.884
+offset_top = -4.764
+offset_right = 68.884
+offset_bottom = 55.236
+pivot_offset = Vector2(29.0, 30.0)
+scale = Vector2(1.2836, 1.2836)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_used_music"
+metadata/cocos_tag = 108
+metadata/action_tag = 1784492744
+texture = ExtResource("17")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_used_music" type="NinePatchRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 846.0
+offset_bottom = 166.0
+pivot_offset = Vector2(423.5, 76.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_used_music"
+metadata/cocos_tag = 15486
+metadata/action_tag = 1111795028
+texture = ExtResource("18")
+patch_margin_left = 21
+patch_margin_right = 21
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="ui_Lock0_music" type="TextureRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 507.4245
+offset_top = 7.104
+offset_right = 628.4245
+offset_bottom = 100.104
+pivot_offset = Vector2(60.5, 46.5)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock0_music"
+metadata/cocos_tag = 104
+metadata/action_tag = 141186385
+texture = ExtResource("19")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock1_2" type="TextureRect" parent="panel_Music/ui_Lock0_music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 95.79
+offset_right = 113.0
+offset_bottom = 188.79
+pivot_offset = Vector2(52.5, 46.5)
+scale = Vector2(1.46, 1.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock1_2"
+metadata/cocos_tag = 105
+metadata/action_tag = -1775247235
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_new_music" type="TextureRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 9.391
+offset_top = -8.194
+offset_right = 71.391
+offset_bottom = 62.806
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_new_music"
+metadata/cocos_tag = 5991
+metadata/action_tag = 836806595
+texture = ExtResource("21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

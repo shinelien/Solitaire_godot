@@ -1,0 +1,300 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Magic0.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/2021fishlines.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/Node_finger.tscn" id="4"]
+
+[sub_resource type="Animation" id="Anim_start"]
+resource_name = "start"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_win"]
+resource_name = "win"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -150.0)]}
+[sub_resource type="Animation" id="Anim_nomove"]
+resource_name = "nomove"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_three"]
+resource_name = "three"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_Lobby"]
+resource_name = "Lobby"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_clickShop"]
+resource_name = "clickShop"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_getFish"]
+resource_name = "getFish"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_unlockTips"]
+resource_name = "unlockTips"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -250.0)]}
+[sub_resource type="Animation" id="Anim_unlock"]
+resource_name = "unlock"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="Animation" id="Anim_buyFish"]
+resource_name = "buyFish"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Node_1/Node_spine:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(390.0, 400.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_1/Node_spine:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1/Node_1/FileNode_tips:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, -50.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"start": SubResource("Anim_start"),
+"win": SubResource("Anim_win"),
+"nomove": SubResource("Anim_nomove"),
+"three": SubResource("Anim_three"),
+"Lobby": SubResource("Anim_Lobby"),
+"clickShop": SubResource("Anim_clickShop"),
+"getFish": SubResource("Anim_getFish"),
+"unlockTips": SubResource("Anim_unlockTips"),
+"unlock": SubResource("Anim_unlock"),
+"buyFish": SubResource("Anim_buyFish")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1440.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 0
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1440.0
+pivot_offset = Vector2(540.0, 720.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 37
+metadata/action_tag = 1719355082
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Node_1" type="Control" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 720.0
+offset_right = 540.0
+offset_bottom = 720.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 116
+metadata/action_tag = 195411739
+
+[node name="Node_spine" type="Control" parent="Panel_1/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 390.0
+offset_top = 400.0
+offset_right = 390.0
+offset_bottom = 400.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_spine"
+metadata/cocos_tag = 222
+metadata/action_tag = 1142793079
+
+[node name="Particle_1" type="Control" parent="Panel_1/Node_1/Node_spine"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(4.0, 4.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 54
+metadata/action_tag = -1032100482
+
+[node name="Emitter" parent="Panel_1/Node_1/Node_spine/Particle_1" instance=ExtResource("2")]
+
+[node name="FileNode_tips" parent="Panel_1/Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -50.0
+offset_right = 0.0
+offset_bottom = -50.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_tips"
+metadata/cocos_tag = 18
+metadata/action_tag = 1813607425
+
+[node name="FileNode_shou" parent="Panel_1/Node_1" instance=ExtResource("4")]
+mouse_filter = 2
+offset_left = 339.3447
+offset_top = -592.1665
+offset_right = 339.3447
+offset_bottom = -592.1665
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_shou"
+metadata/cocos_tag = 197
+metadata/action_tag = -2107021699
+
+[node name="Node_btn" type="Control" parent="Panel_1/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_btn"
+metadata/cocos_tag = 68
+metadata/action_tag = -1403391507
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

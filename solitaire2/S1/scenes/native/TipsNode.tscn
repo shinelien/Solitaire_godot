@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="1"]
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.000000
+offset_bottom = 0.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_tips" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -288.000000
+offset_top = -25.000000
+offset_right = 288.000000
+offset_bottom = 25.000000
+pivot_offset = Vector2(288.000000, 25.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="text_tips" type="Label" parent="panel_tips"]
+layout_mode = 0
+offset_left = 172.500000
+offset_top = 13.500000
+offset_right = 403.500000
+offset_bottom = 36.500000
+pivot_offset = Vector2(115.500000, 11.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "الحصول على العملات الذهبية*500"
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,540 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop2.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Task5.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Task4.png" id="7"]
+[ext_resource type="Font" path="res://assets/invincible/font/ui_num0.fnt" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Task1.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Task3.png" id="14"]
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.76667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_task1/Button_2/Button_Task1:visible")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.53333, 0.76667), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, false]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(2.0, 108.0), Vector2(3.36859, 108.0), Vector2(7.50103, 108.0), Vector2(14.47998, 108.0), Vector2(24.45271, 108.0), Vector2(37.64804, 108.0), Vector2(54.40636, 108.0), Vector2(75.23366, 108.0), Vector2(100.90391, 108.0), Vector2(132.67308, 108.0), Vector2(172.8, 108.0), Vector2(226.18624, 108.0), Vector2(309.44, 108.0), Vector2(548.56, 108.0), Vector2(631.81376, 108.0), Vector2(685.2, 108.0), Vector2(725.32692, 108.0), Vector2(757.09609, 108.0), Vector2(782.76634, 108.0), Vector2(803.59364, 108.0), Vector2(820.35196, 108.0), Vector2(833.54729, 108.0), Vector2(843.52002, 108.0), Vector2(850.49897, 108.0), Vector2(854.63141, 108.0), Vector2(856.0, 108.0), Vector2(856.0, 108.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.6068, 6.59), Vector2(0.64436, 6.59), Vector2(0.75705, 6.59), Vector2(0.94486, 6.59), Vector2(1.2078, 6.59), Vector2(1.54586, 6.59), Vector2(1.95905, 6.59), Vector2(2.44736, 6.59), Vector2(3.0108, 6.59), Vector2(3.0033, 6.59), Vector2(2.9958, 6.59), Vector2(2.9883, 6.59), Vector2(2.9808, 6.59), Vector2(2.9733, 6.59), Vector2(2.9658, 6.59), Vector2(2.9583, 6.59), Vector2(2.9508, 6.59), Vector2(2.3648, 6.59), Vector2(1.7788, 6.59), Vector2(1.1928, 6.59), Vector2(0.6068, 6.59), Vector2(0.6068, 6.59)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.17961), Color(1, 1, 1, 0.35922), Color(1, 1, 1, 0.53882), Color(1, 1, 1, 0.71843), Color(1, 1, 1, 0.89804), Color(1, 1, 1, 0.82896), Color(1, 1, 1, 0.75988), Color(1, 1, 1, 0.6908), Color(1, 1, 1, 0.62172), Color(1, 1, 1, 0.55264), Color(1, 1, 1, 0.48356), Color(1, 1, 1, 0.41448), Color(1, 1, 1, 0.3454), Color(1, 1, 1, 0.27632), Color(1, 1, 1, 0.20724), Color(1, 1, 1, 0.13816), Color(1, 1, 1, 0.06908), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_task1/Button_2:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 0.66213), Vector2(1.0, 0.40823), Vector2(1.0, 0.2263), Vector2(1.0, 0.10435), Vector2(1.0, 0.03038), Vector2(1.0, -0.00761), Vector2(1.0, -0.0216), Vector2(1.0, -0.0236), Vector2(1.0, 0.20417), Vector2(1.0, 0.42052), Vector2(1.0, 0.6146), Vector2(1.0, 0.77668), Vector2(1.0, 0.89863), Vector2(1.0, 0.97434), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_task1/Ui_Task3_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.64, 0.64), Vector2(1.18353, 1.18353), Vector2(1.39177, 1.39177), Vector2(1.53956, 1.53956), Vector2(1.65368, 1.65368), Vector2(1.74464, 1.74464), Vector2(1.81779, 1.81779), Vector2(1.87632, 1.87632), Vector2(1.92222, 1.92222), Vector2(1.95681, 1.95681), Vector2(1.98098, 1.98098), Vector2(1.99527, 1.99527), Vector2(2.0, 2.0), Vector2(1.94706, 1.94706), Vector2(1.78825, 1.78825), Vector2(1.52356, 1.52356), Vector2(1.363, 1.363), Vector2(1.46406, 1.46406), Vector2(1.45925, 1.45925), Vector2(1.34856, 1.34856), Vector2(1.342, 1.342), Vector2(1.30831, 1.30831), Vector2(1.3, 1.3)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_task1/Ui_Task3_2:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.36667, 0.76667), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_task1/Ui_Task3_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.76667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.08333), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.41667), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.58333), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.91667), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="Animation" id="Anim_idle"]
+resource_name = "idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_task1/Button_2/Button_Task1:visible")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(856.0, 108.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.6068, 6.59)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_task1/Button_2:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_task1/Ui_Task3_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.3, 1.3)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_task1/Ui_Task3_2:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [true]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_task1/Ui_Task3_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+[sub_resource type="Animation" id="Anim_Start1"]
+resource_name = "Start1"
+length = 0.11667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_task1/Button_2/Button_Task1:visible")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.11667), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, true]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.11667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(856.0, 108.0), Vector2(856.0, 108.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.11667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.6068, 6.59), Vector2(0.6068, 6.59)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.11667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_task1/Button_2:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 0.98432), Vector2(1.0, 0.4982), Vector2(1.0, 0.01208), Vector2(1.0, -0.0036), Vector2(1.0, 0.4982), Vector2(1.0, 0.86554), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_task1/Ui_Task3_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.11667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.3, 1.3), Vector2(0.97525, 0.97525), Vector2(0.6505, 0.6505), Vector2(0.32575, 0.32575), Vector2(0.001, 0.001), Vector2(0.001, 0.001)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_task1/Ui_Task3_2:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.11667), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_task1/Ui_Task3_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.11667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="Animation" id="Anim_Start2"]
+resource_name = "Start2"
+length = 0.13333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_task1/Button_2/Button_Task1:visible")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(856.0, 108.0), Vector2(856.0, 108.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.6068, 6.59), Vector2(0.6068, 6.59)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_task1/Button_2/Ui_Starbox3_2:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_task1/Button_2:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 0.7491), Vector2(1.0, 0.4982), Vector2(1.0, 0.2473), Vector2(1.0, -0.0036), Vector2(1.0, 0.2473), Vector2(1.0, 0.4982), Vector2(1.0, 0.7491), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_task1/Ui_Task3_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.001, 0.001), Vector2(0.001, 0.001)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_task1/Ui_Task3_2:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_task1/Ui_Task3_2:modulate")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.13333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0"),
+"idle": SubResource("Anim_idle"),
+"Start1": SubResource("Anim_Start1"),
+"Start2": SubResource("Anim_Start2")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 284
+metadata/action_tag = 0
+
+[node name="Panel_task1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -425.0
+offset_top = -150.0
+offset_right = 425.0
+offset_bottom = 150.0
+pivot_offset = Vector2(425.0, 150.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_task1"
+metadata/cocos_tag = 285
+metadata/action_tag = -1141041389
+
+[node name="Button_2" type="TextureButton" parent="Panel_task1"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -15.0
+offset_top = 12.0
+offset_right = 865.0
+offset_bottom = 288.0
+pivot_offset = Vector2(440.0, 138.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_2"
+metadata/cocos_tag = 293
+metadata/action_tag = 887340402
+script = ExtResource("2")
+scale9_margins = Vector4(90.0, 90.0, 0.0, 0.0)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("3")
+texture_disabled = ExtResource("3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Image_3" type="NinePatchRect" parent="Panel_task1/Button_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 85.0
+offset_top = 131.0
+offset_right = 535.0
+offset_bottom = 248.0
+pivot_offset = Vector2(0.0, 117.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 295
+metadata/action_tag = -1738211638
+texture = ExtResource("4")
+patch_margin_left = 29
+patch_margin_right = 29
+patch_margin_top = 26
+patch_margin_bottom = 26
+
+[node name="Text_15_reward" type="Label" parent="Panel_task1/Button_2/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 37.98
+offset_top = 68.3632
+offset_right = 105.98
+offset_bottom = 102.3632
+pivot_offset = Vector2(0.0, 17.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.47059, 0.76078, 1.0, 1.0)
+metadata/cocos_name = "Text_15_reward"
+metadata/cocos_tag = 291
+metadata/action_tag = 1771148257
+script = ExtResource("6")
+design_size = Vector2(68.0, 34.0)
+design_center = Vector2(71.98, 85.3632)
+design_font_size = 34
+bitmap_font = false
+fit_box = false
+text = "奖励"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_Task4_1" type="TextureRect" parent="Panel_task1/Button_2/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 255.6
+offset_top = 50.8632
+offset_right = 318.6
+offset_bottom = 119.8632
+pivot_offset = Vector2(31.5, 34.5)
+scale = Vector2(0.74, 0.74)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_Task4_1"
+metadata/cocos_tag = 297
+metadata/action_tag = -1319952744
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_task1/Button_2/Image_3/Ui_Task4_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 108.4
+offset_top = 14.5
+offset_right = 181.4
+offset_bottom = 54.5
+pivot_offset = Vector2(36.5, 20.0)
+scale = Vector2(1.18, 1.18)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.2902, 1.0, 0.2902, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 298
+metadata/action_tag = -736201454
+script = ExtResource("6")
+design_size = Vector2(73.0, 40.0)
+design_center = Vector2(144.9, 34.5)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+100"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_1" type="Label" parent="Panel_task1/Button_2/Image_3/Ui_Task4_1/BitmapFontLabel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -27.1
+offset_top = -1.8
+offset_right = -2.1
+offset_bottom = 48.2
+pivot_offset = Vector2(12.5, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_1"
+metadata/cocos_tag = 4186
+metadata/action_tag = -1643544045
+script = ExtResource("6")
+design_size = Vector2(25.0, 50.0)
+design_center = Vector2(-14.6, 23.2)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "+"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_miaoshu" type="Label" parent="Panel_task1/Button_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 35.2
+offset_top = 16.56
+offset_right = 598.2
+offset_bottom = 140.56
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_miaoshu"
+metadata/cocos_tag = 288
+metadata/action_tag = -133179111
+script = ExtResource("6")
+design_size = Vector2(563.0, 124.0)
+design_center = Vector2(316.7, 78.56)
+design_font_size = 25
+bitmap_font = false
+fit_box = true
+text = "Herausforderung 1 Tägliche HerausforderungHerausforderung 1 Tägliche HerausforderungHerausforderungHerausforderung"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Image_2_0" type="NinePatchRect" parent="Panel_task1/Button_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 98.0
+offset_top = 143.0
+offset_right = 518.0
+offset_bottom = 199.0
+pivot_offset = Vector2(210.0, 28.0)
+scale = Vector2(0.9, -0.9)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2_0"
+metadata/cocos_tag = 289
+metadata/action_tag = -1476039770
+texture = ExtResource("9")
+patch_margin_left = 20
+patch_margin_right = 20
+patch_margin_top = 11
+patch_margin_bottom = 11
+
+[node name="LoadingBar_task1" type="TextureProgressBar" parent="Panel_task1/Button_2/Image_2_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 10.0
+offset_top = 7.5
+offset_right = 410.0
+offset_bottom = 48.5
+pivot_offset = Vector2(200.0, 20.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar_task1"
+metadata/cocos_tag = 290
+metadata/action_tag = 2113971076
+value = 100.0
+nine_patch_stretch = true
+
+[node name="Button_Task1" type="TextureButton" parent="Panel_task1/Button_2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 626.0
+offset_top = 154.68
+offset_right = 832.0
+offset_bottom = 256.68
+pivot_offset = Vector2(103.0, 102.0)
+scale = Vector2(1.34, 1.34)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Task1"
+metadata/cocos_tag = 286
+metadata/action_tag = 1648783420
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("11")
+texture_disabled = ExtResource("12")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_TaskNum1" type="Label" parent="Panel_task1/Button_2/Button_Task1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 61.0
+offset_top = 20.44
+offset_right = 145.0
+offset_bottom = 75.44
+pivot_offset = Vector2(42.0, 27.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_TaskNum1"
+metadata/cocos_tag = 292
+metadata/action_tag = -253816849
+script = ExtResource("6")
+design_size = Vector2(84.0, 55.0)
+design_center = Vector2(103.0, 47.94)
+design_font_size = 55
+bitmap_font = false
+fit_box = false
+text = "0/1"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_5" type="Label" parent="Panel_task1/Button_2/Button_Task1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 58.0
+offset_top = 49.32
+offset_right = 148.0
+offset_bottom = 85.32
+pivot_offset = Vector2(45.0, 18.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.24706, 1.0, 0.24706, 1.0)
+metadata/cocos_name = "Text_5"
+metadata/cocos_tag = 287
+metadata/action_tag = 1712579959
+script = ExtResource("6")
+design_size = Vector2(90.0, 36.0)
+design_center = Vector2(103.0, 67.32)
+design_font_size = 36
+bitmap_font = false
+fit_box = false
+text = "Start"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_Starbox3_2" type="TextureRect" parent="Panel_task1/Button_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 2.0
+offset_top = 108.0
+offset_right = 48.0
+offset_bottom = 154.0
+pivot_offset = Vector2(46.0, 23.0)
+scale = Vector2(0.6068, 6.59)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(0.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "Ui_Starbox3_2"
+metadata/cocos_tag = 744
+metadata/action_tag = 1973843875
+texture = ExtResource("13")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Ui_Task3_2" type="TextureRect" parent="Panel_task1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 653.4832
+offset_top = 97.5851
+offset_right = 773.4832
+offset_bottom = 217.5851
+pivot_offset = Vector2(60.0, 60.0)
+scale = Vector2(0.64, 0.64)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_Task3_2"
+metadata/cocos_tag = 299
+metadata/action_tag = -2042248796
+texture = ExtResource("14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

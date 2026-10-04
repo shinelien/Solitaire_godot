@@ -1,0 +1,236 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop1.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/JiangBei_102.png" id="3"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="10"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 451
+metadata/action_tag = 0
+
+[node name="panel_Rank" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -422.5
+offset_top = -90.0
+offset_right = 422.5
+offset_bottom = 90.0
+pivot_offset = Vector2(422.5, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_Rank"
+metadata/cocos_tag = 731
+metadata/action_tag = 1061196048
+
+[node name="Image_33" type="NinePatchRect" parent="panel_Rank"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 845.0
+offset_bottom = 180.0
+pivot_offset = Vector2(422.5, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_33"
+metadata/cocos_tag = 755
+metadata/action_tag = -2126647827
+texture = ExtResource("2")
+patch_margin_left = 98
+patch_margin_right = 98
+patch_margin_top = 33
+patch_margin_bottom = 52
+
+[node name="Sprite_JiangBei" type="TextureRect" parent="panel_Rank/Image_33"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -54.8505
+offset_top = -48.996
+offset_right = 185.1495
+offset_bottom = 221.004
+pivot_offset = Vector2(120.0, 135.0)
+scale = Vector2(0.33, 0.33)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_JiangBei"
+metadata/cocos_tag = 5377
+metadata/action_tag = -1598280780
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_rank" type="Label" parent="panel_Rank/Image_33"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 54.75
+offset_top = 45.0
+offset_right = 198.75
+offset_bottom = 135.0
+pivot_offset = Vector2(72.0, 45.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_rank"
+metadata/cocos_tag = 492
+metadata/action_tag = -1593449265
+script = ExtResource("6")
+design_size = Vector2(144.0, 90.0)
+design_center = Vector2(126.75, 90.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "211"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_name" type="Label" parent="panel_Rank/Image_33"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 201.7615
+offset_top = 40.0
+offset_right = 451.7615
+offset_bottom = 140.0
+pivot_offset = Vector2(125.0, 50.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_name"
+metadata/cocos_tag = 749
+metadata/action_tag = 106584224
+script = ExtResource("6")
+design_size = Vector2(250.0, 100.0)
+design_center = Vector2(326.7615, 90.0)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "aaaaaaaaaa\n啊啊啊啊啊"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_score" type="Label" parent="panel_Rank/Image_33"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 464.75
+offset_top = 65.0
+offset_right = 589.75
+offset_bottom = 115.0
+pivot_offset = Vector2(0.0, 25.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_score"
+metadata/cocos_tag = 135
+metadata/action_tag = 2039518364
+script = ExtResource("6")
+design_size = Vector2(125.0, 50.0)
+design_center = Vector2(527.25, 90.0)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "99999"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_look" type="TextureButton" parent="panel_Rank"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 545.8615
+offset_top = 11.4
+offset_right = 816.8615
+offset_bottom = 161.4
+pivot_offset = Vector2(271.0, 75.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_look"
+metadata/cocos_tag = 738
+metadata/action_tag = -1656500145
+script = ExtResource("7")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("9")
+texture_disabled = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_look" type="Label" parent="panel_Rank/Button_look"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 75.5
+offset_top = 45.0
+offset_right = 195.5
+offset_bottom = 105.0
+pivot_offset = Vector2(60.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_look"
+metadata/cocos_tag = 739
+metadata/action_tag = 1738368642
+script = ExtResource("6")
+design_size = Vector2(120.0, 60.0)
+design_center = Vector2(135.5, 75.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "使用"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

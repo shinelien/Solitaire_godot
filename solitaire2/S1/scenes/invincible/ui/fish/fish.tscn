@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_exp_1.png" id="2"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="3"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/Node_DuiHua.tscn" id="6"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 2247
+metadata/action_tag = 0
+
+[node name="Node_spine" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_spine"
+metadata/cocos_tag = 12
+metadata/action_tag = 478950362
+
+[node name="Node_1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -50.0
+offset_right = 0.0
+offset_bottom = -50.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 9
+metadata/action_tag = -697134785
+
+[node name="Node_2" type="Control" parent="Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.6, 0.6)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_2"
+metadata/cocos_tag = 274
+metadata/action_tag = 1684438035
+
+[node name="Image_1" type="NinePatchRect" parent="Node_1/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -97.5
+offset_top = -30.5
+offset_right = 97.5
+offset_bottom = 30.5
+pivot_offset = Vector2(97.5, 30.5)
+scale = Vector2(0.75, 0.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 8
+metadata/action_tag = 1831300493
+texture = ExtResource("2")
+patch_margin_left = 76
+patch_margin_right = 62
+patch_margin_top = 20
+patch_margin_bottom = 20
+
+[node name="LoadingBar" type="TextureProgressBar" parent="Node_1/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -70.0
+offset_top = -10.0
+offset_right = 70.0
+offset_bottom = 10.0
+pivot_offset = Vector2(70.0, 10.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar"
+metadata/cocos_tag = 2251
+metadata/action_tag = 362948118
+value = 100.0
+nine_patch_stretch = true
+
+[node name="Text_rare" type="Label" parent="Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -46.0
+offset_top = -51.5
+offset_right = 46.0
+offset_bottom = -6.5
+pivot_offset = Vector2(46.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "Text_rare"
+metadata/cocos_tag = 361
+metadata/action_tag = 248848613
+script = ExtResource("4")
+design_size = Vector2(92.0, 45.0)
+design_center = Vector2(0.0, -29.0)
+design_font_size = 45
+bitmap_font = false
+fit_box = false
+text = "Rare"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Node_1/Text_rare"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 46.0
+offset_top = 36.0811
+offset_right = 46.0
+offset_bottom = 36.0811
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.38, 1.38)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 452
+metadata/action_tag = -278673287
+
+[node name="Emitter" parent="Node_1/Text_rare/Particle_1" instance=ExtResource("5")]
+
+[node name="FileNode_DuiHua" parent="Node_1" instance=ExtResource("6")]
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -42.0
+offset_right = 0.0
+offset_bottom = -42.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_DuiHua"
+metadata/cocos_tag = 89
+metadata/action_tag = -1777766209
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

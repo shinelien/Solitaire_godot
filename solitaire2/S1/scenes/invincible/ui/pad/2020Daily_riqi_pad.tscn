@@ -1,0 +1,1617 @@
+[gd_scene load_steps=37 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_bg0.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Starbox5.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_0.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_1.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_2.png" id="6"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="7"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/ui_box0.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/shadows_fish.png" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="11"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/ui_box2.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_WG0.png" id="13"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="14"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue0.png" id="15"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue1.png" id="16"]
+[ext_resource type="Font" path="res://assets/invincible/font/2021font0.fnt" id="17"]
+[ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="18"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_duihua.png" id="19"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/emoji/happy1.png" id="20"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close0.png" id="21"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_btn_close1.png" id="22"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="23"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="24"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="25"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_homelevel_3.png" id="26"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="27"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/ImageFile.png" id="28"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Daily_bar1.png" id="29"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/iconJiangBei_01.png" id="30"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/daily_Trophyiconbg.png" id="31"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/iconJiangBei_002.png" id="32"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/iconJiangBei_001.png" id="33"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/iconJiangBei_000.png" id="34"]
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.08), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0.32), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.44), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0.52), Color(1, 1, 1, 0.56), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.68), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.76), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.84), Color(1, 1, 1, 0.88), Color(1, 1, 1, 0.92), Color(1, 1, 1, 0.96), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_more/Node_2/Button_StarBox:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.41667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_more/Node_2/Button_StarBox:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.41667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_more/Node_2:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.6, 0.6), Vector2(0.60112, 0.60112), Vector2(0.60453, 0.60453), Vector2(0.61044, 0.61044), Vector2(0.61926, 0.61926), Vector2(0.63183, 0.63183), Vector2(0.65, 0.65), Vector2(0.68012, 0.68012), Vector2(0.76988, 0.76988), Vector2(0.8, 0.8), Vector2(0.81817, 0.81817), Vector2(0.83074, 0.83074), Vector2(0.83956, 0.83956), Vector2(0.84547, 0.84547), Vector2(0.84888, 0.84888), Vector2(0.85, 0.85), Vector2(0.84, 0.84), Vector2(0.83, 0.83), Vector2(0.82, 0.82), Vector2(0.81, 0.81), Vector2(0.8, 0.8), Vector2(0.8, 0.8)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_more/Node_2:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_more:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.41667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1440.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 8152
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -405.0
+offset_right = 1080.0
+offset_bottom = 1845.0
+pivot_offset = Vector2(540.0, 1125.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 13966
+metadata/action_tag = 1410138315
+color = Color(0.0, 0.0, 0.0, 0.49804)
+
+[node name="Panel_more" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1440.0
+pivot_offset = Vector2(540.0, 720.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_more"
+metadata/cocos_tag = 13898
+metadata/action_tag = -776847334
+
+[node name="Panel_out" type="Control" parent="Panel_more"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -100.062
+offset_top = -50.76
+offset_right = 1180.062
+offset_bottom = 1490.76
+pivot_offset = Vector2(640.062, 770.76)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_out"
+metadata/cocos_tag = 13899
+metadata/action_tag = 451233258
+
+[node name="Node_2" type="Control" parent="Panel_more"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 720.0
+offset_right = 540.0
+offset_bottom = 720.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.6, 0.6)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_2"
+metadata/cocos_tag = 13900
+metadata/action_tag = -1722879225
+
+[node name="Node_1" type="Control" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 13901
+metadata/action_tag = -945248995
+
+[node name="Image_1" type="NinePatchRect" parent="Panel_more/Node_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -505.0
+offset_top = -700.0
+offset_right = 505.0
+offset_bottom = 700.0
+pivot_offset = Vector2(505.0, 700.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 0.95686, 0.89804, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 13902
+metadata/action_tag = 1114435053
+texture = ExtResource("2")
+patch_margin_left = 89
+patch_margin_right = 89
+patch_margin_top = 89
+patch_margin_bottom = 89
+
+[node name="Panel_2" type="ColorRect" parent="Panel_more/Node_2/Node_1/Image_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -1.292
+offset_top = -2.5725
+offset_right = 1008.708
+offset_bottom = 1397.4275
+pivot_offset = Vector2(0.0, 1400.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_2"
+metadata/cocos_tag = 13903
+metadata/action_tag = 749166315
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Node_3_0" type="Control" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -393.0
+offset_right = 0.0
+offset_bottom = -393.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_3_0"
+metadata/cocos_tag = 13904
+metadata/action_tag = 988761232
+
+[node name="Image_3" type="NinePatchRect" parent="Panel_more/Node_2/Node_3_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -228.5
+offset_top = -10.0
+offset_right = 228.5
+offset_bottom = 60.0
+pivot_offset = Vector2(228.5, 35.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 13905
+metadata/action_tag = -110906573
+texture = ExtResource("3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 17
+patch_margin_bottom = 17
+
+[node name="Button_modeRight" type="TextureButton" parent="Panel_more/Node_2/Node_3_0"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 255.0
+offset_top = -35.74
+offset_right = 345.0
+offset_bottom = 84.26
+pivot_offset = Vector2(0.0, 58.74)
+scale = Vector2(0.75, 0.5727)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_modeRight"
+metadata/cocos_tag = 13906
+metadata/action_tag = -935067544
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_disabled = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_modeLeft1" type="TextureButton" parent="Panel_more/Node_2/Node_3_0"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -255.0
+offset_top = -37.0
+offset_right = -165.0
+offset_bottom = 83.0
+pivot_offset = Vector2(0.0, 60.0)
+scale = Vector2(0.75, 0.5727)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_modeLeft1"
+metadata/cocos_tag = 13907
+metadata/action_tag = 1938707909
+scale = Vector2(-1, 1)
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_disabled = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_title2" type="Label" parent="Panel_more/Node_2/Node_3_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -139.0
+offset_top = -2.5
+offset_right = 139.0
+offset_bottom = 52.5
+pivot_offset = Vector2(139.0, 27.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_title2"
+metadata/cocos_tag = 13908
+metadata/action_tag = -818619128
+script = ExtResource("8")
+design_size = Vector2(278.0, 55.0)
+design_center = Vector2(0.0, 25.0)
+design_font_size = 55
+bitmap_font = false
+fit_box = false
+text = "2019年11月"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_1__2" type="Control" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 117.0
+offset_right = 0.0
+offset_bottom = 117.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 13909
+metadata/action_tag = 1137195537
+
+[node name="Text_week7" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -404.5089
+offset_top = -415.0
+offset_right = -374.5089
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week7"
+metadata/cocos_tag = 13910
+metadata/action_tag = 2103664945
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(-389.5089, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "日"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week1" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -278.1906
+offset_top = -415.0
+offset_right = -248.1906
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week1"
+metadata/cocos_tag = 13911
+metadata/action_tag = 320543011
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(-263.1906, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "一"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week2" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -146.6415
+offset_top = -415.0
+offset_right = -116.6415
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week2"
+metadata/cocos_tag = 13912
+metadata/action_tag = 1406198338
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(-131.6415, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "二"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week3" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -18.1887
+offset_top = -415.0
+offset_right = 11.8113
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week3"
+metadata/cocos_tag = 13913
+metadata/action_tag = 1657583099
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(-3.1887, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "三"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week4" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 119.5536
+offset_top = -415.0
+offset_right = 149.5536
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week4"
+metadata/cocos_tag = 13914
+metadata/action_tag = -1173705125
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(134.5536, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "四"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week5" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 250.2554
+offset_top = -415.0
+offset_right = 280.2554
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week5"
+metadata/cocos_tag = 13915
+metadata/action_tag = -1979823067
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(265.2554, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "五"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_week6" type="Label" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 381.8436
+offset_top = -415.0
+offset_right = 411.8436
+offset_bottom = -385.0
+pivot_offset = Vector2(15.0, 15.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_week6"
+metadata/cocos_tag = 13916
+metadata/action_tag = 690266581
+script = ExtResource("8")
+design_size = Vector2(30.0, 30.0)
+design_center = Vector2(396.8436, -400.0)
+design_font_size = 30
+bitmap_font = false
+fit_box = false
+text = "六"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Panel_container" type="ColorRect" parent="Panel_more/Node_2/Node_1__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -482.0
+offset_top = -337.07
+offset_right = 482.0
+offset_bottom = 362.93
+pivot_offset = Vector2(482.0, 350.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_container"
+metadata/cocos_tag = 13917
+metadata/action_tag = -1423612381
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Button_StarBox" type="TextureButton" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -75.0
+offset_top = -698.3126
+offset_right = 75.0
+offset_bottom = -548.3126
+pivot_offset = Vector2(75.0, 75.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_StarBox"
+metadata/cocos_tag = 13918
+metadata/action_tag = 1393634464
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fish_ui_ui_box0_1" type="TextureRect" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -31.0
+offset_top = -31.0
+offset_right = 181.0
+offset_bottom = 181.0
+pivot_offset = Vector2(106.0, 106.0)
+scale = Vector2(2.15, 2.15)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "fish_ui_ui_box0_1"
+metadata/cocos_tag = 13919
+metadata/action_tag = -717292547
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_36" type="ColorRect" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -25.0
+offset_top = -76.0
+offset_right = 175.0
+offset_bottom = 124.0
+pivot_offset = Vector2(100.0, 100.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_36"
+metadata/cocos_tag = 13920
+metadata/action_tag = 431446055
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Node_fish" type="Control" parent="Panel_more/Node_2/Button_StarBox/Panel_36"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_fish"
+metadata/cocos_tag = 13921
+metadata/action_tag = -1357803228
+
+[node name="shadows_fish_1" type="TextureRect" parent="Panel_more/Node_2/Button_StarBox/Panel_36"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -5.0
+offset_top = -51.3799
+offset_right = 205.0
+offset_bottom = 12.6201
+pivot_offset = Vector2(105.0, 32.0)
+scale = Vector2(1.0911, 1.7813)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shadows_fish_1"
+metadata/cocos_tag = 13922
+metadata/action_tag = -1739472740
+texture = ExtResource("10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_rare" type="Label" parent="Panel_more/Node_2/Button_StarBox/Panel_36"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 40.0
+offset_top = -60.0
+offset_right = 160.0
+offset_bottom = 0.0
+pivot_offset = Vector2(60.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "Text_rare"
+metadata/cocos_tag = 13923
+metadata/action_tag = -941717023
+script = ExtResource("8")
+design_size = Vector2(120.0, 60.0)
+design_center = Vector2(100.0, -30.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "Rare"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Panel_more/Node_2/Button_StarBox/Panel_36/Text_rare"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 60.0
+offset_top = 30.0
+offset_right = 60.0
+offset_bottom = 30.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 13924
+metadata/action_tag = 223035413
+
+[node name="Emitter" parent="Panel_more/Node_2/Button_StarBox/Panel_36/Text_rare/Particle_1" instance=ExtResource("11")]
+
+[node name="Image_1" type="NinePatchRect" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -12.5
+offset_top = 163.5
+offset_right = 162.5
+offset_bottom = 235.5
+pivot_offset = Vector2(87.5, 36.0)
+scale = Vector2(2.18, 2.29)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 13925
+metadata/action_tag = 555377656
+texture = ExtResource("12")
+patch_margin_left = 21
+patch_margin_right = 21
+patch_margin_top = 0
+patch_margin_bottom = 0
+
+[node name="LoadingBar_StarBox" type="TextureProgressBar" parent="Panel_more/Node_2/Button_StarBox/Image_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 175.0
+offset_bottom = 72.0
+pivot_offset = Vector2(87.5, 36.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar_StarBox"
+metadata/cocos_tag = 13926
+metadata/action_tag = 799771296
+value = 100.0
+nine_patch_stretch = true
+
+[node name="Star_target" type="TextureRect" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -158.1243
+offset_top = 29.6673
+offset_right = -70.1243
+offset_bottom = 103.6673
+pivot_offset = Vector2(44.0, 37.0)
+scale = Vector2(1.2, 1.2)
+rotation = 0.02616
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Star_target"
+metadata/cocos_tag = 13927
+metadata/action_tag = 1927091977
+texture = ExtResource("13")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_getFish" type="TextureButton" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -51.7246
+offset_top = 196.9853
+offset_right = 199.2754
+offset_bottom = 298.9853
+pivot_offset = Vector2(125.5, 51.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_getFish"
+metadata/cocos_tag = 13928
+metadata/action_tag = -489084424
+script = ExtResource("14")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("15")
+texture_pressed = ExtResource("16")
+texture_disabled = ExtResource("16")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_getFish" type="Label" parent="Panel_more/Node_2/Button_StarBox/Button_getFish"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 71.5
+offset_top = 10.92
+offset_right = 179.5
+offset_bottom = 82.92
+pivot_offset = Vector2(54.0, 36.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_getFish"
+metadata/cocos_tag = 13929
+metadata/action_tag = 1477415773
+script = ExtResource("8")
+design_size = Vector2(108.0, 72.0)
+design_center = Vector2(125.5, 46.92)
+design_font_size = 72
+bitmap_font = false
+fit_box = false
+text = "get"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_more/Node_2/Button_StarBox"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 55.0
+offset_top = 124.0
+offset_right = 95.0
+offset_bottom = 198.0
+pivot_offset = Vector2(20.0, 37.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 13930
+metadata/action_tag = 56365017
+script = ExtResource("8")
+design_size = Vector2(40.0, 74.0)
+design_center = Vector2(75.0, 161.0)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "/"
+theme_override_fonts/font = ExtResource("17")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_StarNum" type="Label" parent="Panel_more/Node_2/Button_StarBox/BitmapFontLabel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -97.2
+offset_top = -13.92
+offset_right = -1.2
+offset_bottom = 76.08
+pivot_offset = Vector2(96.0, 45.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_StarNum"
+metadata/cocos_tag = 13931
+metadata/action_tag = -720425162
+script = ExtResource("8")
+design_size = Vector2(96.0, 90.0)
+design_center = Vector2(-49.2, 31.08)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "12"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_StarNumMax" type="Label" parent="Panel_more/Node_2/Button_StarBox/BitmapFontLabel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 48.0
+offset_top = -13.92
+offset_right = 149.0
+offset_bottom = 76.08
+pivot_offset = Vector2(0.0, 45.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_StarNumMax"
+metadata/cocos_tag = 13932
+metadata/action_tag = 944507632
+script = ExtResource("8")
+design_size = Vector2(101.0, 90.0)
+design_center = Vector2(98.5, 31.08)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "14"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Image_4" type="NinePatchRect" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -494.0
+offset_top = -634.0
+offset_right = -226.0
+offset_bottom = -470.0
+pivot_offset = Vector2(134.0, 82.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_4"
+metadata/cocos_tag = 13933
+metadata/action_tag = -1883379550
+texture = ExtResource("19")
+patch_margin_left = 63
+patch_margin_right = 20
+patch_margin_top = 27
+patch_margin_bottom = 27
+
+[node name="Text_Star_miaoshu" type="Label" parent="Panel_more/Node_2/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 7.8524
+offset_top = -1.282
+offset_right = 259.8524
+offset_bottom = 148.718
+pivot_offset = Vector2(0.0, 75.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.0, 0.0, 0.0, 1.0)
+metadata/cocos_name = "Text_Star_miaoshu"
+metadata/cocos_tag = 13934
+metadata/action_tag = 1987047897
+script = ExtResource("8")
+design_size = Vector2(252.0, 150.0)
+design_center = Vector2(133.8524, 73.718)
+design_font_size = 35
+bitmap_font = false
+fit_box = true
+text = "Collect crowns\nGet rate fish"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="emoji_happy1_1" type="TextureRect" parent="Panel_more/Node_2/Image_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 59.7036
+offset_top = 169.0567
+offset_right = 114.7036
+offset_bottom = 222.0567
+pivot_offset = Vector2(27.5, 26.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "emoji_happy1_1"
+metadata/cocos_tag = 13935
+metadata/action_tag = -1735444488
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_close" type="TextureButton" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 407.9647
+offset_top = -723.2944
+offset_right = 511.9647
+offset_bottom = -593.2944
+pivot_offset = Vector2(52.0, 65.0)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_close"
+metadata/cocos_tag = 13936
+metadata/action_tag = -1224195919
+script = ExtResource("14")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = ExtResource("21")
+texture_pressed = ExtResource("22")
+texture_disabled = ExtResource("22")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_start" type="TextureButton" parent="Panel_more/Node_2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -201.5
+offset_top = 502.0
+offset_right = 201.5
+offset_bottom = 642.0
+pivot_offset = Vector2(201.5, 70.0)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_start"
+metadata/cocos_tag = 13937
+metadata/action_tag = 279945097
+texture_normal = ExtResource("23")
+texture_pressed = ExtResource("24")
+texture_disabled = ExtResource("25")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_start11" type="Label" parent="Panel_more/Node_2/Button_start"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 126.5
+offset_top = 38.6
+offset_right = 276.5
+offset_bottom = 98.6
+pivot_offset = Vector2(75.0, 30.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_start11"
+metadata/cocos_tag = 13938
+metadata/action_tag = -1624443321
+script = ExtResource("8")
+design_size = Vector2(150.0, 60.0)
+design_center = Vector2(201.5, 68.6)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "START"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Panel_111" type="Control" parent="Panel_more"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -910.4734
+offset_top = -99.6959
+offset_right = -147.6779
+offset_bottom = 20.3041
+pivot_offset = Vector2(0.0, 120.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_111"
+metadata/cocos_tag = 13939
+metadata/action_tag = 801540863
+
+[node name="Image_83" type="NinePatchRect" parent="Panel_more/Panel_111"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -3.26045
+offset_top = 13.82925
+offset_right = 668.87585
+offset_bottom = 113.63475
+pivot_offset = Vector2(336.06815, 49.90275)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_83"
+metadata/cocos_tag = 13940
+metadata/action_tag = -1243128612
+texture = ExtResource("26")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 16
+patch_margin_bottom = 16
+
+[node name="Node_2" type="Control" parent="Panel_more/Panel_111"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.2599
+offset_top = 106.716
+offset_right = 51.2599
+offset_bottom = 106.716
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_2"
+metadata/cocos_tag = 13941
+metadata/action_tag = -732791008
+
+[node name="daily_icon0_1" type="TextureRect" parent="Panel_more/Panel_111/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -26.1559
+offset_top = -103.6726
+offset_right = 19.8441
+offset_bottom = -57.6726
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daily_icon0_1"
+metadata/cocos_tag = 13942
+metadata/action_tag = -872941431
+texture = ExtResource("27")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_more/Panel_111/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -48.655
+offset_top = -46.5
+offset_right = 48.655
+offset_bottom = -1.5
+pivot_offset = Vector2(48.655, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 13943
+metadata/action_tag = 283118242
+texture = ExtResource("28")
+patch_margin_left = 17
+patch_margin_right = 17
+patch_margin_top = 14
+patch_margin_bottom = 14
+
+[node name="Text_total1" type="Label" parent="Panel_more/Panel_111/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -33.3079
+offset_top = -43.0285
+offset_right = -13.3079
+offset_bottom = -3.0285
+pivot_offset = Vector2(20.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_total1"
+metadata/cocos_tag = 13944
+metadata/action_tag = 1205706099
+script = ExtResource("8")
+design_size = Vector2(20.0, 40.0)
+design_center = Vector2(-23.3079, -23.0285)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "3"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_1_0" type="Label" parent="Panel_more/Panel_111/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -23.3084
+offset_top = -43.0285
+offset_right = -3.3084
+offset_bottom = -3.0285
+pivot_offset = Vector2(20.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.22353, 0.80784, 1.0, 1.0)
+metadata/cocos_name = "Text_1_0"
+metadata/cocos_tag = 13945
+metadata/action_tag = 1371222057
+script = ExtResource("8")
+design_size = Vector2(20.0, 40.0)
+design_center = Vector2(-13.3084, -23.0285)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "/"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_total2" type="Label" parent="Panel_more/Panel_111/Node_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.3074
+offset_top = -43.0288
+offset_right = 39.6926
+offset_bottom = -3.0288
+pivot_offset = Vector2(0.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.22353, 0.80784, 1.0, 1.0)
+metadata/cocos_name = "Text_total2"
+metadata/cocos_tag = 13946
+metadata/action_tag = -567346248
+script = ExtResource("8")
+design_size = Vector2(40.0, 40.0)
+design_center = Vector2(19.6926, -23.0288)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "31"
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_bar" type="Control" parent="Panel_more/Panel_111"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 381.3977
+offset_top = 60.0
+offset_right = 381.3977
+offset_bottom = 60.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_bar"
+metadata/cocos_tag = 13947
+metadata/action_tag = -1051120672
+
+[node name="Image_1" type="NinePatchRect" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -304.754
+offset_top = -15.4998
+offset_right = 246.246
+offset_bottom = 15.5002
+pivot_offset = Vector2(0.0, 15.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 13948
+metadata/action_tag = -1254269301
+texture = ExtResource("29")
+patch_margin_left = 34
+patch_margin_right = 34
+patch_margin_top = 10
+patch_margin_bottom = 10
+
+[node name="LoadingBar_percent" type="TextureProgressBar" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -299.254
+offset_top = -11.5017
+offset_right = 240.746
+offset_bottom = 11.4983
+pivot_offset = Vector2(0.0, 11.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar_percent"
+metadata/cocos_tag = 13949
+metadata/action_tag = 2114636567
+value = 100.0
+nine_patch_stretch = true
+
+[node name="Node_11" type="Control" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 244.0
+offset_top = 43.0
+offset_right = 244.0
+offset_bottom = 43.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11"
+metadata/cocos_tag = 13950
+metadata/action_tag = 297294975
+
+[node name="Sprite_iconTrophyDiamon" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -26.9003
+offset_top = -98.6801
+offset_right = 29.0997
+offset_bottom = -35.6801
+pivot_offset = Vector2(28.0, 31.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_iconTrophyDiamon"
+metadata/cocos_tag = 13951
+metadata/action_tag = 1015183104
+texture = ExtResource("30")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="daily_daily_Trophyiconbg_1_0_0_0" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -27.0
+offset_top = -54.5
+offset_right = 27.0
+offset_bottom = -9.5
+pivot_offset = Vector2(27.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daily_daily_Trophyiconbg_1_0_0_0"
+metadata/cocos_tag = 13952
+metadata/action_tag = -322349794
+texture = ExtResource("31")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BMFont_road4" type="Label" parent="Panel_more/Panel_111/Node_bar/Node_11"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -47.5
+offset_top = -78.776
+offset_right = 47.5
+offset_bottom = 11.224
+pivot_offset = Vector2(47.5, 45.0)
+scale = Vector2(0.34, 0.34)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BMFont_road4"
+metadata/cocos_tag = 13953
+metadata/action_tag = -896931733
+script = ExtResource("8")
+design_size = Vector2(95.0, 90.0)
+design_center = Vector2(0.0, -33.776)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "31"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_11_0" type="Control" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 105.2022
+offset_top = 43.0
+offset_right = 105.2022
+offset_bottom = 43.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11_0"
+metadata/cocos_tag = 13954
+metadata/action_tag = -1634100633
+
+[node name="iconTrophy_002_3" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -26.4
+offset_top = -98.6801
+offset_right = 28.6
+offset_bottom = -35.6801
+pivot_offset = Vector2(27.5, 31.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "iconTrophy_002_3"
+metadata/cocos_tag = 13955
+metadata/action_tag = 1774583693
+texture = ExtResource("32")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="daily_daily_Trophyiconbg_1_0_0" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -27.0
+offset_top = -54.5
+offset_right = 27.0
+offset_bottom = -9.5
+pivot_offset = Vector2(27.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daily_daily_Trophyiconbg_1_0_0"
+metadata/cocos_tag = 13956
+metadata/action_tag = 2121611038
+texture = ExtResource("31")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BMFont_road3" type="Label" parent="Panel_more/Panel_111/Node_bar/Node_11_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -48.0
+offset_top = -78.7758
+offset_right = 48.0
+offset_bottom = 11.2242
+pivot_offset = Vector2(48.0, 45.0)
+scale = Vector2(0.34, 0.34)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BMFont_road3"
+metadata/cocos_tag = 13957
+metadata/action_tag = 1249298458
+script = ExtResource("8")
+design_size = Vector2(96.0, 90.0)
+design_center = Vector2(0.0, -33.7758)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "21"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_11_0_0" type="Control" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -33.5956
+offset_top = 43.0
+offset_right = -33.5956
+offset_bottom = 43.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11_0_0"
+metadata/cocos_tag = 13958
+metadata/action_tag = -217324492
+
+[node name="iconTrophy_001_2" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -26.4
+offset_top = -98.6811
+offset_right = 28.6
+offset_bottom = -35.6811
+pivot_offset = Vector2(27.5, 31.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "iconTrophy_001_2"
+metadata/cocos_tag = 13959
+metadata/action_tag = -1783971983
+texture = ExtResource("33")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="daily_daily_Trophyiconbg_1_0" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -27.0
+offset_top = -54.5
+offset_right = 27.0
+offset_bottom = -9.5
+pivot_offset = Vector2(27.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daily_daily_Trophyiconbg_1_0"
+metadata/cocos_tag = 13960
+metadata/action_tag = 455117923
+texture = ExtResource("31")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BMFont_road2" type="Label" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -50.5
+offset_top = -78.7758
+offset_right = 50.5
+offset_bottom = 11.2242
+pivot_offset = Vector2(50.5, 45.0)
+scale = Vector2(0.34, 0.34)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BMFont_road2"
+metadata/cocos_tag = 13961
+metadata/action_tag = -1440805129
+script = ExtResource("8")
+design_size = Vector2(101.0, 90.0)
+design_center = Vector2(0.0, -33.7758)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "14"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Node_11_0_0_0" type="Control" parent="Panel_more/Panel_111/Node_bar"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -172.3934
+offset_top = 43.0
+offset_right = -172.3934
+offset_bottom = 43.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11_0_0_0"
+metadata/cocos_tag = 13962
+metadata/action_tag = 1680490864
+
+[node name="iconTrophy_000_1" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -26.4001
+offset_top = -98.6811
+offset_right = 28.5999
+offset_bottom = -35.6811
+pivot_offset = Vector2(27.5, 31.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "iconTrophy_000_1"
+metadata/cocos_tag = 13963
+metadata/action_tag = -1343491445
+texture = ExtResource("34")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="daily_daily_Trophyiconbg_1" type="TextureRect" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -27.0
+offset_top = -54.5
+offset_right = 27.0
+offset_bottom = -9.5
+pivot_offset = Vector2(27.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daily_daily_Trophyiconbg_1"
+metadata/cocos_tag = 13964
+metadata/action_tag = 1494632116
+texture = ExtResource("31")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BMFont_road1" type="Label" parent="Panel_more/Panel_111/Node_bar/Node_11_0_0_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -24.5
+offset_top = -78.7754
+offset_right = 24.5
+offset_bottom = 11.2246
+pivot_offset = Vector2(24.5, 45.0)
+scale = Vector2(0.34, 0.34)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BMFont_road1"
+metadata/cocos_tag = 13965
+metadata/action_tag = -1262393359
+script = ExtResource("8")
+design_size = Vector2(49.0, 90.0)
+design_center = Vector2(0.0, -33.7754)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "7"
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

@@ -1,0 +1,231 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="2"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_icon.png" id="4"]
+[ext_resource type="Script" path="res://solitaire/native/atlas_number.gd" id="5"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/TextAtlas.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_item_light.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_bg_0.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/img_new.png" id="9"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 92
+metadata/action_tag = 0
+
+[node name="panel_item" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -62.5
+offset_top = -87.5
+offset_right = 62.5
+offset_bottom = 87.5
+pivot_offset = Vector2(62.5, 87.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_item"
+metadata/cocos_tag = 95
+metadata/action_tag = -392405192
+
+[node name="Image_3" type="Control" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 2.5
+offset_top = 1.0
+offset_right = 122.5
+offset_bottom = 181.0
+pivot_offset = Vector2(60.0, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 97
+metadata/action_tag = -390919442
+
+[node name="text_item" type="Label" parent="panel_item/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 19.96
+offset_top = 137.0
+offset_right = 101.96
+offset_bottom = 160.0
+pivot_offset = Vector2(41.0, 11.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "text_item"
+metadata/cocos_tag = 99
+metadata/action_tag = 1689178852
+script = ExtResource("3")
+design_size = Vector2(82.0, 23.0)
+design_center = Vector2(60.96, 148.5)
+design_font_size = 20
+bitmap_font = false
+fit_box = false
+text = "قيد الاستخدام"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="img_coin" type="TextureRect" parent="panel_item/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 17.6048
+offset_top = 134.5426
+offset_right = 45.6048
+offset_bottom = 162.5426
+pivot_offset = Vector2(14.0, 14.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_coin"
+metadata/cocos_tag = 100
+metadata/action_tag = 593651630
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="atlasLabel_num" type="Control" parent="panel_item/Image_3/img_coin"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 31.4767
+offset_top = 5.261
+offset_right = 87.4767
+offset_bottom = 23.261
+pivot_offset = Vector2(28.0, 9.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "atlasLabel_num"
+metadata/cocos_tag = 101
+metadata/action_tag = 1913608079
+script = ExtResource("5")
+text = "1000"
+glyph_size = Vector2(14.0, 18.0)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="Image_2" type="Control" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 125.0
+offset_bottom = 175.0
+pivot_offset = Vector2(62.5, 87.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 96
+metadata/action_tag = 448380393
+
+[node name="img_light_1" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.0
+offset_top = 25.2025
+offset_right = 121.0
+offset_bottom = 128.2025
+pivot_offset = Vector2(58.5, 51.5)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_light_1"
+metadata/cocos_tag = 102
+metadata/action_tag = -1801862473
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_light_2" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.0
+offset_top = 25.2025
+offset_right = 121.0
+offset_bottom = 128.2025
+pivot_offset = Vector2(58.5, 51.5)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_light_2"
+metadata/cocos_tag = 103
+metadata/action_tag = -473222234
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_card" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 4.0
+offset_top = -16.8017
+offset_right = 126.0
+offset_bottom = 165.1983
+pivot_offset = Vector2(61.0, 91.0)
+scale = Vector2(0.55, 0.55)
+rotation = -0.26183
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_card"
+metadata/cocos_tag = 104
+metadata/action_tag = 1733192486
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_new" type="TextureRect" parent="panel_item"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -6.0
+offset_top = -2.5
+offset_right = 56.0
+offset_bottom = 28.5
+pivot_offset = Vector2(31.0, 15.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_new"
+metadata/cocos_tag = 105
+metadata/action_tag = -701101178
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

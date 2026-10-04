@@ -1,0 +1,180 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="4"]
+[ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
+[ext_resource type="Texture2D" path="res://assets/invincible/card_0_1_0.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/store_choice0.png" id="9"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 217
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -75.0
+offset_top = -140.0
+offset_right = 75.0
+offset_bottom = 140.0
+pivot_offset = Vector2(75.0, 140.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 224
+metadata/action_tag = -2084090501
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Button_card_face" type="TextureButton" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -94.9972
+offset_top = 191.0
+offset_right = 245.0028
+offset_bottom = 313.0
+pivot_offset = Vector2(170.0, 61.0)
+scale = Vector2(0.45, 0.45)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_card_face"
+metadata/cocos_tag = 222
+metadata/action_tag = -969917858
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_disabled = ExtResource("4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_card_face" type="Label" parent="Panel_1/Button_card_face"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 25.40055
+offset_top = 12.12675
+offset_right = 314.59945
+offset_bottom = 104.99325
+pivot_offset = Vector2(144.59945, 46.43325)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_card_face"
+metadata/cocos_tag = 223
+metadata/action_tag = -405400517
+script = ExtResource("6")
+design_size = Vector2(289.1989, 92.8665)
+design_center = Vector2(170.0, 58.56)
+design_font_size = 60
+bitmap_font = false
+fit_box = true
+text = "使用"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Sprite_face" type="TextureRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 149.0
+offset_bottom = 222.0
+pivot_offset = Vector2(74.0, 110.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_face"
+metadata/cocos_tag = 218
+metadata/action_tag = -1199568495
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_color" type="TextureRect" parent="Panel_1/Sprite_face"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.0
+offset_top = 87.0
+offset_right = 97.0
+offset_bottom = 133.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_color"
+metadata/cocos_tag = 219
+metadata/action_tag = -967424087
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_num" type="TextureRect" parent="Panel_1/Sprite_face"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.9976
+offset_top = 10.0
+offset_right = 54.9976
+offset_bottom = 56.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_num"
+metadata/cocos_tag = 220
+metadata/action_tag = -203831596
+texture = ExtResource("8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_used_bg" type="TextureRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 112.6914
+offset_top = -19.6258
+offset_right = 170.6914
+offset_bottom = 40.3742
+pivot_offset = Vector2(26.8076, 28.302)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_used_bg"
+metadata/cocos_tag = 287
+metadata/action_tag = -133859546
+texture = ExtResource("9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

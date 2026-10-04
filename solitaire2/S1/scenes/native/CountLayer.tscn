@@ -1,0 +1,987 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_1.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_bg.png" id="2"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_line.png" id="4"]
+[ext_resource type="Script" path="res://solitaire/native/atlas_number.gd" id="5"]
+[ext_resource type="Texture2D" path="res://assets/master/img/shijian_2.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/master/img/btn0.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/master/img/btn1.png" id="8"]
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 576.000000
+offset_bottom = 1024.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_count" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 0.000000
+offset_right = 576.000000
+offset_bottom = 1024.000000
+pivot_offset = Vector2(0.000000, 1024.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="img_set_bg_0" type="NinePatchRect" parent="panel_count"]
+layout_mode = 0
+offset_left = 23.000000
+offset_top = 96.060800
+offset_right = 553.000000
+offset_bottom = 916.060800
+pivot_offset = Vector2(265.000000, 410.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 30
+patch_margin_right = 30
+patch_margin_top = 90
+patch_margin_bottom = 60
+
+[node name="Image_13" type="NinePatchRect" parent="panel_count"]
+layout_mode = 0
+offset_left = 43.000000
+offset_top = 168.960000
+offset_right = 533.000000
+offset_bottom = 834.240000
+pivot_offset = Vector2(245.000000, 0.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+patch_margin_left = 25
+patch_margin_right = 25
+patch_margin_top = 51
+patch_margin_bottom = 51
+
+[node name="Text_1" type="Label" parent="panel_count"]
+layout_mode = 0
+offset_left = 232.000000
+offset_top = 117.120000
+offset_right = 344.000000
+offset_bottom = 149.120000
+pivot_offset = Vector2(56.000000, 16.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "游戏统计"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panel_game_1" type="Control" parent="panel_count"]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 174.457600
+offset_right = 576.000000
+offset_bottom = 514.457600
+pivot_offset = Vector2(0.000000, 340.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="Image_2" type="TextureRect" parent="panel_count/panel_game_1"]
+layout_mode = 0
+offset_left = 58.000000
+offset_top = 13.000000
+offset_right = 518.000000
+offset_bottom = 15.000000
+pivot_offset = Vector2(230.000000, 1.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+visible = false
+self_modulate = Color(0.901961, 0.901961, 0.980392, 1.000000)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_name_1" type="Control" parent="panel_count/panel_game_1"]
+layout_mode = 0
+offset_left = 46.080200
+offset_top = 0.000000
+offset_right = 246.080200
+offset_bottom = 340.000000
+pivot_offset = Vector2(0.000000, 340.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="Text_2" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 22.000000
+offset_right = 166.000000
+offset_bottom = 48.000000
+pivot_offset = Vector2(0.000000, 13.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 0.000000, 1.000000)
+text = "抽一张牌游戏"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 59.500000
+offset_right = 106.000000
+offset_bottom = 80.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 79.500000
+offset_right = 106.000000
+offset_bottom = 100.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "失败局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 99.500000
+offset_right = 70.000000
+offset_bottom = 120.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜率"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 119.500000
+offset_right = 142.000000
+offset_bottom = 140.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最快胜利时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 139.500000
+offset_right = 142.000000
+offset_bottom = 160.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最长胜利时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 159.500000
+offset_right = 142.000000
+offset_bottom = 180.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利最少步数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 179.500000
+offset_right = 142.000000
+offset_bottom = 200.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利最多步数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 199.500000
+offset_right = 142.000000
+offset_bottom = 220.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "无返回胜利数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 219.500000
+offset_right = 106.000000
+offset_bottom = 240.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最高分数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 239.500000
+offset_right = 142.000000
+offset_bottom = 260.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "当前连胜局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 259.500000
+offset_right = 142.000000
+offset_bottom = 280.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最高连胜局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0_0_0" type="Label" parent="panel_count/panel_game_1/text_name_1"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 279.500000
+offset_right = 124.000000
+offset_bottom = 300.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "总游戏时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panel_num_1" type="Control" parent="panel_count/panel_game_1"]
+layout_mode = 0
+offset_left = 324.160400
+offset_top = 0.000000
+offset_right = 524.160400
+offset_bottom = 340.000000
+pivot_offset = Vector2(200.000000, 340.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="atlasLabel_1" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 60.000000
+offset_right = 164.000000
+offset_bottom = 80.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_2" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 80.000000
+offset_right = 164.000000
+offset_bottom = 100.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_3" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 100.000000
+offset_right = 164.000000
+offset_bottom = 120.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_4" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 120.000000
+offset_right = 164.000000
+offset_bottom = 140.000000
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_5" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 140.000000
+offset_right = 164.000000
+offset_bottom = 160.000000
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_6" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 160.000000
+offset_right = 164.000000
+offset_bottom = 180.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_7" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 180.000000
+offset_right = 164.000000
+offset_bottom = 200.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_8" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 200.000000
+offset_right = 164.000000
+offset_bottom = 220.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_9" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 220.000000
+offset_right = 164.000000
+offset_bottom = 240.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_10" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 240.000000
+offset_right = 164.000000
+offset_bottom = 260.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_11" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 260.000000
+offset_right = 164.000000
+offset_bottom = 280.000000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_12" type="Control" parent="panel_count/panel_game_1/panel_num_1"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 280.000000
+offset_right = 164.000000
+offset_bottom = 300.000000
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="panel_game_2" type="Control" parent="panel_count"]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = 499.143100
+offset_right = 576.000000
+offset_bottom = 839.143100
+pivot_offset = Vector2(0.000000, 340.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="Image_2" type="TextureRect" parent="panel_count/panel_game_2"]
+layout_mode = 0
+offset_left = 58.000000
+offset_top = -4.400000
+offset_right = 518.000000
+offset_bottom = -2.400000
+pivot_offset = Vector2(230.000000, 1.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.901961, 0.901961, 0.980392, 1.000000)
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="text_name_2" type="Control" parent="panel_count/panel_game_2"]
+layout_mode = 0
+offset_left = 46.080000
+offset_top = 0.000000
+offset_right = 246.080000
+offset_bottom = 340.000000
+pivot_offset = Vector2(0.000000, 340.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="Text_2_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 14.000100
+offset_right = 166.000000
+offset_bottom = 40.000100
+pivot_offset = Vector2(0.000000, 13.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 0.000000, 1.000000)
+text = "抽三张牌游戏"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_2" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 49.500000
+offset_right = 106.000000
+offset_bottom = 70.500000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 70.954600
+offset_right = 106.000000
+offset_bottom = 91.954600
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "失败局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 92.409100
+offset_right = 70.000000
+offset_bottom = 113.409100
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜率"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 113.863600
+offset_right = 142.000000
+offset_bottom = 134.863600
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最快胜利时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 135.318200
+offset_right = 142.000000
+offset_bottom = 156.318200
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最长胜利时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 156.772800
+offset_right = 142.000000
+offset_bottom = 177.772800
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利最少步数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 178.227300
+offset_right = 142.000000
+offset_bottom = 199.227300
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "胜利最多步数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 199.681900
+offset_right = 142.000000
+offset_bottom = 220.681900
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "无返回胜利数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 221.136400
+offset_right = 106.000000
+offset_bottom = 242.136400
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最高分数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 242.591000
+offset_right = 142.000000
+offset_bottom = 263.591000
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "当前连胜局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 264.045500
+offset_right = 142.000000
+offset_bottom = 285.045500
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "最高连胜局数"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_3_1_0_0_0_0_0_0_0_0_0_0_1" type="Label" parent="panel_count/panel_game_2/text_name_2"]
+layout_mode = 0
+offset_left = 34.000000
+offset_top = 285.500100
+offset_right = 124.000000
+offset_bottom = 306.500100
+pivot_offset = Vector2(0.000000, 10.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "总游戏时间"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panel_num_2" type="Control" parent="panel_count/panel_game_2"]
+layout_mode = 0
+offset_left = 324.160000
+offset_top = 0.000000
+offset_right = 524.160000
+offset_bottom = 340.000000
+pivot_offset = Vector2(200.000000, 340.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="atlasLabel_1" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 50.000100
+offset_right = 164.000000
+offset_bottom = 70.000100
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_2" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 71.454600
+offset_right = 164.000000
+offset_bottom = 91.454600
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_3" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 92.909200
+offset_right = 164.000000
+offset_bottom = 112.909200
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_4" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 114.363700
+offset_right = 164.000000
+offset_bottom = 134.363700
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_5" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 135.818300
+offset_right = 164.000000
+offset_bottom = 155.818300
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_6" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 157.272800
+offset_right = 164.000000
+offset_bottom = 177.272800
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_7" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 178.727400
+offset_right = 164.000000
+offset_bottom = 198.727400
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_8" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 200.181900
+offset_right = 164.000000
+offset_bottom = 220.181900
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_9" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 221.636500
+offset_right = 164.000000
+offset_bottom = 241.636500
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_10" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 243.091000
+offset_right = 164.000000
+offset_bottom = 263.091000
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_11" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 152.000000
+offset_top = 264.545500
+offset_right = 164.000000
+offset_bottom = 284.545500
+pivot_offset = Vector2(12.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "0"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="atlasLabel_12" type="Control" parent="panel_count/panel_game_2/panel_num_2"]
+layout_mode = 0
+offset_left = 104.000000
+offset_top = 286.000100
+offset_right = 164.000000
+offset_bottom = 306.000100
+pivot_offset = Vector2(60.000000, 10.000000)
+mouse_filter = 2
+scale = Vector2(0.780000, 0.780000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+script = ExtResource("5")
+text = "00/00"
+glyph_size = Vector2(12.000000, 20.000000)
+first_character = "."
+atlas = ExtResource("6")
+
+[node name="btn_close" type="TextureButton" parent="panel_count"]
+layout_mode = 0
+offset_left = 173.000000
+offset_top = 838.599400
+offset_right = 403.000000
+offset_bottom = 892.599400
+pivot_offset = Vector2(115.000000, 27.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0

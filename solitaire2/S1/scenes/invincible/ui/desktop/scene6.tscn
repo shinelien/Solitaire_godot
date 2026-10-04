@@ -1,0 +1,167 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_bgshadow.png" id="3"]
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 3.33333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_top/Image_3:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 3.33333), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-0.0024, 960.0), Vector2(-0.0024, 960.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_top/scene9_0_1:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.63333, 1.65, 1.66667, 1.68333, 1.7, 1.71667, 1.73333, 1.75, 1.76667, 1.78333, 1.8, 1.81667, 1.83333, 1.85, 1.86667, 1.88333, 1.9, 1.91667, 1.93333, 1.95, 1.96667, 1.98333, 2.0, 2.01667, 2.03333, 2.05, 2.06667, 2.08333, 2.1, 2.11667, 2.13333, 2.15, 2.16667, 2.18333, 2.2, 2.21667, 2.23333, 2.25, 2.26667, 2.28333, 2.3, 2.31667, 2.33333, 2.35, 2.36667, 2.38333, 2.4, 2.41667, 2.43333, 2.45, 2.46667, 2.48333, 2.5, 2.51667, 2.53333, 2.55, 2.56667, 2.58333, 2.6, 2.61667, 2.63333, 2.65, 2.66667, 2.68333, 2.7, 2.71667, 2.73333, 2.75, 2.76667, 2.78333, 2.8, 2.81667, 2.83333, 2.85, 2.86667, 2.88333, 2.9, 2.91667, 2.93333, 2.95, 2.96667, 2.98333, 3.0, 3.01667, 3.03333, 3.05, 3.06667, 3.08333, 3.1, 3.11667, 3.13333, 3.15, 3.16667, 3.18333, 3.2, 3.21667, 3.23333, 3.25, 3.26667, 3.28333, 3.3, 3.31667, 3.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, 0.03142, 0.06283, 0.09425, 0.12566, 0.15708, 0.1885, 0.21991, 0.25133, 0.28274, 0.31416, 0.34558, 0.37699, 0.40841, 0.43982, 0.47124, 0.50265, 0.53407, 0.56549, 0.5969, 0.62832, 0.65973, 0.69115, 0.72257, 0.75398, 0.7854, 0.81681, 0.84823, 0.87965, 0.91106, 0.94248, 0.97389, 1.00531, 1.03673, 1.06814, 1.09956, 1.13097, 1.16239, 1.19381, 1.22522, 1.25664, 1.28805, 1.31947, 1.35088, 1.3823, 1.41372, 1.44513, 1.47655, 1.50796, 1.53938, 1.5708, 1.60221, 1.63363, 1.66504, 1.69646, 1.72788, 1.75929, 1.79071, 1.82212, 1.85354, 1.88496, 1.91637, 1.94779, 1.9792, 2.01062, 2.04204, 2.07345, 2.10487, 2.13628, 2.1677, 2.19911, 2.23053, 2.26195, 2.29336, 2.32478, 2.35619, 2.38761, 2.41903, 2.45044, 2.48186, 2.51327, 2.54469, 2.57611, 2.60752, 2.63894, 2.67035, 2.70177, 2.73319, 2.7646, 2.79602, 2.82743, 2.85885, 2.89027, 2.92168, 2.9531, 2.98451, 3.01593, 3.04734, 3.07876, 3.11018, 3.14159, 3.17301, 3.20442, 3.23584, 3.26726, 3.29867, 3.33009, 3.3615, 3.39292, 3.42434, 3.45575, 3.48717, 3.51858, 3.55, 3.58142, 3.61283, 3.64425, 3.67566, 3.70708, 3.7385, 3.76991, 3.80133, 3.83274, 3.86416, 3.89557, 3.92699, 3.95841, 3.98982, 4.02124, 4.05265, 4.08407, 4.11549, 4.1469, 4.17832, 4.20973, 4.24115, 4.27257, 4.30398, 4.3354, 4.36681, 4.39823, 4.42965, 4.46106, 4.49248, 4.52389, 4.55531, 4.58673, 4.61814, 4.64956, 4.68097, 4.71239, 4.7438, 4.77522, 4.80664, 4.83805, 4.86947, 4.90088, 4.9323, 4.96372, 4.99513, 5.02655, 5.05796, 5.08938, 5.1208, 5.15221, 5.18363, 5.21504, 5.24646, 5.27788, 5.30929, 5.34071, 5.37212, 5.40354, 5.43496, 5.46637, 5.49779, 5.5292, 5.56062, 5.59203, 5.62345, 5.65487, 5.68628, 5.7177, 5.74911, 5.78053, 5.81195, 5.84336, 5.87478, 5.90619, 5.93761, 5.96903, 6.00044, 6.03186, 6.06327, 6.09469, 6.12611, 6.15752, 6.18894, 6.22035, 6.25177, 6.28319]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 1379
+metadata/action_tag = 0
+
+[node name="Panel_2" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_2"
+metadata/cocos_tag = 287
+metadata/action_tag = 1159572480
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="desktop7_2" type="TextureRect" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 68.4723
+offset_top = -64.0001
+offset_right = 1013.4723
+offset_bottom = 1983.9999
+pivot_offset = Vector2(472.5, 1024.0)
+scale = Vector2(1.145, 1.245)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "desktop7_2"
+metadata/cocos_tag = 367
+metadata/action_tag = 1476100052
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_top" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top"
+metadata/cocos_tag = 26
+metadata/action_tag = 1716646674
+
+[node name="Image_3" type="TextureRect" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0024
+offset_top = 960.0
+offset_right = 1079.9976
+offset_bottom = 2246.4
+pivot_offset = Vector2(540.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 1128
+metadata/action_tag = -1520696635
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_3_0" type="TextureRect" parent="Panel_top/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0007
+offset_top = -0.1287
+offset_right = 1079.9993
+offset_bottom = 1199.8253
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3_0"
+metadata/cocos_tag = 1129
+metadata/action_tag = -1857325330
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="scene9_0_1" type="TextureRect" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -2.48
+offset_top = 40.9399
+offset_right = 47.52
+offset_bottom = 140.9399
+pivot_offset = Vector2(50.0, 50.0)
+scale = Vector2(15.0, 15.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.24706)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "scene9_0_1"
+metadata/cocos_tag = 368
+metadata/action_tag = 1764292245
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="scene9_0_1_0" type="TextureRect" parent="Panel_top/scene9_0_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 50.0
+offset_top = 0.0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(0.0, 50.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "scene9_0_1_0"
+metadata/cocos_tag = 369
+metadata/action_tag = 1131587049
+scale = Vector2(-1, 1)
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

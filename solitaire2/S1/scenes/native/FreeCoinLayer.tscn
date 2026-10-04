@@ -1,0 +1,194 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/master/img/img_kuan_1.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_free.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_close.png" id="3"]
+[ext_resource type="Font" path="res://assets/master/chinese.tres" id="4"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_coins.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/master/img/img_btn_bg4.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/master/img/Videoplayer.png" id="7"]
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 576.000000
+offset_bottom = 1024.000000
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+
+[node name="panel_freecoin" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.000000
+offset_top = -0.947900
+offset_right = 576.000000
+offset_bottom = 1023.052100
+pivot_offset = Vector2(0.000000, 1024.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+color = Color(0.000000, 0.000000, 0.000000, 0.800000)
+
+[node name="img_freecoin" type="NinePatchRect" parent="panel_freecoin"]
+layout_mode = 0
+offset_left = 38.000000
+offset_top = 261.023700
+offset_right = 538.000000
+offset_bottom = 684.890100
+pivot_offset = Vector2(250.000000, 0.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("1")
+patch_margin_left = 60
+patch_margin_right = 60
+patch_margin_top = 50
+patch_margin_bottom = 80
+
+[node name="Image_4" type="TextureRect" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 1074.798300
+offset_top = -176.920800
+offset_right = 1225.798300
+offset_bottom = -139.920800
+pivot_offset = Vector2(75.500000, 18.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="btn_close" type="TextureButton" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 8.550000
+offset_top = 3.932000
+offset_right = 51.550000
+offset_bottom = 46.932000
+pivot_offset = Vector2(21.500000, 21.500000)
+mouse_filter = 0
+scale = Vector2(0.800000, 0.800000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_title" type="Label" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 125.500000
+offset_top = 8.432000
+offset_right = 374.500000
+offset_bottom = 42.432000
+pivot_offset = Vector2(124.500000, 17.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 0.000000, 1.000000)
+text = "需要观看一段视频"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Image_17" type="TextureRect" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 181.500000
+offset_top = 105.579800
+offset_right = 318.500000
+offset_bottom = 210.579800
+pivot_offset = Vector2(68.500000, 52.500000)
+mouse_filter = 2
+scale = Vector2(1.310000, 1.310000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_miaoshu" type="Label" parent="panel_freecoin/img_freecoin/Image_17"]
+layout_mode = 0
+offset_left = -65.000000
+offset_top = 105.050000
+offset_right = 202.000000
+offset_bottom = 128.050000
+pivot_offset = Vector2(133.500000, 11.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+text = "您将获得500金币"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_lingqu" type="TextureButton" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 75.072500
+offset_top = 288.205500
+offset_right = 222.072500
+offset_bottom = 350.205500
+pivot_offset = Vector2(73.500000, 31.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text_lingqu" type="Label" parent="panel_freecoin/img_freecoin/btn_lingqu"]
+layout_mode = 0
+offset_left = 48.500000
+offset_top = 15.500000
+offset_right = 98.500000
+offset_bottom = 46.500000
+pivot_offset = Vector2(25.000000, 15.500000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.000000, 0.000000, 0.000000, 1.000000)
+text = "领取"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_guankan" type="TextureButton" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 282.044600
+offset_top = 276.549000
+offset_right = 431.044600
+offset_bottom = 356.549000
+pivot_offset = Vector2(74.500000, 40.000000)
+mouse_filter = 0
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(1.000000, 1.000000, 1.000000, 1.000000)
+texture_normal = ExtResource("7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text_guankan" type="Label" parent="panel_freecoin/img_freecoin/btn_guankan"]
+layout_mode = 0
+offset_left = 18.500000
+offset_top = 49.768000
+offset_right = 130.500000
+offset_bottom = 77.768000
+pivot_offset = Vector2(56.000000, 14.000000)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.000000, 0.000000, 0.000000, 1.000000)
+text = "领取双倍"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_10" type="Label" parent="panel_freecoin/img_freecoin"]
+layout_mode = 0
+offset_left = 767.806200
+offset_top = 368.582600
+offset_right = 911.806200
+offset_bottom = 389.582600
+pivot_offset = Vector2(76.752000, 8.494500)
+mouse_filter = 2
+scale = Vector2(1.000000, 1.000000)
+self_modulate = Color(0.274510, 0.917647, 0.274510, 1.000000)
+text = "需要观看一段视频"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1

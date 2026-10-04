@@ -1,0 +1,341 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_shadow2.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="3"]
+
+[sub_resource type="Animation" id="Anim_start0"]
+resource_name = "start0"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_11/card_shadow2_213:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-82.0, -120.0), Vector2(-78.08914, -117.65348), Vector2(-74.27458, -115.36475), Vector2(-70.65024, -113.19014), Vector2(-67.30537, -111.18322), Vector2(-64.32233, -109.3934), Vector2(-61.77458, -107.86475), Vector2(-59.72484, -106.6349), Vector2(-58.22359, -105.73415), Vector2(-57.30779, -105.18467), Vector2(-57.0, -105.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_11/card_shadow2_213:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.8, 0.8), Vector2(0.82347, 0.82347), Vector2(0.84635, 0.84635), Vector2(0.8681, 0.8681), Vector2(0.88817, 0.88817), Vector2(0.90607, 0.90607), Vector2(0.92135, 0.92135), Vector2(0.93365, 0.93365), Vector2(0.94266, 0.94266), Vector2(0.94815, 0.94815), Vector2(0.95, 0.95)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_11/card_0_1_0_1/card_tips0_723_0:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.01), Color(1, 1, 1, 0.04), Color(1, 1, 1, 0.09), Color(1, 1, 1, 0.16), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.36), Color(1, 1, 1, 0.49), Color(1, 1, 1, 0.64), Color(1, 1, 1, 0.81), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_11/card_0_1_0_1:position")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-23.0, -23.0), Vector2(-23.0, -25.19008), Vector2(-23.0, -27.32624), Vector2(-23.0, -29.35587), Vector2(-23.0, -31.22899), Vector2(-23.0, -32.89949), Vector2(-23.0, -34.32624), Vector2(-23.0, -35.47409), Vector2(-23.0, -36.31479), Vector2(-23.0, -36.82764), Vector2(-23.0, -37.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_11/card_0_1_0_1:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.00782, 1.00782), Vector2(1.01545, 1.01545), Vector2(1.0227, 1.0227), Vector2(1.02939, 1.02939), Vector2(1.03536, 1.03536), Vector2(1.04045, 1.04045), Vector2(1.04455, 1.04455), Vector2(1.04755, 1.04755), Vector2(1.04938, 1.04938), Vector2(1.05, 1.05)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_11:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node_11_0/card_shadow2_213:position")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-60.0, -109.0), Vector2(-60.0, -109.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node_11_0/card_shadow2_213:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.95, 0.95), Vector2(0.95, 0.95)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node_11_0/card_0_1_0_1/card_tips0_723:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node_11_0/card_0_1_0_1:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-23.0, -37.0), Vector2(-23.0, -37.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node_11_0/card_0_1_0_1:scale")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.05, 1.05), Vector2(1.05, 1.05)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Node_11_0:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.0, 0.0), Vector2(0.0, 0.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Node_11_0:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_start1"]
+resource_name = "start1"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_11/card_shadow2_213:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-57.0, -105.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_11/card_shadow2_213:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.95, 0.95)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_11/card_0_1_0_1/card_tips0_723_0:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_11/card_0_1_0_1:position")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-23.0, -37.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_11/card_0_1_0_1:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.05, 1.05)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_11:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node_11_0/card_shadow2_213:position")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-60.0, -109.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node_11_0/card_shadow2_213:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.95, 0.95)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node_11_0/card_0_1_0_1/card_tips0_723:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node_11_0/card_0_1_0_1:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(-23.0, -37.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node_11_0/card_0_1_0_1:scale")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.05, 1.05)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Node_11_0:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.0, 0.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Node_11_0:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [true]}
+[sub_resource type="Animation" id="Anim_out0"]
+resource_name = "out0"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node_11/card_shadow2_213:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-57.0, -105.0), Vector2(-57.30779, -105.18467), Vector2(-58.22359, -105.73415), Vector2(-59.72484, -106.6349), Vector2(-61.77458, -107.86475), Vector2(-64.32233, -109.3934), Vector2(-67.30537, -111.18322), Vector2(-70.65024, -113.19014), Vector2(-74.27458, -115.36475), Vector2(-78.08914, -117.65348), Vector2(-82.0, -120.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node_11/card_shadow2_213:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.95, 0.95), Vector2(0.94815, 0.94815), Vector2(0.94266, 0.94266), Vector2(0.93365, 0.93365), Vector2(0.92135, 0.92135), Vector2(0.90607, 0.90607), Vector2(0.88817, 0.88817), Vector2(0.8681, 0.8681), Vector2(0.84635, 0.84635), Vector2(0.82347, 0.82347), Vector2(0.8, 0.8)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node_11/card_0_1_0_1/card_tips0_723_0:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node_11/card_0_1_0_1:position")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-23.0, -37.0), Vector2(-23.0, -32.1854), Vector2(-23.0, -28.7344), Vector2(-23.0, -26.3614), Vector2(-23.0, -24.8144), Vector2(-23.0, -23.875), Vector2(-23.0, -23.3584), Vector2(-23.0, -23.1134), Vector2(-23.0, -23.0224), Vector2(-23.0, -23.0014), Vector2(-23.0, -23.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node_11/card_0_1_0_1:scale")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.05, 1.05), Vector2(1.0328, 1.0328), Vector2(1.02048, 1.02048), Vector2(1.01201, 1.01201), Vector2(1.00648, 1.00648), Vector2(1.00313, 1.00313), Vector2(1.00128, 1.00128), Vector2(1.0004, 1.0004), Vector2(1.00008, 1.00008), Vector2(1.00001, 1.00001), Vector2(1.0, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node_11:visible")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node_11_0/card_shadow2_213:position")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-60.0, -109.0), Vector2(-60.0, -109.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node_11_0/card_shadow2_213:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.95, 0.95), Vector2(0.95, 0.95)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node_11_0/card_0_1_0_1/card_tips0_723:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node_11_0/card_0_1_0_1:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-23.0, -37.0), Vector2(-23.0, -37.0)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node_11_0/card_0_1_0_1:scale")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.05, 1.05), Vector2(1.05, 1.05)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Node_11_0:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.0, 0.0), Vector2(0.0, 0.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Node_11_0:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.16667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"start0": SubResource("Anim_start0"),
+"start1": SubResource("Anim_start1"),
+"out0": SubResource("Anim_out0")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 3879
+metadata/action_tag = 0
+
+[node name="Node_11" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11"
+metadata/cocos_tag = 4204
+metadata/action_tag = -1860664424
+
+[node name="card_shadow2_213" type="TextureRect" parent="Node_11"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -82.0
+offset_top = -120.0
+offset_right = 82.0
+offset_bottom = 120.0
+pivot_offset = Vector2(82.0, 120.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_shadow2_213"
+metadata/cocos_tag = 4202
+metadata/action_tag = -1414498597
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_0_1_0_1" type="TextureRect" parent="Node_11"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_0_1_0_1"
+metadata/cocos_tag = 3880
+metadata/action_tag = 1006527234
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_tips0_723_0" type="TextureRect" parent="Node_11/card_0_1_0_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 46.0
+offset_bottom = 46.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_tips0_723_0"
+metadata/cocos_tag = 5016
+metadata/action_tag = 2066827121
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_11_0" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_11_0"
+metadata/cocos_tag = 4779
+metadata/action_tag = -888721711
+
+[node name="card_shadow2_213" type="TextureRect" parent="Node_11_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -60.0
+offset_top = -109.0
+offset_right = 104.0
+offset_bottom = 131.0
+pivot_offset = Vector2(82.0, 120.0)
+scale = Vector2(0.95, 0.95)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_shadow2_213"
+metadata/cocos_tag = 4780
+metadata/action_tag = 189668924
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_0_1_0_1" type="TextureRect" parent="Node_11_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -23.0
+offset_top = -37.0
+offset_right = 23.0
+offset_bottom = 9.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.05, 1.05)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_0_1_0_1"
+metadata/cocos_tag = 4781
+metadata/action_tag = 11304216
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_tips0_723" type="TextureRect" parent="Node_11_0/card_0_1_0_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 46.0
+offset_bottom = 46.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_tips0_723"
+metadata/cocos_tag = 4942
+metadata/action_tag = -1228507543
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1
