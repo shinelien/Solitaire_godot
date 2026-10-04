@@ -89,6 +89,16 @@ func buy_skin(kind: String, index: int) -> Dictionary:
 	save()
 	return {"ok": true}
 
+func buy_magic() -> Dictionary:
+	if magic >= 50:
+		return {"ok": false, "reason": "魔法棒已达到 50 根上限"}
+	if coins < 70:
+		return {"ok": false, "reason": "金币不足"}
+	coins -= 70
+	magic += 1
+	save()
+	return {"ok": true}
+
 func sign_day(today := "") -> int:
 	if today.is_empty():
 		today = Time.get_date_string_from_system()
@@ -114,7 +124,7 @@ func claim_sign(today := "") -> Dictionary:
 	var gold: int = [14, 20, 28, 0, 50, 70, 0][day - 1]
 	var wands: int = [0, 1, 1, 1, 1, 2, 2][day - 1]
 	coins += gold
-	magic += wands
+	magic = mini(50, magic + wands)
 	if day in [3, 7] and fish_type not in sign_data.fish_claimed:
 		tanks[current_tank].append({"type": fish_type, "hp": 60, "death_at": 0})
 		sign_data.fish_claimed.append(fish_type)

@@ -70,6 +70,7 @@ func _ready() -> void:
 	ads.reward_earned.connect(func(placement: String, receipt: String): profile.award_reward(placement, receipt))
 	audio = AudioStreamPlayer.new()
 	add_child(audio)
+	play_music()
 	toast = Label.new()
 	toast.z_index = 4090
 	toast.position = Vector2(140, 980)
@@ -128,7 +129,7 @@ func layout_screen() -> void:
 func _process(delta: float) -> void:
 	if game_visible and dialogs.is_empty() and not focus_paused and not finished and not dealing and session.state != null:
 		session.elapsed += delta
-		if session.objective().lost:
+		if not busy and session.objective().lost:
 			finish(false)
 	update_hud()
 
@@ -319,6 +320,8 @@ func action(name: String, button: Node) -> void:
 				board.hint(hints[0], session.state)
 			else:
 				message("暂无可移动的牌")
+		"Button_Shuffle", "Button_Shuffle111":
+			use_magic()
 		"Button_setting", "Button_Set":
 			var settings := open_dialog("UI_set", "Start")
 			hide_node(settings, "Node_update")
@@ -402,6 +405,80 @@ func refresh_board() -> void:
 		finish(true)
 	elif result.lost:
 		finish(false)
+
+func use_magic() -> void:
+	if busy or finished or not game_visible or not dialogs.is_empty() or session.state == null:
+		return
+	if profile.magic <= 0:
+		magic_shop()
+		return
+	var plan := session.magic_plan()
+	if plan.is_empty():
+		message("当前没有适合魔法棒移动的牌")
+		return
+	cancel_pointer()
+	board.clear_hint()
+	busy = true
+	var token := generation
+	var effect := load("res://scenes/invincible/ui/Animation/Magic.tscn").instantiate() as InvincibleScene
+	effect.name = "MagicEffect"
+	effect.position = board.cards[plan.card_id].position + Vector2(-148, -110)
+	effect.z_index = 2200
+	add_child(effect)
+	effect.frame_event.connect(func(_target: NodePath, event: String):
+		if event == "magic" and token == generation and not effect.has_meta("applied"):
+			effect.set_meta("applied", true)
+			apply_magic_event(plan, token))
+	(effect.get_node("AnimationPlayer") as AnimationPlayer).animation_finished.connect(func(_clip): effect.queue_free(), CONNECT_ONE_SHOT)
+	effect.play_clip("Start0")
+	play_effect("Magic0")
+
+func apply_magic_event(plan: Dictionary, token: int) -> void:
+	if profile.magic <= 0 or not session.apply_magic(plan):
+		busy = false
+		message("当前没有适合魔法棒移动的牌")
+		return
+	profile.magic -= 1
+	profile.statistics.magic_used = int(profile.statistics.get("magic_used", 0)) + 1
+	profile.save()
+	var duration := board.magic_transfer(session.state, int(plan.card_id))
+	await get_tree().create_timer(duration).timeout
+	if token != generation:
+		return
+	board.settle_layers()
+	busy = false
+	var result := session.objective()
+	if result.won:
+		finish(true)
+	elif result.lost:
+		finish(false)
+
+func magic_shop(after_purchase: Callable = Callable()) -> void:
+	var view := open_dialog("AD_magic", "loop")
+	text(view, "Text_title", "获得魔法棒")
+	text(view, "Text_miaoshu", "获得 1 根魔法棒")
+	text(view, "text_1000", "70")
+	text(view, "text_guankan", "领取")
+	text(view, "text_guankan0", "免费领取")
+	text(view, "Text_xianZhi", "%d/50" % profile.magic)
+	# The source shows one video entry alongside the coin purchase.
+	hide_node(view, "btn_guankan")
+	var buy := view.find_child("btn_1000gold", true, false) as TextureButton
+	buy.disabled = profile.coins < 70 or profile.magic >= 50
+	buy.set_meta("local_action", func():
+		var result := profile.buy_magic()
+		if not result.ok:
+			message(str(result.reason))
+			return
+		close_dialog()
+		if after_purchase.is_valid():
+			after_purchase.call()
+		message("已获得 1 根魔法棒"))
+	for name in ["btn_guankan", "btn_guankan0"]:
+		var button := view.find_child(name, true, false) as TextureButton
+		button.set_meta("local_action", func():
+			ads.request_rewarded("magic")
+			message("广告尚未接入，暂时无法领取"))
 
 func commit(move: Move) -> void:
 	if move == null:

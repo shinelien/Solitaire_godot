@@ -87,14 +87,25 @@ func claim() -> void:
 		draw_rewards()
 
 func draw_rewards() -> void:
-	var view := game.open_dialog("2020Draw", "Start1")
-	game.hide_node(view, "Panel_Again")
 	var draws: Array = game.profile.sign_data.draws
-	var first := maxi(0, draws.size() - 3)
+	var first := -1
+	for index in draws.size():
+		if not bool(draws[index].opened):
+			first = index / 3 * 3
+			break
+	if first < 0:
+		return
+	var indices := [first, first + 1, first + 2]
+	var view := game.open_dialog("2020Draw", "Start1")
+	view.set_meta("draw_indices", indices)
+	view.set_meta("revealing", 0)
+	game.hide_node(view, "Panel_Again")
 	var completed := view.find_child("Button_get", true, false) as TextureButton
 	completed.set_meta("local_action", func():
-		if draws.all(func(item: Dictionary): return bool(item.opened)):
-			game.close_dialog())
+		if draws_finished(view):
+			game.close_dialog()
+			if draws.any(func(item: Dictionary): return not bool(item.opened)):
+				call_deferred("draw_rewards"))
 	var open_all := view.find_child("Button_open", true, false) as TextureButton
 	game.text(view, "Text_open", "全部翻开")
 	game.text(view, "Text_13", "完成")
@@ -120,7 +131,19 @@ func draw_rewards() -> void:
 		for offset in 3:
 			var id: int = [4, 1, 5][offset]
 			reveal_draw(view, view.find_child("FileNode_%d" % id, true, false), first + offset))
-	completed.disabled = not draws.all(func(item: Dictionary): return bool(item.opened))
+	update_draw_buttons(view)
+
+func draws_finished(view: InvincibleScene) -> bool:
+	var indices: Array = view.get_meta("draw_indices")
+	return int(view.get_meta("revealing")) == 0 and indices.all(func(index: int): return bool(game.profile.sign_data.draws[index].opened))
+
+func update_draw_buttons(view: InvincibleScene) -> void:
+	var completed := view.find_child("Button_get", true, false) as TextureButton
+	completed.disabled = not draws_finished(view)
+	var indices: Array = view.get_meta("draw_indices")
+	if indices.all(func(index: int): return bool(game.profile.sign_data.draws[index].opened)):
+		game.hide_node(view, "Button_open")
+		completed.show()
 
 func reveal_draw(view: InvincibleScene, item: InvincibleScene, index: int, award := true) -> void:
 	if award and bool(game.profile.sign_data.draws[index].opened):
@@ -128,10 +151,20 @@ func reveal_draw(view: InvincibleScene, item: InvincibleScene, index: int, award
 	if award:
 		game.profile.open_sign_draw(index)
 		game.play_effect("Get_coin")
-	item.play_clip("Start1" if int(game.profile.sign_data.draws[index].coins) >= 30 else "Start")
+	var large := int(game.profile.sign_data.draws[index].coins) >= 30
+	var duration := item.play_clip("Start1" if large else "Start")
 	var panel := item.get_node("card_bg_0_1/Panel_69") as Control
-	(panel.get_node("Gold0") as CanvasItem).show()
+	(panel.get_node("Gold1" if large else "Gold0") as CanvasItem).show()
 	(panel.get_node("BitmapFontLabel_num") as CanvasItem).show()
 	game.text(panel, "BitmapFontLabel_num", "+%d" % int(game.profile.sign_data.draws[index].coins))
-	(view.find_child("Button_get", true, false) as TextureButton).show()
-	(view.find_child("Button_get", true, false) as TextureButton).disabled = not game.profile.sign_data.draws.all(func(reward: Dictionary): return bool(reward.opened))
+	var player := item.get_node("AnimationPlayer") as AnimationPlayer
+	if award and duration > 0:
+		view.set_meta("revealing", int(view.get_meta("revealing")) + 1)
+		player.animation_finished.connect(func(_clip):
+			if is_instance_valid(view):
+				view.set_meta("revealing", int(view.get_meta("revealing")) - 1)
+				update_draw_buttons(view), CONNECT_ONE_SHOT)
+	else:
+		player.seek(duration, true)
+		player.stop(true)
+	update_draw_buttons(view)

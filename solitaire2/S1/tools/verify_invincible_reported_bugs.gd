@@ -97,7 +97,47 @@ func verify_overlap() -> void:
 	game.board.show()
 	await process_frame
 
+func verify_magic() -> void:
+	print("VERIFY in-game magic")
+	var previous := game.session.state.clone()
+	var wand := button(game.game_ui, "Button_Shuffle")
+	await click(wand)
+	check(game.busy and game.get_node_or_null("MagicEffect") != null, "wand click starts original magic effect")
+	check(game.profile.magic == 3 and game.session.state.content_equals(previous), "inventory and card state wait for native magic event")
+	await snapshot("22-magic-windup")
+	await click(wand)
+	check(game.profile.magic == 2 and game.session.magic_used == 1, "repeated click consumes only one wand")
+	check(game.session.state.move_count == previous.move_count + 1, "magic records one move")
+	check(game.session.history.is_empty(), "magic clears undo history")
+	await create_timer(.5).timeout
+	await snapshot("23-magic-transfer")
+	await create_timer(2).timeout
+	check(not game.busy and game.get_node_or_null("MagicEffect") == null, "native magic effect and transfer finish")
+	check(game.session.state.total_card_count() == 52, "magic preserves all cards")
+	for id in game.board.layout:
+		check(game.board.cards[id].position.distance_to(game.board.layout[id].pos) < 1, "magic settles every card position")
+	check((button(game.game_ui, "Text_ShuffleNum_0") as Label).text == "2", "wand count updates in game HUD")
+	var restored := InvincibleProfile.new("user://invincible_reported_bugs.cfg")
+	check(restored.magic == 2 and restored.statistics.magic_used == 1, "wand consumption survives restart")
+	await snapshot("24-magic-result")
+	game.profile.magic = 0
+	game.profile.coins = 70
+	game.profile.save()
+	previous = game.session.state.clone()
+	await click(wand)
+	check(game.dialogs.size() == 1, "empty inventory opens original magic shop from the game")
+	var shop: InvincibleScene = game.dialogs.back()
+	await click(button(shop, "btn_guankan0"))
+	check(game.profile.magic == 0 and game.profile.coins == 70, "unavailable ad cannot award a wand")
+	await click(button(shop, "btn_1000gold"))
+	check(game.profile.magic == 1 and game.profile.coins == 0 and game.dialogs.is_empty(), "game shop charges 70 and returns to game")
+	check(game.session.state.content_equals(previous), "buying a wand does not change the current deal")
+
 func run() -> void:
+	create_timer(90).timeout.connect(func():
+		check(false, "graphical verification timed out")
+		print(JSON.stringify({"checks": checks, "failures": failures}))
+		quit(1))
 	var test_path := "user://invincible_reported_bugs.cfg"
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(test_path))
 	game = load("res://scenes/invincible_main.tscn").instantiate()
@@ -116,11 +156,14 @@ func run() -> void:
 	render_view.notify_mouse_entered()
 	render_view.add_child(game)
 	await create_timer(3.3).timeout
+	await verify_magic()
+	print("VERIFY card overlap")
 	await verify_overlap()
 	for card: InvincibleCard in game.board.cards.values():
 		for slot: Polygon2D in card.spine.slots.values():
 			check(slot.z_index == 0, "Spine slot remains in card layer")
 	await click(button(game.game_ui, "Button_pause"))
+	print("VERIFY pause and calendar")
 	check(game.dialogs.size() == 1, "pause opens by pointer")
 	if game.dialogs.is_empty():
 		finish(preview)
@@ -148,6 +191,7 @@ func run() -> void:
 	game.profile.level = 5
 	game.profile.save()
 	await click(button(game.lobby, "Button_Mybag"))
+	print("VERIFY wardrobe")
 	check(game.dialogs.size() == 1, "palette opens original wardrobe")
 	var bag: InvincibleScene = game.dialogs.back()
 	await snapshot("15-wardrobe-backs")
@@ -178,6 +222,7 @@ func run() -> void:
 	check(game.profile.magic == magic_before + 1 and game.profile.coins == 80, "magic purchase costs original 70 coins")
 	await click(button(bag, "Button_close"))
 	await click(button(game.lobby, "Button_Sign"))
+	print("VERIFY sign-in")
 	check(game.dialogs.size() == 1, "gift opens original seven-day sign-in")
 	var sign: InvincibleScene = game.dialogs.back()
 	await snapshot("18-sign-in")
@@ -197,16 +242,38 @@ func run() -> void:
 	await click(button(sign, "Button_get"))
 	check(game.dialogs.size() == 2 and game.profile.sign_data.draws.size() == 3, "day four opens original three-card treasure reward")
 	var draw: InvincibleScene = game.dialogs.back()
-	await create_timer(1).timeout
-	var open_debug := button(draw, "Button_open") as TextureButton
-	print("DRAW_BUTTON ", open_debug.is_visible_in_tree(), " ", open_debug.get_global_rect(), " disabled=", open_debug.disabled)
-	open_debug.pressed.connect(func(): print("DRAW_BUTTON_PRESSED"))
+	print("VERIFY treasure entrance")
+	var draw_animation := draw.get_node("AnimationPlayer") as AnimationPlayer
+	if draw_animation.is_playing():
+		await draw_animation.animation_finished
 	await click(button(draw, "Button_open"))
-	print("DRAW_HOVER ", render_view.gui_get_hovered_control())
+	print("VERIFY treasure opened")
 	await create_timer(.8).timeout
 	check(game.profile.sign_data.draws.all(func(item: Dictionary): return bool(item.opened)), "treasure reveals every reward through pointer input")
+	check((button(draw, "Button_get") as TextureButton).disabled, "treasure completion waits for the original reveal animation")
+	await create_timer(3).timeout
 	await snapshot("21-sign-treasure")
+	check(not (button(draw, "Button_get") as TextureButton).disabled, "treasure completion enables after the reveal animations")
 	await click(button(draw, "Button_get"))
+	await click(button(sign, "Button_close"))
+	# Resume the oldest unfinished batch before a later day's rewards.
+	game.profile.sign_data.draws = [{"coins": 30, "opened": true}, {"coins": 2, "opened": false}, {"coins": 6, "opened": true}, {"coins": 100, "opened": false}, {"coins": 3, "opened": false}, {"coins": 7, "opened": false}]
+	game.profile.save()
+	game.profile.sign_data = InvincibleProfile.new(test_path).sign_data
+	before = game.profile.coins
+	await click(button(game.lobby, "Button_Sign"))
+	sign = game.dialogs.front()
+	for batch in 2:
+		draw = game.dialogs.back()
+		check(draw.get_meta("draw_indices") == [batch * 3, batch * 3 + 1, batch * 3 + 2], "pending treasure resumes oldest unfinished batch")
+		draw_animation = draw.get_node("AnimationPlayer")
+		if draw_animation.is_playing():
+			await draw_animation.animation_finished
+		await click(button(draw, "Button_open"))
+		await create_timer(3.5).timeout
+		await click(button(draw, "Button_get"))
+	check(game.profile.coins == before + 112, "resumed treasures award only unopened rewards once")
+	check(game.dialogs.size() == 1, "every pending treasure can finish and return to sign-in")
 	await click(button(sign, "Button_close"))
 	game.profile.tanks[0][0].hp = 20
 	await click(button(game.lobby, "Button_weishi"))

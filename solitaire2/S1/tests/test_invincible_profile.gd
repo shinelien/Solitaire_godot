@@ -77,3 +77,22 @@ func test_unowned_face_is_not_applied_to_individual_cards() -> void:
 	assert_eq(player.face_count(2), 1)
 	player.face_choices["10"] = 0
 	assert_eq(player.card_style(10), 0)
+
+func test_magic_purchase_respects_inventory_cap_and_survives_restart() -> void:
+	var player := fresh("magic")
+	player.coins = 140
+	player.magic = 49
+	assert_true(player.buy_magic().ok)
+	assert_eq(player.coins, 70)
+	assert_eq(player.magic, 50)
+	var restored := InvincibleProfile.new(player.path)
+	assert_eq(restored.magic, 50)
+	assert_false(restored.buy_magic().ok)
+	assert_eq(restored.coins, 70)
+	restored.magic = 49
+	assert_true(restored.buy_magic().ok)
+	assert_eq(restored.magic, 50)
+	assert_eq(restored.coins, 0)
+	restored.magic = 49
+	assert_false(restored.buy_magic().ok)
+	assert_eq(restored.magic, 49)

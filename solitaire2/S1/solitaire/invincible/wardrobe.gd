@@ -65,7 +65,7 @@ func back_item(item: InvincibleScene, index: int) -> void:
 	var owned: bool = index in game.profile.skin_owned.back
 	var unlocked := game.profile.level >= int(shop.CardBg[index].unlock)
 	show_node(item, "Button_buy", not owned)
-	show_node(item, "Button_card_bg", owned)
+	show_node(item, "Button_card_bg", owned and int(game.profile.settings.back) != index)
 	show_node(item, "Sprite_used_bg", int(game.profile.settings.back) == index)
 	show_node(item, "ui_Lock0_Changjing", not unlocked)
 	show_node(item, "Text_buy", not unlocked)
@@ -176,29 +176,4 @@ func music_item(item: InvincibleScene, index: int) -> void:
 		game.play_music())
 
 func magic_shop() -> void:
-	var view := game.open_dialog("AD_magic", "loop")
-	game.text(view, "Text_title", "获得魔法棒")
-	game.text(view, "Text_miaoshu", "获得 1 根魔法棒")
-	game.text(view, "text_1000", "70")
-	game.text(view, "text_guankan", "领取")
-	game.text(view, "text_guankan0", "免费领取")
-	game.text(view, "Text_xianZhi", "%d/50" % int(game.profile.statistics.get("magic_purchases", 0)))
-	var buy := view.find_child("btn_1000gold", true, false) as TextureButton
-	if buy != null:
-		buy.disabled = game.profile.coins < 70 or int(game.profile.statistics.get("magic_purchases", 0)) >= 50
-		buy.set_meta("local_action", func():
-			if game.profile.coins < 70 or int(game.profile.statistics.get("magic_purchases", 0)) >= 50:
-				return
-			game.profile.coins -= 70
-			game.profile.magic += 1
-			game.profile.statistics.magic_purchases = int(game.profile.statistics.get("magic_purchases", 0)) + 1
-			game.profile.save()
-			game.close_dialog()
-			show_tab("magic")
-			game.message("已获得 1 根魔法棒"))
-	for name in ["btn_guankan", "btn_guankan0"]:
-		var button := view.find_child(name, true, false) as TextureButton
-		if button != null:
-			button.set_meta("local_action", func():
-				game.ads.request_rewarded("magic")
-				game.message("广告尚未接入，暂时无法领取"))
+	game.magic_shop(func(): show_tab("magic"))

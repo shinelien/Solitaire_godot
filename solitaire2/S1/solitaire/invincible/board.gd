@@ -127,6 +127,35 @@ func settle_layers() -> void:
 	for id in layout:
 		cards[id].z_index = layout[id].z
 
+func magic_transfer(state: GameState, card_id: int) -> float:
+	clear_hint()
+	var next := build_layout(state)
+	var card: InvincibleCard = cards[card_id]
+	var target: Vector2 = next[card_id].pos
+	card.source = next[card_id].source
+	card.face_up = true
+	card.z_index = 1100
+	var spine_time := card.spine.play("Magic")
+	if card.motion != null and card.motion.is_valid():
+		card.motion.kill()
+	card.motion = card.create_tween()
+	# CardSprite::moveShowWiat: .4 delay, .27 to center, 1.25 hold, .26 to target.
+	card.motion.tween_interval(.4)
+	card.motion.tween_property(card, "position", Vector2(540, 960), .27)
+	card.motion.tween_callback(func():
+		for id in next:
+			if id == card_id:
+				continue
+			var other: InvincibleCard = cards[id]
+			other.source = next[id].source
+			other.z_index = next[id].z
+			other.travel(next[id].pos, .2)
+			other.show_face(next[id].face, true))
+	card.motion.tween_interval(1.25)
+	card.motion.tween_property(card, "position", target, .26)
+	layout = next
+	return maxf(2.18, spine_time)
+
 func deal(state: GameState) -> void:
 	layout = build_layout(state)
 	var number := 0
