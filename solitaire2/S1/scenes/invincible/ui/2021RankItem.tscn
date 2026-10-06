@@ -1,15 +1,49 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_ui/fish_ui_shop1.png" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/JiangBei_102.png" id="3"]
+
+
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="4"]
 [ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="5"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="7"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="8"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="9"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre2.png" id="10"]
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/jiangbei.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1037, 1711, 296, 276)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(269, 273, 240, 270)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(658, 927, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(949, 1587, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1222, 1587, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_default"]
 resource_name = "default"
@@ -62,7 +96,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_33"
 metadata/cocos_tag = 755
 metadata/action_tag = -2126647827
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 patch_margin_left = 98
 patch_margin_right = 98
 patch_margin_top = 33
@@ -83,7 +117,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_JiangBei"
 metadata/cocos_tag = 5377
 metadata/action_tag = -1598280780
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -194,9 +228,9 @@ metadata/cocos_tag = 738
 metadata/action_tag = -1656500145
 script = ExtResource("7")
 scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
-texture_normal = ExtResource("8")
-texture_pressed = ExtResource("9")
-texture_disabled = ExtResource("10")
+texture_normal = SubResource("atlas_sprite_8")
+texture_pressed = SubResource("atlas_sprite_9")
+texture_disabled = SubResource("atlas_sprite_10")
 ignore_texture_size = true
 stretch_mode = 0
 

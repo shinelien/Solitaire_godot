@@ -137,3 +137,6 @@ if __name__=='__main__':
     manifest={'master_commit':subprocess.check_output(['git','-C',str(SOURCE),'rev-parse','HEAD']).decode().strip(),'spine_commit':SPINE_COMMIT,'scenes':counts,'files':{str(p.relative_to(OUT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.rglob('*')) if p.is_file() and not p.name.endswith('.import')}}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
     print('Imported master scenes:',counts)
+
+    from use_master_atlases import main as use_atlases
+    use_atlases()

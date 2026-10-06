@@ -1,9 +1,17 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/invincible/img/BeiJing2.jpg" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_bgshadow.png" id="3"]
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/scene7_0.tscn" id="4"]
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1744, 969, 162, 150)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_loop"]
 resource_name = "loop"
@@ -75,7 +83,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_3"
 metadata/cocos_tag = 187
 metadata/action_tag = -978378331
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -94,7 +102,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_3_0"
 metadata/cocos_tag = 188
 metadata/action_tag = -759340050
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 

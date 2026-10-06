@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_Endlight.png" id="2"]
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(505, 739, 140, 311)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_loop"]
 resource_name = "loop"
@@ -90,7 +98,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_1"
 metadata/cocos_tag = 4606
 metadata/action_tag = 1712725862
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -109,7 +117,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_0_0"
 metadata/cocos_tag = 4607
 metadata/action_tag = 1321194076
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -129,7 +137,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_1_0"
 metadata/cocos_tag = 5294
 metadata/action_tag = -883478345
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -148,7 +156,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_1_0_0"
 metadata/cocos_tag = 5655
 metadata/action_tag = -500318516
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -168,7 +176,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_1_0_0_0"
 metadata/cocos_tag = 5656
 metadata/action_tag = 2037827740
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -203,7 +211,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_0"
 metadata/cocos_tag = 6196
 metadata/action_tag = -2076807252
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -222,7 +230,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_1"
 metadata/cocos_tag = 6197
 metadata/action_tag = 1618289439
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -241,7 +249,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_Endlight_85_0_0_0"
 metadata/cocos_tag = 6198
 metadata/action_tag = 2060662571
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 

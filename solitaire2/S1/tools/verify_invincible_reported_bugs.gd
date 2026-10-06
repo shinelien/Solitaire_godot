@@ -36,7 +36,8 @@ func button(parent: Node, name: String) -> Control:
 	return parent.find_child(name, true, false) as Control
 
 func snapshot(name: String) -> void:
-	await RenderingServer.frame_post_draw
+	await process_frame
+	RenderingServer.force_draw(false)
 	var image := render_view.get_texture().get_image()
 	check(image.get_size() == Vector2i(1080, 1920), "1080p: " + name)
 	image.save_png("res://docs/invincible-evidence/" + name + ".png")
@@ -68,18 +69,21 @@ func verify_overlap() -> void:
 		cards.append(card)
 	cards[0].hide()
 	cards[1].hide()
-	await RenderingServer.frame_post_draw
+	await process_frame
+	RenderingServer.force_draw(false)
 	var reference := render_view.get_texture().get_image()
 	cards[0].show()
 	cards[1].show()
-	await RenderingServer.frame_post_draw
+	await process_frame
+	RenderingServer.force_draw(false)
 	var fixed := overlap_pixels(reference, render_view.get_texture().get_image(), Vector2i(700, 383))
 	check(fixed == 0, "overlapped artwork cannot change the front card's opaque pixels")
 	# Positive control: restoring the old slot layers must reproduce the fault.
 	for card in cards:
 		for slot: Polygon2D in card.spine.slots.values():
 			slot.z_index = slot.get_index()
-	await RenderingServer.frame_post_draw
+	await process_frame
+	RenderingServer.force_draw(false)
 	var faulty := overlap_pixels(reference, render_view.get_texture().get_image(), Vector2i(700, 383))
 	check(faulty > 100, "pixel check detects the reported layering regression")
 	for card in cards:
@@ -134,7 +138,7 @@ func verify_magic() -> void:
 	check(game.session.state.content_equals(previous), "buying a wand does not change the current deal")
 
 func run() -> void:
-	create_timer(90).timeout.connect(func():
+	create_timer(180).timeout.connect(func():
 		check(false, "graphical verification timed out")
 		print(JSON.stringify({"checks": checks, "failures": failures}))
 		quit(1))

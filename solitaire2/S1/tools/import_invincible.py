@@ -258,3 +258,6 @@ if __name__=='__main__':
  assets();counts={str(f.relative_to(S/'cocosstudio')):import_scene(f) for f in sorted((S/'cocosstudio').rglob('*.csd'))}
  manifest={'source_ref':'origin/InvincibleWarrior','source_commit':'12b33cbed','design':[1080,1920],'scenes':counts,'timelines':timeline_report,'missing':sorted(set(missing)),'unsupported':sorted(set(unsupported))}
  (A/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2));print('Scenes',len(counts),'Nodes',sum(x or 0 for x in counts.values()),'clips',len(timeline_report),'missing',len(set(missing)),'unsupported',len(set(unsupported)))
+
+ from use_existing_atlases import main as use_atlases
+ use_atlases()

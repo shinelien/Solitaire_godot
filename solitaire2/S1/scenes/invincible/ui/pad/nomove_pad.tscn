@@ -1,17 +1,57 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre0.png" id="3"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_gre1.png" id="4"]
+
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/btn.tscn" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_btn0.png" id="6"]
+
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="7"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Start_BG.tscn" id="9"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Magic_0.png" id="10"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue0.png" id="11"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn_blue1.png" id="12"]
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(658, 927, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(949, 1587, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(885, 881, 40, 40)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1473, 547, 93, 180)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(167, 646, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(647, 629, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_Start0"]
 resource_name = "Start0"
@@ -96,8 +136,8 @@ metadata/cocos_tag = 681
 metadata/action_tag = -1842803808
 script = ExtResource("2")
 scale9_margins = Vector4(40.0, 40.0, 11.0, 11.0)
-texture_normal = ExtResource("3")
-texture_pressed = ExtResource("4")
+texture_normal = SubResource("atlas_sprite_3")
+texture_pressed = SubResource("atlas_sprite_4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -134,7 +174,7 @@ self_modulate = Color(0.5451, 0.41176, 0.07843, 1.0)
 metadata/cocos_name = "btn1_btn0_1"
 metadata/cocos_tag = 687
 metadata/action_tag = 666386830
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -154,7 +194,7 @@ metadata/cocos_name = "btn1_btn0_1_0"
 metadata/cocos_tag = 688
 metadata/action_tag = -1049696055
 scale = Vector2(-1, 1)
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -221,7 +261,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Navigate17_1_0"
 metadata/cocos_tag = 668
 metadata/action_tag = 1738277685
-texture = ExtResource("10")
+texture = SubResource("atlas_sprite_10")
 expand_mode = 1
 stretch_mode = 0
 
@@ -242,8 +282,8 @@ metadata/cocos_tag = 671
 metadata/action_tag = -1080792577
 script = ExtResource("2")
 scale9_margins = Vector4(40.0, 40.0, 11.0, 11.0)
-texture_normal = ExtResource("11")
-texture_pressed = ExtResource("12")
+texture_normal = SubResource("atlas_sprite_11")
+texture_pressed = SubResource("atlas_sprite_12")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -280,7 +320,7 @@ self_modulate = Color(0.5451, 0.41176, 0.07843, 1.0)
 metadata/cocos_name = "btn1_btn0_1"
 metadata/cocos_tag = 673
 metadata/action_tag = 1131792168
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -300,7 +340,7 @@ metadata/cocos_name = "btn1_btn0_1_0"
 metadata/cocos_tag = 674
 metadata/action_tag = -1230262803
 scale = Vector2(-1, 1)
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 

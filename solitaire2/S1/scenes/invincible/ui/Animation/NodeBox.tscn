@@ -1,13 +1,52 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=17 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_0.png" id="2"]
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Start_BG.tscn" id="3"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_1.png" id="4"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_2.png" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_3.png" id="6"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_4.png" id="7"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Box4_5.png" id="8"]
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/513dd97971e9_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/Gamebox.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1232, 861, 226, 178)
+margin = Rect2(0, 36, 36, 36)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(255, 402, 226, 192)
+margin = Rect2(0, 22, 36, 22)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(363, 1330, 236, 212)
+margin = Rect2(0, 2, 26, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1114, 453, 258, 214)
+margin = Rect2(0, 0, 4, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(598, 987, 262, 214)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1, 792, 262, 212)
+margin = Rect2(0, 2, 0, 2)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_Start0"]
 resource_name = "Start0"
@@ -31,7 +70,7 @@ tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.0666
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite_Box:texture")
 tracks/4/interp = 0
-tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.83333, 0.88333, 0.93333, 0.98333, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8")]}
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.83333, 0.88333, 0.93333, 0.98333, 1.03333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_4"), SubResource("atlas_sprite_5"), SubResource("atlas_sprite_6"), SubResource("atlas_sprite_7"), SubResource("atlas_sprite_8")]}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite_Box:modulate")
 tracks/5/interp = 1
@@ -65,7 +104,7 @@ tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.0666
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite_Box:texture")
 tracks/4/interp = 0
-tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("2")]}
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite_Box:modulate")
 tracks/5/interp = 1
@@ -96,7 +135,7 @@ tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.1), "transitions": PackedFlo
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite_Box:texture")
 tracks/4/interp = 0
-tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.1), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("4"), ExtResource("5")]}
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.1), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_4"), SubResource("atlas_sprite_5")]}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite_Box:modulate")
 tracks/5/interp = 1
@@ -127,7 +166,7 @@ tracks/3/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": Packe
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite_Box:texture")
 tracks/4/interp = 0
-tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("5"), ExtResource("5")]}
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.71667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_5"), SubResource("atlas_sprite_5")]}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite_Box:modulate")
 tracks/5/interp = 1
@@ -161,7 +200,7 @@ tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.0666
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite_Box:texture")
 tracks/4/interp = 0
-tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("2"), ExtResource("2")]}
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 1.9), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite_Box:modulate")
 tracks/5/interp = 1
@@ -206,7 +245,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_Box"
 metadata/cocos_tag = 504
 metadata/action_tag = -92749041
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 

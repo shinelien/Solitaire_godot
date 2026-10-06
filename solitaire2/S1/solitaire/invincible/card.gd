@@ -29,16 +29,16 @@ func configure(id: int, face: int, back: int) -> void:
 	_update_skin()
 
 func _update_skin() -> void:
-	var prefix := "res://assets/invincible/frames/"
-	spine.overrides.card_bg_1 = load(prefix + ("card_fronts.png" if shown_face else "card_bg_%d.png" % back_skin))
+	var prefix := ""
+	spine.overrides.card_bg_1 = InvincibleAtlas.texture(prefix + ("card_fronts.png" if shown_face else "card_bg_%d.png" % back_skin))
 	var suit := card_id / 13
 	var rank := card_id % 13 + 1
 	var style := 0 if face_skin == 0 else face_skin + 1
 	if rank <= 10 and style == 3:
 		style = 0
 	var image := "card_%d_%s%s.png" % [style, char(65 + suit), str(rank) if rank > 10 else ""]
-	spine.overrides.poker0 = load(prefix + image)
-	spine.overrides.poker2 = load(prefix + "card_0%d.png" % rank)
+	spine.overrides.poker0 = InvincibleAtlas.texture(prefix + image)
+	spine.overrides.poker2 = InvincibleAtlas.texture(prefix + "card_0%d.png" % rank)
 	spine.overrides.poker3 = spine.overrides.poker2
 	spine.hidden_slots.poker0 = not shown_face
 	spine.hidden_slots.poker2 = not shown_face or suit % 2 != 0

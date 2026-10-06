@@ -1,7 +1,15 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Human/gif/A_0_0.png" id="2"]
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1716, 240, 19, 30)
+margin = Rect2(0, 0, 2, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_Npc_up"]
 resource_name = "Npc_up"
@@ -48,7 +56,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_1"
 metadata/cocos_tag = 244
 metadata/action_tag = 1320354971
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 

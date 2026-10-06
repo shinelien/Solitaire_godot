@@ -1,34 +1,175 @@
-[gd_scene load_steps=38 format=3]
+[gd_scene load_steps=40 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_guan0.png" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi1.png" id="3"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi2.png" id="4"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi3.png" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_guan4.png" id="6"]
+
+
+
+
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/upgrade.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Crown1.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="9"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao0.png" id="10"]
+
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="11"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="12"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao1.png" id="13"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao2.png" id="14"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao3.png" id="15"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao4.png" id="16"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao5.png" id="17"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao6.png" id="18"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao7.png" id="19"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao8.png" id="20"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao9.png" id="21"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao10.png" id="22"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao11.png" id="23"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao12.png" id="24"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao13.png" id="25"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao14.png" id="26"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao15.png" id="27"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao16.png" id="28"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/flash/wenhao17.png" id="29"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(404, 802, 252, 209)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(920, 629, 47, 56)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1533, 419, 23, 42)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1791, 1833, 27, 39)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1633, 1727, 300, 260)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1846, 1523, 42, 75)
+margin = Rect2(13, 2, 34, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_13"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1861, 448, 42, 73)
+margin = Rect2(13, 3, 34, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1803, 1683, 42, 73)
+margin = Rect2(13, 3, 34, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1704, 887, 38, 73)
+margin = Rect2(16, 3, 38, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1915, 1682, 26, 73)
+margin = Rect2(21, 3, 50, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_17"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(848, 1949, 18, 73)
+margin = Rect2(25, 3, 58, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_18"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1176, 691, 28, 73)
+margin = Rect2(19, 3, 48, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_19"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1745, 400, 34, 73)
+margin = Rect2(17, 3, 42, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_20"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1803, 1758, 42, 73)
+margin = Rect2(13, 3, 34, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_21"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1590, 1745, 42, 73)
+margin = Rect2(13, 3, 34, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_22"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1431, 1521, 42, 75)
+margin = Rect2(13, 2, 34, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_23"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1786, 706, 34, 75)
+margin = Rect2(17, 2, 42, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_24"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1643, 1677, 26, 75)
+margin = Rect2(21, 2, 50, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_25"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1214, 830, 16, 75)
+margin = Rect2(26, 2, 60, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_26"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1888, 616, 18, 75)
+margin = Rect2(25, 2, 58, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_27"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1412, 44, 28, 75)
+margin = Rect2(19, 2, 48, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_28"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1749, 475, 34, 75)
+margin = Rect2(17, 2, 42, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_29"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1804, 1606, 40, 75)
+margin = Rect2(14, 2, 36, 4)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_loop"]
 resource_name = "loop"
@@ -108,7 +249,7 @@ tracks/17/keys = {"times": PackedFloat32Array(0.0, 7.5), "transitions": PackedFl
 tracks/18/type = "value"
 tracks/18/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/18/interp = 0
-tracks/18/keys = {"times": PackedFloat32Array(0.0, 7.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("10")]}
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 7.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_start"]
 resource_name = "start"
 length = 8.25
@@ -190,7 +331,7 @@ tracks/18/keys = {"times": PackedFloat32Array(0.0, 8.25), "transitions": PackedF
 tracks/19/type = "value"
 tracks/19/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/19/interp = 0
-tracks/19/keys = {"times": PackedFloat32Array(0.0, 8.25), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("10")]}
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 8.25), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_start1"]
 resource_name = "start1"
 length = 5.58333
@@ -272,7 +413,7 @@ tracks/18/keys = {"times": PackedFloat32Array(0.0, 5.58333), "transitions": Pack
 tracks/19/type = "value"
 tracks/19/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/19/interp = 0
-tracks/19/keys = {"times": PackedFloat32Array(0.0, 5.58333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("10")]}
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 5.58333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_idle"]
 resource_name = "idle"
 length = 0.001
@@ -351,7 +492,7 @@ tracks/17/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32
 tracks/18/type = "value"
 tracks/18/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/18/interp = 0
-tracks/18/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("10")]}
+tracks/18/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 1, "values": [SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_start2"]
 resource_name = "start2"
 length = 0.5
@@ -430,7 +571,7 @@ tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.066
 tracks/18/type = "value"
 tracks/18/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/18/interp = 0
-tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("10")]}
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_out"]
 resource_name = "out"
 length = 0.33333
@@ -509,7 +650,7 @@ tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.066
 tracks/18/type = "value"
 tracks/18/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/18/interp = 0
-tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.33333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("10")]}
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.33333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_10")]}
 [sub_resource type="Animation" id="Anim_loop1"]
 resource_name = "loop1"
 length = 1.13333
@@ -588,7 +729,7 @@ tracks/17/keys = {"times": PackedFloat32Array(0.0, 1.13333), "transitions": Pack
 tracks/18/type = "value"
 tracks/18/path = NodePath("Node_CrownNo/Node_3/Sprite_1:texture")
 tracks/18/interp = 0
-tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667, 0.33333, 0.4, 0.46667, 0.53333, 0.6, 0.66667, 0.73333, 0.8, 0.86667, 0.93333, 1.0, 1.06667, 1.13333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("10"), ExtResource("13"), ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18"), ExtResource("19"), ExtResource("20"), ExtResource("21"), ExtResource("22"), ExtResource("23"), ExtResource("24"), ExtResource("25"), ExtResource("26"), ExtResource("27"), ExtResource("28"), ExtResource("29")]}
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667, 0.33333, 0.4, 0.46667, 0.53333, 0.6, 0.66667, 0.73333, 0.8, 0.86667, 0.93333, 1.0, 1.06667, 1.13333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_13"), SubResource("atlas_sprite_14"), SubResource("atlas_sprite_15"), SubResource("atlas_sprite_16"), SubResource("atlas_sprite_17"), SubResource("atlas_sprite_18"), SubResource("atlas_sprite_19"), SubResource("atlas_sprite_20"), SubResource("atlas_sprite_21"), SubResource("atlas_sprite_22"), SubResource("atlas_sprite_23"), SubResource("atlas_sprite_24"), SubResource("atlas_sprite_25"), SubResource("atlas_sprite_26"), SubResource("atlas_sprite_27"), SubResource("atlas_sprite_28"), SubResource("atlas_sprite_29")]}
 [sub_resource type="AnimationLibrary" id="Library"]
 _data = {
 "loop": SubResource("Anim_loop"),
@@ -659,7 +800,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown0_1"
 metadata/cocos_tag = 164
 metadata/action_tag = 98222433
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -694,7 +835,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown1_4"
 metadata/cocos_tag = 171
 metadata/action_tag = -1955545374
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -729,7 +870,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown2_6"
 metadata/cocos_tag = 174
 metadata/action_tag = 378061451
-texture = ExtResource("4")
+texture = SubResource("atlas_sprite_4")
 expand_mode = 1
 stretch_mode = 0
 
@@ -764,7 +905,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown3_8"
 metadata/cocos_tag = 177
 metadata/action_tag = -1380064913
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -783,7 +924,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown4_2"
 metadata/cocos_tag = 1936
 metadata/action_tag = 72174996
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -839,7 +980,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown1_1"
 metadata/cocos_tag = 1935
 metadata/action_tag = -364568761
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -909,7 +1050,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_1"
 metadata/cocos_tag = 4991
 metadata/action_tag = -2005833655
-texture = ExtResource("10")
+texture = SubResource("atlas_sprite_10")
 expand_mode = 1
 stretch_mode = 0
 

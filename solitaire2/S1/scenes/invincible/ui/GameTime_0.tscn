@@ -1,8 +1,16 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/ui/card/Timer.tscn" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/time0_bg0.png" id="3"]
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/time_0.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(980, 1, 21, 66)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_default"]
 resource_name = "default"
@@ -115,7 +123,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "time0_bg0_1"
 metadata/cocos_tag = 2797
 metadata/action_tag = 643090220
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 

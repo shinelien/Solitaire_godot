@@ -733,7 +733,7 @@ func populate_calendar(dialog: InvincibleScene) -> void:
 		image.position = Vector2(-55, -55)
 		image.size = Vector2(110, 110)
 		image.pivot_offset = Vector2(55, 55)
-		image.texture = load("res://assets/invincible/frames/daily/Daily_Daily%d.png" % (3 if closed else 2 if count > 0 else 1))
+		image.texture = InvincibleAtlas.texture("daily/Daily_Daily%d.png" % (3 if closed else 2 if count > 0 else 1))
 		var label := item.find_child("Text_day_0", true, false) as Label
 		label.text = str(day + 1)
 		label.position = Vector2(52.8, 51.7) - label.size / 2
@@ -745,7 +745,7 @@ func populate_calendar(dialog: InvincibleScene) -> void:
 		crown.position = Vector2(55, 55)
 		crown.scale = Vector2.ONE * .91
 		crown.visible = count > 0
-		(item.find_child("Sprite_cown", true, false) as TextureRect).texture = load("res://assets/invincible/frames/daily/Challenge_WG%d.png" % mini(3, count))
+		(item.find_child("Sprite_cown", true, false) as TextureRect).texture = InvincibleAtlas.texture("daily/Challenge_WG%d.png" % mini(3, count))
 		for name in ["Daily_Daily4_1", "Daily_Daily4_1_0"]:
 			var halo := item.find_child(name, true, false) as Control
 			halo.position = Vector2(55, 53.9) - halo.size / 2

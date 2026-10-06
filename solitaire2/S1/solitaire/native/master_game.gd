@@ -344,7 +344,7 @@ func _open_shop() -> void:
 				var parts := {}
 				_collect(item, parts)
 				var filename: String = {"background": "game_bg_%d.png", "face": "card_%d_13_0.png", "back": "card_bg_%d.png"}[category] % i
-				parts.img_card.texture = load("res://assets/master/frames/" + filename)
+				parts.img_card.texture = MasterAtlas.texture("" + filename)
 				_bind(parts.img_card, _shop_select.bind(category, i))
 				parts.img_new.hide()
 				parts.img_light_1.hide()

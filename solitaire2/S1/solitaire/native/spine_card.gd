@@ -57,15 +57,23 @@ func set_textures(p_front: Texture2D, p_back: Texture2D) -> void:
 func _apply_texture() -> void:
 	if _mesh == null:
 		return
-	_mesh.texture = front if shown_face else back
-	# Mesh topology stays original; UVs use the selected master full-card image.
+	var selected := (front if shown_face else back) as AtlasTexture
+	if selected == null:
+		return
+	_mesh.texture = selected.atlas
 	var source: Array = _bindings.card_bg_1.card_bg_5.uv
 	var original: Texture2D = load(_bindings.card_bg_1.card_bg_5.texture)
-	var texture_size := _mesh.texture.get_size() if _mesh.texture != null else Vector2.ONE
 	var uv := PackedVector2Array()
 	for i in range(0, source.size(), 2):
-		uv.append(Vector2(source[i], source[i + 1]) / original.get_size() * texture_size)
+		uv.append(Vector2(source[i], source[i + 1]) / original.get_size() * selected.get_size() - selected.margin.position + selected.region.position)
 	_mesh.uv = uv
+	if not selected.has_meta("clip_material"):
+		var material := ShaderMaterial.new()
+		material.shader = preload("res://solitaire/invincible/atlas_clip.gdshader")
+		var size := selected.atlas.get_size()
+		material.set_shader_parameter("atlas_bounds", Vector4(selected.region.position.x / size.x, selected.region.position.y / size.y, selected.region.size.x / size.x, selected.region.size.y / size.y))
+		selected.set_meta("clip_material", material)
+	_mesh.material = selected.get_meta("clip_material")
 
 func flip(to_face: bool, from_stock: bool, left: bool) -> float:
 	desired_face = to_face

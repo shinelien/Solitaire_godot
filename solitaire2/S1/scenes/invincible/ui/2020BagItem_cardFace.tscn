@@ -1,18 +1,72 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=21 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_button.gd" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_7day0.png" id="3"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_7day4.png" id="4"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Challenge_chuangkoubg2.png" id="5"]
+
+
+
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="6"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Store_btn8.png" id="7"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_Starbox5.png" id="8"]
+
+
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="9"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="10"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_7day5.png" id="11"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/store_choice0.png" id="12"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/main_tips1.png" id="13"]
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/challenge.png" id="atlas_page_2"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_3"]
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_4"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(118, 347, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(511, 1052, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(918, 1571, 58, 58)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(811, 1986, 60, 60)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_3")
+region = Rect2(1477, 1973, 69, 53)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(847, 1674, 64, 94)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_4")
+region = Rect2(1127, 288, 58, 60)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_13"]
+atlas = ExtResource("atlas_page_3")
+region = Rect2(1158, 1450, 34, 39)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_default"]
 resource_name = "default"
@@ -67,9 +121,9 @@ metadata/cocos_tag = 8333
 metadata/action_tag = 614799859
 script = ExtResource("2")
 scale9_margins = Vector4(29.0, 29.0, 58.0, 52.0)
-texture_normal = ExtResource("3")
-texture_pressed = ExtResource("4")
-texture_disabled = ExtResource("4")
+texture_normal = SubResource("atlas_sprite_3")
+texture_pressed = SubResource("atlas_sprite_4")
+texture_disabled = SubResource("atlas_sprite_4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -88,7 +142,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_5"
 metadata/cocos_tag = 83
 metadata/action_tag = -365448384
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -108,7 +162,7 @@ metadata/cocos_name = "Image_5_0"
 metadata/cocos_tag = 84
 metadata/action_tag = 1470180102
 scale = Vector2(-1, 1)
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -128,7 +182,7 @@ metadata/cocos_name = "Image_5_1"
 metadata/cocos_tag = 85
 metadata/action_tag = 565692108
 scale = Vector2(-1, 1)
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -147,7 +201,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_5_2"
 metadata/cocos_tag = 86
 metadata/action_tag = 1407949545
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -204,7 +258,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Store_btn8_51"
 metadata/cocos_tag = 138
 metadata/action_tag = 515913323
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -223,7 +277,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_1"
 metadata/cocos_tag = 1748
 metadata/action_tag = 543362717
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 patch_margin_left = 22
 patch_margin_right = 22
 patch_margin_top = 17
@@ -292,7 +346,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_used_face"
 metadata/cocos_tag = 8346
 metadata/action_tag = -1610856442
-texture = ExtResource("11")
+texture = SubResource("atlas_sprite_11")
 patch_margin_left = 21
 patch_margin_right = 21
 patch_margin_top = 31
@@ -313,7 +367,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_used_face"
 metadata/cocos_tag = 91
 metadata/action_tag = 2121903159
-texture = ExtResource("12")
+texture = SubResource("atlas_sprite_12")
 expand_mode = 1
 stretch_mode = 0
 
@@ -332,7 +386,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "img_new_face"
 metadata/cocos_tag = 8344
 metadata/action_tag = -539465389
-texture = ExtResource("13")
+texture = SubResource("atlas_sprite_13")
 expand_mode = 1
 stretch_mode = 0
 

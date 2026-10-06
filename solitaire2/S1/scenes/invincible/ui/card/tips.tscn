@@ -1,14 +1,53 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_light0.png" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_light1.png" id="3"]
+
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/start_0.tscn" id="4"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_l1.png" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_l2.png" id="6"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_l0.png" id="7"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/card_l3.png" id="8"]
+
+
+
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/pokerstart.tscn" id="9"]
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(187, 415, 156, 232)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(155, 649, 166, 236)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1978, 102, 33, 45)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(955, 902, 160, 238)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1180, 1256, 41, 40)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(2006, 803, 8, 79)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_start0"]
 resource_name = "start0"
@@ -436,7 +475,7 @@ self_modulate = Color(0.0, 1.0, 0.0, 1.0)
 metadata/cocos_name = "card_light0_1_0"
 metadata/cocos_tag = 5977
 metadata/action_tag = 1906127540
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -456,7 +495,7 @@ self_modulate = Color(0.0, 1.0, 0.0, 1.0)
 metadata/cocos_name = "card_light0_1"
 metadata/cocos_tag = 5898
 metadata/action_tag = -1467131312
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -514,7 +553,7 @@ self_modulate = Color(1.0, 0.64314, 0.0, 1.0)
 metadata/cocos_name = "card_light0_1_1"
 metadata/cocos_tag = 8259
 metadata/action_tag = -381121898
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -533,7 +572,7 @@ self_modulate = Color(1.0, 0.64706, 0.0, 1.0)
 metadata/cocos_name = "card_light0_1_2"
 metadata/cocos_tag = 9434
 metadata/action_tag = 1239053234
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -552,7 +591,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_1"
 metadata/cocos_tag = 326
 metadata/action_tag = 560464559
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 patch_margin_left = 11
 patch_margin_right = 11
 patch_margin_top = 16
@@ -573,7 +612,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_2"
 metadata/cocos_tag = 343
 metadata/action_tag = 2030718328
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 patch_margin_left = 17
 patch_margin_right = 17
 patch_margin_top = 26
@@ -594,7 +633,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_2_0"
 metadata/cocos_tag = 367
 metadata/action_tag = 497122102
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 patch_margin_left = 17
 patch_margin_right = 17
 patch_margin_top = 26
@@ -615,7 +654,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2"
 metadata/cocos_tag = 345
 metadata/action_tag = 247195444
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -634,7 +673,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2_0"
 metadata/cocos_tag = 358
 metadata/action_tag = 2056016909
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -653,7 +692,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2_0_0"
 metadata/cocos_tag = 359
 metadata/action_tag = 2068547036
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -672,7 +711,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2_0_0_0"
 metadata/cocos_tag = 360
 metadata/action_tag = 1806826442
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -691,7 +730,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2_0_0_0_0"
 metadata/cocos_tag = 361
 metadata/action_tag = -1036008784
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -710,7 +749,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l0_2_0_1"
 metadata/cocos_tag = 362
 metadata/action_tag = 149056766
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -729,7 +768,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l3_6"
 metadata/cocos_tag = 363
 metadata/action_tag = -1774484653
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 expand_mode = 1
 stretch_mode = 0
 
@@ -748,7 +787,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l3_6_0"
 metadata/cocos_tag = 364
 metadata/action_tag = -1351701241
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 expand_mode = 1
 stretch_mode = 0
 
@@ -767,7 +806,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l3_6_0_0"
 metadata/cocos_tag = 365
 metadata/action_tag = -1187300184
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 expand_mode = 1
 stretch_mode = 0
 
@@ -786,7 +825,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_l3_6_0_0_0"
 metadata/cocos_tag = 368
 metadata/action_tag = -466829154
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 expand_mode = 1
 stretch_mode = 0
 

@@ -45,6 +45,7 @@ func configure(rig_name: String) -> void:
 				var mat := CanvasItemMaterial.new()
 				mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD if int(item.blend) == 1 else CanvasItemMaterial.BLEND_MODE_MUL if int(item.blend) == 2 else CanvasItemMaterial.BLEND_MODE_MIX
 				poly.material = mat
+			poly.set_meta("base_material", poly.material)
 			add_child(poly)
 			slots[item.slot] = poly
 	player = AnimationPlayer.new()
@@ -112,13 +113,23 @@ func _sample(time: float) -> void:
 			vertices.append(Vector2(lerpf(entry[1][j], target[j], fraction), lerpf(entry[1][j + 1], target[j + 1], fraction)))
 		poly.polygon = vertices
 		poly.polygons = a.triangles_packed
-		poly.texture = overrides.get(a.slot, a.texture)
+		poly.texture = a.texture
+		poly.material = poly.get_meta("base_material", null)
 		poly.uv = a.uv_packed
 		if overrides.has(a.slot):
+			var replacement := overrides[a.slot] as AtlasTexture
+			poly.texture = replacement.atlas
 			var uv := PackedVector2Array()
 			var source: Array = a.override_uv
 			for j in range(0, source.size(), 2):
-				uv.append(Vector2(source[j], source[j + 1]) * poly.texture.get_size())
+				uv.append(Vector2(source[j], source[j + 1]) * replacement.get_size() - replacement.margin.position + replacement.region.position)
 			poly.uv = uv
+			if not replacement.has_meta("clip_material"):
+				var material := ShaderMaterial.new()
+				material.shader = preload("res://solitaire/invincible/atlas_clip.gdshader")
+				var atlas_size := replacement.atlas.get_size()
+				material.set_shader_parameter("atlas_bounds", Vector4(replacement.region.position.x / atlas_size.x, replacement.region.position.y / atlas_size.y, replacement.region.size.x / atlas_size.x, replacement.region.size.y / atlas_size.y))
+				replacement.set_meta("clip_material", material)
+			poly.material = replacement.get_meta("clip_material")
 		var color: Array = entry[2]
 		poly.modulate = Color(color[0], color[1], color[2], color[3])

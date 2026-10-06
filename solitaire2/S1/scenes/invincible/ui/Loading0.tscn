@@ -1,12 +1,26 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/invincible/img/BeiJing11.jpg" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/fish_icon0.png" id="3"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_logo5.png" id="4"]
+
+
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="5"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="6"]
 [ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="7"]
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1371, 1136, 148, 113)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1, 106, 475, 248)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_start"]
 resource_name = "start"
@@ -235,7 +249,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "fish_icon0_4"
 metadata/cocos_tag = 4821
 metadata/action_tag = -485648861
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 
@@ -254,7 +268,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_logo5_2"
 metadata/cocos_tag = 543
 metadata/action_tag = -821070754
-texture = ExtResource("4")
+texture = SubResource("atlas_sprite_4")
 expand_mode = 1
 stretch_mode = 0
 

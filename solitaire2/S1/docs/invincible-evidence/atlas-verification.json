@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-06",
+  "atlas": {
+    "invincible_sprites_verified": 1022,
+    "master_sprites_verified": 540,
+    "removed_individual_pngs": 1562,
+    "assets_before": 6890,
+    "assets_after_including_import_metadata": 782,
+    "removed_stale_cache_files": 5734
+  },
+  "resources": {
+    "scenes": 240,
+    "failures": []
+  },
+  "reported_bugs_gui": {
+    "checks": 1090,
+    "failures": [],
+    "viewport": [
+      1080,
+      1920
+    ],
+    "clock": "fixed-fps 60",
+    "snapshot": "process_frame then RenderingServer.force_draw(false)"
+  },
+  "unit": {
+    "duration_ms": 1256,
+    "failed": 0,
+    "passed": 219,
+    "skipped": 0,
+    "suite_count": 21,
+    "suites_run": [
+      "auto_complete",
+      "core_model",
+      "game_session",
+      "golden_deal",
+      "hint_engine",
+      "invincible_magic",
+      "invincible_product",
+      "invincible_profile",
+      "legacy_dealer",
+      "legacy_decode",
+      "library_integrity",
+      "master_product",
+      "move_executor",
+      "move_model",
+      "rules_engine",
+      "score_win",
+      "boundary_moves",
+      "state_isolation",
+      "snapshot_undo",
+      "wp08_interaction",
+      "wp08_mapping"
+    ],
+    "total": 219
+  },
+  "limitations": [
+    "Existing unit-test exit RID/resource leak warnings persist.",
+    "Local SubViewport checks do not establish device or full Cocos parity."
+  ],
+  "legacy_master_gui": {
+    "evidence": "res://docs/native-evidence",
+    "failed": 0,
+    "failures": [],
+    "persistent_cards": 52
+  }
+}

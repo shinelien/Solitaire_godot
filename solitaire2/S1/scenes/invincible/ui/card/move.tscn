@@ -1,8 +1,16 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Level_card1__55c58fd3.png" id="3"]
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/game/car_new_0_1.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(163, 679, 148, 220)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_start0"]
 resource_name = "start0"
@@ -94,7 +102,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "card_0_1_0_1"
 metadata/cocos_tag = 7
 metadata/action_tag = -919157334
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 

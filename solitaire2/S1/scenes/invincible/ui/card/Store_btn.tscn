@@ -1,11 +1,19 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="2"]
 [ext_resource type="Font" path="res://assets/invincible/chinese.tres" id="3"]
 [ext_resource type="Font" path="res://assets/invincible/font/level_num22x.fnt" id="4"]
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_label.gd" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/Ui_storebtn2.png" id="6"]
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1362, 2015, 58, 23)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_Loop_L0"]
 resource_name = "Loop_L0"
@@ -370,7 +378,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Ui_storebtn2_2899_0_0"
 metadata/cocos_tag = 9463
 metadata/action_tag = -52683098
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -408,7 +416,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Ui_storebtn2_2899"
 metadata/cocos_tag = 8775
 metadata/action_tag = 1975360133
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -547,7 +555,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Ui_storebtn2_2899_0"
 metadata/cocos_tag = 9458
 metadata/action_tag = 17912179
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 

@@ -1,13 +1,13 @@
-[gd_scene load_steps=41 format=3]
+[gd_scene load_steps=44 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Ribbon.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/ui/Animation/light.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Start_BG.tscn" id="4"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_guan0.png" id="5"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi1.png" id="6"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi2.png" id="7"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/daily/Challenge_baoshi3.png" id="8"]
+
+
+
+
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Sprite.png" id="9"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/upgrade.tscn" id="10"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Crown1.tscn" id="11"]
@@ -21,22 +21,140 @@
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Press.png" id="19"]
 [ext_resource type="Texture2D" path="res://assets/invincible/Default/Button_Disable.png" id="20"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/btn.tscn" id="21"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/btn1_ad0.png" id="22"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_gift3.png" id="23"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn0.png" id="24"]
+
+
+
 [ext_resource type="Font" path="res://assets/invincible/font/Wintips.fnt" id="25"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/win_bg1.png" id="26"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_share0.png" id="27"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_share1.png" id="28"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_data0.png" id="29"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_ranking0.png" id="30"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_ranking1.png" id="31"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/ui_btn_S2.png" id="32"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn1.png" id="33"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn2.png" id="34"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn3.png" id="35"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn4.png" id="36"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/gif/gif_btn5.png" id="37"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/invincible/ui1.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/invincible/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/d850b5e35f23_rotated.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(404, 802, 252, 209)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(920, 629, 47, 56)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1533, 419, 23, 42)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1791, 1833, 27, 39)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_22"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1881, 1565, 112, 112)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_23"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(726, 562, 210, 100)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_24"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(356, 1630, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_26"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1751, 347, 80, 137)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_27"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1843, 1886, 14, 14)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_28"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(2000, 890, 14, 14)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_29"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(927, 1526, 14, 14)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_30"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(272, 1126, 14, 14)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_31"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(288, 1126, 14, 14)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_32"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1770, 68, 92, 100)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_33"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(356, 1538, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_34"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1142, 1717, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_35"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(328, 1446, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_36"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(328, 1354, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_37"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(328, 1262, 406, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_Start"]
 resource_name = "Start"
@@ -199,7 +317,7 @@ tracks/38/keys = {"times": PackedFloat32Array(0.0, 0.6, 0.61667, 0.63333, 0.65, 
 tracks/39/type = "value"
 tracks/39/path = NodePath("panel_win/Node_endBG/Button_doubleWin/Sprite_1:texture")
 tracks/39/interp = 0
-tracks/39/keys = {"times": PackedFloat32Array(0.0, 2.25), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [ExtResource("24"), ExtResource("24")]}
+tracks/39/keys = {"times": PackedFloat32Array(0.0, 2.25), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_24"), SubResource("atlas_sprite_24")]}
 tracks/40/type = "value"
 tracks/40/path = NodePath("panel_win/Node_endBG/Button_doubleWin/Sprite_1:modulate")
 tracks/40/interp = 1
@@ -398,7 +516,7 @@ tracks/37/keys = {"times": PackedFloat32Array(0.0, 1.33333), "transitions": Pack
 tracks/38/type = "value"
 tracks/38/path = NodePath("panel_win/Node_endBG/Button_doubleWin/Sprite_1:texture")
 tracks/38/interp = 0
-tracks/38/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.46667, 0.51667, 0.56667, 0.61667, 1.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [ExtResource("24"), ExtResource("33"), ExtResource("34"), ExtResource("35"), ExtResource("36"), ExtResource("37"), ExtResource("37")]}
+tracks/38/keys = {"times": PackedFloat32Array(0.0, 0.41667, 0.46667, 0.51667, 0.56667, 0.61667, 1.33333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_24"), SubResource("atlas_sprite_33"), SubResource("atlas_sprite_34"), SubResource("atlas_sprite_35"), SubResource("atlas_sprite_36"), SubResource("atlas_sprite_37"), SubResource("atlas_sprite_37")]}
 tracks/39/type = "value"
 tracks/39/path = NodePath("panel_win/Node_endBG/Button_doubleWin/Sprite_1:modulate")
 tracks/39/interp = 1
@@ -594,7 +712,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown0_1"
 metadata/cocos_tag = 857
 metadata/action_tag = 1099656494
-texture = ExtResource("5")
+texture = SubResource("atlas_sprite_5")
 expand_mode = 1
 stretch_mode = 0
 
@@ -629,7 +747,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown1_4"
 metadata/cocos_tag = 859
 metadata/action_tag = 2064865317
-texture = ExtResource("6")
+texture = SubResource("atlas_sprite_6")
 expand_mode = 1
 stretch_mode = 0
 
@@ -664,7 +782,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown2_6"
 metadata/cocos_tag = 861
 metadata/action_tag = -739225939
-texture = ExtResource("7")
+texture = SubResource("atlas_sprite_7")
 expand_mode = 1
 stretch_mode = 0
 
@@ -699,7 +817,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "daily_Crown3_8"
 metadata/cocos_tag = 863
 metadata/action_tag = -1075281700
-texture = ExtResource("8")
+texture = SubResource("atlas_sprite_8")
 expand_mode = 1
 stretch_mode = 0
 
@@ -1681,7 +1799,7 @@ self_modulate = Color(0.99608, 1.0, 0.57255, 1.0)
 metadata/cocos_name = "ui_Videoplayer_1"
 metadata/cocos_tag = 2335
 metadata/action_tag = 371514322
-texture = ExtResource("22")
+texture = SubResource("atlas_sprite_22")
 expand_mode = 1
 stretch_mode = 0
 
@@ -1700,7 +1818,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "ui_gift3_1"
 metadata/cocos_tag = 2336
 metadata/action_tag = -1539108346
-texture = ExtResource("23")
+texture = SubResource("atlas_sprite_23")
 expand_mode = 1
 stretch_mode = 0
 
@@ -1719,7 +1837,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_1"
 metadata/cocos_tag = 368
 metadata/action_tag = 658279495
-texture = ExtResource("24")
+texture = SubResource("atlas_sprite_24")
 expand_mode = 1
 stretch_mode = 0
 
@@ -1842,7 +1960,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Image_2"
 metadata/cocos_tag = 2194
 metadata/action_tag = 1452291291
-texture = ExtResource("26")
+texture = SubResource("atlas_sprite_26")
 patch_margin_left = 25
 patch_margin_right = 25
 patch_margin_top = 45
@@ -2062,9 +2180,9 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Button_share"
 metadata/cocos_tag = 28732
 metadata/action_tag = -784538265
-texture_normal = ExtResource("27")
-texture_pressed = ExtResource("28")
-texture_disabled = ExtResource("28")
+texture_normal = SubResource("atlas_sprite_27")
+texture_pressed = SubResource("atlas_sprite_28")
+texture_disabled = SubResource("atlas_sprite_28")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2114,7 +2232,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Button_PingJia"
 metadata/cocos_tag = 28734
 metadata/action_tag = 416492451
-texture_normal = ExtResource("29")
+texture_normal = SubResource("atlas_sprite_29")
 texture_disabled = ExtResource("20")
 ignore_texture_size = true
 stretch_mode = 0
@@ -2165,8 +2283,8 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Button_rank"
 metadata/cocos_tag = 28736
 metadata/action_tag = 949361948
-texture_normal = ExtResource("30")
-texture_pressed = ExtResource("31")
+texture_normal = SubResource("atlas_sprite_30")
+texture_pressed = SubResource("atlas_sprite_31")
 texture_disabled = ExtResource("20")
 ignore_texture_size = true
 stretch_mode = 0
@@ -2296,7 +2414,7 @@ metadata/cocos_tag = 10119
 metadata/action_tag = -1642421105
 script = ExtResource("17")
 scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
-texture_disabled = ExtResource("32")
+texture_disabled = SubResource("atlas_sprite_32")
 ignore_texture_size = true
 stretch_mode = 0
 

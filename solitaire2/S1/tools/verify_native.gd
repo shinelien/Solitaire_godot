@@ -14,21 +14,21 @@ func check(condition: bool, message: String) -> void:
 
 func screenshot(name: String) -> void:
 	await process_frame
-	await RenderingServer.frame_post_draw
+	RenderingServer.force_draw(false)
 	root.get_texture().get_image().save_png(EVIDENCE + "/" + name + ".png")
 
 func click(point: Vector2) -> void:
 	var press := InputEventMouseButton.new()
 	press.button_index = MOUSE_BUTTON_LEFT
-	press.position = root.get_final_transform() * point
+	press.position = point
 	press.pressed = true
-	Input.parse_input_event(press)
+	root.push_input(press, true)
 	await process_frame
 	var release := InputEventMouseButton.new()
 	release.button_index = MOUSE_BUTTON_LEFT
-	release.position = root.get_final_transform() * point
+	release.position = point
 	release.pressed = false
-	Input.parse_input_event(release)
+	root.push_input(release, true)
 	await process_frame
 
 func _run() -> void:

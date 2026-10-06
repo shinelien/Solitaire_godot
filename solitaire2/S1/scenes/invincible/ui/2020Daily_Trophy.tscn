@@ -1,11 +1,25 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://solitaire/invincible/cocos_scene.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/JiangBei_3.png" id="2"]
-[ext_resource type="Texture2D" path="res://assets/invincible/frames/JiangBeilight_1.png" id="3"]
+
+
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Crown0.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/upgrade.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/invincible/particles/Particicle/Crown1.tscn" id="6"]
+
+[ext_resource type="Texture2D" path="res://assets/invincible/atlases/243849c52043_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(280, 245, 275, 266)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(799, 376, 122, 135)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
 
 [sub_resource type="Animation" id="Anim_start0"]
 resource_name = "start0"
@@ -336,7 +350,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Sprite_trophy"
 metadata/cocos_tag = 459
 metadata/action_tag = -1013294520
-texture = ExtResource("2")
+texture = SubResource("atlas_sprite_2")
 expand_mode = 1
 stretch_mode = 0
 
@@ -355,7 +369,7 @@ self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 metadata/cocos_name = "Trophylight"
 metadata/cocos_tag = 751
 metadata/action_tag = -1328369865
-texture = ExtResource("3")
+texture = SubResource("atlas_sprite_3")
 expand_mode = 1
 stretch_mode = 0
 

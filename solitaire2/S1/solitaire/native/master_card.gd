@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func configure(id: int, face_skin: int, back_skin: int) -> void:
 	card_id = id
-	spine.set_textures(load("res://assets/master/frames/card_%d_%d_%d.png" % [face_skin, id % 13 + 1, id / 13]), load("res://assets/master/frames/card_bg_%d.png" % back_skin))
+	spine.set_textures(MasterAtlas.texture("card_%d_%d_%d.png" % [face_skin, id % 13 + 1, id / 13]), MasterAtlas.texture("card_bg_%d.png" % back_skin))
 
 func show_face(value: bool, animate := false, stock := false, left := false) -> float:
 	face_up = value

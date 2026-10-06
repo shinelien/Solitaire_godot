@@ -58,7 +58,7 @@ func back_item(item: InvincibleScene, index: int) -> void:
 	show_node(item, "img_new_bg", false)
 	var image := item.find_child("img_card_bg", true, false) as TextureRect
 	var center := image.position + image.size / 2
-	image.texture = load("res://assets/invincible/frames/card_bg_%d.png" % index)
+	image.texture = InvincibleAtlas.texture("card_bg_%d.png" % index)
 	image.size = image.texture.get_size()
 	image.position = center - image.size / 2
 	image.pivot_offset = image.size / 2
