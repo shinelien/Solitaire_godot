@@ -1,0 +1,6981 @@
+{
+ "meta": {
+  "generator": "deal_tools/importer/generate_fixtures.py",
+  "independence": "Expectations are computed by an independent Python implementation of the documented legacy spec, reading only the raw fixed-object records exported under data/legacy/. The production GDScript LegacyDealDecoder/LegacyDealer are never invoked here.",
+  "canonical_digest_format": "sha256(columns ','-joined and '|'-joined + '#' + stock ids ','-joined); record 0 must equal 935879b0483480ea8f936cdc2c2b236d532d2b9531f800b19173f8dd50d620e3",
+  "pools": {
+   "bureau1": {
+    "source": "Resources/data/bureau1.d",
+    "records": 32084,
+    "bytes": 1700452,
+    "sha256": "36414bfcd91c916caa77c8b908dc51000732bfc8ba2b8113798d6a2a48d2ccf5"
+   },
+   "bureau3": {
+    "source": "Resources/data/bureau3.d",
+    "records": 4999,
+    "bytes": 264947,
+    "sha256": "0bf9409ac5a5954a02460274fc50e8cd1ca79693be4dd90e70cc6ebcac81ca43"
+   }
+  },
+  "record0": {
+   "pool": "bureau1",
+   "index": 0,
+   "sha256_52b_no_lf": "7a0e10fddf0759403b0b06788ae1dc256df74d7c9f8e52e39e8c00c25a34fce0",
+   "sha256_53b_with_lf": "6c839523eed3cdb1a2f8212b81a4e561525f926f27395c923fd289ffa7e7111f",
+   "canonical_dealt_sha256": "935879b0483480ea8f936cdc2c2b236d532d2b9531f800b19173f8dd50d620e3",
+   "expected_canonical_dealt_sha256": "935879b0483480ea8f936cdc2c2b236d532d2b9531f800b19173f8dd50d620e3"
+  }
+ },
+ "fixtures": [
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 0,
+   "raw_deal": "TB>7`OVZ]_=Jc:1S<b?ML0DEWR[\\8CG9FX2U6Pa4YA^HNQ@3I5;K",
+   "consumption": [
+    27,
+    11,
+    5,
+    25,
+    3,
+    16,
+    33,
+    30,
+    24,
+    46,
+    17,
+    41,
+    4,
+    49,
+    32,
+    6,
+    37,
+    2,
+    40,
+    22,
+    9,
+    23,
+    19,
+    8,
+    44,
+    43,
+    34,
+    39,
+    21,
+    20,
+    0,
+    28,
+    29,
+    15,
+    50,
+    12,
+    35,
+    1,
+    10,
+    51,
+    26,
+    13,
+    47,
+    45,
+    42,
+    38,
+    31,
+    48,
+    7,
+    14,
+    18,
+    36
+   ],
+   "dealt_canonical_sha256": "edf45311bfb34cbf2dac624ad3656337230c903943b42e7f5c73735dbf16bce8",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 27,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     21,
+     20,
+     0,
+     28,
+     29,
+     15,
+     50,
+     12,
+     35,
+     1,
+     10,
+     51,
+     26,
+     13,
+     47,
+     45,
+     42,
+     38,
+     31,
+     48,
+     7,
+     14,
+     18,
+     36
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     21,
+     20,
+     0,
+     28,
+     29,
+     15,
+     50,
+     12,
+     35,
+     1,
+     10,
+     51,
+     26,
+     13,
+     47,
+     45,
+     42,
+     38,
+     31,
+     48,
+     7,
+     14,
+     18
+    ],
+    "waste": [
+     36
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     21,
+     20,
+     0,
+     28,
+     29,
+     15,
+     50,
+     12,
+     35,
+     1,
+     10,
+     51,
+     26,
+     13,
+     47,
+     45,
+     42,
+     38,
+     31,
+     48,
+     7
+    ],
+    "waste": [
+     36,
+     18,
+     14
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 1,
+   "raw_deal": "6b@OR>`GJa;0DQM1[PKCA9\\WU_c48^ZV]3LH?:=2BE7SN5XT<YFI",
+   "consumption": [
+    25,
+    22,
+    41,
+    12,
+    36,
+    40,
+    5,
+    30,
+    35,
+    7,
+    21,
+    18,
+    2,
+    13,
+    10,
+    15,
+    24,
+    28,
+    3,
+    45,
+    38,
+    42,
+    46,
+    8,
+    4,
+    51,
+    47,
+    37,
+    39,
+    44,
+    9,
+    17,
+    19,
+    27,
+    32,
+    43,
+    1,
+    29,
+    33,
+    20,
+    0,
+    11,
+    49,
+    26,
+    23,
+    48,
+    14,
+    34,
+    31,
+    16,
+    50,
+    6
+   ],
+   "dealt_canonical_sha256": "86de9f4edf6369f96e745f3d87cc61b8c695041a93344d468c2c0b50c4150fdc",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 25,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     39,
+     44,
+     9,
+     17,
+     19,
+     27,
+     32,
+     43,
+     1,
+     29,
+     33,
+     20,
+     0,
+     11,
+     49,
+     26,
+     23,
+     48,
+     14,
+     34,
+     31,
+     16,
+     50,
+     6
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     39,
+     44,
+     9,
+     17,
+     19,
+     27,
+     32,
+     43,
+     1,
+     29,
+     33,
+     20,
+     0,
+     11,
+     49,
+     26,
+     23,
+     48,
+     14,
+     34,
+     31,
+     16,
+     50
+    ],
+    "waste": [
+     6
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     39,
+     44,
+     9,
+     17,
+     19,
+     27,
+     32,
+     43,
+     1,
+     29,
+     33,
+     20,
+     0,
+     11,
+     49,
+     26,
+     23,
+     48,
+     14,
+     34,
+     31
+    ],
+    "waste": [
+     6,
+     50,
+     16
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 2,
+   "raw_deal": "9401L5Y?O7Z:aBb3=;GKNPSHRXMVEA6][\\J^F`@W8QI2<UD_cTC>",
+   "consumption": [
+    14,
+    19,
+    36,
+    51,
+    47,
+    20,
+    37,
+    12,
+    2,
+    25,
+    33,
+    8,
+    39,
+    16,
+    48,
+    22,
+    46,
+    26,
+    44,
+    43,
+    45,
+    6,
+    17,
+    21,
+    38,
+    29,
+    40,
+    34,
+    24,
+    35,
+    32,
+    30,
+    27,
+    23,
+    11,
+    13,
+    3,
+    50,
+    18,
+    49,
+    10,
+    42,
+    7,
+    31,
+    15,
+    41,
+    5,
+    28,
+    1,
+    0,
+    4,
+    9
+   ],
+   "dealt_canonical_sha256": "e448e93d8cb944607ae9a61ffc3aaefe2fb991f1a4a56665831352cd2b1481e2",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 14,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     24,
+     35,
+     32,
+     30,
+     27,
+     23,
+     11,
+     13,
+     3,
+     50,
+     18,
+     49,
+     10,
+     42,
+     7,
+     31,
+     15,
+     41,
+     5,
+     28,
+     1,
+     0,
+     4,
+     9
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     24,
+     35,
+     32,
+     30,
+     27,
+     23,
+     11,
+     13,
+     3,
+     50,
+     18,
+     49,
+     10,
+     42,
+     7,
+     31,
+     15,
+     41,
+     5,
+     28,
+     1,
+     0,
+     4
+    ],
+    "waste": [
+     9
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     24,
+     35,
+     32,
+     30,
+     27,
+     23,
+     11,
+     13,
+     3,
+     50,
+     18,
+     49,
+     10,
+     42,
+     7,
+     31,
+     15,
+     41,
+     5,
+     28,
+     1
+    ],
+    "waste": [
+     9,
+     4,
+     0
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 3,
+   "raw_deal": "6ER5OBYT1P>ZCG2:]W7aM=H34D_SF^L@`A9[N\\V;0U<I8cJXQKb?",
+   "consumption": [
+    15,
+    50,
+    27,
+    33,
+    40,
+    26,
+    51,
+    8,
+    25,
+    12,
+    37,
+    0,
+    11,
+    38,
+    44,
+    30,
+    43,
+    9,
+    17,
+    48,
+    16,
+    28,
+    46,
+    22,
+    35,
+    47,
+    20,
+    4,
+    3,
+    24,
+    13,
+    29,
+    49,
+    7,
+    39,
+    45,
+    10,
+    2,
+    23,
+    19,
+    42,
+    14,
+    32,
+    1,
+    36,
+    41,
+    18,
+    31,
+    5,
+    34,
+    21,
+    6
+   ],
+   "dealt_canonical_sha256": "7512a57ef923fe00d46d1792c72239ffd284fe24f74970cd4092cc8a0d689bef",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 15,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     3,
+     24,
+     13,
+     29,
+     49,
+     7,
+     39,
+     45,
+     10,
+     2,
+     23,
+     19,
+     42,
+     14,
+     32,
+     1,
+     36,
+     41,
+     18,
+     31,
+     5,
+     34,
+     21,
+     6
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     3,
+     24,
+     13,
+     29,
+     49,
+     7,
+     39,
+     45,
+     10,
+     2,
+     23,
+     19,
+     42,
+     14,
+     32,
+     1,
+     36,
+     41,
+     18,
+     31,
+     5,
+     34,
+     21
+    ],
+    "waste": [
+     6
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     3,
+     24,
+     13,
+     29,
+     49,
+     7,
+     39,
+     45,
+     10,
+     2,
+     23,
+     19,
+     42,
+     14,
+     32,
+     1,
+     36,
+     41,
+     18,
+     31,
+     5
+    ],
+    "waste": [
+     6,
+     21,
+     34
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4,
+   "raw_deal": "bVG2:T?JcSZR;N1BQL>EYFUO^X0K=97D_3\\I46PHWa]MC[<A5@`8",
+   "consumption": [
+    8,
+    48,
+    16,
+    5,
+    17,
+    12,
+    43,
+    19,
+    29,
+    45,
+    49,
+    39,
+    24,
+    32,
+    6,
+    4,
+    25,
+    44,
+    3,
+    47,
+    20,
+    7,
+    9,
+    13,
+    27,
+    0,
+    40,
+    46,
+    31,
+    37,
+    22,
+    41,
+    21,
+    14,
+    28,
+    33,
+    18,
+    1,
+    30,
+    11,
+    34,
+    42,
+    35,
+    51,
+    26,
+    15,
+    36,
+    10,
+    2,
+    23,
+    38,
+    50
+   ],
+   "dealt_canonical_sha256": "4067b0f196799839b2099f6f6efef8edf994cf8b48ca33762591d1ba365d513b",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 8,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     31,
+     37,
+     22,
+     41,
+     21,
+     14,
+     28,
+     33,
+     18,
+     1,
+     30,
+     11,
+     34,
+     42,
+     35,
+     51,
+     26,
+     15,
+     36,
+     10,
+     2,
+     23,
+     38,
+     50
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     31,
+     37,
+     22,
+     41,
+     21,
+     14,
+     28,
+     33,
+     18,
+     1,
+     30,
+     11,
+     34,
+     42,
+     35,
+     51,
+     26,
+     15,
+     36,
+     10,
+     2,
+     23,
+     38
+    ],
+    "waste": [
+     50
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     31,
+     37,
+     22,
+     41,
+     21,
+     14,
+     28,
+     33,
+     18,
+     1,
+     30,
+     11,
+     34,
+     42,
+     35,
+     51,
+     26,
+     15,
+     36,
+     10,
+     2
+    ],
+    "waste": [
+     50,
+     38,
+     23
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 9,
+   "raw_deal": ";5J7YZ\\K9[@O<`>=:Q0bNLAHW_1?BGRXacDIESUTF4M68VP]3^2C",
+   "consumption": [
+    19,
+    2,
+    46,
+    3,
+    45,
+    32,
+    38,
+    8,
+    6,
+    29,
+    4,
+    22,
+    36,
+    37,
+    35,
+    21,
+    25,
+    20,
+    51,
+    49,
+    40,
+    34,
+    23,
+    18,
+    15,
+    1,
+    47,
+    39,
+    24,
+    17,
+    28,
+    30,
+    50,
+    0,
+    33,
+    10,
+    13,
+    14,
+    48,
+    12,
+    31,
+    16,
+    43,
+    9,
+    27,
+    44,
+    42,
+    41,
+    7,
+    26,
+    5,
+    11
+   ],
+   "dealt_canonical_sha256": "ac38e7520924163555322f70f995f407eb49ac008b3af5e7769201583ab8e25d",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 19,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     24,
+     17,
+     28,
+     30,
+     50,
+     0,
+     33,
+     10,
+     13,
+     14,
+     48,
+     12,
+     31,
+     16,
+     43,
+     9,
+     27,
+     44,
+     42,
+     41,
+     7,
+     26,
+     5,
+     11
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     24,
+     17,
+     28,
+     30,
+     50,
+     0,
+     33,
+     10,
+     13,
+     14,
+     48,
+     12,
+     31,
+     16,
+     43,
+     9,
+     27,
+     44,
+     42,
+     41,
+     7,
+     26,
+     5
+    ],
+    "waste": [
+     11
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     24,
+     17,
+     28,
+     30,
+     50,
+     0,
+     33,
+     10,
+     13,
+     14,
+     48,
+     12,
+     31,
+     16,
+     43,
+     9,
+     27,
+     44,
+     42,
+     41,
+     7
+    ],
+    "waste": [
+     11,
+     5,
+     26
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 49,
+   "raw_deal": "4?<FEY0`O7Z5BKWbNV93=U\\2TRIa:A6H]PcSXDGQMC8_L[@1J;>^",
+   "consumption": [
+    46,
+    14,
+    11,
+    26,
+    1,
+    16,
+    43,
+    28,
+    47,
+    8,
+    19,
+    29,
+    33,
+    23,
+    20,
+    40,
+    35,
+    51,
+    32,
+    45,
+    24,
+    6,
+    17,
+    10,
+    49,
+    25,
+    34,
+    36,
+    2,
+    44,
+    37,
+    13,
+    3,
+    9,
+    38,
+    30,
+    50,
+    39,
+    27,
+    18,
+    5,
+    42,
+    7,
+    31,
+    48,
+    0,
+    41,
+    21,
+    22,
+    12,
+    15,
+    4
+   ],
+   "dealt_canonical_sha256": "589f4c46d88c45446b47ff03767a36ce0c717e5853a6fb47bf921d9e5a56d003",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 46,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     2,
+     44,
+     37,
+     13,
+     3,
+     9,
+     38,
+     30,
+     50,
+     39,
+     27,
+     18,
+     5,
+     42,
+     7,
+     31,
+     48,
+     0,
+     41,
+     21,
+     22,
+     12,
+     15,
+     4
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     2,
+     44,
+     37,
+     13,
+     3,
+     9,
+     38,
+     30,
+     50,
+     39,
+     27,
+     18,
+     5,
+     42,
+     7,
+     31,
+     48,
+     0,
+     41,
+     21,
+     22,
+     12,
+     15
+    ],
+    "waste": [
+     4
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     2,
+     44,
+     37,
+     13,
+     3,
+     9,
+     38,
+     30,
+     50,
+     39,
+     27,
+     18,
+     5,
+     42,
+     7,
+     31,
+     48,
+     0,
+     41,
+     21,
+     22
+    ],
+    "waste": [
+     4,
+     15,
+     12
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 99,
+   "raw_deal": "^BZ?Q3Y=\\Cc]L`654O1<@>_X[Jb2PEGMD:I87FKR9ASNU0Ha;WTV",
+   "consumption": [
+    38,
+    36,
+    39,
+    11,
+    49,
+    24,
+    0,
+    37,
+    30,
+    35,
+    17,
+    9,
+    34,
+    27,
+    22,
+    7,
+    8,
+    25,
+    10,
+    20,
+    29,
+    23,
+    21,
+    32,
+    2,
+    50,
+    26,
+    43,
+    40,
+    47,
+    14,
+    16,
+    12,
+    1,
+    31,
+    4,
+    5,
+    6,
+    48,
+    28,
+    45,
+    51,
+    19,
+    44,
+    13,
+    41,
+    3,
+    33,
+    15,
+    42,
+    18,
+    46
+   ],
+   "dealt_canonical_sha256": "6da040ec690d676d3d226befb12241608a5360504e7ef7a901112b9939745b7f",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 38,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     40,
+     47,
+     14,
+     16,
+     12,
+     1,
+     31,
+     4,
+     5,
+     6,
+     48,
+     28,
+     45,
+     51,
+     19,
+     44,
+     13,
+     41,
+     3,
+     33,
+     15,
+     42,
+     18,
+     46
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     40,
+     47,
+     14,
+     16,
+     12,
+     1,
+     31,
+     4,
+     5,
+     6,
+     48,
+     28,
+     45,
+     51,
+     19,
+     44,
+     13,
+     41,
+     3,
+     33,
+     15,
+     42,
+     18
+    ],
+    "waste": [
+     46
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     40,
+     47,
+     14,
+     16,
+     12,
+     1,
+     31,
+     4,
+     5,
+     6,
+     48,
+     28,
+     45,
+     51,
+     19,
+     44,
+     13,
+     41,
+     3,
+     33,
+     15
+    ],
+    "waste": [
+     46,
+     18,
+     42
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 199,
+   "raw_deal": ";6A<G?ES\\@ZK8Yc9^FT7DJX>CN2_M5bPV4`:I=U[B]QH0OL3aR1W",
+   "consumption": [
+    39,
+    1,
+    34,
+    49,
+    3,
+    28,
+    31,
+    0,
+    24,
+    33,
+    45,
+    18,
+    43,
+    37,
+    13,
+    25,
+    10,
+    48,
+    4,
+    38,
+    32,
+    50,
+    5,
+    29,
+    47,
+    2,
+    30,
+    19,
+    14,
+    40,
+    26,
+    20,
+    7,
+    36,
+    22,
+    46,
+    9,
+    51,
+    41,
+    8,
+    27,
+    42,
+    16,
+    44,
+    35,
+    21,
+    15,
+    23,
+    12,
+    17,
+    6,
+    11
+   ],
+   "dealt_canonical_sha256": "094cfaa6b08d79f9eb60619777f8fc9e7b5844a6173a5d57e3e67073bbe7d76b",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     14,
+     40,
+     26,
+     20,
+     7,
+     36,
+     22,
+     46,
+     9,
+     51,
+     41,
+     8,
+     27,
+     42,
+     16,
+     44,
+     35,
+     21,
+     15,
+     23,
+     12,
+     17,
+     6,
+     11
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     14,
+     40,
+     26,
+     20,
+     7,
+     36,
+     22,
+     46,
+     9,
+     51,
+     41,
+     8,
+     27,
+     42,
+     16,
+     44,
+     35,
+     21,
+     15,
+     23,
+     12,
+     17,
+     6
+    ],
+    "waste": [
+     11
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     14,
+     40,
+     26,
+     20,
+     7,
+     36,
+     22,
+     46,
+     9,
+     51,
+     41,
+     8,
+     27,
+     42,
+     16,
+     44,
+     35,
+     21,
+     15,
+     23,
+     12
+    ],
+    "waste": [
+     11,
+     6,
+     17
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 499,
+   "raw_deal": "Z08c`2UG5O7@^TDa[B1YQ9KMJ\\:4V<6S>A_]EWN3IX;HL?=bRCPF",
+   "consumption": [
+    22,
+    32,
+    19,
+    34,
+    50,
+    13,
+    15,
+    28,
+    24,
+    11,
+    40,
+    25,
+    3,
+    30,
+    39,
+    21,
+    45,
+    47,
+    17,
+    14,
+    35,
+    6,
+    12,
+    38,
+    4,
+    10,
+    44,
+    26,
+    29,
+    27,
+    9,
+    33,
+    41,
+    1,
+    18,
+    43,
+    49,
+    20,
+    36,
+    46,
+    16,
+    7,
+    31,
+    5,
+    23,
+    37,
+    2,
+    48,
+    51,
+    8,
+    0,
+    42
+   ],
+   "dealt_canonical_sha256": "fc6a0a0af4db945beb88c5edd19d43dc02615cc72c6172142d3b2e0e92edac65",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 22,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     29,
+     27,
+     9,
+     33,
+     41,
+     1,
+     18,
+     43,
+     49,
+     20,
+     36,
+     46,
+     16,
+     7,
+     31,
+     5,
+     23,
+     37,
+     2,
+     48,
+     51,
+     8,
+     0,
+     42
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     29,
+     27,
+     9,
+     33,
+     41,
+     1,
+     18,
+     43,
+     49,
+     20,
+     36,
+     46,
+     16,
+     7,
+     31,
+     5,
+     23,
+     37,
+     2,
+     48,
+     51,
+     8,
+     0
+    ],
+    "waste": [
+     42
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     29,
+     27,
+     9,
+     33,
+     41,
+     1,
+     18,
+     43,
+     49,
+     20,
+     36,
+     46,
+     16,
+     7,
+     31,
+     5,
+     23,
+     37,
+     2,
+     48,
+     51
+    ],
+    "waste": [
+     42,
+     0,
+     8
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 999,
+   "raw_deal": "NWH=S_T06B[^4DbR8Y>`GZ3C?5EAcP2FO\\@KL7<VaQ1]9;MJ:UXI",
+   "consumption": [
+    25,
+    40,
+    37,
+    10,
+    26,
+    29,
+    11,
+    9,
+    45,
+    1,
+    33,
+    49,
+    38,
+    12,
+    7,
+    28,
+    27,
+    16,
+    44,
+    31,
+    22,
+    2,
+    32,
+    51,
+    17,
+    21,
+    5,
+    15,
+    19,
+    3,
+    42,
+    23,
+    48,
+    14,
+    41,
+    8,
+    34,
+    50,
+    20,
+    4,
+    46,
+    43,
+    18,
+    6,
+    0,
+    36,
+    47,
+    35,
+    13,
+    24,
+    39,
+    30
+   ],
+   "dealt_canonical_sha256": "a27d205968ff7d751e93f7061f1a04f771d35c5ab4d0c38f540ac86916b11617",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 25,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     19,
+     3,
+     42,
+     23,
+     48,
+     14,
+     41,
+     8,
+     34,
+     50,
+     20,
+     4,
+     46,
+     43,
+     18,
+     6,
+     0,
+     36,
+     47,
+     35,
+     13,
+     24,
+     39,
+     30
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     19,
+     3,
+     42,
+     23,
+     48,
+     14,
+     41,
+     8,
+     34,
+     50,
+     20,
+     4,
+     46,
+     43,
+     18,
+     6,
+     0,
+     36,
+     47,
+     35,
+     13,
+     24,
+     39
+    ],
+    "waste": [
+     30
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     19,
+     3,
+     42,
+     23,
+     48,
+     14,
+     41,
+     8,
+     34,
+     50,
+     20,
+     4,
+     46,
+     43,
+     18,
+     6,
+     0,
+     36,
+     47,
+     35,
+     13
+    ],
+    "waste": [
+     30,
+     39,
+     24
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 1499,
+   "raw_deal": "GPN:9a7>TIH0_K4=CO\\J[BQ?^3DZA5b1cUVMYSX`FE2W8;6R<@]L",
+   "consumption": [
+    28,
+    45,
+    16,
+    12,
+    34,
+    6,
+    11,
+    8,
+    39,
+    2,
+    21,
+    22,
+    48,
+    40,
+    35,
+    41,
+    29,
+    38,
+    37,
+    51,
+    1,
+    50,
+    5,
+    17,
+    42,
+    20,
+    3,
+    46,
+    15,
+    33,
+    18,
+    43,
+    26,
+    44,
+    31,
+    19,
+    13,
+    4,
+    27,
+    47,
+    0,
+    24,
+    25,
+    36,
+    14,
+    7,
+    49,
+    9,
+    10,
+    30,
+    32,
+    23
+   ],
+   "dealt_canonical_sha256": "efea2e032e17b11a6f1d4d129f4da246ec27cb294273d67a783a8dd4d0f83cae",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     15,
+     33,
+     18,
+     43,
+     26,
+     44,
+     31,
+     19,
+     13,
+     4,
+     27,
+     47,
+     0,
+     24,
+     25,
+     36,
+     14,
+     7,
+     49,
+     9,
+     10,
+     30,
+     32,
+     23
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     15,
+     33,
+     18,
+     43,
+     26,
+     44,
+     31,
+     19,
+     13,
+     4,
+     27,
+     47,
+     0,
+     24,
+     25,
+     36,
+     14,
+     7,
+     49,
+     9,
+     10,
+     30,
+     32
+    ],
+    "waste": [
+     23
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     15,
+     33,
+     18,
+     43,
+     26,
+     44,
+     31,
+     19,
+     13,
+     4,
+     27,
+     47,
+     0,
+     24,
+     25,
+     36,
+     14,
+     7,
+     49,
+     9,
+     10
+    ],
+    "waste": [
+     23,
+     32,
+     30
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 1999,
+   "raw_deal": "`CYD480]7\\1U3^A_:G6a2RBVKJ5<WFObP[ZcSL9HXNM@QE;>=?TI",
+   "consumption": [
+    25,
+    36,
+    15,
+    13,
+    14,
+    11,
+    21,
+    33,
+    16,
+    29,
+    30,
+    40,
+    24,
+    9,
+    28,
+    35,
+    51,
+    42,
+    43,
+    32,
+    50,
+    31,
+    22,
+    39,
+    12,
+    5,
+    26,
+    27,
+    38,
+    18,
+    34,
+    2,
+    49,
+    6,
+    23,
+    10,
+    47,
+    17,
+    46,
+    3,
+    37,
+    1,
+    44,
+    7,
+    45,
+    0,
+    8,
+    4,
+    20,
+    41,
+    19,
+    48
+   ],
+   "dealt_canonical_sha256": "dea7e15c9c15bef7141f952c46098a1682e0bb25009281173f0bbed114f91c9a",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 25,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 13,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     38,
+     18,
+     34,
+     2,
+     49,
+     6,
+     23,
+     10,
+     47,
+     17,
+     46,
+     3,
+     37,
+     1,
+     44,
+     7,
+     45,
+     0,
+     8,
+     4,
+     20,
+     41,
+     19,
+     48
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     38,
+     18,
+     34,
+     2,
+     49,
+     6,
+     23,
+     10,
+     47,
+     17,
+     46,
+     3,
+     37,
+     1,
+     44,
+     7,
+     45,
+     0,
+     8,
+     4,
+     20,
+     41,
+     19
+    ],
+    "waste": [
+     48
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     38,
+     18,
+     34,
+     2,
+     49,
+     6,
+     23,
+     10,
+     47,
+     17,
+     46,
+     3,
+     37,
+     1,
+     44,
+     7,
+     45,
+     0,
+     8,
+     4,
+     20
+    ],
+    "waste": [
+     48,
+     19,
+     41
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 2499,
+   "raw_deal": "8I:M_aA?BGEFTYR7=J>c5S^KX;@V16NO\\903C2Z4DUb`<HW]PQ[L",
+   "consumption": [
+    28,
+    43,
+    33,
+    32,
+    45,
+    39,
+    24,
+    12,
+    48,
+    50,
+    37,
+    20,
+    4,
+    42,
+    2,
+    19,
+    3,
+    0,
+    9,
+    44,
+    31,
+    30,
+    6,
+    1,
+    38,
+    16,
+    11,
+    40,
+    27,
+    46,
+    35,
+    5,
+    51,
+    14,
+    26,
+    13,
+    7,
+    34,
+    41,
+    36,
+    22,
+    21,
+    23,
+    18,
+    15,
+    17,
+    49,
+    47,
+    29,
+    10,
+    25,
+    8
+   ],
+   "dealt_canonical_sha256": "f92219282dd8f7c7928f6e79bc80177e20165b98c60c685bb4f8a7c49e176d95",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     27,
+     46,
+     35,
+     5,
+     51,
+     14,
+     26,
+     13,
+     7,
+     34,
+     41,
+     36,
+     22,
+     21,
+     23,
+     18,
+     15,
+     17,
+     49,
+     47,
+     29,
+     10,
+     25,
+     8
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     27,
+     46,
+     35,
+     5,
+     51,
+     14,
+     26,
+     13,
+     7,
+     34,
+     41,
+     36,
+     22,
+     21,
+     23,
+     18,
+     15,
+     17,
+     49,
+     47,
+     29,
+     10,
+     25
+    ],
+    "waste": [
+     8
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     27,
+     46,
+     35,
+     5,
+     51,
+     14,
+     26,
+     13,
+     7,
+     34,
+     41,
+     36,
+     22,
+     21,
+     23,
+     18,
+     15,
+     17,
+     49,
+     47,
+     29
+    ],
+    "waste": [
+     8,
+     25,
+     10
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 2999,
+   "raw_deal": "C6HWY5cRS=]02AO_\\K3`:8^4J<>71PQDL;FI?Xb[aU@ZVET9BNMG",
+   "consumption": [
+    23,
+    29,
+    30,
+    18,
+    9,
+    36,
+    21,
+    38,
+    42,
+    16,
+    37,
+    49,
+    43,
+    50,
+    40,
+    15,
+    25,
+    22,
+    11,
+    28,
+    20,
+    33,
+    32,
+    1,
+    7,
+    14,
+    12,
+    26,
+    4,
+    46,
+    8,
+    10,
+    48,
+    3,
+    27,
+    44,
+    47,
+    31,
+    17,
+    2,
+    0,
+    45,
+    13,
+    35,
+    34,
+    51,
+    5,
+    41,
+    39,
+    24,
+    6,
+    19
+   ],
+   "dealt_canonical_sha256": "c76456c0a4d91a38c8a511a84d66a56b10183cb61d41919e2fc9061f46d8005d",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 23,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     4,
+     46,
+     8,
+     10,
+     48,
+     3,
+     27,
+     44,
+     47,
+     31,
+     17,
+     2,
+     0,
+     45,
+     13,
+     35,
+     34,
+     51,
+     5,
+     41,
+     39,
+     24,
+     6,
+     19
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     4,
+     46,
+     8,
+     10,
+     48,
+     3,
+     27,
+     44,
+     47,
+     31,
+     17,
+     2,
+     0,
+     45,
+     13,
+     35,
+     34,
+     51,
+     5,
+     41,
+     39,
+     24,
+     6
+    ],
+    "waste": [
+     19
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     4,
+     46,
+     8,
+     10,
+     48,
+     3,
+     27,
+     44,
+     47,
+     31,
+     17,
+     2,
+     0,
+     45,
+     13,
+     35,
+     34,
+     51,
+     5,
+     41,
+     39
+    ],
+    "waste": [
+     19,
+     6,
+     24
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 3499,
+   "raw_deal": "\\L?6<7E:Sb;a=V5`]CWF2K8MU3N4HB[1_JR^Q0Z@PYAXDIGcT>O9",
+   "consumption": [
+    9,
+    31,
+    14,
+    36,
+    51,
+    23,
+    25,
+    20,
+    40,
+    17,
+    41,
+    32,
+    16,
+    42,
+    0,
+    33,
+    46,
+    34,
+    26,
+    47,
+    1,
+    43,
+    18,
+    24,
+    4,
+    30,
+    3,
+    37,
+    29,
+    8,
+    27,
+    2,
+    22,
+    39,
+    19,
+    45,
+    48,
+    5,
+    38,
+    13,
+    49,
+    11,
+    50,
+    35,
+    10,
+    21,
+    7,
+    12,
+    6,
+    15,
+    28,
+    44
+   ],
+   "dealt_canonical_sha256": "a172f43bea72e261cc86bb8e76dfd597d46c7f3f16bec544bc6c5d653f6bcf21",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 9,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     29,
+     8,
+     27,
+     2,
+     22,
+     39,
+     19,
+     45,
+     48,
+     5,
+     38,
+     13,
+     49,
+     11,
+     50,
+     35,
+     10,
+     21,
+     7,
+     12,
+     6,
+     15,
+     28,
+     44
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     29,
+     8,
+     27,
+     2,
+     22,
+     39,
+     19,
+     45,
+     48,
+     5,
+     38,
+     13,
+     49,
+     11,
+     50,
+     35,
+     10,
+     21,
+     7,
+     12,
+     6,
+     15,
+     28
+    ],
+    "waste": [
+     44
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     29,
+     8,
+     27,
+     2,
+     22,
+     39,
+     19,
+     45,
+     48,
+     5,
+     38,
+     13,
+     49,
+     11,
+     50,
+     35,
+     10,
+     21,
+     7,
+     12,
+     6
+    ],
+    "waste": [
+     44,
+     28,
+     15
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 3999,
+   "raw_deal": "5]3[7FK=McX@_GY8BL2O<a>J`0QbWC4NHR6PD?TZ\\^V1US:;IAE9",
+   "consumption": [
+    9,
+    21,
+    17,
+    25,
+    11,
+    10,
+    35,
+    37,
+    1,
+    38,
+    46,
+    44,
+    42,
+    36,
+    15,
+    20,
+    32,
+    6,
+    34,
+    24,
+    30,
+    4,
+    19,
+    39,
+    50,
+    33,
+    0,
+    48,
+    26,
+    14,
+    49,
+    12,
+    31,
+    2,
+    28,
+    18,
+    8,
+    41,
+    23,
+    47,
+    16,
+    40,
+    51,
+    29,
+    13,
+    27,
+    22,
+    7,
+    43,
+    3,
+    45,
+    5
+   ],
+   "dealt_canonical_sha256": "b6a4cfd07b86f11c602aa9d9394d5be70ba9d30afabacc8620ad76002fcb80d4",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 9,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     26,
+     14,
+     49,
+     12,
+     31,
+     2,
+     28,
+     18,
+     8,
+     41,
+     23,
+     47,
+     16,
+     40,
+     51,
+     29,
+     13,
+     27,
+     22,
+     7,
+     43,
+     3,
+     45,
+     5
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     26,
+     14,
+     49,
+     12,
+     31,
+     2,
+     28,
+     18,
+     8,
+     41,
+     23,
+     47,
+     16,
+     40,
+     51,
+     29,
+     13,
+     27,
+     22,
+     7,
+     43,
+     3,
+     45
+    ],
+    "waste": [
+     5
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     26,
+     14,
+     49,
+     12,
+     31,
+     2,
+     28,
+     18,
+     8,
+     41,
+     23,
+     47,
+     16,
+     40,
+     51,
+     29,
+     13,
+     27,
+     22,
+     7,
+     43
+    ],
+    "waste": [
+     5,
+     45,
+     3
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4499,
+   "raw_deal": "HB_O1W0;E^A4?N9K`PaTQFR5G[\\bM]DL3=cIC6>V<:@Y7Z2JSXU8",
+   "consumption": [
+    8,
+    37,
+    40,
+    35,
+    26,
+    2,
+    42,
+    7,
+    41,
+    16,
+    10,
+    12,
+    38,
+    14,
+    6,
+    19,
+    25,
+    51,
+    13,
+    3,
+    28,
+    20,
+    45,
+    29,
+    50,
+    44,
+    43,
+    23,
+    5,
+    34,
+    22,
+    33,
+    36,
+    49,
+    32,
+    48,
+    27,
+    9,
+    30,
+    15,
+    4,
+    17,
+    46,
+    21,
+    11,
+    0,
+    39,
+    1,
+    31,
+    47,
+    18,
+    24
+   ],
+   "dealt_canonical_sha256": "b1dd35d7820418ff1f20d412c68231d61e59fadfbe08c676d6c15b199c9e3cdc",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 8,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 6,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": false
+      },
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     5,
+     34,
+     22,
+     33,
+     36,
+     49,
+     32,
+     48,
+     27,
+     9,
+     30,
+     15,
+     4,
+     17,
+     46,
+     21,
+     11,
+     0,
+     39,
+     1,
+     31,
+     47,
+     18,
+     24
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     5,
+     34,
+     22,
+     33,
+     36,
+     49,
+     32,
+     48,
+     27,
+     9,
+     30,
+     15,
+     4,
+     17,
+     46,
+     21,
+     11,
+     0,
+     39,
+     1,
+     31,
+     47,
+     18
+    ],
+    "waste": [
+     24
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     5,
+     34,
+     22,
+     33,
+     36,
+     49,
+     32,
+     48,
+     27,
+     9,
+     30,
+     15,
+     4,
+     17,
+     46,
+     21,
+     11,
+     0,
+     39,
+     1,
+     31
+    ],
+    "waste": [
+     24,
+     18,
+     47
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4700,
+   "raw_deal": "OP=7R>X2cGCQLb[BY]3EA\\J:F05_84MW?;UVa<D`ZIST9^N@K16H",
+   "consumption": [
+    24,
+    6,
+    1,
+    27,
+    16,
+    30,
+    46,
+    9,
+    36,
+    35,
+    25,
+    42,
+    48,
+    20,
+    12,
+    49,
+    38,
+    37,
+    11,
+    15,
+    39,
+    29,
+    4,
+    8,
+    47,
+    5,
+    0,
+    22,
+    10,
+    26,
+    44,
+    17,
+    21,
+    3,
+    45,
+    41,
+    18,
+    43,
+    50,
+    28,
+    33,
+    19,
+    23,
+    51,
+    2,
+    40,
+    14,
+    34,
+    7,
+    13,
+    32,
+    31
+   ],
+   "dealt_canonical_sha256": "7edbc0fe8a45d124e846786934483e3f309a8dc668cdca443c67eae0a0477b54",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 24,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     10,
+     26,
+     44,
+     17,
+     21,
+     3,
+     45,
+     41,
+     18,
+     43,
+     50,
+     28,
+     33,
+     19,
+     23,
+     51,
+     2,
+     40,
+     14,
+     34,
+     7,
+     13,
+     32,
+     31
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     10,
+     26,
+     44,
+     17,
+     21,
+     3,
+     45,
+     41,
+     18,
+     43,
+     50,
+     28,
+     33,
+     19,
+     23,
+     51,
+     2,
+     40,
+     14,
+     34,
+     7,
+     13,
+     32
+    ],
+    "waste": [
+     31
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     10,
+     26,
+     44,
+     17,
+     21,
+     3,
+     45,
+     41,
+     18,
+     43,
+     50,
+     28,
+     33,
+     19,
+     23,
+     51,
+     2,
+     40,
+     14,
+     34,
+     7
+    ],
+    "waste": [
+     31,
+     32,
+     13
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4800,
+   "raw_deal": "^]BF4?P3:MQ[5K\\Z_L<c@DVA`>bGER;=8X1YSWT9O6I7HaN2C0JU",
+   "consumption": [
+    37,
+    26,
+    0,
+    19,
+    2,
+    30,
+    49,
+    24,
+    7,
+    25,
+    6,
+    31,
+    9,
+    36,
+    39,
+    35,
+    41,
+    1,
+    40,
+    8,
+    13,
+    11,
+    34,
+    21,
+    23,
+    50,
+    14,
+    48,
+    17,
+    38,
+    20,
+    16,
+    51,
+    12,
+    28,
+    47,
+    42,
+    44,
+    27,
+    5,
+    43,
+    33,
+    29,
+    10,
+    3,
+    32,
+    15,
+    4,
+    22,
+    18,
+    45,
+    46
+   ],
+   "dealt_canonical_sha256": "ba7d31c33ca543d802fd44a287aa6c01e1700bee77da34e2d932c57aca5e841d",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 37,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 26,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     17,
+     38,
+     20,
+     16,
+     51,
+     12,
+     28,
+     47,
+     42,
+     44,
+     27,
+     5,
+     43,
+     33,
+     29,
+     10,
+     3,
+     32,
+     15,
+     4,
+     22,
+     18,
+     45,
+     46
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     17,
+     38,
+     20,
+     16,
+     51,
+     12,
+     28,
+     47,
+     42,
+     44,
+     27,
+     5,
+     43,
+     33,
+     29,
+     10,
+     3,
+     32,
+     15,
+     4,
+     22,
+     18,
+     45
+    ],
+    "waste": [
+     46
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     17,
+     38,
+     20,
+     16,
+     51,
+     12,
+     28,
+     47,
+     42,
+     44,
+     27,
+     5,
+     43,
+     33,
+     29,
+     10,
+     3,
+     32,
+     15,
+     4,
+     22
+    ],
+    "waste": [
+     46,
+     45,
+     18
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4900,
+   "raw_deal": ":4FWBaQc2\\M?DIbA^[J5V>U97KHTZP@=YE<OC03;N_81L`XRSG6]",
+   "consumption": [
+    45,
+    6,
+    23,
+    35,
+    34,
+    40,
+    48,
+    28,
+    1,
+    8,
+    47,
+    30,
+    11,
+    3,
+    0,
+    19,
+    31,
+    12,
+    21,
+    41,
+    13,
+    16,
+    32,
+    42,
+    36,
+    24,
+    27,
+    7,
+    9,
+    37,
+    14,
+    38,
+    5,
+    26,
+    43,
+    46,
+    17,
+    50,
+    25,
+    20,
+    15,
+    29,
+    44,
+    2,
+    51,
+    33,
+    49,
+    18,
+    39,
+    22,
+    4,
+    10
+   ],
+   "dealt_canonical_sha256": "ca6c5d94271e24a5bc1e1fb09ef7f708bc49e8145aef15bbee0fd2a07ba30e3f",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 45,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 1,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     9,
+     37,
+     14,
+     38,
+     5,
+     26,
+     43,
+     46,
+     17,
+     50,
+     25,
+     20,
+     15,
+     29,
+     44,
+     2,
+     51,
+     33,
+     49,
+     18,
+     39,
+     22,
+     4,
+     10
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     9,
+     37,
+     14,
+     38,
+     5,
+     26,
+     43,
+     46,
+     17,
+     50,
+     25,
+     20,
+     15,
+     29,
+     44,
+     2,
+     51,
+     33,
+     49,
+     18,
+     39,
+     22,
+     4
+    ],
+    "waste": [
+     10
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     9,
+     37,
+     14,
+     38,
+     5,
+     26,
+     43,
+     46,
+     17,
+     50,
+     25,
+     20,
+     15,
+     29,
+     44,
+     2,
+     51,
+     33,
+     49,
+     18,
+     39
+    ],
+    "waste": [
+     10,
+     4,
+     22
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4949,
+   "raw_deal": "\\[:M<`J0N12DV@843^TRa=GBS_7YPU9bO?CZH>K]F5WcXQAE6LI;",
+   "consumption": [
+    11,
+    25,
+    28,
+    6,
+    21,
+    17,
+    33,
+    40,
+    51,
+    39,
+    5,
+    22,
+    45,
+    27,
+    14,
+    24,
+    42,
+    19,
+    15,
+    31,
+    50,
+    9,
+    37,
+    32,
+    41,
+    7,
+    47,
+    35,
+    18,
+    23,
+    13,
+    49,
+    34,
+    36,
+    46,
+    3,
+    4,
+    8,
+    16,
+    38,
+    20,
+    2,
+    1,
+    30,
+    0,
+    26,
+    48,
+    12,
+    29,
+    10,
+    43,
+    44
+   ],
+   "dealt_canonical_sha256": "49b7b68231ef769b1242d399d0c992806cf55b298bb0f57e55aa9d4a3794a05a",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 11,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 6,
+       "face_up": false
+      },
+      {
+       "id": 21,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 22,
+       "face_up": false
+      },
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 19,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 37,
+       "face_up": false
+      },
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 47,
+       "face_up": false
+      },
+      {
+       "id": 35,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     18,
+     23,
+     13,
+     49,
+     34,
+     36,
+     46,
+     3,
+     4,
+     8,
+     16,
+     38,
+     20,
+     2,
+     1,
+     30,
+     0,
+     26,
+     48,
+     12,
+     29,
+     10,
+     43,
+     44
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     18,
+     23,
+     13,
+     49,
+     34,
+     36,
+     46,
+     3,
+     4,
+     8,
+     16,
+     38,
+     20,
+     2,
+     1,
+     30,
+     0,
+     26,
+     48,
+     12,
+     29,
+     10,
+     43
+    ],
+    "waste": [
+     44
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     18,
+     23,
+     13,
+     49,
+     34,
+     36,
+     46,
+     3,
+     4,
+     8,
+     16,
+     38,
+     20,
+     2,
+     1,
+     30,
+     0,
+     26,
+     48,
+     12,
+     29
+    ],
+    "waste": [
+     44,
+     43,
+     10
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4970,
+   "raw_deal": "E4W=`c]Y@2<096[_Z8PF1UC5DKaLNOBXT?;VS\\:>^QMRIGb3HA7J",
+   "consumption": [
+    26,
+    7,
+    17,
+    24,
+    3,
+    50,
+    23,
+    25,
+    34,
+    29,
+    33,
+    46,
+    14,
+    10,
+    44,
+    35,
+    38,
+    11,
+    15,
+    36,
+    40,
+    18,
+    31,
+    30,
+    28,
+    49,
+    27,
+    20,
+    5,
+    19,
+    37,
+    1,
+    22,
+    32,
+    8,
+    42,
+    47,
+    43,
+    6,
+    9,
+    0,
+    12,
+    2,
+    16,
+    41,
+    45,
+    51,
+    48,
+    13,
+    39,
+    4,
+    21
+   ],
+   "dealt_canonical_sha256": "94b55e42ea33845b69fcf9142a62fce0817e2aeeece8a96fc0552dceddb8b177",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 26,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 17,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 3,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 34,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 33,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 35,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 18,
+       "face_up": false
+      },
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     5,
+     19,
+     37,
+     1,
+     22,
+     32,
+     8,
+     42,
+     47,
+     43,
+     6,
+     9,
+     0,
+     12,
+     2,
+     16,
+     41,
+     45,
+     51,
+     48,
+     13,
+     39,
+     4,
+     21
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     5,
+     19,
+     37,
+     1,
+     22,
+     32,
+     8,
+     42,
+     47,
+     43,
+     6,
+     9,
+     0,
+     12,
+     2,
+     16,
+     41,
+     45,
+     51,
+     48,
+     13,
+     39,
+     4
+    ],
+    "waste": [
+     21
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     5,
+     19,
+     37,
+     1,
+     22,
+     32,
+     8,
+     42,
+     47,
+     43,
+     6,
+     9,
+     0,
+     12,
+     2,
+     16,
+     41,
+     45,
+     51,
+     48,
+     13
+    ],
+    "waste": [
+     21,
+     4,
+     39
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4990,
+   "raw_deal": "6JPV4RScDF0XQ5IE=]C1U_A39L>@b2N\\Z`H7M?Y:^[K8GaB;OT<W",
+   "consumption": [
+    39,
+    12,
+    36,
+    31,
+    11,
+    18,
+    49,
+    23,
+    8,
+    27,
+    43,
+    46,
+    10,
+    41,
+    15,
+    29,
+    7,
+    24,
+    48,
+    42,
+    44,
+    30,
+    2,
+    50,
+    16,
+    14,
+    28,
+    9,
+    3,
+    17,
+    47,
+    37,
+    1,
+    19,
+    45,
+    13,
+    21,
+    25,
+    5,
+    33,
+    40,
+    0,
+    22,
+    20,
+    51,
+    35,
+    34,
+    4,
+    38,
+    32,
+    26,
+    6
+   ],
+   "dealt_canonical_sha256": "0b81e6e852ab2e320eff7b49c176fa1f60bbe42642624c4deab2150048a74ac9",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 39,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 12,
+       "face_up": false
+      },
+      {
+       "id": 36,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 31,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 8,
+       "face_up": false
+      },
+      {
+       "id": 27,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 43,
+       "face_up": false
+      },
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 10,
+       "face_up": false
+      },
+      {
+       "id": 41,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 7,
+       "face_up": false
+      },
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 48,
+       "face_up": false
+      },
+      {
+       "id": 42,
+       "face_up": false
+      },
+      {
+       "id": 44,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 2,
+       "face_up": false
+      },
+      {
+       "id": 50,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     3,
+     17,
+     47,
+     37,
+     1,
+     19,
+     45,
+     13,
+     21,
+     25,
+     5,
+     33,
+     40,
+     0,
+     22,
+     20,
+     51,
+     35,
+     34,
+     4,
+     38,
+     32,
+     26,
+     6
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     3,
+     17,
+     47,
+     37,
+     1,
+     19,
+     45,
+     13,
+     21,
+     25,
+     5,
+     33,
+     40,
+     0,
+     22,
+     20,
+     51,
+     35,
+     34,
+     4,
+     38,
+     32,
+     26
+    ],
+    "waste": [
+     6
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     3,
+     17,
+     47,
+     37,
+     1,
+     19,
+     45,
+     13,
+     21,
+     25,
+     5,
+     33,
+     40,
+     0,
+     22,
+     20,
+     51,
+     35,
+     34,
+     4,
+     38
+    ],
+    "waste": [
+     6,
+     26,
+     32
+    ]
+   }
+  },
+  {
+   "source": "Resources/data/bureau3.d",
+   "pool": "bureau3",
+   "index": 4998,
+   "raw_deal": "Z<`\\3_U[TYK:SF782O6RbE1C;>4WD?]JGcX9PLI0V5B=MHQN^@aA",
+   "consumption": [
+    17,
+    49,
+    16,
+    46,
+    30,
+    33,
+    24,
+    29,
+    13,
+    18,
+    5,
+    38,
+    0,
+    25,
+    28,
+    32,
+    9,
+    40,
+    51,
+    23,
+    26,
+    45,
+    15,
+    20,
+    39,
+    4,
+    14,
+    11,
+    19,
+    1,
+    21,
+    50,
+    34,
+    6,
+    31,
+    2,
+    8,
+    7,
+    22,
+    35,
+    10,
+    27,
+    41,
+    36,
+    43,
+    37,
+    47,
+    3,
+    44,
+    48,
+    12,
+    42
+   ],
+   "dealt_canonical_sha256": "706ed86c25b843ef7c0712502ea2070c246d9e52546f790d3c3fd65a73674558",
+   "dealt": {
+    "tableau": [
+     [
+      {
+       "id": 17,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 49,
+       "face_up": false
+      },
+      {
+       "id": 16,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 46,
+       "face_up": false
+      },
+      {
+       "id": 30,
+       "face_up": false
+      },
+      {
+       "id": 33,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 24,
+       "face_up": false
+      },
+      {
+       "id": 29,
+       "face_up": false
+      },
+      {
+       "id": 13,
+       "face_up": false
+      },
+      {
+       "id": 18,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 5,
+       "face_up": false
+      },
+      {
+       "id": 38,
+       "face_up": false
+      },
+      {
+       "id": 0,
+       "face_up": false
+      },
+      {
+       "id": 25,
+       "face_up": false
+      },
+      {
+       "id": 28,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 32,
+       "face_up": false
+      },
+      {
+       "id": 9,
+       "face_up": false
+      },
+      {
+       "id": 40,
+       "face_up": false
+      },
+      {
+       "id": 51,
+       "face_up": false
+      },
+      {
+       "id": 23,
+       "face_up": false
+      },
+      {
+       "id": 26,
+       "face_up": true
+      }
+     ],
+     [
+      {
+       "id": 45,
+       "face_up": false
+      },
+      {
+       "id": 15,
+       "face_up": false
+      },
+      {
+       "id": 20,
+       "face_up": false
+      },
+      {
+       "id": 39,
+       "face_up": false
+      },
+      {
+       "id": 4,
+       "face_up": false
+      },
+      {
+       "id": 14,
+       "face_up": false
+      },
+      {
+       "id": 11,
+       "face_up": true
+      }
+     ]
+    ],
+    "stock": [
+     19,
+     1,
+     21,
+     50,
+     34,
+     6,
+     31,
+     2,
+     8,
+     7,
+     22,
+     35,
+     10,
+     27,
+     41,
+     36,
+     43,
+     37,
+     47,
+     3,
+     44,
+     48,
+     12,
+     42
+    ],
+    "waste": []
+   },
+   "ready_draw1": {
+    "stock": [
+     19,
+     1,
+     21,
+     50,
+     34,
+     6,
+     31,
+     2,
+     8,
+     7,
+     22,
+     35,
+     10,
+     27,
+     41,
+     36,
+     43,
+     37,
+     47,
+     3,
+     44,
+     48,
+     12
+    ],
+    "waste": [
+     42
+    ]
+   },
+   "ready_draw3": {
+    "stock": [
+     19,
+     1,
+     21,
+     50,
+     34,
+     6,
+     31,
+     2,
+     8,
+     7,
+     22,
+     35,
+     10,
+     27,
+     41,
+     36,
+     43,
+     37,
+     47,
+     3,
+     44
+    ],
+    "waste": [
+     42,
+     12,
+     48
+    ]
+   }
+  }
+ ]
+}

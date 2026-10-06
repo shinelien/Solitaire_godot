@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/card_0_1_0.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/Sprite.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/newhd/card_bg_0.png" id="4"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "card/CardFace"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 70
+metadata/action_tag = 0
+
+[node name="Sprite_face" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -74.0
+offset_top = -110.0
+offset_right = 74.0
+offset_bottom = 110.0
+pivot_offset = Vector2(74.0, 110.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_face"
+metadata/cocos_tag = 71
+metadata/action_tag = -2101847390
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_color" type="TextureRect" parent="Sprite_face"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.0
+offset_top = 87.0
+offset_right = 97.0
+offset_bottom = 133.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_color"
+metadata/cocos_tag = 73
+metadata/action_tag = -859025480
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_num" type="TextureRect" parent="Sprite_face"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.9976
+offset_top = 10.0
+offset_right = 54.9976
+offset_bottom = 56.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_num"
+metadata/cocos_tag = 72
+metadata/action_tag = -706990143
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_bg" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -71.0
+offset_top = -109.0
+offset_right = 71.0
+offset_bottom = 109.0
+pivot_offset = Vector2(71.0, 109.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_bg"
+metadata/cocos_tag = 74
+metadata/action_tag = -1514782153
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

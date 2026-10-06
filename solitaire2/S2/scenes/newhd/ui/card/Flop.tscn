@@ -1,0 +1,2318 @@
+[gd_scene load_steps=40 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="6"]
+
+
+
+
+
+
+[ext_resource type="Font" path="res://assets/newhd/font/Wintips.fnt" id="13"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/ui/Animation/NodeBox.tscn" id="30"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/Gamebox.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(871, 1692, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1627, 1074, 64, 94)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1671, 1721, 65, 65)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1632, 1471, 36, 71)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1627, 1266, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1565, 409, 20, 67)
+margin = Rect2(23, 0, 46, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1872, 1621, 44, 67)
+margin = Rect2(11, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1618, 176, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1988, 1729, 44, 67)
+margin = Rect2(12, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(2011, 1206, 33, 45)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1613, 1755, 56, 71)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(2008, 238, 34, 51)
+margin = Rect2(8, 0, 16, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_17"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(43, 643, 40, 51)
+margin = Rect2(5, 0, 10, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_18"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1683, 258, 36, 51)
+margin = Rect2(7, 0, 14, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_19"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(43, 696, 40, 51)
+margin = Rect2(5, 0, 10, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_20"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(982, 1995, 50, 49)
+margin = Rect2(0, 2, 0, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_21"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1771, 1955, 48, 51)
+margin = Rect2(0, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_22"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1492, 160, 58, 72)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_23"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(771, 1629, 93, 180)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_24"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1613, 1828, 55, 70)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_25"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(454, 1660, 223, 178)
+margin = Rect2(0, 24, 36, 24)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_26"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1387, 129, 58, 78)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_27"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1638, 798, 145, 142)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_28"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1607, 1587, 57, 72)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_29"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1625, 535, 130, 61)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_31"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1209, 92, 96, 129)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Flop1"]
+resource_name = "Flop1"
+length = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_reward1/Image_reward1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_reward1/card_l1_2:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_reward1/card_l1_2:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_reward1:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_reward2/Image_reward1:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_reward2/card_l1_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_reward2/card_l1_2:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_reward2:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_reward3/Image_reward1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_reward3/card_l1_2:scale")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_reward3/card_l1_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_reward3:scale")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_reward4/Image_reward1:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_reward4/card_l1_2:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_reward4/card_l1_2:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_reward4:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_reward5/Image_reward1:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_reward5/card_l1_2:scale")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_reward5/card_l1_2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_reward5:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_reward6/Image_reward1:modulate")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Panel_reward6/card_l1_2:scale")
+tracks/21/interp = 1
+tracks/21/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Panel_reward6/card_l1_2:modulate")
+tracks/22/interp = 1
+tracks/22/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Panel_reward6:scale")
+tracks/23/interp = 1
+tracks/23/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Panel_reward7/Image_reward1:modulate")
+tracks/24/interp = 1
+tracks/24/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Panel_reward7/card_l1_2:scale")
+tracks/25/interp = 1
+tracks/25/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Panel_reward7/card_l1_2:modulate")
+tracks/26/interp = 1
+tracks/26/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Panel_reward7:scale")
+tracks/27/interp = 1
+tracks/27/keys = {"times": PackedFloat32Array(0.0, 0.05), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Flop3"]
+resource_name = "Flop3"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_reward1/Image_reward1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_reward1/card_l1_2:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_reward1/card_l1_2:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_reward1:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_reward2/Image_reward1:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_reward2/card_l1_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_reward2/card_l1_2:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_reward2:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_reward3/Image_reward1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_reward3/card_l1_2:scale")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_reward3/card_l1_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_reward3:scale")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_reward4/Image_reward1:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_reward4/card_l1_2:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_reward4/card_l1_2:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_reward4:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_reward5/Image_reward1:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_reward5/card_l1_2:scale")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_reward5/card_l1_2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_reward5:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_reward6/Image_reward1:modulate")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Panel_reward6/card_l1_2:scale")
+tracks/21/interp = 1
+tracks/21/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Panel_reward6/card_l1_2:modulate")
+tracks/22/interp = 1
+tracks/22/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Panel_reward6:scale")
+tracks/23/interp = 1
+tracks/23/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Panel_reward7/Image_reward1:modulate")
+tracks/24/interp = 1
+tracks/24/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Panel_reward7/card_l1_2:scale")
+tracks/25/interp = 1
+tracks/25/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(3.0, 2.2864)]}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Panel_reward7/card_l1_2:modulate")
+tracks/26/interp = 1
+tracks/26/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0.0)]}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Panel_reward7:scale")
+tracks/27/interp = 1
+tracks/27/keys = {"times": PackedFloat32Array(0.0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Day1"]
+resource_name = "Day1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_reward1/Image_reward1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_reward1/card_l1_2:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_reward1/card_l1_2:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_reward1:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_reward2/Image_reward1:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_reward2/card_l1_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_reward2/card_l1_2:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_reward2:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_reward3/Image_reward1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_reward3/card_l1_2:scale")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_reward3/card_l1_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_reward3:scale")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_reward4/Image_reward1:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_reward4/card_l1_2:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_reward4/card_l1_2:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_reward4:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_reward5/Image_reward1:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_reward5/card_l1_2:scale")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_reward5/card_l1_2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_reward5:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_reward6/Image_reward1:modulate")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Panel_reward6/card_l1_2:scale")
+tracks/21/interp = 1
+tracks/21/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Panel_reward6/card_l1_2:modulate")
+tracks/22/interp = 1
+tracks/22/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Panel_reward6:scale")
+tracks/23/interp = 1
+tracks/23/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Panel_reward7/Image_reward1:modulate")
+tracks/24/interp = 1
+tracks/24/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.65), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.85), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0.95), Color(1, 1, 1, 1.0)]}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Panel_reward7/card_l1_2:scale")
+tracks/25/interp = 1
+tracks/25/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.0, 2.2864)]}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Panel_reward7/card_l1_2:modulate")
+tracks/26/interp = 1
+tracks/26/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Panel_reward7:scale")
+tracks/27/interp = 1
+tracks/27/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.01, 1.01), Vector2(1.02, 1.02), Vector2(1.03, 1.03), Vector2(1.04, 1.04), Vector2(1.05, 1.05), Vector2(1.06, 1.06), Vector2(1.07, 1.07), Vector2(1.08, 1.08), Vector2(1.09, 1.09), Vector2(1.1, 1.1), Vector2(1.09811, 1.09811), Vector2(1.09244, 1.09244), Vector2(1.08298, 1.08298), Vector2(1.06975, 1.06975), Vector2(1.05273, 1.05273), Vector2(1.03194, 1.03194), Vector2(1.00736, 1.00736), Vector2(1.009, 1.009), Vector2(1.01811, 1.01811), Vector2(1.02344, 1.02344), Vector2(1.02498, 1.02498), Vector2(1.02275, 1.02275), Vector2(1.01673, 1.01673), Vector2(1.00694, 1.00694), Vector2(1.00273, 1.00273), Vector2(1.006, 1.006), Vector2(1.00548, 1.00548), Vector2(1.00119, 1.00119), Vector2(1.00155, 1.00155), Vector2(1.0, 1.0)]}
+[sub_resource type="Animation" id="Anim_Day2"]
+resource_name = "Day2"
+length = 0.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_reward1/Image_reward1:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_reward1/card_l1_2:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_reward1/card_l1_2:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_reward1:scale")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_reward2/Image_reward1:modulate")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_reward2/card_l1_2:scale")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_reward2/card_l1_2:modulate")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_reward2:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_reward3/Image_reward1:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_reward3/card_l1_2:scale")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_reward3/card_l1_2:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_reward3:scale")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_reward4/Image_reward1:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_reward4/card_l1_2:scale")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_reward4/card_l1_2:modulate")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_reward4:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_reward5/Image_reward1:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_reward5/card_l1_2:scale")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_reward5/card_l1_2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_reward5:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_reward6/Image_reward1:modulate")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Panel_reward6/card_l1_2:scale")
+tracks/21/interp = 1
+tracks/21/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(3.62455, 2.76241), Vector2(4.24909, 3.23842), Vector2(4.87364, 3.71443), Vector2(5.49818, 4.19044), Vector2(6.12273, 4.66645), Vector2(6.74727, 5.14245), Vector2(7.37182, 5.61846), Vector2(7.99636, 6.09447), Vector2(8.62091, 6.57048), Vector2(9.24545, 7.04649), Vector2(9.87, 7.5225), Vector2(9.8264, 7.48925), Vector2(9.7828, 7.456), Vector2(9.7392, 7.42275), Vector2(9.6956, 7.3895), Vector2(9.652, 7.35625), Vector2(9.6084, 7.323), Vector2(9.5648, 7.28975), Vector2(9.5212, 7.2565), Vector2(9.4776, 7.22325), Vector2(9.434, 7.19), Vector2(9.3904, 7.15675), Vector2(9.3468, 7.1235), Vector2(9.3032, 7.09025), Vector2(9.2596, 7.057)]}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Panel_reward6/card_l1_2:modulate")
+tracks/22/interp = 1
+tracks/22/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.92857), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.78571), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.64286), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.35714), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.21429), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.07143), Color(1, 1, 1, 0.0)]}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Panel_reward6:scale")
+tracks/23/interp = 1
+tracks/23/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Panel_reward7/Image_reward1:modulate")
+tracks/24/interp = 1
+tracks/24/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Panel_reward7/card_l1_2:scale")
+tracks/25/interp = 1
+tracks/25/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(3.0, 2.2864), Vector2(5.78265, 2.76242), Vector2(8.56529, 3.23844), Vector2(11.34794, 3.71445), Vector2(14.13058, 4.19047), Vector2(16.91323, 4.66649), Vector2(19.69587, 5.14251), Vector2(22.47852, 5.61853), Vector2(25.26116, 6.09455), Vector2(28.04381, 6.57056), Vector2(30.82645, 7.04658), Vector2(33.6091, 7.5226), Vector2(33.6091, 7.5226)]}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Panel_reward7/card_l1_2:modulate")
+tracks/26/interp = 1
+tracks/26/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Panel_reward7:scale")
+tracks/27/interp = 1
+tracks/27/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(0.987, 0.987), Vector2(0.974, 0.974), Vector2(0.961, 0.961), Vector2(0.948, 0.948), Vector2(0.935, 0.935), Vector2(0.922, 0.922), Vector2(0.909, 0.909), Vector2(0.896, 0.896), Vector2(0.883, 0.883), Vector2(0.87, 0.87), Vector2(0.89852, 0.89852), Vector2(0.92315, 0.92315), Vector2(0.94414, 0.94414), Vector2(0.96175, 0.96175), Vector2(0.97626, 0.97626), Vector2(0.98793, 0.98793), Vector2(0.99701, 0.99701), Vector2(1.00377, 1.00377), Vector2(1.00848, 1.00848), Vector2(1.0114, 1.0114), Vector2(1.01279, 1.01279), Vector2(1.01292, 1.01292), Vector2(1.01204, 1.01204), Vector2(1.01043, 1.01043), Vector2(1.00834, 1.00834), Vector2(1.00604, 1.00604), Vector2(1.00379, 1.00379), Vector2(1.00186, 1.00186), Vector2(1.00051, 1.00051), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Flop1": SubResource("Anim_Flop1"),
+"Flop3": SubResource("Anim_Flop3"),
+"Day1": SubResource("Anim_Day1"),
+"Day2": SubResource("Anim_Day2")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "card/Flop"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 1402
+metadata/action_tag = 0
+
+[node name="Panel_reward1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -145.0
+offset_right = 135.0
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward1"
+metadata/cocos_tag = 6496
+metadata/action_tag = -1398052566
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6497
+metadata/action_tag = 1113307096
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6498
+metadata/action_tag = -1628112715
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward1/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6499
+metadata/action_tag = 1070073457
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 64.8
+offset_top = 20.3
+offset_right = 136.8
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6500
+metadata/action_tag = -1797970192
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(100.8, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt0_1" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 23.77
+offset_top = 20.2259
+offset_right = 59.77
+offset_bottom = 91.2259
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt0_1"
+metadata/cocos_tag = 6501
+metadata/action_tag = 8558821
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_0_433" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 112.8181
+offset_top = 158.3038
+offset_right = 178.8181
+offset_bottom = 225.3038
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.5751, 0.5751)
+rotation = 0.50217
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_0_433"
+metadata/cocos_tag = 6502
+metadata/action_tag = 1370002135
+texture = SubResource("atlas_sprite_8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_10_435" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 142.3499
+offset_top = 103.8929
+offset_right = 208.3499
+offset_bottom = 170.8929
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.5573, 0.5573)
+rotation = -1.19949
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_10_435"
+metadata/cocos_tag = 6503
+metadata/action_tag = -475820858
+texture = SubResource("atlas_sprite_9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_3_438" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 84.2459
+offset_top = 77.3971
+offset_right = 150.2459
+offset_bottom = 144.3971
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.8144, 0.8144)
+rotation = -0.23023
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_3_438"
+metadata/cocos_tag = 6504
+metadata/action_tag = -1191271356
+texture = SubResource("atlas_sprite_10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_8_443" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 101.8059
+offset_top = 103.568
+offset_right = 167.8059
+offset_bottom = 170.568
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.882, 0.882)
+rotation = 0.58275
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_8_443"
+metadata/cocos_tag = 6505
+metadata/action_tag = 1879148447
+texture = SubResource("atlas_sprite_11")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_9_444" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 51.3008
+offset_top = 115.7987
+offset_right = 117.3008
+offset_bottom = 182.7987
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.8872, 0.8872)
+rotation = 0.41468
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_9_444"
+metadata/cocos_tag = 6506
+metadata/action_tag = 789517581
+texture = SubResource("atlas_sprite_12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 7.7
+offset_top = 174.6
+offset_right = 240.7
+offset_bottom = 272.6
+pivot_offset = Vector2(116.5, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6608
+metadata/action_tag = -1906184109
+script = ExtResource("6")
+design_size = Vector2(233.0, 98.0)
+design_center = Vector2(124.2, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+100"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6508
+metadata/action_tag = 1343898937
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward2" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -145.0
+offset_right = 135.0
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward2"
+metadata/cocos_tag = 6579
+metadata/action_tag = -195182152
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6580
+metadata/action_tag = 625701769
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6581
+metadata/action_tag = -1237077993
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward2/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6582
+metadata/action_tag = -263703047
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.4
+offset_top = 20.3
+offset_right = 158.4
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6583
+metadata/action_tag = 1941910749
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(122.4, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt1_2" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 23.77
+offset_top = 16.6685
+offset_right = 79.77
+offset_bottom = 87.6685
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt1_2"
+metadata/cocos_tag = 6558
+metadata/action_tag = -1777656961
+texture = SubResource("atlas_sprite_15")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 7.7
+offset_top = 174.6
+offset_right = 240.7
+offset_bottom = 272.6
+pivot_offset = Vector2(116.5, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6607
+metadata/action_tag = -905443521
+script = ExtResource("6")
+design_size = Vector2(233.0, 98.0)
+design_center = Vector2(124.2, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+100"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Money_Baoshi_7_430" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 132.1495
+offset_top = 110.6338
+offset_right = 182.1495
+offset_bottom = 161.6338
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.0872, 1.0872)
+rotation = -0.43997
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_7_430"
+metadata/cocos_tag = 6559
+metadata/action_tag = -1950891437
+texture = SubResource("atlas_sprite_16")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Baoshi_6_429" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 69.0004
+offset_top = 86.5343
+offset_right = 119.0004
+offset_bottom = 137.5343
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.0872, 1.0872)
+rotation = -2.83365
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_6_429"
+metadata/cocos_tag = 6560
+metadata/action_tag = 860477554
+texture = SubResource("atlas_sprite_17")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Baoshi_2_425" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 112.2601
+offset_top = 96.1351
+offset_right = 162.2601
+offset_bottom = 147.1351
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.0872, 1.0872)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_2_425"
+metadata/cocos_tag = 6561
+metadata/action_tag = -818530017
+texture = SubResource("atlas_sprite_18")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Baoshi_1_423" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 174.293
+offset_top = 150.2642
+offset_right = 224.293
+offset_bottom = 201.2642
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.0872, 1.0872)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_1_423"
+metadata/cocos_tag = 6562
+metadata/action_tag = -536819640
+texture = SubResource("atlas_sprite_19")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Baoshi_0_422" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 55.5541
+offset_top = 157.1816
+offset_right = 105.5541
+offset_bottom = 208.1816
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(0.6601, 0.6601)
+rotation = -0.59583
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_0_422"
+metadata/cocos_tag = 6563
+metadata/action_tag = 1295858461
+texture = SubResource("atlas_sprite_20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Baoshi_9_432" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 104.0972
+offset_top = 123.479
+offset_right = 154.0972
+offset_bottom = 174.479
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.272, 1.272)
+rotation = 0.82819
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Baoshi_9_432"
+metadata/cocos_tag = 6564
+metadata/action_tag = -1941187415
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6591
+metadata/action_tag = 713728384
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward3" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -145.0
+offset_right = 135.0
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward3"
+metadata/cocos_tag = 6592
+metadata/action_tag = 737995851
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6593
+metadata/action_tag = -1752031705
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6594
+metadata/action_tag = 101683009
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward3/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6595
+metadata/action_tag = 1888730610
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.4
+offset_top = 20.3
+offset_right = 158.4
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6596
+metadata/action_tag = -606644034
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(122.4, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt2_3" type="TextureRect" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 23.77
+offset_top = 18.8158
+offset_right = 81.77
+offset_bottom = 90.8158
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt2_3"
+metadata/cocos_tag = 6625
+metadata/action_tag = -1831889834
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_0_421" type="TextureRect" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.141
+offset_top = 70.225
+offset_right = 189.141
+offset_bottom = 250.225
+pivot_offset = Vector2(46.5, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = -0.73303
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_0_421"
+metadata/cocos_tag = 6551
+metadata/action_tag = 1336473090
+texture = SubResource("atlas_sprite_23")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 69.0
+offset_top = 174.6
+offset_right = 201.0
+offset_bottom = 272.6
+pivot_offset = Vector2(66.0, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6606
+metadata/action_tag = 1280386793
+script = ExtResource("6")
+design_size = Vector2(132.0, 98.0)
+design_center = Vector2(135.0, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "x3"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6605
+metadata/action_tag = -619968590
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward4" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -145.0
+offset_right = 135.0
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward4"
+metadata/cocos_tag = 6609
+metadata/action_tag = 1249570117
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6610
+metadata/action_tag = 2051810600
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6611
+metadata/action_tag = -719838702
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward4/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6612
+metadata/action_tag = 1393679358
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 76.113
+offset_top = 20.3
+offset_right = 148.113
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6613
+metadata/action_tag = -709463869
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(112.113, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt3_4" type="TextureRect" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 16.0001
+offset_top = 21.2259
+offset_right = 71.0001
+offset_bottom = 91.2259
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt3_4"
+metadata/cocos_tag = 6544
+metadata/action_tag = 332007107
+texture = SubResource("atlas_sprite_24")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Box3_0_44" type="TextureRect" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 16.5
+offset_top = 57.0
+offset_right = 275.5
+offset_bottom = 259.0
+pivot_offset = Vector2(129.5, 202.0)
+scale = Vector2(0.89, 0.89)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Box3_0_44"
+metadata/cocos_tag = 6543
+metadata/action_tag = -636701160
+texture = SubResource("atlas_sprite_25")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 77.5
+offset_top = 174.6
+offset_right = 192.5
+offset_bottom = 272.6
+pivot_offset = Vector2(57.5, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6616
+metadata/action_tag = 386892463
+script = ExtResource("6")
+design_size = Vector2(115.0, 98.0)
+design_center = Vector2(135.0, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "x1"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6617
+metadata/action_tag = -1269792122
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward5" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0001
+offset_top = -145.0
+offset_right = 134.9999
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward5"
+metadata/cocos_tag = 6628
+metadata/action_tag = 888566435
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6629
+metadata/action_tag = -1697694195
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6630
+metadata/action_tag = -1348870880
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward5/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6631
+metadata/action_tag = 1106953377
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 86.4
+offset_top = 20.3
+offset_right = 158.4
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6632
+metadata/action_tag = -443719360
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(122.4, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt4_5" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 18.77
+offset_top = 13.2259
+offset_right = 76.77
+offset_bottom = 91.2259
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt4_5"
+metadata/cocos_tag = 6530
+metadata/action_tag = 1031670304
+texture = SubResource("atlas_sprite_26")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_9_444" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 47.3688
+offset_top = 142.569
+offset_right = 113.3688
+offset_bottom = 209.569
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.1621, 1.1621)
+rotation = 0.13319
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_9_444"
+metadata/cocos_tag = 6535
+metadata/action_tag = 492401198
+texture = SubResource("atlas_sprite_12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_0_433" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 178.2311
+offset_top = 62.1843
+offset_right = 244.2311
+offset_bottom = 129.1843
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.516, 0.516)
+rotation = -0.45723
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_0_433"
+metadata/cocos_tag = 6534
+metadata/action_tag = -1252726813
+texture = SubResource("atlas_sprite_8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_gold0_420" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 76.9498
+offset_top = 85.1597
+offset_right = 221.9498
+offset_bottom = 227.1597
+pivot_offset = Vector2(72.5, 71.0)
+scale = Vector2(0.7729, 0.7729)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_gold0_420"
+metadata/cocos_tag = 6533
+metadata/action_tag = -976889061
+texture = SubResource("atlas_sprite_27")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_8_443" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 148.9411
+offset_top = 112.8211
+offset_right = 214.9411
+offset_bottom = 179.8211
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.7914, 0.7914)
+rotation = 1.01509
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_8_443"
+metadata/cocos_tag = 6532
+metadata/action_tag = -23380172
+texture = SubResource("atlas_sprite_11")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Money_Gold_3_438" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.389
+offset_top = 88.1921
+offset_right = 133.389
+offset_bottom = 155.1921
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(0.7307, 0.7307)
+rotation = 0.89758
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Money_Gold_3_438"
+metadata/cocos_tag = 6531
+metadata/action_tag = 1256595504
+texture = SubResource("atlas_sprite_10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 13.1
+offset_top = 174.6
+offset_right = 246.1
+offset_bottom = 272.6
+pivot_offset = Vector2(116.5, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6635
+metadata/action_tag = -2014082242
+script = ExtResource("6")
+design_size = Vector2(233.0, 98.0)
+design_center = Vector2(129.6, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+150"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6636
+metadata/action_tag = 673543651
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward6" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -145.0
+offset_right = 135.0
+offset_bottom = 145.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward6"
+metadata/cocos_tag = 6637
+metadata/action_tag = -1118955014
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 270.0
+offset_bottom = 290.0
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6638
+metadata/action_tag = -1840665659
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 1.0
+offset_top = -3.8
+offset_right = 269.0
+offset_bottom = 282.2
+pivot_offset = Vector2(134.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6639
+metadata/action_tag = 274734582
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward6/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 203.34
+offset_top = 1.82
+offset_right = 268.34
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6640
+metadata/action_tag = -1240661974
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 81.378
+offset_top = 20.3
+offset_right = 153.378
+offset_bottom = 65.3
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72549, 0.96078, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6641
+metadata/action_tag = -1480452546
+script = ExtResource("6")
+design_size = Vector2(72.0, 45.0)
+design_center = Vector2(117.378, 42.8)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt5_6" type="TextureRect" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 74.0
+offset_bottom = 90.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt5_6"
+metadata/cocos_tag = 6522
+metadata/action_tag = 746737510
+texture = SubResource("atlas_sprite_28")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Ui_7day3_1" type="TextureRect" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 69.1683
+offset_top = 128.3239
+offset_right = 199.1683
+offset_bottom = 189.3239
+pivot_offset = Vector2(65.0, 30.5)
+scale = Vector2(1.5046, 1.5046)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day3_1"
+metadata/cocos_tag = 6523
+metadata/action_tag = -736776312
+texture = SubResource("atlas_sprite_29")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 13.1
+offset_top = 174.6
+offset_right = 246.1
+offset_bottom = 272.6
+pivot_offset = Vector2(116.5, 98.0)
+scale = Vector2(0.62, 0.62)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6648
+metadata/action_tag = -305054630
+script = ExtResource("6")
+design_size = Vector2(233.0, 98.0)
+design_center = Vector2(129.6, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "+100"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward6"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6649
+metadata/action_tag = -1969306315
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_reward7" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -135.0
+offset_top = -144.9999
+offset_right = 135.0
+offset_bottom = 145.0001
+pivot_offset = Vector2(135.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_reward7"
+metadata/cocos_tag = 6650
+metadata/action_tag = 1473164560
+
+[node name="Image_2" type="NinePatchRect" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -288.5
+offset_top = 0.0
+offset_right = 558.5
+offset_bottom = 290.0
+pivot_offset = Vector2(423.5, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 6651
+metadata/action_tag = 608393042
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 95
+patch_margin_bottom = 95
+
+[node name="Image_reward1" type="NinePatchRect" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -288.0
+offset_top = -3.8
+offset_right = 558.0
+offset_bottom = 282.2
+pivot_offset = Vector2(423.0, 143.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_reward1"
+metadata/cocos_tag = 6652
+metadata/action_tag = 189818496
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 22
+patch_margin_right = 22
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Ui_7day1" type="TextureRect" parent="Panel_reward7/Image_reward1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 779.66
+offset_top = 1.82
+offset_right = 844.66
+offset_bottom = 66.82
+pivot_offset = Vector2(32.5, 32.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7day1"
+metadata/cocos_tag = 6653
+metadata/action_tag = 15748893
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="FileNode_box" parent="Panel_reward7" instance=ExtResource("30")]
+mouse_filter = 2
+offset_left = 378.0
+offset_top = 265.0
+offset_right = 378.0
+offset_bottom = 265.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.93, 0.93)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_box"
+metadata/cocos_tag = 6660
+metadata/action_tag = 1370960674
+
+[node name="Text_28_0_0" type="Label" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -251.1004
+offset_top = 150.8
+offset_right = 174.8996
+offset_bottom = 277.8
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.16078, 0.2549, 0.45882, 1.0)
+metadata/cocos_name = "Text_28_0_0"
+metadata/cocos_tag = 6516
+metadata/action_tag = -1714276030
+script = ExtResource("6")
+design_size = Vector2(426.0, 127.0)
+design_center = Vector2(-38.1004, 214.3)
+design_font_size = 29
+bitmap_font = false
+fit_box = true
+text = "连续签到7天,可以得到大礼包"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 29
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_7dayfnt6_7" type="TextureRect" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -171.9998
+offset_top = 19.8901
+offset_right = -75.9998
+offset_bottom = 148.8901
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.5003, 1.1607)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_7dayfnt6_7"
+metadata/cocos_tag = 6513
+metadata/action_tag = -1233909432
+texture = SubResource("atlas_sprite_31")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_28" type="Label" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -32.4
+offset_top = 74.443
+offset_right = 74.6
+offset_bottom = 142.443
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_28"
+metadata/cocos_tag = 6512
+metadata/action_tag = -1144434653
+script = ExtResource("6")
+design_size = Vector2(107.0, 68.0)
+design_center = Vector2(21.1, 108.443)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "Day"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="BitmapFontLabel_1" type="Label" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 285.4
+offset_top = 174.6
+offset_right = 400.4
+offset_bottom = 272.6
+pivot_offset = Vector2(57.5, 98.0)
+scale = Vector2(0.78, 0.78)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BitmapFontLabel_1"
+metadata/cocos_tag = 6658
+metadata/action_tag = 1775271263
+script = ExtResource("6")
+design_size = Vector2(115.0, 98.0)
+design_center = Vector2(342.9, 223.6)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "x1"
+theme_override_fonts/font = ExtResource("13")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="card_l1_2" type="TextureRect" parent="Panel_reward7"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.5
+offset_top = 116.7
+offset_right = 151.5
+offset_bottom = 161.7
+pivot_offset = Vector2(16.5, 22.5)
+scale = Vector2(3.0, 2.2864)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_l1_2"
+metadata/cocos_tag = 6659
+metadata/action_tag = -606372677
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

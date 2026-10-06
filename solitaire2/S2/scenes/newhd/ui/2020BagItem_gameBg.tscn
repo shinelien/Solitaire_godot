@@ -1,0 +1,403 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_button.gd" id="2"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/Sprite.png" id="5"]
+
+
+
+
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="12"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="13"]
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_2"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui1.png" id="atlas_page_3"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(871, 1692, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1086, 177, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1611, 1695, 58, 58)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(846, 252, 121, 93)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1254, 333, 105, 93)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(712, 1466, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(712, 1342, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_3")
+region = Rect2(459, 985, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1627, 1170, 64, 94)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1919, 1669, 58, 60)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1821, 2005, 34, 39)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "2020BagItem_gameBg"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 17706
+metadata/action_tag = 0
+
+[node name="panel_Changjing" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -150.0
+offset_top = -145.0
+offset_right = 150.0
+offset_bottom = 145.0
+pivot_offset = Vector2(150.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_Changjing"
+metadata/cocos_tag = 8476
+metadata/action_tag = -1573488554
+
+[node name="Button_gameBgA" type="TextureButton" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 0.0
+offset_top = -15.0
+offset_right = 300.0
+offset_bottom = 305.0
+pivot_offset = Vector2(150.0, 160.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_gameBgA"
+metadata/cocos_tag = 8477
+metadata/action_tag = 1293026850
+script = ExtResource("2")
+scale9_margins = Vector4(29.0, 29.0, 58.0, 52.0)
+texture_normal = SubResource("atlas_sprite_3")
+texture_pressed = SubResource("atlas_sprite_4")
+texture_disabled = SubResource("atlas_sprite_4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite_Changjing" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 127.0
+offset_top = 137.0
+offset_right = 173.0
+offset_bottom = 183.0
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_Changjing"
+metadata/cocos_tag = 477
+metadata/action_tag = 42010811
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_21_0" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 12.0
+offset_top = 12.8
+offset_right = 70.0
+offset_bottom = 70.8
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.49804)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_21_0"
+metadata/cocos_tag = 100
+metadata/action_tag = -466058339
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_21_1" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 286.5
+offset_top = 12.8
+offset_right = 344.5
+offset_bottom = 70.8
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.49804)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_21_1"
+metadata/cocos_tag = 101
+metadata/action_tag = -1142390400
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_21_2" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 16.41
+offset_top = 297.6
+offset_right = 74.41
+offset_bottom = 355.6
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.27843)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_21_2"
+metadata/cocos_tag = 102
+metadata/action_tag = 478316893
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_21_3" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 286.5
+offset_top = 297.6
+offset_right = 344.5
+offset_bottom = 355.6
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.27843)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_21_3"
+metadata/cocos_tag = 103
+metadata/action_tag = 604565570
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock0_Changjing" type="TextureRect" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 173.02
+offset_top = 135.804
+offset_right = 294.02
+offset_bottom = 228.804
+pivot_offset = Vector2(60.5, 46.5)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock0_Changjing"
+metadata/cocos_tag = 95
+metadata/action_tag = -90814730
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock1_2" type="TextureRect" parent="panel_Changjing/Button_gameBgA/ui_Lock0_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 95.79
+offset_right = 113.0
+offset_bottom = 188.79
+pivot_offset = Vector2(52.5, 46.5)
+scale = Vector2(1.46, 1.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock1_2"
+metadata/cocos_tag = 96
+metadata/action_tag = -1456327947
+texture = SubResource("atlas_sprite_8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_gameBg" type="TextureButton" parent="panel_Changjing/Button_gameBgA"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -40.0
+offset_top = 301.2
+offset_right = 340.0
+offset_bottom = 441.2
+pivot_offset = Vector2(190.0, 70.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_gameBg"
+metadata/cocos_tag = 10626
+metadata/action_tag = 1043434800
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_gameBg" type="Label" parent="panel_Changjing/Button_gameBgA/Button_gameBg"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 142.0
+offset_top = 43.0
+offset_right = 238.0
+offset_bottom = 97.0
+pivot_offset = Vector2(48.0, 27.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_gameBg"
+metadata/cocos_tag = 10627
+metadata/action_tag = -1065960008
+script = ExtResource("13")
+design_size = Vector2(96.0, 54.0)
+design_center = Vector2(190.0, 70.0)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "使用"
+theme_override_fonts/font = ExtResource("12")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Image_used_gameBg" type="NinePatchRect" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0093
+offset_top = -20.3
+offset_right = 299.9907
+offset_bottom = 298.7
+pivot_offset = Vector2(149.9907, 159.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_used_gameBg"
+metadata/cocos_tag = 8490
+metadata/action_tag = -1686607263
+texture = SubResource("atlas_sprite_14")
+patch_margin_left = 21
+patch_margin_right = 21
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Sprite_used_gameBg" type="TextureRect" parent="panel_Changjing/Image_used_gameBg"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 253.3125
+offset_top = -10.7005
+offset_right = 311.3125
+offset_bottom = 49.2995
+pivot_offset = Vector2(29.0, 30.0)
+scale = Vector2(0.99, 0.99)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_used_gameBg"
+metadata/cocos_tag = 92
+metadata/action_tag = 177111864
+texture = SubResource("atlas_sprite_15")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="img_new_gameBg" type="TextureRect" parent="panel_Changjing"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -4.0
+offset_top = -23.9
+offset_right = 58.0
+offset_bottom = 47.1
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "img_new_gameBg"
+metadata/cocos_tag = 8488
+metadata/action_tag = -1324116453
+texture = SubResource("atlas_sprite_16")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

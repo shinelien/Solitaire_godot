@@ -1,0 +1,818 @@
+[gd_scene load_steps=57 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/Start_BG.tscn" id="4"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1903, 326, 50, 51)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1997, 1416, 48, 59)
+margin = Rect2(7, 0, 12, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1809, 142, 32, 48)
+margin = Rect2(7, 0, 16, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1872, 1552, 44, 67)
+margin = Rect2(11, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(363, 1084, 129, 98)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(982, 1995, 50, 49)
+margin = Rect2(0, 2, 0, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1285, 403, 60, 59)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1865, 1690, 52, 59)
+margin = Rect2(4, 0, 8, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1335, 360, 32, 59)
+margin = Rect2(15, 0, 28, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1799, 68, 38, 59)
+margin = Rect2(12, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_13"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1800, 1844, 56, 59)
+margin = Rect2(3, 0, 4, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1337, 209, 60, 59)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1980, 1610, 60, 59)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1858, 1843, 44, 59)
+margin = Rect2(8, 0, 16, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_17"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1661, 380, 32, 59)
+margin = Rect2(15, 0, 28, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_18"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1831, 1905, 48, 48)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_19"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1627, 1266, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_20"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1825, 1109, 125, 98)
+margin = Rect2(0, 0, 4, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_21"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(43, 696, 40, 51)
+margin = Rect2(5, 0, 10, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_22"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1683, 258, 36, 51)
+margin = Rect2(7, 0, 14, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_23"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1881, 1904, 44, 51)
+margin = Rect2(3, 0, 6, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_24"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1905, 217, 48, 51)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_25"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1719, 1955, 50, 51)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_26"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(43, 643, 40, 51)
+margin = Rect2(5, 0, 10, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_27"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(2008, 238, 34, 51)
+margin = Rect2(8, 0, 16, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_28"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1904, 1843, 40, 51)
+margin = Rect2(4, 0, 10, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_29"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1771, 1955, 48, 51)
+margin = Rect2(0, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_30"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1666, 1545, 66, 67)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_31"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1552, 176, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_32"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1872, 1621, 44, 67)
+margin = Rect2(11, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_33"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1731, 60, 20, 67)
+margin = Rect2(23, 0, 46, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_34"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1753, 60, 44, 67)
+margin = Rect2(11, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_35"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1737, 1614, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_36"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1546, 245, 66, 67)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_37"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1618, 176, 64, 67)
+margin = Rect2(1, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_38"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1988, 1729, 44, 67)
+margin = Rect2(12, 0, 22, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_39"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1565, 409, 20, 67)
+margin = Rect2(23, 0, 46, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_40"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1821, 1955, 48, 48)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_41"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1748, 197, 36, 48)
+margin = Rect2(6, 0, 12, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_42"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1957, 127, 46, 48)
+margin = Rect2(0, 0, 2, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_43"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1927, 1896, 48, 48)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_44"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1082, 1995, 36, 48)
+margin = Rect2(6, 0, 12, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_45"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1015, 845, 129, 98)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_46"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1504, 1060, 121, 98)
+margin = Rect2(6, 0, 8, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_47"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1504, 1160, 121, 98)
+margin = Rect2(2, 0, 8, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Star"]
+resource_name = "Star"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_8"), SubResource("atlas_sprite_8")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_9"), SubResource("atlas_sprite_10"), SubResource("atlas_sprite_11"), SubResource("atlas_sprite_12"), SubResource("atlas_sprite_13"), SubResource("atlas_sprite_14"), SubResource("atlas_sprite_15"), SubResource("atlas_sprite_16"), SubResource("atlas_sprite_17"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_18"), SubResource("atlas_sprite_18")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_19"), SubResource("atlas_sprite_19")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_9"), SubResource("atlas_sprite_9")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_20")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.45), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_Baoshi"]
+resource_name = "Baoshi"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_8"), SubResource("atlas_sprite_21"), SubResource("atlas_sprite_22"), SubResource("atlas_sprite_23"), SubResource("atlas_sprite_24"), SubResource("atlas_sprite_25"), SubResource("atlas_sprite_26"), SubResource("atlas_sprite_27"), SubResource("atlas_sprite_28"), SubResource("atlas_sprite_29"), SubResource("atlas_sprite_2")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_18"), SubResource("atlas_sprite_18")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_19"), SubResource("atlas_sprite_19")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_9"), SubResource("atlas_sprite_9")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_20")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.5), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_Gold"]
+resource_name = "Gold"
+length = 0.73333
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_18"), SubResource("atlas_sprite_18")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667, 0.33333, 0.4, 0.46667, 0.53333, 0.6, 0.66667, 0.73333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_19"), SubResource("atlas_sprite_30"), SubResource("atlas_sprite_31"), SubResource("atlas_sprite_32"), SubResource("atlas_sprite_33"), SubResource("atlas_sprite_34"), SubResource("atlas_sprite_35"), SubResource("atlas_sprite_36"), SubResource("atlas_sprite_37"), SubResource("atlas_sprite_38"), SubResource("atlas_sprite_39"), SubResource("atlas_sprite_6")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_9"), SubResource("atlas_sprite_9")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_20")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.73333), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_Exp"]
+resource_name = "Exp"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_18"), SubResource("atlas_sprite_18")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_6"), SubResource("atlas_sprite_6")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667, 0.33333, 0.4, 0.46667, 0.53333, 0.6), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_9"), SubResource("atlas_sprite_10"), SubResource("atlas_sprite_11"), SubResource("atlas_sprite_12"), SubResource("atlas_sprite_13"), SubResource("atlas_sprite_14"), SubResource("atlas_sprite_15"), SubResource("atlas_sprite_16"), SubResource("atlas_sprite_17"), SubResource("atlas_sprite_3")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_20")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.6), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_Activity"]
+resource_name = "Activity"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667, 0.33333, 0.4), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_18"), SubResource("atlas_sprite_40"), SubResource("atlas_sprite_41"), SubResource("atlas_sprite_42"), SubResource("atlas_sprite_43"), SubResource("atlas_sprite_44"), SubResource("atlas_sprite_5")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_6"), SubResource("atlas_sprite_6")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_20")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.4), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+[sub_resource type="Animation" id="Anim_Crown"]
+resource_name = "Crown"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/path = NodePath("baoshi_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_2"), SubResource("atlas_sprite_2")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("baoshi_1:visible")
+tracks/1/interp = 0
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("star3/Particle_1:visible")
+tracks/2/interp = 0
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("star3:texture")
+tracks/3/interp = 0
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("star3:visible")
+tracks/4/interp = 0
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite_3:texture")
+tracks/5/interp = 0
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_5"), SubResource("atlas_sprite_5")]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite_3:visible")
+tracks/6/interp = 0
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite_2:texture")
+tracks/7/interp = 0
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_6"), SubResource("atlas_sprite_6")]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite_2:visible")
+tracks/8/interp = 0
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("star3_0:texture")
+tracks/9/interp = 0
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [SubResource("atlas_sprite_3"), SubResource("atlas_sprite_3")]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("star3_0:visible")
+tracks/10/interp = 0
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, false]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Crown:texture")
+tracks/11/interp = 0
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.06667, 0.13333, 0.2, 0.26667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_20"), SubResource("atlas_sprite_7"), SubResource("atlas_sprite_45"), SubResource("atlas_sprite_46"), SubResource("atlas_sprite_47")]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Crown:visible")
+tracks/12/interp = 0
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.26667), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, true]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Star": SubResource("Anim_Star"),
+"Baoshi": SubResource("Anim_Baoshi"),
+"Gold": SubResource("Anim_Gold"),
+"Exp": SubResource("Anim_Exp"),
+"Activity": SubResource("Anim_Activity"),
+"Crown": SubResource("Anim_Crown")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "Animation/Node_currency"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 24710
+metadata/action_tag = 0
+
+[node name="baoshi_1" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -25.0
+offset_top = -25.5
+offset_right = 25.0
+offset_bottom = 25.5
+pivot_offset = Vector2(25.0, 25.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "baoshi_1"
+metadata/cocos_tag = 16
+metadata/action_tag = -1341286453
+texture = SubResource("atlas_sprite_2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="star3" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -30.0
+offset_top = -29.5
+offset_right = 30.0
+offset_bottom = 29.5
+pivot_offset = Vector2(30.0, 29.5)
+scale = Vector2(1.9, 1.9)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "star3"
+metadata/cocos_tag = 18
+metadata/action_tag = -1913235493
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Particle_1" type="Control" parent="star3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 30.0
+offset_bottom = 30.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.63, 0.63)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 1297
+metadata/action_tag = 1511358152
+
+[node name="Emitter" parent="star3/Particle_1" instance=ExtResource("4")]
+
+[node name="Sprite_3" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+pivot_offset = Vector2(24.0, 24.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_3"
+metadata/cocos_tag = 14
+metadata/action_tag = 1876345831
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Sprite_2" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -33.0
+offset_top = -33.5
+offset_right = 33.0
+offset_bottom = 33.5
+pivot_offset = Vector2(33.0, 33.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_2"
+metadata/cocos_tag = 1446
+metadata/action_tag = 1851458654
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="star3_0" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -30.0002
+offset_top = -29.4999
+offset_right = 29.9998
+offset_bottom = 29.5001
+pivot_offset = Vector2(30.0, 29.5)
+scale = Vector2(1.3, 1.3)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.0, 0.84314, 0.25882, 1.0)
+metadata/cocos_name = "star3_0"
+metadata/cocos_tag = 17867
+metadata/action_tag = -1328658526
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Crown" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -64.5
+offset_top = -49.0
+offset_right = 64.5
+offset_bottom = 49.0
+pivot_offset = Vector2(64.5, 49.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Crown"
+metadata/cocos_tag = 16
+metadata/action_tag = -2087200998
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

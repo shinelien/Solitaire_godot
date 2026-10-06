@@ -1,0 +1,133 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/Sprite.png" id="2"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/ui1.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1, 1, 424, 393)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 16.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_top/Image_3:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 16.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(-0.0024, 960.0), Vector2(-0.0024, 960.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+metadata/source_scene = "desktop/scene1"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 1379
+metadata/action_tag = 0
+
+[node name="Panel_2" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_2"
+metadata/cocos_tag = 287
+metadata/action_tag = 1159572480
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="222" type="TextureRect" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.5
+offset_top = -83.2
+offset_right = 1012.5
+offset_bottom = 1964.8
+pivot_offset = Vector2(472.5, 1024.0)
+scale = Vector2(1.145, 1.145)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.0, 0.67843, 1.0, 1.0)
+metadata/cocos_name = "222"
+metadata/cocos_tag = 2034
+metadata/action_tag = -1576690619
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_top" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 960.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top"
+metadata/cocos_tag = 195
+metadata/action_tag = 1134680146
+
+[node name="Image_3" type="TextureRect" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0024
+offset_top = 960.0
+offset_right = 1079.9976
+offset_bottom = 2121.984
+pivot_offset = Vector2(540.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 196
+metadata/action_tag = 1921544441
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_3_0" type="TextureRect" parent="Panel_top/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0007
+offset_top = -0.1162
+offset_right = 1079.9993
+offset_bottom = 1199.8838
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3_0"
+metadata/cocos_tag = 197
+metadata/action_tag = 876930160
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

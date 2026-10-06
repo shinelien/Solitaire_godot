@@ -1,0 +1,167 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="2"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="3"]
+[ext_resource type="Font" path="res://assets/newhd/font/level_num22x.fnt" id="4"]
+[ext_resource type="Texture2D" path="res://assets/newhd/font/ui_logo0.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/newhd/font/ui_logo5.png" id="6"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+metadata/source_scene = "Loading0"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 2
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -260.01
+offset_top = -340.032
+offset_right = 1340.01
+offset_bottom = 2260.032
+pivot_offset = Vector2(800.01, 1300.032)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 539
+metadata/action_tag = 1698427837
+color = Color(0.04314, 0.10196, 0.16863, 1.0)
+
+[node name="LoadingBar_percent" type="TextureProgressBar" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 192.5
+offset_top = 1036.0
+offset_right = 887.5
+offset_bottom = 1076.0
+pivot_offset = Vector2(347.5, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar_percent"
+metadata/cocos_tag = 707
+metadata/action_tag = -1322784655
+value = 50.0
+nine_patch_stretch = true
+
+[node name="Text_2" type="Label" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 643.464
+offset_top = 1195.104
+offset_right = 663.464
+offset_bottom = 1235.104
+pivot_offset = Vector2(0.0, 19.872)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_2"
+metadata/cocos_tag = 545
+metadata/action_tag = -1689474682
+script = ExtResource("3")
+design_size = Vector2(20.0, 40.0)
+design_center = Vector2(653.464, 1215.104)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "%"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_percent" type="Label" parent="Text_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -59.87
+offset_top = -23.1
+offset_right = -7.87
+offset_bottom = 66.9
+pivot_offset = Vector2(52.0, 45.0)
+scale = Vector2(1.5, 1.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_percent"
+metadata/cocos_tag = 1146
+metadata/action_tag = 1189167280
+script = ExtResource("3")
+design_size = Vector2(52.0, 90.0)
+design_center = Vector2(-33.87, 21.9)
+design_font_size = 32
+bitmap_font = true
+fit_box = false
+text = "0"
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="ui_logo0_3" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 429.3
+offset_top = 692.4
+offset_right = 672.3
+offset_bottom = 920.4
+pivot_offset = Vector2(121.5, 114.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_logo0_3"
+metadata/cocos_tag = 544
+metadata/action_tag = -2139594470
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_logo5_2" type="TextureRect" parent="ui_logo0_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -43.79
+offset_top = 210.58
+offset_right = 272.21
+offset_bottom = 295.58
+pivot_offset = Vector2(158.0, 42.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_logo5_2"
+metadata/cocos_tag = 543
+metadata/action_tag = -821070754
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

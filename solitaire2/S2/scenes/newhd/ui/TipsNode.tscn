@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="2"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="3"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "TipsNode"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 138
+metadata/action_tag = 0
+
+[node name="panel_tips" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -540.0
+offset_top = -100.0
+offset_right = 540.0
+offset_bottom = 100.0
+pivot_offset = Vector2(540.0, 100.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_tips"
+metadata/cocos_tag = 140
+metadata/action_tag = -375070212
+color = Color(0.0, 0.0, 0.0, 0.8)
+
+[node name="text_tips" type="Label" parent="panel_tips"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 432.9998
+offset_top = 66.0001
+offset_right = 646.9998
+offset_bottom = 134.0001
+pivot_offset = Vector2(107.0, 34.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "text_tips"
+metadata/cocos_tag = 141
+metadata/action_tag = -1171894421
+script = ExtResource("3")
+design_size = Vector2(214.0, 68.0)
+design_center = Vector2(539.9998, 100.0001)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "500gold"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

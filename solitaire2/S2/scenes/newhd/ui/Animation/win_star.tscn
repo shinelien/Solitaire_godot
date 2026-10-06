@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(13, 1639, 217, 214)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_start0"]
+resource_name = "start0"
+length = 2.16667
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"start0": SubResource("Anim_start0")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "Animation/win_star"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 210
+metadata/action_tag = 0
+
+[node name="win_star0_2" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -108.4999
+offset_top = -107.0
+offset_right = 108.5001
+offset_bottom = 107.0
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_2"
+metadata/cocos_tag = 299
+metadata/action_tag = -1129582478
+texture = SubResource("atlas_sprite_2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

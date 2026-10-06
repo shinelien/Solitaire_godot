@@ -1,0 +1,816 @@
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="6"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/Start_BG.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/level0.tscn" id="9"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_button.gd" id="10"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/Button_Disable.png" id="13"]
+
+
+
+
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/btn.tscn" id="19"]
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/Sprite.png" id="20"]
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/ui1.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(417, 1195, 169, 165)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1699, 652, 128, 128)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(919, 877, 144, 144)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(901, 1023, 200, 121)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1055, 1426, 92, 92)
+margin = Rect2(14, 14, 28, 28)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1211, 1510, 92, 92)
+margin = Rect2(14, 14, 28, 28)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(604, 1002, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1384, 362, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1184, 1646, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_17"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1, 1913, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_18"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(469, 841, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_21"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1349, 664, 142, 141)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_22"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(13, 1639, 217, 214)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.66667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_1/Image_7:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.06667), Color(1, 1, 1, 0.13333), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.26667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.46667), Color(1, 1, 1, 0.53333), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.73333), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.86667), Color(1, 1, 1, 0.93333), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_1/Node_4/Button_go/Sprite_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.38333, 0.6, 0.61667, 0.63333, 0.65, 0.66667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.49804), Color(1, 1, 1, 0.39843), Color(1, 1, 1, 0.29882), Color(1, 1, 1, 0.19922), Color(1, 1, 1, 0.09961), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_1:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.66667), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+metadata/source_scene = "Feedback"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 17091
+metadata/action_tag = 0
+
+[node name="Panel_1" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -190.0
+offset_right = 1080.0
+offset_bottom = 2110.0
+pivot_offset = Vector2(540.0, 1150.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_1"
+metadata/cocos_tag = 17092
+metadata/action_tag = -632433544
+color = Color(0.0, 0.0, 0.0, 0.29804)
+
+[node name="Image_7" type="NinePatchRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 218.82805
+offset_top = 1006.02205
+offset_right = 861.17195
+offset_bottom = 1431.97795
+pivot_offset = Vector2(321.17195, 212.97795)
+scale = Vector2(1.6, 1.82)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_7"
+metadata/cocos_tag = 17093
+metadata/action_tag = 1828522590
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 55
+patch_margin_right = 55
+patch_margin_top = 54
+patch_margin_bottom = 54
+
+[node name="Image_5" type="NinePatchRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 75.0
+offset_top = 818.0
+offset_right = 1005.0
+offset_bottom = 1528.0
+pivot_offset = Vector2(465.0, 355.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_5"
+metadata/cocos_tag = 17094
+metadata/action_tag = 1432427530
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 42
+patch_margin_right = 42
+patch_margin_top = 42
+patch_margin_bottom = 42
+
+[node name="Image_6" type="NinePatchRect" parent="Panel_1/Image_5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 17.0
+offset_top = 24.0
+offset_right = 913.0
+offset_bottom = 686.0
+pivot_offset = Vector2(448.0, 331.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.72157, 0.69412, 0.59216, 1.0)
+metadata/cocos_name = "Image_6"
+metadata/cocos_tag = 17095
+metadata/action_tag = -1521636722
+texture = SubResource("atlas_sprite_4")
+patch_margin_left = 65
+patch_margin_right = 65
+patch_margin_top = 65
+patch_margin_bottom = 65
+
+[node name="daliy_titlebg0_2" type="TextureRect" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 340.0
+offset_top = 813.5
+offset_right = 540.0
+offset_bottom = 934.5
+pivot_offset = Vector2(200.0, 60.5)
+scale = Vector2(1.31, 1.3)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.97255, 0.97255, 0.97255, 1.0)
+metadata/cocos_name = "daliy_titlebg0_2"
+metadata/cocos_tag = 17096
+metadata/action_tag = 537693998
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="daliy_titlebg0_2_0" type="TextureRect" parent="Panel_1/daliy_titlebg0_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 200.0
+offset_top = 0.0
+offset_right = 400.0
+offset_bottom = 121.0
+pivot_offset = Vector2(0.0, 60.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "daliy_titlebg0_2_0"
+metadata/cocos_tag = 17097
+metadata/action_tag = -1441979952
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_4" type="Control" parent="Panel_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 1150.0
+offset_right = 540.0
+offset_bottom = 1150.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_4"
+metadata/cocos_tag = 17098
+metadata/action_tag = 231038468
+
+[node name="Text_10" type="Label" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -82.5
+offset_top = -339.5
+offset_right = 82.5
+offset_bottom = -276.5
+pivot_offset = Vector2(82.5, 31.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.32549, 0.23529, 0.14118, 1.0)
+metadata/cocos_name = "Text_10"
+metadata/cocos_tag = 17099
+metadata/action_tag = 421633193
+script = ExtResource("7")
+design_size = Vector2(165.0, 63.0)
+design_center = Vector2(0.0, -308.0)
+design_font_size = 55
+bitmap_font = false
+fit_box = false
+text = "满意度"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -71.2271
+offset_right = 0.0
+offset_bottom = -71.2271
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.731, 1.731)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 17100
+metadata/action_tag = 1215308586
+
+[node name="Emitter" parent="Panel_1/Node_4/Particle_1" instance=ExtResource("8")]
+
+[node name="Particle_5" type="Control" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -2.8009
+offset_top = -83.2898
+offset_right = -2.8009
+offset_bottom = -83.2898
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.4222, 0.4222)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_5"
+metadata/cocos_tag = 17101
+metadata/action_tag = 2036696456
+
+[node name="Emitter" parent="Panel_1/Node_4/Particle_5" instance=ExtResource("9")]
+
+[node name="Button_close" type="TextureButton" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 388.6188
+offset_top = -374.44
+offset_right = 508.6188
+offset_bottom = -254.44
+pivot_offset = Vector2(60.0, 60.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_close"
+metadata/cocos_tag = 17102
+metadata/action_tag = -401561660
+script = ExtResource("10")
+scale9_margins = Vector4(15.0, 15.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_11")
+texture_pressed = SubResource("atlas_sprite_12")
+texture_disabled = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_feedback" type="TextureButton" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -420.0013
+offset_top = 165.1855
+offset_right = -20.0013
+offset_bottom = 305.1855
+pivot_offset = Vector2(400.0, 70.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_feedback"
+metadata/cocos_tag = 17103
+metadata/action_tag = -1285163980
+script = ExtResource("10")
+scale9_margins = Vector4(30.0, 30.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_14")
+texture_pressed = SubResource("atlas_sprite_15")
+texture_disabled = SubResource("atlas_sprite_15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_feedback" type="Label" parent="Panel_1/Node_4/Button_feedback"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 104.0
+offset_top = 40.2
+offset_right = 296.0
+offset_bottom = 94.2
+pivot_offset = Vector2(96.0, 27.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_feedback"
+metadata/cocos_tag = 17104
+metadata/action_tag = -1589015834
+script = ExtResource("7")
+design_size = Vector2(192.0, 54.0)
+design_center = Vector2(200.0, 67.2)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "意见反馈"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_go" type="TextureButton" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 19.9998
+offset_top = 165.1851
+offset_right = 419.9998
+offset_bottom = 305.1851
+pivot_offset = Vector2(0.0, 70.49)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_go"
+metadata/cocos_tag = 17105
+metadata/action_tag = 510209790
+script = ExtResource("10")
+scale9_margins = Vector4(30.0, 30.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_16")
+texture_pressed = SubResource("atlas_sprite_17")
+texture_disabled = SubResource("atlas_sprite_18")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_go" type="Label" parent="Panel_1/Node_4/Button_go"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 152.0
+offset_top = 40.2
+offset_right = 248.0
+offset_bottom = 94.2
+pivot_offset = Vector2(48.0, 27.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_go"
+metadata/cocos_tag = 17106
+metadata/action_tag = -13122142
+script = ExtResource("7")
+design_size = Vector2(96.0, 54.0)
+design_center = Vector2(200.0, 67.2)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "提交"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="Panel_1/Node_4/Button_go"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 200.0
+offset_top = 58.8
+offset_right = 200.0
+offset_bottom = 58.8
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.4, 1.4)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 17107
+metadata/action_tag = -709655050
+
+[node name="Emitter" parent="Panel_1/Node_4/Button_go/Particle_1" instance=ExtResource("19")]
+
+[node name="Sprite_1" type="TextureRect" parent="Panel_1/Node_4/Button_go"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 177.0
+offset_top = 44.2
+offset_right = 223.0
+offset_bottom = 90.2
+pivot_offset = Vector2(23.0, 23.0)
+scale = Vector2(0.94, 1.37)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_1"
+metadata/cocos_tag = 17108
+metadata/action_tag = 915143010
+texture = ExtResource("20")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_10_0" type="Label" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -270.0
+offset_top = 23.8074
+offset_right = 270.0
+offset_bottom = 75.8074
+pivot_offset = Vector2(270.0, 26.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.32549, 0.23529, 0.14118, 1.0)
+metadata/cocos_name = "Text_10_0"
+metadata/cocos_tag = 17109
+metadata/action_tag = 344067562
+script = ExtResource("7")
+design_size = Vector2(540.0, 52.0)
+design_center = Vector2(0.0, 49.8074)
+design_font_size = 45
+bitmap_font = false
+fit_box = false
+text = "欢迎给我们提上宝贵的建议"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="win_star2_1" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -370.3837
+offset_top = -157.7394
+offset_right = -228.3837
+offset_bottom = -16.7394
+pivot_offset = Vector2(71.0, 70.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star2_1"
+metadata/cocos_tag = 17110
+metadata/action_tag = -1953159745
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="win_star2_2" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -220.4484
+offset_top = -157.7394
+offset_right = -78.4484
+offset_bottom = -16.7394
+pivot_offset = Vector2(71.0, 70.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star2_2"
+metadata/cocos_tag = 17111
+metadata/action_tag = 1174224010
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="win_star2_3" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -70.5126
+offset_top = -157.7394
+offset_right = 71.4874
+offset_bottom = -16.7394
+pivot_offset = Vector2(71.0, 70.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star2_3"
+metadata/cocos_tag = 17112
+metadata/action_tag = 2073228026
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="win_star2_4" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 79.4205
+offset_top = -157.7394
+offset_right = 221.4205
+offset_bottom = -16.7394
+pivot_offset = Vector2(71.0, 70.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star2_4"
+metadata/cocos_tag = 17113
+metadata/action_tag = -1875568659
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="win_star2_5" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 229.3489
+offset_top = -157.7394
+offset_right = 371.3489
+offset_bottom = -16.7394
+pivot_offset = Vector2(71.0, 70.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star2_5"
+metadata/cocos_tag = 17114
+metadata/action_tag = 1095385764
+texture = SubResource("atlas_sprite_21")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="win_star0_1" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -407.8833
+offset_top = -194.2421
+offset_right = -190.8833
+offset_bottom = 19.7579
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_1"
+metadata/cocos_tag = 17115
+metadata/action_tag = 1443643232
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_star" type="ColorRect" parent="Panel_1/Node_4/win_star0_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 217.0
+offset_bottom = 214.0
+pivot_offset = Vector2(0.0, 214.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_star"
+metadata/cocos_tag = 1
+metadata/action_tag = 510616693
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="win_star0_2" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -257.9476
+offset_top = -194.2421
+offset_right = -40.9476
+offset_bottom = 19.7579
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_2"
+metadata/cocos_tag = 17117
+metadata/action_tag = -2035412437
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_star" type="ColorRect" parent="Panel_1/Node_4/win_star0_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 217.0
+offset_bottom = 214.0
+pivot_offset = Vector2(0.0, 214.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_star"
+metadata/cocos_tag = 2
+metadata/action_tag = 1944560678
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="win_star0_3" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -108.0186
+offset_top = -194.2421
+offset_right = 108.9814
+offset_bottom = 19.7579
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_3"
+metadata/cocos_tag = 17119
+metadata/action_tag = -1598644658
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_star" type="ColorRect" parent="Panel_1/Node_4/win_star0_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 217.0
+offset_bottom = 214.0
+pivot_offset = Vector2(0.0, 214.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_star"
+metadata/cocos_tag = 3
+metadata/action_tag = -182277472
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="win_star0_4" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 41.9114
+offset_top = -194.2421
+offset_right = 258.9114
+offset_bottom = 19.7579
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_4"
+metadata/cocos_tag = 17121
+metadata/action_tag = 729132808
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_star" type="ColorRect" parent="Panel_1/Node_4/win_star0_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 217.0
+offset_bottom = 214.0
+pivot_offset = Vector2(0.0, 214.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_star"
+metadata/cocos_tag = 4
+metadata/action_tag = -419123267
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="win_star0_5" type="TextureRect" parent="Panel_1/Node_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 191.8455
+offset_top = -194.2421
+offset_right = 408.8455
+offset_bottom = 19.7579
+pivot_offset = Vector2(108.5, 107.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "win_star0_5"
+metadata/cocos_tag = 17123
+metadata/action_tag = -1858361019
+texture = SubResource("atlas_sprite_22")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Panel_star" type="ColorRect" parent="Panel_1/Node_4/win_star0_5"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 217.0
+offset_bottom = 214.0
+pivot_offset = Vector2(0.0, 214.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_star"
+metadata/cocos_tag = 5
+metadata/action_tag = -150001155
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

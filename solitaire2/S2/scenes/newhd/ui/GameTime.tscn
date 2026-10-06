@@ -1,0 +1,151 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/ui/card/Timer.tscn" id="3"]
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(982, 1, 116, 100)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "GameTime"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 847
+metadata/action_tag = 0
+
+[node name="Node_1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 850
+metadata/action_tag = 1997046132
+
+[node name="Image_1" type="NinePatchRect" parent="Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -247.5
+offset_top = -66.0
+offset_right = 247.5
+offset_bottom = 62.0
+pivot_offset = Vector2(247.5, 64.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.59608)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 634
+metadata/action_tag = -115231987
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 38
+patch_margin_right = 38
+patch_margin_top = 33
+patch_margin_bottom = 33
+
+[node name="FileNode_sec0" parent="Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = 178.0
+offset_top = -2.0
+offset_right = 178.0
+offset_bottom = -2.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_sec0"
+metadata/cocos_tag = 437
+metadata/action_tag = 312451753
+
+[node name="FileNode_sec1" parent="Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = 89.0
+offset_top = -2.0001
+offset_right = 89.0
+offset_bottom = -2.0001
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_sec1"
+metadata/cocos_tag = 446
+metadata/action_tag = -1098453023
+
+[node name="FileNode_min0" parent="Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 0.0
+offset_bottom = -2.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_min0"
+metadata/cocos_tag = 455
+metadata/action_tag = 636633069
+
+[node name="FileNode_min1" parent="Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = -89.0
+offset_top = -2.0001
+offset_right = -89.0
+offset_bottom = -2.0001
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_min1"
+metadata/cocos_tag = 464
+metadata/action_tag = 964327647
+
+[node name="FileNode_hour1" parent="Node_1" instance=ExtResource("3")]
+mouse_filter = 2
+offset_left = -178.0
+offset_top = -2.0
+offset_right = -178.0
+offset_bottom = -2.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_hour1"
+metadata/cocos_tag = 635
+metadata/action_tag = 2061043516
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

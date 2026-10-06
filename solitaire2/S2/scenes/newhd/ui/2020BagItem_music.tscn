@@ -1,0 +1,422 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_button.gd" id="2"]
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="5"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="6"]
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/ui/Animation/Node_music.tscn" id="8"]
+
+
+
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/1d5b9c289ccc_rotated.png" id="atlas_page_2"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui1.png" id="atlas_page_3"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(871, 1692, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1086, 177, 67, 290)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(782, 218, 107, 136)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(712, 1466, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(712, 1342, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_3")
+region = Rect2(459, 985, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1627, 1170, 64, 94)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_13"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1919, 1669, 58, 60)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(846, 252, 121, 93)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1254, 333, 105, 93)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_16"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1821, 2005, 34, 39)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "2020BagItem_music"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 17706
+metadata/action_tag = 0
+
+[node name="panel_Music" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -150.0
+offset_top = -145.0
+offset_right = 150.0
+offset_bottom = 145.0
+pivot_offset = Vector2(150.0, 145.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_Music"
+metadata/cocos_tag = 15172
+metadata/action_tag = -1338897877
+
+[node name="Button_music_on" type="TextureButton" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -272.5
+offset_top = 70.0
+offset_right = 572.5
+offset_bottom = 220.0
+pivot_offset = Vector2(422.5, 75.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_music_on"
+metadata/cocos_tag = 15173
+metadata/action_tag = 1393244964
+script = ExtResource("2")
+scale9_margins = Vector4(29.0, 29.0, 17.0, 41.0)
+texture_normal = SubResource("atlas_sprite_3")
+texture_pressed = SubResource("atlas_sprite_4")
+texture_disabled = SubResource("atlas_sprite_4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_music" type="Label" parent="panel_Music/Button_music_on"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 118.3
+offset_top = 46.5
+offset_right = 305.3
+offset_bottom = 103.5
+pivot_offset = Vector2(0.0, 28.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.15294, 0.28627, 0.34118, 1.0)
+metadata/cocos_name = "Text_music"
+metadata/cocos_tag = 15801
+metadata/action_tag = -2134238813
+script = ExtResource("6")
+design_size = Vector2(187.0, 57.0)
+design_center = Vector2(211.8, 75.0)
+design_font_size = 50
+bitmap_font = false
+fit_box = false
+text = "Music01"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_music_237" type="TextureRect" parent="panel_Music/Button_music_on"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 18.832
+offset_top = 1.165
+offset_right = 125.832
+offset_bottom = 137.165
+pivot_offset = Vector2(53.5, 68.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.40143
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_music_237"
+metadata/cocos_tag = 106
+metadata/action_tag = 1548894340
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="FileNode_music" parent="panel_Music/Button_music_on/Ui_music_237" instance=ExtResource("8")]
+mouse_filter = 2
+offset_left = 53.5
+offset_top = 68.0
+offset_right = 53.5
+offset_bottom = 68.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "FileNode_music"
+metadata/cocos_tag = 16677
+metadata/action_tag = 352606402
+
+[node name="Button_music" type="TextureButton" parent="panel_Music/Button_music_on"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 503.8615
+offset_top = 2.0
+offset_right = 816.8615
+offset_bottom = 142.0
+pivot_offset = Vector2(313.0, 70.0)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_music"
+metadata/cocos_tag = 16690
+metadata/action_tag = 962130060
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_use" type="Label" parent="panel_Music/Button_music_on/Button_music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.5
+offset_top = 36.0
+offset_right = 216.5
+offset_bottom = 104.0
+pivot_offset = Vector2(60.0, 34.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_use"
+metadata/cocos_tag = 16691
+metadata/action_tag = -1827572089
+script = ExtResource("6")
+design_size = Vector2(120.0, 68.0)
+design_center = Vector2(156.5, 70.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "使用"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Image_used_music" type="NinePatchRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -274.5002
+offset_top = 64.0
+offset_right = 572.4998
+offset_bottom = 216.0
+pivot_offset = Vector2(423.5, 76.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_used_music"
+metadata/cocos_tag = 15486
+metadata/action_tag = 1111795028
+texture = SubResource("atlas_sprite_12")
+patch_margin_left = 21
+patch_margin_right = 21
+patch_margin_top = 31
+patch_margin_bottom = 31
+
+[node name="Sprite_used_music" type="TextureRect" parent="panel_Music/Image_used_music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 784.12
+offset_top = -1.12
+offset_right = 842.12
+offset_bottom = 58.88
+pivot_offset = Vector2(29.0, 30.0)
+scale = Vector2(1.2836, 1.2836)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_used_music"
+metadata/cocos_tag = 108
+metadata/action_tag = 1784492744
+texture = SubResource("atlas_sprite_13")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_Shop" type="TextureButton" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 231.62
+offset_top = 71.604
+offset_right = 544.62
+offset_bottom = 211.604
+pivot_offset = Vector2(313.0, 68.698)
+scale = Vector2(0.68, 0.68)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Shop"
+metadata/cocos_tag = 16688
+metadata/action_tag = -1435438202
+script = ExtResource("2")
+scale9_margins = Vector4(57.0, 57.0, 11.0, 11.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_19" type="Label" parent="panel_Music/Button_Shop"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 96.5
+offset_top = 36.0
+offset_right = 216.5
+offset_bottom = 104.0
+pivot_offset = Vector2(60.0, 34.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_19"
+metadata/cocos_tag = 16689
+metadata/action_tag = 25365022
+script = ExtResource("6")
+design_size = Vector2(120.0, 68.0)
+design_center = Vector2(156.5, 70.0)
+design_font_size = 60
+bitmap_font = false
+fit_box = false
+text = "获得"
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="ui_Lock0_music" type="TextureRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 206.5
+offset_top = 63.7
+offset_right = 327.5
+offset_bottom = 156.7
+pivot_offset = Vector2(60.5, 46.5)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock0_music"
+metadata/cocos_tag = 104
+metadata/action_tag = 141186385
+texture = SubResource("atlas_sprite_14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_Lock1_2" type="TextureRect" parent="panel_Music/ui_Lock0_music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 8.0
+offset_top = 95.79
+offset_right = 113.0
+offset_bottom = 188.79
+pivot_offset = Vector2(52.5, 46.5)
+scale = Vector2(1.46, 1.46)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_Lock1_2"
+metadata/cocos_tag = 105
+metadata/action_tag = -1775247235
+texture = SubResource("atlas_sprite_15")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_new_music" type="TextureRect" parent="panel_Music"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -274.0
+offset_top = 60.2
+offset_right = -212.0
+offset_bottom = 131.2
+pivot_offset = Vector2(31.0, 35.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_new_music"
+metadata/cocos_tag = 5991
+metadata/action_tag = 836806595
+texture = SubResource("atlas_sprite_16")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

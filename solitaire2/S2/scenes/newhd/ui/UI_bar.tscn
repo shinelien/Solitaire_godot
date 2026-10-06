@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/Default/ImageFile.png" id="2"]
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="3"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="4"]
+
+[sub_resource type="Animation" id="Anim_default"]
+resource_name = "default"
+length = 0.001
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"default": SubResource("Anim_default")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "UI_bar"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 4
+metadata/action_tag = 0
+
+[node name="Node_42" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0001
+offset_top = 0.0
+offset_right = 0.0001
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_42"
+metadata/cocos_tag = 258
+metadata/action_tag = -748692091
+
+[node name="Image_2" type="NinePatchRect" parent="Node_42"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -255.5
+offset_top = -25.0
+offset_right = 255.5
+offset_bottom = 25.0
+pivot_offset = Vector2(255.5, 25.0)
+scale = Vector2(1.1, 1.24)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_2"
+metadata/cocos_tag = 259
+metadata/action_tag = 1343220106
+texture = ExtResource("2")
+patch_margin_left = 20
+patch_margin_right = 20
+patch_margin_top = 11
+patch_margin_bottom = 11
+
+[node name="LoadingBar_percent" type="TextureProgressBar" parent="Node_42"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -250.0
+offset_top = -22.0
+offset_right = 250.0
+offset_bottom = 22.0
+pivot_offset = Vector2(250.0, 22.0)
+scale = Vector2(1.1, 1.24)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "LoadingBar_percent"
+metadata/cocos_tag = 260
+metadata/action_tag = 1206261952
+value = 78.0
+nine_patch_stretch = true
+
+[node name="Text_lv" type="Label" parent="Node_42"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -38.0
+offset_top = -92.5
+offset_right = 38.0
+offset_bottom = -47.5
+pivot_offset = Vector2(38.0, 22.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_lv"
+metadata/cocos_tag = 856
+metadata/action_tag = -862591616
+script = ExtResource("4")
+design_size = Vector2(76.0, 45.0)
+design_center = Vector2(0.0, -70.0)
+design_font_size = 40
+bitmap_font = false
+fit_box = false
+text = "Lv 2"
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

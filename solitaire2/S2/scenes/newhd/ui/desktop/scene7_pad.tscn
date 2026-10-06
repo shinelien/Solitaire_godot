@@ -1,0 +1,389 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/img/BeiJing8.jpg" id="2"]
+
+
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/scene3_0.tscn" id="6"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/dynamicScene.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/67a220fc14db_rotated.png" id="atlas_page_1"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui1.png" id="atlas_page_2"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(209, 396, 267, 267)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1304, 204, 191, 132)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1103, 356, 282, 143)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_2")
+region = Rect2(1, 1, 424, 393)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_loop"]
+resource_name = "loop"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_2/Node_1/shop_music0_4_0:rotation")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.63333, 1.65, 1.66667, 1.68333, 1.7, 1.71667, 1.73333, 1.75, 1.76667, 1.78333, 1.8, 1.81667, 1.83333, 1.85, 1.86667, 1.88333, 1.9, 1.91667, 1.93333, 1.95, 1.96667, 1.98333, 2.0, 2.01667, 2.03333, 2.05, 2.06667, 2.08333, 2.1, 2.11667, 2.13333, 2.15, 2.16667, 2.18333, 2.2, 2.21667, 2.23333, 2.25, 2.26667, 2.28333, 2.3, 2.31667, 2.33333, 2.35, 2.36667, 2.38333, 2.4, 2.41667, 2.43333, 2.45, 2.46667, 2.48333, 2.5, 2.51667, 2.53333, 2.55, 2.56667, 2.58333, 2.6, 2.61667, 2.63333, 2.65, 2.66667, 2.68333, 2.7, 2.71667, 2.73333, 2.75, 2.76667, 2.78333, 2.8, 2.81667, 2.83333, 2.85, 2.86667, 2.88333, 2.9, 2.91667, 2.93333, 2.95, 2.96667, 2.98333, 3.0, 3.01667, 3.03333, 3.05, 3.06667, 3.08333, 3.1, 3.11667, 3.13333, 3.15, 3.16667, 3.18333, 3.2, 3.21667, 3.23333, 3.25, 3.26667, 3.28333, 3.3, 3.31667, 3.33333, 3.35, 3.36667, 3.38333, 3.4, 3.41667, 3.43333, 3.45, 3.46667, 3.48333, 3.5, 3.51667, 3.53333, 3.55, 3.56667, 3.58333, 3.6, 3.61667, 3.63333, 3.65, 3.66667, 3.68333, 3.7, 3.71667, 3.73333, 3.75, 3.76667, 3.78333, 3.8, 3.81667, 3.83333, 3.85, 3.86667, 3.88333, 3.9, 3.91667, 3.93333, 3.95, 3.96667, 3.98333, 4.0, 4.01667, 4.03333, 4.05, 4.06667, 4.08333, 4.1, 4.11667, 4.13333, 4.15, 4.16667, 4.18333, 4.2, 4.21667, 4.23333, 4.25, 4.26667, 4.28333, 4.3, 4.31667, 4.33333, 4.35, 4.36667, 4.38333, 4.4, 4.41667, 4.43333, 4.45, 4.46667, 4.48333, 4.5, 4.51667, 4.53333, 4.55, 4.56667, 4.58333, 4.6, 4.61667, 4.63333, 4.65, 4.66667, 4.68333, 4.7, 4.71667, 4.73333, 4.75, 4.76667, 4.78333, 4.8, 4.81667, 4.83333, 4.85, 4.86667, 4.88333, 4.9, 4.91667, 4.93333, 4.95, 4.96667, 4.98333, 5.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, 0.02094, 0.04189, 0.06283, 0.08378, 0.10472, 0.12566, 0.14661, 0.16755, 0.1885, 0.20944, 0.23038, 0.25133, 0.27227, 0.29322, 0.31416, 0.3351, 0.35605, 0.37699, 0.39794, 0.41888, 0.43982, 0.46077, 0.48171, 0.50265, 0.5236, 0.54454, 0.56549, 0.58643, 0.60737, 0.62832, 0.64926, 0.67021, 0.69115, 0.71209, 0.73304, 0.75398, 0.77493, 0.79587, 0.81681, 0.83776, 0.8587, 0.87965, 0.90059, 0.92153, 0.94248, 0.96342, 0.98437, 1.00531, 1.02625, 1.0472, 1.06814, 1.08909, 1.11003, 1.13097, 1.15192, 1.17286, 1.19381, 1.21475, 1.23569, 1.25664, 1.27758, 1.29852, 1.31947, 1.34041, 1.36136, 1.3823, 1.40324, 1.42419, 1.44513, 1.46608, 1.48702, 1.50796, 1.52891, 1.54985, 1.5708, 1.59174, 1.61268, 1.63363, 1.65457, 1.67552, 1.69646, 1.7174, 1.73835, 1.75929, 1.78024, 1.80118, 1.82212, 1.84307, 1.86401, 1.88496, 1.9059, 1.92684, 1.94779, 1.96873, 1.98968, 2.01062, 2.03156, 2.05251, 2.07345, 2.0944, 2.11534, 2.13628, 2.15723, 2.17817, 2.19911, 2.22006, 2.241, 2.26195, 2.28289, 2.30383, 2.32478, 2.34572, 2.36667, 2.38761, 2.40855, 2.4295, 2.45044, 2.47139, 2.49233, 2.51327, 2.53422, 2.55516, 2.57611, 2.59705, 2.61799, 2.63894, 2.65988, 2.68083, 2.70177, 2.72271, 2.74366, 2.7646, 2.78555, 2.80649, 2.82743, 2.84838, 2.86932, 2.89027, 2.91121, 2.93215, 2.9531, 2.97404, 2.99498, 3.01593, 3.03687, 3.05782, 3.07876, 3.0997, 3.12065, 3.14159, 3.16254, 3.18348, 3.20442, 3.22537, 3.24631, 3.26726, 3.2882, 3.30914, 3.33009, 3.35103, 3.37198, 3.39292, 3.41386, 3.43481, 3.45575, 3.4767, 3.49764, 3.51858, 3.53953, 3.56047, 3.58142, 3.60236, 3.6233, 3.64425, 3.66519, 3.68614, 3.70708, 3.72802, 3.74897, 3.76991, 3.79086, 3.8118, 3.83274, 3.85369, 3.87463, 3.89557, 3.91652, 3.93746, 3.95841, 3.97935, 4.00029, 4.02124, 4.04218, 4.06313, 4.08407, 4.10501, 4.12596, 4.1469, 4.16785, 4.18879, 4.20973, 4.23068, 4.25162, 4.27257, 4.29351, 4.31445, 4.3354, 4.35634, 4.37729, 4.39823, 4.41917, 4.44012, 4.46106, 4.48201, 4.50295, 4.52389, 4.54484, 4.56578, 4.58673, 4.60767, 4.62861, 4.64956, 4.6705, 4.69145, 4.71239, 4.73333, 4.75428, 4.77522, 4.79616, 4.81711, 4.83805, 4.859, 4.87994, 4.90088, 4.92183, 4.94277, 4.96372, 4.98466, 5.0056, 5.02655, 5.04749, 5.06844, 5.08938, 5.11032, 5.13127, 5.15221, 5.17316, 5.1941, 5.21504, 5.23599, 5.25693, 5.27788, 5.29882, 5.31976, 5.34071, 5.36165, 5.3826, 5.40354, 5.42448, 5.44543, 5.46637, 5.48732, 5.50826, 5.5292, 5.55015, 5.57109, 5.59203, 5.61298, 5.63392, 5.65487, 5.67581, 5.69675, 5.7177, 5.73864, 5.75959, 5.78053, 5.80147, 5.82242, 5.84336, 5.86431, 5.88525, 5.90619, 5.92714, 5.94808, 5.96903, 5.98997, 6.01091, 6.03186, 6.0528, 6.07375, 6.09469, 6.11563, 6.13658, 6.15752, 6.17847, 6.19941, 6.22035, 6.2413, 6.26224, 6.28319]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_2/Node_1/scene3_1_2:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 3.85, 3.86667, 3.88333, 3.9, 3.91667, 3.93333, 3.95, 3.96667, 3.98333, 4.0, 4.01667, 4.03333, 4.05, 4.06667, 4.08333, 4.1, 4.11667, 4.13333, 4.15, 4.16667, 5.0), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, -0.00262, -0.00524, -0.00785, -0.01047, -0.01309, -0.01571, -0.01833, -0.02094, -0.02356, -0.02618, -0.0288, -0.03142, -0.03403, -0.03665, -0.03927, -0.04189, -0.04451, -0.04712, -0.04974, -0.05236, -0.04974, -0.04712, -0.04451, -0.04189, -0.03927, -0.03665, -0.03403, -0.03142, -0.0288, -0.02618, -0.02356, -0.02094, -0.01833, -0.01571, -0.01309, -0.01047, -0.00785, -0.00524, -0.00262, 0.0, 0.0]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"loop": SubResource("Anim_loop")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1440.0
+script = ExtResource("1")
+metadata/source_scene = "desktop/scene7_pad"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 1379
+metadata/action_tag = 0
+
+[node name="Panel_2" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1440.0
+pivot_offset = Vector2(540.0, 720.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_2"
+metadata/cocos_tag = 287
+metadata/action_tag = 1159572480
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="desktop8_3" type="TextureRect" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.5
+offset_top = -304.0
+offset_right = 1012.5
+offset_bottom = 1744.0
+pivot_offset = Vector2(472.5, 1024.0)
+scale = Vector2(1.145, 1.145)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "desktop8_3"
+metadata/cocos_tag = 209
+metadata/action_tag = 56121858
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Node_1" type="Control" parent="Panel_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = -75.0239
+offset_right = 540.0
+offset_bottom = -75.0239
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.8541, 0.8541)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 221
+metadata/action_tag = 962345048
+
+[node name="shop_music0_4" type="TextureRect" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 283.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.2)
+self_modulate = Color(0.0, 0.0, 0.0, 1.0)
+metadata/cocos_name = "shop_music0_4"
+metadata/cocos_tag = 213
+metadata/action_tag = 541702509
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -267.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 267.0
+pivot_offset = Vector2(267.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0"
+metadata/cocos_tag = 214
+metadata/action_tag = -451906282
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -267.0
+offset_top = -267.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(267.0, 267.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0_0"
+metadata/cocos_tag = 215
+metadata/action_tag = 1819592329
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0_0_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -267.0
+offset_right = 267.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 267.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0_0_0"
+metadata/cocos_tag = 216
+metadata/action_tag = 582049166
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0" type="TextureRect" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 267.0
+offset_bottom = 267.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0"
+metadata/cocos_tag = 217
+metadata/action_tag = -1980251098
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -267.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 267.0
+pivot_offset = Vector2(267.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0"
+metadata/cocos_tag = 218
+metadata/action_tag = -601444086
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -267.0
+offset_top = -267.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(267.0, 267.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0_0"
+metadata/cocos_tag = 219
+metadata/action_tag = -269464903
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="shop_music0_4_0_0_0" type="TextureRect" parent="Panel_2/Node_1/shop_music0_4_0"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -267.0
+offset_right = 267.0
+offset_bottom = 0.0
+pivot_offset = Vector2(0.0, 267.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "shop_music0_4_0_0_0"
+metadata/cocos_tag = 220
+metadata/action_tag = 565511105
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="scene3_0_1" type="TextureRect" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 272.8766
+offset_top = -21.5559
+offset_right = 463.8766
+offset_bottom = 110.4441
+pivot_offset = Vector2(191.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "scene3_0_1"
+metadata/cocos_tag = 245
+metadata/action_tag = -346204270
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="scene3_1_2" type="TextureRect" parent="Panel_2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 124.814
+offset_top = -4.8347
+offset_right = 406.814
+offset_bottom = 138.1653
+pivot_offset = Vector2(282.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "scene3_1_2"
+metadata/cocos_tag = 246
+metadata/action_tag = 1660026344
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Particle_1" type="Control" parent="Panel_2/Node_1/scene3_1_2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 7.3491
+offset_top = 135.0807
+offset_right = 7.3491
+offset_bottom = 135.0807
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 208
+metadata/action_tag = -1042335833
+
+[node name="Emitter" parent="Panel_2/Node_1/scene3_1_2/Particle_1" instance=ExtResource("6")]
+
+[node name="Panel_top" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1440.0
+pivot_offset = Vector2(540.0, 720.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_top"
+metadata/cocos_tag = 210
+metadata/action_tag = -1047931345
+
+[node name="Image_3" type="TextureRect" parent="Panel_top"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -360.0018
+offset_top = 720.0
+offset_right = 1439.9982
+offset_bottom = 1665.2
+pivot_offset = Vector2(900.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 3.14159
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3"
+metadata/cocos_tag = 211
+metadata/action_tag = -996729950
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Image_3_0" type="TextureRect" parent="Panel_top/Image_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -0.0946
+offset_right = 1800.0
+offset_bottom = 945.1054
+pivot_offset = Vector2(900.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_3_0"
+metadata/cocos_tag = 212
+metadata/action_tag = 1556625947
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

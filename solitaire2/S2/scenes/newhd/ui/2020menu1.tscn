@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1447, 130, 43, 82)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("game_new2_1:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-35.5, -41.0), Vector2(-34.56667, -41.0), Vector2(-33.63333, -41.0), Vector2(-32.7, -41.0), Vector2(-31.76667, -41.0), Vector2(-30.83333, -41.0), Vector2(-29.9, -41.0), Vector2(-28.96667, -41.0), Vector2(-28.03333, -41.0), Vector2(-27.1, -41.0), Vector2(-26.16667, -41.0), Vector2(-25.23333, -41.0), Vector2(-24.3, -41.0), Vector2(-23.36667, -41.0), Vector2(-22.43333, -41.0), Vector2(-21.5, -41.0), Vector2(-21.5, -41.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("game_new2_1:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, -0.02181, -0.08691, -0.19426, -0.34218, -0.52833, -0.74977, -1.00301, -1.28406, -1.58849, -1.9115, -2.24799, -2.59265, -2.94005, -3.28471, -3.6212, -3.9442, -4.24863, -4.52968, -4.78293, -5.00437, -5.19052, -5.33843, -5.44578, -5.51088, -5.53269]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("game_new2_1_0:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-7.5, -41.0), Vector2(-8.2, -41.0), Vector2(-8.9, -41.0), Vector2(-9.6, -41.0), Vector2(-10.3, -41.0), Vector2(-11.0, -41.0), Vector2(-11.7, -41.0), Vector2(-12.4, -41.0), Vector2(-13.1, -41.0), Vector2(-13.8, -41.0), Vector2(-14.5, -41.0), Vector2(-15.2, -41.0), Vector2(-15.9, -41.0), Vector2(-16.6, -41.0), Vector2(-17.3, -41.0), Vector2(-18.0, -41.0), Vector2(-18.7, -41.0), Vector2(-19.4, -41.0), Vector2(-20.1, -41.0), Vector2(-20.8, -41.0), Vector2(-21.5, -41.0), Vector2(-21.5, -41.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("game_new2_1_0:rotation")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [0.0, -0.02439, -0.09695, -0.21591, -0.37833, -0.58021, -0.81658, -1.08162, -1.3688, -1.67106, -1.98095, -2.29084, -2.5931, -2.88028, -3.14532, -3.38169, -3.58357, -3.74599, -3.86494, -3.93751, -3.9619, -3.9619]}
+[sub_resource type="Animation" id="Anim_Start1"]
+resource_name = "Start1"
+length = 0.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("game_new2_1:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-21.5, -41.0), Vector2(-22.43333, -41.0), Vector2(-23.36667, -41.0), Vector2(-24.3, -41.0), Vector2(-25.23333, -41.0), Vector2(-26.16667, -41.0), Vector2(-27.1, -41.0), Vector2(-28.03333, -41.0), Vector2(-28.96667, -41.0), Vector2(-29.9, -41.0), Vector2(-30.83333, -41.0), Vector2(-31.76667, -41.0), Vector2(-32.7, -41.0), Vector2(-33.63333, -41.0), Vector2(-34.56667, -41.0), Vector2(-35.5, -41.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("game_new2_1:rotation")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [-5.53269, -5.51088, -5.44578, -5.33843, -5.19052, -5.00437, -4.78293, -4.52968, -4.24863, -3.9442, -3.6212, -3.28471, -2.94005, -2.59265, -2.24799, -1.9115, -1.58849, -1.28406, -1.00301, -0.74977, -0.52833, -0.34218, -0.19426, -0.08691, -0.02181, 0.0]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("game_new2_1_0:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-21.5, -41.0), Vector2(-20.94, -41.0), Vector2(-20.38, -41.0), Vector2(-19.82, -41.0), Vector2(-19.26, -41.0), Vector2(-18.7, -41.0), Vector2(-18.14, -41.0), Vector2(-17.58, -41.0), Vector2(-17.02, -41.0), Vector2(-16.46, -41.0), Vector2(-15.9, -41.0), Vector2(-15.34, -41.0), Vector2(-14.78, -41.0), Vector2(-14.22, -41.0), Vector2(-13.66, -41.0), Vector2(-13.1, -41.0), Vector2(-12.54, -41.0), Vector2(-11.98, -41.0), Vector2(-11.42, -41.0), Vector2(-10.86, -41.0), Vector2(-10.3, -41.0), Vector2(-9.74, -41.0), Vector2(-9.18, -41.0), Vector2(-8.62, -41.0), Vector2(-8.06, -41.0), Vector2(-7.5, -41.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("game_new2_1_0:rotation")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [-3.9619, -3.94628, -3.89966, -3.82279, -3.71687, -3.58357, -3.425, -3.24365, -3.04239, -2.8244, -2.5931, -2.35214, -2.10533, -1.85656, -1.60976, -1.3688, -1.1375, -0.9195, -0.71824, -0.5369, -0.37833, -0.24503, -0.13911, -0.06224, -0.01562, 0.0]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0"),
+"Start1": SubResource("Anim_Start1")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "2020menu1"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 1428
+metadata/action_tag = 0
+
+[node name="game_new2_1" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -21.5
+offset_top = -41.0
+offset_right = 21.5
+offset_bottom = 41.0
+pivot_offset = Vector2(21.5, 41.0)
+scale = Vector2(1.0, 1.0)
+rotation = -5.51088
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "game_new2_1"
+metadata/cocos_tag = 1429
+metadata/action_tag = 493062296
+texture = SubResource("atlas_sprite_2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="game_new2_1_0" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -21.5
+offset_top = -41.0
+offset_right = 21.5
+offset_bottom = 41.0
+pivot_offset = Vector2(21.5, 41.0)
+scale = Vector2(1.0, 1.0)
+rotation = -3.9619
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "game_new2_1_0"
+metadata/cocos_tag = 1430
+metadata/action_tag = 1606805613
+texture = SubResource("atlas_sprite_2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

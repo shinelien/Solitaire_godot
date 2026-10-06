@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(782, 218, 107, 136)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Start"]
+resource_name = "Start"
+length = 0.83333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Ui_music_237:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.83333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-53.5, -68.0), Vector2(-52.42485, -70.02371), Vector2(-51.34971, -72.04741), Vector2(-50.27456, -74.07112), Vector2(-49.19941, -76.09482), Vector2(-48.12426, -78.11853), Vector2(-47.04912, -80.14223), Vector2(-45.97397, -82.16594), Vector2(-44.89882, -84.18964), Vector2(-43.82367, -86.21335), Vector2(-42.74853, -88.23705), Vector2(-41.67338, -90.26076), Vector2(-40.59823, -92.28446), Vector2(-39.52308, -94.30817), Vector2(-38.44794, -96.33187), Vector2(-37.37279, -98.35558), Vector2(-36.29764, -100.37928), Vector2(-35.22249, -102.40299), Vector2(-34.14735, -104.42669), Vector2(-33.0722, -106.4504), Vector2(-31.99705, -108.4741), Vector2(-30.9219, -110.4978), Vector2(-29.84675, -112.52151), Vector2(-28.77161, -114.54521), Vector2(-27.69646, -116.56892), Vector2(-26.62131, -118.59262), Vector2(-25.54617, -120.61633), Vector2(-24.47102, -122.64004), Vector2(-23.39587, -124.66374), Vector2(-22.32072, -126.68744), Vector2(-21.24558, -128.71115), Vector2(-20.17043, -130.73486), Vector2(-19.09528, -132.75856), Vector2(-18.02013, -134.78226), Vector2(-16.94499, -136.80597), Vector2(-15.86984, -138.82968), Vector2(-14.79469, -140.85338), Vector2(-13.71954, -142.87709), Vector2(-12.6444, -144.90079), Vector2(-11.56925, -146.92449), Vector2(-10.4941, -148.9482), Vector2(-10.4941, -148.9482)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Ui_music_237:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.83333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.7, 0.7), Vector2(0.6985, 0.6985), Vector2(0.697, 0.697), Vector2(0.6955, 0.6955), Vector2(0.694, 0.694), Vector2(0.6925, 0.6925), Vector2(0.691, 0.691), Vector2(0.6895, 0.6895), Vector2(0.688, 0.688), Vector2(0.6865, 0.6865), Vector2(0.685, 0.685), Vector2(0.6835, 0.6835), Vector2(0.682, 0.682), Vector2(0.6805, 0.6805), Vector2(0.679, 0.679), Vector2(0.6775, 0.6775), Vector2(0.676, 0.676), Vector2(0.6745, 0.6745), Vector2(0.673, 0.673), Vector2(0.6715, 0.6715), Vector2(0.67, 0.67), Vector2(0.6685, 0.6685), Vector2(0.667, 0.667), Vector2(0.6655, 0.6655), Vector2(0.664, 0.664), Vector2(0.6625, 0.6625), Vector2(0.661, 0.661), Vector2(0.6595, 0.6595), Vector2(0.658, 0.658), Vector2(0.6565, 0.6565), Vector2(0.655, 0.655), Vector2(0.6535, 0.6535), Vector2(0.652, 0.652), Vector2(0.6505, 0.6505), Vector2(0.649, 0.649), Vector2(0.6475, 0.6475), Vector2(0.646, 0.646), Vector2(0.6445, 0.6445), Vector2(0.643, 0.643), Vector2(0.6415, 0.6415), Vector2(0.64, 0.64), Vector2(0.64, 0.64)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ui_music_237:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.83333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.97143), Color(1, 1, 1, 0.94286), Color(1, 1, 1, 0.91429), Color(1, 1, 1, 0.88571), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.82857), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.77143), Color(1, 1, 1, 0.74286), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.68571), Color(1, 1, 1, 0.65714), Color(1, 1, 1, 0.62857), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.54286), Color(1, 1, 1, 0.51429), Color(1, 1, 1, 0.48571), Color(1, 1, 1, 0.45714), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.37143), Color(1, 1, 1, 0.34286), Color(1, 1, 1, 0.31429), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.25714), Color(1, 1, 1, 0.22857), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.17143), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.11429), Color(1, 1, 1, 0.08571), Color(1, 1, 1, 0.05714), Color(1, 1, 1, 0.02857), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start": SubResource("Anim_Start")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "Animation/Node_music"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 15802
+metadata/action_tag = 0
+
+[node name="Ui_music_237" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -35.2225
+offset_top = -102.403
+offset_right = 71.7775
+offset_bottom = 33.597
+pivot_offset = Vector2(53.5, 68.0)
+scale = Vector2(0.6745, 0.6745)
+rotation = -0.01745
+modulate = Color(1, 1, 1, 0.6549)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_music_237"
+metadata/cocos_tag = 16094
+metadata/action_tag = 1647486142
+texture = SubResource("atlas_sprite_2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

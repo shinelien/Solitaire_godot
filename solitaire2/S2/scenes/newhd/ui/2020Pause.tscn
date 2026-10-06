@@ -1,0 +1,745 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/ui/Node_wenli.tscn" id="4"]
+
+
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_button.gd" id="8"]
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="11"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="12"]
+
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1384, 1349, 82, 142)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(919, 877, 144, 144)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(795, 1811, 177, 177)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_6"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(677, 604, 243, 228)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(85, 664, 316, 85)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_9"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1403, 1060, 99, 130)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1085, 223, 99, 130)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Start0"]
+resource_name = "Start0"
+length = 0.85
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_close:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.04941), Color(1, 1, 1, 0.09882), Color(1, 1, 1, 0.14824), Color(1, 1, 1, 0.19765), Color(1, 1, 1, 0.24706), Color(1, 1, 1, 0.29647), Color(1, 1, 1, 0.34588), Color(1, 1, 1, 0.39529), Color(1, 1, 1, 0.44471), Color(1, 1, 1, 0.49412), Color(1, 1, 1, 0.49412)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_close__2/Node_1/Image_6:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05556), Color(1, 1, 1, 0.11111), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.22222), Color(1, 1, 1, 0.27778), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.38889), Color(1, 1, 1, 0.44444), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55556), Color(1, 1, 1, 0.61111), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.72222), Color(1, 1, 1, 0.77778), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.88889), Color(1, 1, 1, 0.94444), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_close__2/Node_1/Panel_3:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.08333), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.41667), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.58333), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.91667), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_close__2/Node_1:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.00277), Color(1, 1, 1, 0.01108), Color(1, 1, 1, 0.02493), Color(1, 1, 1, 0.04432), Color(1, 1, 1, 0.06925), Color(1, 1, 1, 0.09972), Color(1, 1, 1, 0.13573), Color(1, 1, 1, 0.17729), Color(1, 1, 1, 0.22438), Color(1, 1, 1, 0.27701), Color(1, 1, 1, 0.33518), Color(1, 1, 1, 0.39889), Color(1, 1, 1, 0.46814), Color(1, 1, 1, 0.54294), Color(1, 1, 1, 0.62327), Color(1, 1, 1, 0.70914), Color(1, 1, 1, 0.80055), Color(1, 1, 1, 0.89751), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_close__2/ui_logo0_3:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(430.5004, -513.0), Vector2(430.5004, -513.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_close__2/ui_logo0_3:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.05556), Color(1, 1, 1, 0.11111), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.22222), Color(1, 1, 1, 0.27778), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.38889), Color(1, 1, 1, 0.44444), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.55556), Color(1, 1, 1, 0.61111), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.72222), Color(1, 1, 1, 0.77778), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.88889), Color(1, 1, 1, 0.94444), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_close__2/Button_NewGame:position")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(240.0, 501.5181), Vector2(240.00006, 465.00424), Vector2(240.00011, 428.63449), Vector2(240.00017, 392.55238), Vector2(240.00022, 356.9003), Vector2(240.00028, 321.81897), Vector2(240.00033, 287.44683), Vector2(240.00038, 253.91952), Vector2(240.00043, 221.36938), Vector2(240.00048, 189.92485), Vector2(240.00053, 159.71004), Vector2(240.00057, 130.84419), Vector2(240.00062, 103.44123), Vector2(240.00066, 77.60928), Vector2(240.00069, 53.45032), Vector2(240.00073, 31.05967), Vector2(240.00076, 10.52571), Vector2(240.00079, -8.07053), Vector2(240.00081, -24.65566), Vector2(240.00084, -39.16422), Vector2(240.00086, -51.53895), Vector2(240.00087, -61.73102), Vector2(240.00088, -69.70021), Vector2(240.00089, -75.41505), Vector2(240.0009, -78.85301), Vector2(240.0009, -80.0005), Vector2(240.0009, -80.0005)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_close__2/Button_NewGame:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_close__2/Button_NewGame:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_close__2/Button_Again:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(240.0, 501.518), Vector2(240.00008, 470.00656), Vector2(240.00017, 438.76396), Vector2(240.00025, 408.05675), Vector2(240.00033, 378.14693), Vector2(240.0004, 349.28966), Vector2(240.00047, 321.73115), Vector2(240.00054, 295.70652), Vector2(240.00061, 271.4378), Vector2(240.00067, 249.13204), Vector2(240.00072, 228.97956), Vector2(240.00077, 211.15227), Vector2(240.00081, 195.80228), Vector2(240.00084, 183.06055), Vector2(240.00087, 173.03579), Vector2(240.00088, 165.81352), Vector2(240.0009, 161.45536), Vector2(240.0009, 159.9985), Vector2(240.0009, 159.9985)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_close__2/Button_Again:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_close__2/Button_Lobby:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(240.0, 637.0), Vector2(240.00014, 599.92503), Vector2(240.00028, 563.76297), Vector2(240.00041, 529.40425), Vector2(240.00053, 497.6949), Vector2(240.00064, 469.41569), Vector2(240.00073, 445.26297), Vector2(240.0008, 425.83145), Vector2(240.00086, 411.59961), Vector2(240.00089, 402.91786), Vector2(240.0009, 400.0), Vector2(240.0009, 400.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_close__2/Button_Lobby:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_close__2/Text_pauseTitle1:modulate")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.07692), Color(1, 1, 1, 0.15385), Color(1, 1, 1, 0.23077), Color(1, 1, 1, 0.30769), Color(1, 1, 1, 0.38462), Color(1, 1, 1, 0.46154), Color(1, 1, 1, 0.53846), Color(1, 1, 1, 0.61538), Color(1, 1, 1, 0.69231), Color(1, 1, 1, 0.76923), Color(1, 1, 1, 0.84615), Color(1, 1, 1, 0.92308), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_close__2/Button_DailyBack:position")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(240.0, 501.5181), Vector2(240.0, 465.00424), Vector2(240.0, 428.63449), Vector2(240.0, 392.55238), Vector2(240.0, 356.9003), Vector2(240.0, 321.81897), Vector2(240.0, 287.44683), Vector2(240.0, 253.91952), Vector2(240.0, 221.36938), Vector2(240.0, 189.92485), Vector2(240.0, 159.71004), Vector2(240.0, 130.84419), Vector2(240.0, 103.44123), Vector2(240.0, 77.60928), Vector2(240.0, 53.45032), Vector2(240.0, 31.05967), Vector2(240.0, 10.52571), Vector2(240.0, -8.07053), Vector2(240.0, -24.65566), Vector2(240.0, -39.16422), Vector2(240.0, -51.53895), Vector2(240.0, -61.73102), Vector2(240.0, -69.70021), Vector2(240.0, -75.41505), Vector2(240.0, -78.85301), Vector2(240.0, -80.0005), Vector2(240.0, -80.0005)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_close__2/Button_DailyBack:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_close__2/Button_DailyBack:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.1), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0.3), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.7), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.9), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_close__2:position")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.85), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.0, 1220.0), Vector2(0.0, 1199.61761), Vector2(0.0, 1179.295), Vector2(0.0, 1159.09178), Vector2(0.0, 1139.06722), Vector2(0.0, 1119.28005), Vector2(0.0, 1099.78831), Vector2(0.0, 1080.64917), Vector2(0.0, 1061.91877), Vector2(0.0, 1043.65204), Vector2(0.0, 1025.90258), Vector2(0.0, 1008.72244), Vector2(0.0, 992.16201), Vector2(0.0, 976.26988), Vector2(0.0, 961.09264), Vector2(0.0, 946.67482), Vector2(0.0, 933.05871), Vector2(0.0, 920.28426), Vector2(0.0, 908.38891), Vector2(0.0, 897.40758), Vector2(0.0, 887.37247), Vector2(0.0, 878.31301), Vector2(0.0, 870.25578), Vector2(0.0, 863.22441), Vector2(0.0, 857.23952), Vector2(0.0, 852.31867), Vector2(0.0, 848.47629), Vector2(0.0, 845.72366), Vector2(0.0, 844.06885), Vector2(0.0, 843.5167), Vector2(0.0, 843.0), Vector2(0.0, 843.0)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_close__2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_close__2:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_close__2:rotation")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0, 0.85), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/21/type = "method"
+tracks/21/path = NodePath(".")
+tracks/21/keys = {"times": PackedFloat32Array(0.48333), "transitions": PackedFloat32Array(1), "values": [{"method": &"timeline_event", "args": ["Panel_close__2","FrameEvent","{\"FrameIndex\": \"29\", \"Tween\": \"False\", \"Value\": \"game_pause_0\"}"]}]}
+[sub_resource type="Animation" id="Anim_Start1"]
+resource_name = "Start1"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel_close:modulate")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.49412), Color(1, 1, 1, 0.45294), Color(1, 1, 1, 0.41176), Color(1, 1, 1, 0.37059), Color(1, 1, 1, 0.32941), Color(1, 1, 1, 0.28824), Color(1, 1, 1, 0.24706), Color(1, 1, 1, 0.20588), Color(1, 1, 1, 0.16471), Color(1, 1, 1, 0.12353), Color(1, 1, 1, 0.08235), Color(1, 1, 1, 0.04118), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel_close__2/Node_1/Image_6:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel_close__2/Node_1/Panel_3:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel_close__2/Node_1:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel_close__2/ui_logo0_3:position")
+tracks/4/interp = 1
+tracks/4/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(430.5004, -513.0), Vector2(430.5004, -513.0)]}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel_close__2/ui_logo0_3:modulate")
+tracks/5/interp = 1
+tracks/5/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel_close__2/Button_NewGame:position")
+tracks/6/interp = 1
+tracks/6/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(240.0009, -80.0005), Vector2(240.0009, -80.0005)]}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Panel_close__2/Button_NewGame:scale")
+tracks/7/interp = 1
+tracks/7/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Panel_close__2/Button_NewGame:modulate")
+tracks/8/interp = 1
+tracks/8/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.875), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.625), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.375), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.125), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel_close__2/Button_Again:position")
+tracks/9/interp = 1
+tracks/9/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(240.0009, 159.9985), Vector2(240.0009, 159.9985)]}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel_close__2/Button_Again:modulate")
+tracks/10/interp = 1
+tracks/10/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel_close__2/Button_Lobby:position")
+tracks/11/interp = 1
+tracks/11/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(240.0009, 400.0), Vector2(240.0009, 400.0)]}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel_close__2/Button_Lobby:modulate")
+tracks/12/interp = 1
+tracks/12/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel_close__2/Text_pauseTitle1:modulate")
+tracks/13/interp = 1
+tracks/13/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.85714), Color(1, 1, 1, 0.71429), Color(1, 1, 1, 0.57143), Color(1, 1, 1, 0.42857), Color(1, 1, 1, 0.28571), Color(1, 1, 1, 0.14286), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel_close__2/Button_DailyBack:position")
+tracks/14/interp = 1
+tracks/14/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(240.0, -80.0005), Vector2(240.0, -80.0005)]}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Panel_close__2/Button_DailyBack:scale")
+tracks/15/interp = 1
+tracks/15/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Panel_close__2/Button_DailyBack:modulate")
+tracks/16/interp = 1
+tracks/16/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.875), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.625), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.375), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.125), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Panel_close__2:position")
+tracks/17/interp = 1
+tracks/17/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.0, 843.0), Vector2(0.0, 874.41667), Vector2(0.0, 905.83333), Vector2(0.0, 937.25), Vector2(0.0, 968.66667), Vector2(0.0, 1000.08333), Vector2(0.0, 1031.5), Vector2(0.0, 1062.91667), Vector2(0.0, 1094.33333), Vector2(0.0, 1125.75), Vector2(0.0, 1157.16667), Vector2(0.0, 1188.58333), Vector2(0.0, 1220.0), Vector2(0.0, 1220.0)]}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Panel_close__2:modulate")
+tracks/18/interp = 1
+tracks/18/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.25), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 1.0), Color(1, 1, 1, 0.91667), Color(1, 1, 1, 0.83333), Color(1, 1, 1, 0.75), Color(1, 1, 1, 0.66667), Color(1, 1, 1, 0.58333), Color(1, 1, 1, 0.5), Color(1, 1, 1, 0.41667), Color(1, 1, 1, 0.33333), Color(1, 1, 1, 0.25), Color(1, 1, 1, 0.16667), Color(1, 1, 1, 0.08333), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Panel_close__2:scale")
+tracks/19/interp = 1
+tracks/19/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Panel_close__2:rotation")
+tracks/20/interp = 1
+tracks/20/keys = {"times": PackedFloat32Array(0.0, 0.25), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.0]}
+tracks/21/type = "method"
+tracks/21/path = NodePath(".")
+tracks/21/keys = {"times": PackedFloat32Array(0.2), "transitions": PackedFloat32Array(1), "values": [{"method": &"timeline_event", "args": ["Panel_close__2","FrameEvent","{\"FrameIndex\": \"82\", \"Tween\": \"False\", \"Value\": \"game_pause_1\"}"]}]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start0": SubResource("Anim_Start0"),
+"Start1": SubResource("Anim_Start1")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+metadata/source_scene = "2020Pause"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 2525
+metadata/action_tag = 0
+
+[node name="Panel_close" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = -190.0
+offset_right = 1080.0
+offset_bottom = 2110.0
+pivot_offset = Vector2(540.0, 1150.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_close"
+metadata/cocos_tag = 2541
+metadata/action_tag = 1099775823
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Panel_close__2" type="ColorRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 1220.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(540.0, 350.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_close"
+metadata/cocos_tag = 2545
+metadata/action_tag = -851558564
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="Node_1" type="Control" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 540.0
+offset_top = 86.0
+offset_right = 540.0
+offset_bottom = 86.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node_1"
+metadata/cocos_tag = 12786
+metadata/action_tag = -952794026
+
+[node name="Image_1" type="NinePatchRect" parent="Panel_close__2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -381.0
+offset_top = -600.0
+offset_right = 381.0
+offset_bottom = 600.0
+pivot_offset = Vector2(381.0, 600.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 0.95686, 0.89804, 1.0)
+metadata/cocos_name = "Image_1"
+metadata/cocos_tag = 12788
+metadata/action_tag = 348236479
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 11
+patch_margin_right = 11
+patch_margin_top = 31
+patch_margin_bottom = 11
+
+[node name="Image_6" type="NinePatchRect" parent="Panel_close__2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -338.31275
+offset_top = -552.20115
+offset_right = 338.31275
+offset_bottom = 552.20115
+pivot_offset = Vector2(338.31275, 552.20115)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(0.72157, 0.69412, 0.59216, 1.0)
+metadata/cocos_name = "Image_6"
+metadata/cocos_tag = 12789
+metadata/action_tag = -38967294
+texture = SubResource("atlas_sprite_3")
+patch_margin_left = 65
+patch_margin_right = 65
+patch_margin_top = 65
+patch_margin_bottom = 65
+
+[node name="Panel_3" type="ColorRect" parent="Panel_close__2/Node_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -376.0
+offset_top = -595.5005
+offset_right = 376.0
+offset_bottom = 595.4995
+pivot_offset = Vector2(376.0, 595.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_3"
+metadata/cocos_tag = 12790
+metadata/action_tag = -1849581152
+color = Color(0.58824, 0.78431, 1.0, 0.0)
+
+[node name="BG" parent="Panel_close__2/Node_1/Panel_3" instance=ExtResource("4")]
+mouse_filter = 2
+offset_left = -142.88
+offset_top = -190.5599
+offset_right = -142.88
+offset_bottom = -190.5599
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.15686)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "BG"
+metadata/cocos_tag = 16787
+metadata/action_tag = 962374549
+
+[node name="biankuang1_1" type="TextureRect" parent="Panel_close__2/Node_1/Panel_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -3.0
+offset_top = -0.9528
+offset_right = 174.0
+offset_bottom = 176.0472
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "biankuang1_1"
+metadata/cocos_tag = 12901
+metadata/action_tag = 2054310537
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="biankuang1_1_1" type="TextureRect" parent="Panel_close__2/Node_1/Panel_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 575.0
+offset_top = -0.9528
+offset_right = 752.0
+offset_bottom = 176.0472
+pivot_offset = Vector2(177.0, 0.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "biankuang1_1_1"
+metadata/cocos_tag = 12902
+metadata/action_tag = 1597034771
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="biankuang1_1_0" type="TextureRect" parent="Panel_close__2/Node_1/Panel_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -3.0
+offset_top = 1014.9528
+offset_right = 174.0
+offset_bottom = 1191.9528
+pivot_offset = Vector2(0.0, 177.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "biankuang1_1_0"
+metadata/cocos_tag = 12903
+metadata/action_tag = 1427040174
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="biankuang1_1_1_0" type="TextureRect" parent="Panel_close__2/Node_1/Panel_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 575.0
+offset_top = 1014.9528
+offset_right = 752.0
+offset_bottom = 1191.9528
+pivot_offset = Vector2(177.0, 177.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "biankuang1_1_1_0"
+metadata/cocos_tag = 12904
+metadata/action_tag = 80728739
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_logo0_3" type="TextureRect" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 430.5004
+offset_top = -513.0
+offset_right = 673.5004
+offset_bottom = -285.0
+pivot_offset = Vector2(121.5, 114.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_logo0_3"
+metadata/cocos_tag = 23560
+metadata/action_tag = 797888152
+texture = SubResource("atlas_sprite_6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_logo5_2" type="TextureRect" parent="Panel_close__2/ui_logo0_3"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -43.79
+offset_top = 206.02
+offset_right = 272.21
+offset_bottom = 291.02
+pivot_offset = Vector2(158.0, 42.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.0, 0.0, 0.0, 1.0)
+metadata/cocos_name = "ui_logo5_2"
+metadata/cocos_tag = 23559
+metadata/action_tag = -271637347
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Button_NewGame" type="TextureButton" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 240.0
+offset_top = 501.5181
+offset_right = 840.0
+offset_bottom = 681.5181
+pivot_offset = Vector2(300.0, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_NewGame"
+metadata/cocos_tag = 2537
+metadata/action_tag = -2137269296
+script = ExtResource("8")
+scale9_margins = Vector4(30.0, 30.0, 23.0, 23.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_NewGame" type="Label" parent="Panel_close__2/Button_NewGame"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 127.5
+offset_top = 45.9
+offset_right = 472.5
+offset_bottom = 126.9
+pivot_offset = Vector2(172.5, 40.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_NewGame"
+metadata/cocos_tag = 2542
+metadata/action_tag = -1464906637
+script = ExtResource("12")
+design_size = Vector2(345.0, 81.0)
+design_center = Vector2(300.0, 86.4)
+design_font_size = 72
+bitmap_font = false
+fit_box = false
+text = "New game"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_Again" type="TextureButton" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 240.0
+offset_top = 501.518
+offset_right = 840.0
+offset_bottom = 681.518
+pivot_offset = Vector2(300.0, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Again"
+metadata/cocos_tag = 2538
+metadata/action_tag = 249214005
+script = ExtResource("8")
+scale9_margins = Vector4(30.0, 30.0, 23.0, 23.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_Again" type="Label" parent="Panel_close__2/Button_Again"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 207.5
+offset_top = 45.9
+offset_right = 392.5
+offset_bottom = 126.9
+pivot_offset = Vector2(92.5, 40.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_Again"
+metadata/cocos_tag = 2543
+metadata/action_tag = -1876281122
+script = ExtResource("12")
+design_size = Vector2(185.0, 81.0)
+design_center = Vector2(300.0, 86.4)
+design_font_size = 72
+bitmap_font = false
+fit_box = false
+text = "Again"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_Lobby" type="TextureButton" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 240.0
+offset_top = 637.0
+offset_right = 840.0
+offset_bottom = 817.0
+pivot_offset = Vector2(300.0, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_Lobby"
+metadata/cocos_tag = 2539
+metadata/action_tag = -2005948331
+script = ExtResource("8")
+scale9_margins = Vector4(30.0, 30.0, 21.0, 23.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_Lobby" type="Label" parent="Panel_close__2/Button_Lobby"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 201.5
+offset_top = 45.9
+offset_right = 398.5
+offset_bottom = 126.9
+pivot_offset = Vector2(98.5, 40.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_Lobby"
+metadata/cocos_tag = 2544
+metadata/action_tag = -182280810
+script = ExtResource("12")
+design_size = Vector2(197.0, 81.0)
+design_center = Vector2(300.0, 86.4)
+design_font_size = 72
+bitmap_font = false
+fit_box = false
+text = "Lobby"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_pauseTitle1" type="Label" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 460.0
+offset_top = -220.0
+offset_right = 620.0
+offset_bottom = -130.0
+pivot_offset = Vector2(80.0, 45.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(0.0, 0.0, 0.0, 1.0)
+metadata/cocos_name = "Text_pauseTitle1"
+metadata/cocos_tag = 2546
+metadata/action_tag = -240760681
+script = ExtResource("12")
+design_size = Vector2(160.0, 90.0)
+design_center = Vector2(540.0, -175.0)
+design_font_size = 80
+bitmap_font = false
+fit_box = false
+text = "暂停"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Button_DailyBack" type="TextureButton" parent="Panel_close__2"]
+layout_mode = 0
+mouse_filter = 0
+offset_left = 240.0
+offset_top = 501.5181
+offset_right = 840.0
+offset_bottom = 681.5181
+pivot_offset = Vector2(300.0, 90.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_DailyBack"
+metadata/cocos_tag = 2183
+metadata/action_tag = 1285269172
+script = ExtResource("8")
+scale9_margins = Vector4(30.0, 30.0, 23.0, 23.0)
+texture_normal = SubResource("atlas_sprite_9")
+texture_pressed = SubResource("atlas_sprite_10")
+texture_disabled = SubResource("atlas_sprite_10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_DailyBack" type="Label" parent="Panel_close__2/Button_DailyBack"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 164.5
+offset_top = 45.9
+offset_right = 435.5
+offset_bottom = 126.9
+pivot_offset = Vector2(135.5, 40.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_DailyBack"
+metadata/cocos_tag = 2184
+metadata/action_tag = -380007247
+script = ExtResource("12")
+design_size = Vector2(271.0, 81.0)
+design_center = Vector2(300.0, 86.4)
+design_font_size = 72
+bitmap_font = false
+fit_box = false
+text = "Difficulty"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

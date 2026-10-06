@@ -1,0 +1,152 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="2"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/start_0.tscn" id="4"]
+
+[sub_resource type="Animation" id="Anim_Loop"]
+resource_name = "Loop"
+length = 1.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("N:position")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 1.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-32.5, -27.5), Vector2(-32.5, -27.48629), Vector2(-32.5, -27.4499), Vector2(-32.5, -27.39791), Vector2(-32.5, -27.33742), Vector2(-32.5, -27.27552), Vector2(-32.5, -27.2193), Vector2(-32.5, -27.17585), Vector2(-32.5, -27.15227), Vector2(-32.5, -27.15564), Vector2(-32.5, -27.19306), Vector2(-32.5, -27.27162), Vector2(-32.5, -27.3984), Vector2(-32.5, -27.58051), Vector2(-32.5, -27.82504), Vector2(-32.5, -28.13907), Vector2(-32.5, -28.52969), Vector2(-32.5, -29.00401), Vector2(-32.5, -29.5691), Vector2(-32.5, -30.23207), Vector2(-32.5, -31.0), Vector2(-32.5, -31.76793), Vector2(-32.5, -32.4309), Vector2(-32.5, -32.99599), Vector2(-32.5, -33.47031), Vector2(-32.5, -33.86093), Vector2(-32.5, -34.17496), Vector2(-32.5, -34.41949), Vector2(-32.5, -34.6016), Vector2(-32.5, -34.72838), Vector2(-32.5, -34.80694), Vector2(-32.5, -34.84436), Vector2(-32.5, -34.84773), Vector2(-32.5, -34.82415), Vector2(-32.5, -34.7807), Vector2(-32.5, -34.72448), Vector2(-32.5, -34.66258), Vector2(-32.5, -34.60209), Vector2(-32.5, -34.5501), Vector2(-32.5, -34.51371), Vector2(-32.5, -34.5), Vector2(-32.5, -34.41382), Vector2(-32.5, -34.1574), Vector2(-32.5, -33.73705), Vector2(-32.5, -33.16312), Vector2(-32.5, -32.44975), Vector2(-32.5, -31.6145), Vector2(-32.5, -30.67793), Vector2(-32.5, -29.66312), Vector2(-32.5, -28.59504), Vector2(-32.5, -27.5), Vector2(-32.5, -27.5)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("E:position")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.35, 0.36667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.46667, 0.48333, 0.5, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(-8.5, -27.5), Vector2(-8.5, -27.48629), Vector2(-8.5, -27.4499), Vector2(-8.5, -27.39791), Vector2(-8.5, -27.33742), Vector2(-8.5, -27.27552), Vector2(-8.5, -27.2193), Vector2(-8.5, -27.17585), Vector2(-8.5, -27.15227), Vector2(-8.5, -27.15564), Vector2(-8.5, -27.19306), Vector2(-8.5, -27.27162), Vector2(-8.5, -27.3984), Vector2(-8.5, -27.58051), Vector2(-8.5, -27.82504), Vector2(-8.5, -28.13907), Vector2(-8.5, -28.52969), Vector2(-8.5, -29.00401), Vector2(-8.5, -29.5691), Vector2(-8.5, -30.23207), Vector2(-8.5, -31.0), Vector2(-8.5, -31.76793), Vector2(-8.5, -32.4309), Vector2(-8.5, -32.99599), Vector2(-8.5, -33.47031), Vector2(-8.5, -33.86093), Vector2(-8.5, -34.17496), Vector2(-8.5, -34.41949), Vector2(-8.5, -34.6016), Vector2(-8.5, -34.72838), Vector2(-8.5, -34.80694), Vector2(-8.5, -34.84436), Vector2(-8.5, -34.84773), Vector2(-8.5, -34.82415), Vector2(-8.5, -34.7807), Vector2(-8.5, -34.72448), Vector2(-8.5, -34.66258), Vector2(-8.5, -34.60209), Vector2(-8.5, -34.5501), Vector2(-8.5, -34.51371), Vector2(-8.5, -34.5), Vector2(-8.5, -34.41382), Vector2(-8.5, -34.1574), Vector2(-8.5, -33.73705), Vector2(-8.5, -33.16312), Vector2(-8.5, -32.44975), Vector2(-8.5, -31.6145), Vector2(-8.5, -30.67793), Vector2(-8.5, -29.66312), Vector2(-8.5, -28.59504), Vector2(-8.5, -27.5), Vector2(-8.5, -27.5)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("W:position")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.51667, 0.53333, 0.55, 0.56667, 0.58333, 0.6, 0.61667, 0.63333, 0.65, 0.66667, 0.68333, 0.7, 0.71667, 0.73333, 0.75, 0.76667, 0.78333, 0.8, 0.81667, 0.83333, 0.85, 0.86667, 0.88333, 0.9, 0.91667, 0.93333, 0.95, 0.96667, 0.98333, 1.0, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(11.0, -27.5), Vector2(11.0, -27.48629), Vector2(11.0, -27.4499), Vector2(11.0, -27.39791), Vector2(11.0, -27.33742), Vector2(11.0, -27.27552), Vector2(11.0, -27.2193), Vector2(11.0, -27.17585), Vector2(11.0, -27.15227), Vector2(11.0, -27.15564), Vector2(11.0, -27.19306), Vector2(11.0, -27.27162), Vector2(11.0, -27.3984), Vector2(11.0, -27.58051), Vector2(11.0, -27.82504), Vector2(11.0, -28.13907), Vector2(11.0, -28.52969), Vector2(11.0, -29.00401), Vector2(11.0, -29.5691), Vector2(11.0, -30.23207), Vector2(11.0, -31.0), Vector2(11.0, -31.76793), Vector2(11.0, -32.4309), Vector2(11.0, -32.99599), Vector2(11.0, -33.47031), Vector2(11.0, -33.86093), Vector2(11.0, -34.17496), Vector2(11.0, -34.41949), Vector2(11.0, -34.6016), Vector2(11.0, -34.72838), Vector2(11.0, -34.80694), Vector2(11.0, -34.84436), Vector2(11.0, -34.84773), Vector2(11.0, -34.82415), Vector2(11.0, -34.7807), Vector2(11.0, -34.72448), Vector2(11.0, -34.66258), Vector2(11.0, -34.60209), Vector2(11.0, -34.5501), Vector2(11.0, -34.51371), Vector2(11.0, -34.5), Vector2(11.0, -34.41382), Vector2(11.0, -34.1574), Vector2(11.0, -33.73705), Vector2(11.0, -33.16312), Vector2(11.0, -32.44975), Vector2(11.0, -31.6145), Vector2(11.0, -30.67793), Vector2(11.0, -29.66312), Vector2(11.0, -28.59504), Vector2(11.0, -27.5), Vector2(11.0, -27.5)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Loop": SubResource("Anim_Loop")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "Grade"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 1662
+metadata/action_tag = 0
+
+[node name="N" type="Label" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -32.5
+offset_top = -32.6842
+offset_right = -13.5
+offset_bottom = -3.6842
+pivot_offset = Vector2(9.5, 14.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "N"
+metadata/cocos_tag = 1755
+metadata/action_tag = -1191967972
+script = ExtResource("3")
+design_size = Vector2(19.0, 29.0)
+design_center = Vector2(-23.0, -18.1842)
+design_font_size = 25
+bitmap_font = false
+fit_box = false
+text = "N"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="E" type="Label" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -8.5
+offset_top = -26.9269
+offset_right = 8.5
+offset_bottom = 2.0731
+pivot_offset = Vector2(8.5, 14.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "E"
+metadata/cocos_tag = 1762
+metadata/action_tag = -1193227792
+script = ExtResource("3")
+design_size = Vector2(17.0, 29.0)
+design_center = Vector2(0.0, -12.4269)
+design_font_size = 25
+bitmap_font = false
+fit_box = false
+text = "E"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="W" type="Label" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 11.0
+offset_top = -27.5
+offset_right = 35.0
+offset_bottom = 1.5
+pivot_offset = Vector2(12.0, 14.5)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+metadata/cocos_name = "W"
+metadata/cocos_tag = 1763
+metadata/action_tag = 980194917
+script = ExtResource("3")
+design_size = Vector2(24.0, 29.0)
+design_center = Vector2(23.0, -13.0)
+design_font_size = 25
+bitmap_font = false
+fit_box = false
+text = "W"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Particle_1" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0001
+offset_top = -8.9189
+offset_right = -0.0001
+offset_bottom = -8.9189
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 1116
+metadata/action_tag = 945218203
+
+[node name="Emitter" parent="Particle_1" instance=ExtResource("4")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

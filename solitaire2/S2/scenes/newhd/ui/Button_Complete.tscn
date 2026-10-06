@@ -1,0 +1,247 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_button.gd" id="2"]
+
+
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="6"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="7"]
+
+[ext_resource type="PackedScene" path="res://scenes/newhd/particles/Particicle/btn.tscn" id="9"]
+
+
+
+
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1184, 1646, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1, 1913, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_5"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(469, 841, 271, 122)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_8"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1639, 1544, 25, 38)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(731, 85, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_11"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(1428, 1, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_12"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(675, 177, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_13"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(675, 269, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_14"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(675, 361, 409, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_15"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(675, 453, 406, 90)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Start"]
+resource_name = "Start"
+length = 0.58333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button_auto/Sprite_1:texture")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.21667, 0.26667, 0.31667, 0.36667, 0.41667, 0.58333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1), "update": 1, "values": [SubResource("atlas_sprite_10"), SubResource("atlas_sprite_11"), SubResource("atlas_sprite_12"), SubResource("atlas_sprite_13"), SubResource("atlas_sprite_14"), SubResource("atlas_sprite_15"), SubResource("atlas_sprite_15")]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button_auto/Sprite_1:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.16667, 0.38333, 0.4, 0.41667, 0.43333, 0.45, 0.58333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.49804), Color(1, 1, 1, 0.39843), Color(1, 1, 1, 0.29882), Color(1, 1, 1, 0.19922), Color(1, 1, 1, 0.09961), Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Button_auto:scale")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.58333), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.5, 0.5), Vector2(0.6097, 0.6097), Vector2(0.70441, 0.70441), Vector2(0.78514, 0.78514), Vector2(0.8529, 0.8529), Vector2(0.9087, 0.9087), Vector2(0.95357, 0.95357), Vector2(0.9885, 0.9885), Vector2(1.01451, 1.01451), Vector2(1.03263, 1.03263), Vector2(1.04385, 1.04385), Vector2(1.04919, 1.04919), Vector2(1.04968, 1.04968), Vector2(1.04631, 1.04631), Vector2(1.0401, 1.0401), Vector2(1.03207, 1.03207), Vector2(1.02323, 1.02323), Vector2(1.01458, 1.01458), Vector2(1.00716, 1.00716), Vector2(1.00196, 1.00196), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start": SubResource("Anim_Start")
+}
+
+[node name="Node" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1")
+metadata/source_scene = "Button_Complete"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Node"
+metadata/cocos_tag = 11597
+metadata/action_tag = 0
+
+[node name="Button_auto" type="TextureButton" parent="."]
+layout_mode = 0
+mouse_filter = 0
+offset_left = -260.0001
+offset_top = -70.0002
+offset_right = 259.9999
+offset_bottom = 69.9998
+pivot_offset = Vector2(260.0, 70.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Button_auto"
+metadata/cocos_tag = 11599
+metadata/action_tag = 1092217225
+script = ExtResource("2")
+scale9_margins = Vector4(55.0, 55.0, 23.0, 23.0)
+texture_normal = SubResource("atlas_sprite_3")
+texture_pressed = SubResource("atlas_sprite_4")
+texture_disabled = SubResource("atlas_sprite_5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_autoComplete" type="Label" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 101.0
+offset_top = 37.4
+offset_right = 419.0
+offset_bottom = 91.4
+pivot_offset = Vector2(159.0, 27.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Text_autoComplete"
+metadata/cocos_tag = 11600
+metadata/action_tag = 1244309549
+script = ExtResource("7")
+design_size = Vector2(318.0, 54.0)
+design_center = Vector2(260.0, 64.4)
+design_font_size = 48
+bitmap_font = false
+fit_box = false
+text = "Auto Complete"
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="btn1_btn0_1" type="TextureRect" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 520.0
+offset_top = 48.2
+offset_right = 545.0
+offset_bottom = 86.2
+pivot_offset = Vector2(0.0, 19.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.29804)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_btn0_1"
+metadata/cocos_tag = 1060
+metadata/action_tag = -889918668
+texture = SubResource("atlas_sprite_8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="btn1_btn0_1_0" type="TextureRect" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -25.0
+offset_top = 48.2
+offset_right = 0.0
+offset_bottom = 86.2
+pivot_offset = Vector2(25.0, 19.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.29804)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "btn1_btn0_1_0"
+metadata/cocos_tag = 1061
+metadata/action_tag = -1405121163
+scale = Vector2(-1, 1)
+texture = SubResource("atlas_sprite_8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Particle_1" type="Control" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 260.0
+offset_top = 28.0
+offset_right = 260.0
+offset_bottom = 28.0
+pivot_offset = Vector2(0.0, 0.0)
+scale = Vector2(1.4, 1.4)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Particle_1"
+metadata/cocos_tag = 3866
+metadata/action_tag = -2082689654
+
+[node name="Emitter" parent="Button_auto/Particle_1" instance=ExtResource("9")]
+
+[node name="Sprite_1" type="TextureRect" parent="Button_auto"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 55.5
+offset_top = 22.2
+offset_right = 464.5
+offset_bottom = 112.2
+pivot_offset = Vector2(204.5, 45.0)
+scale = Vector2(1.1266, 1.3757)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Sprite_1"
+metadata/cocos_tag = 3696
+metadata/action_tag = 1381793942
+texture = SubResource("atlas_sprite_10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1

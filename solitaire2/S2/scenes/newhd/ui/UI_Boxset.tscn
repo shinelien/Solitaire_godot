@@ -1,0 +1,706 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_scene.gd" id="1"]
+
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/card_0_1_0.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/newhd/card_bg_0.png" id="6"]
+
+[ext_resource type="Font" path="res://assets/newhd/chinese.tres" id="8"]
+[ext_resource type="Script" path="res://solitaire/newhd/cocos_label.gd" id="9"]
+
+
+[ext_resource type="Texture2D" path="res://assets/newhd/ui.png" id="atlas_page_0"]
+[ext_resource type="Texture2D" path="res://assets/newhd/atlases/d850b5e35f23_rotated.png" id="atlas_page_1"]
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_2"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(232, 1653, 207, 213)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_3"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1513, 1695, 96, 58)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_4"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(1207, 702, 210, 100)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_7"]
+atlas = ExtResource("atlas_page_0")
+region = Rect2(771, 1629, 93, 180)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="atlas_sprite_10"]
+atlas = ExtResource("atlas_page_1")
+region = Rect2(782, 218, 107, 136)
+margin = Rect2(0, 0, 0, 0)
+filter_clip = true
+
+[sub_resource type="Animation" id="Anim_Start"]
+resource_name = "Start"
+length = 0.41667
+tracks/0/type = "value"
+tracks/0/path = NodePath("panel_set/Panel_out_1/Image_GoldMiaoShu:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.2, 0.2), Vector2(0.37553, 0.37553), Vector2(0.52706, 0.52706), Vector2(0.65623, 0.65623), Vector2(0.76464, 0.76464), Vector2(0.85393, 0.85393), Vector2(0.92571, 0.92571), Vector2(0.9816, 0.9816), Vector2(1.02322, 1.02322), Vector2(1.0522, 1.0522), Vector2(1.07016, 1.07016), Vector2(1.07871, 1.07871), Vector2(1.07948, 1.07948), Vector2(1.07409, 1.07409), Vector2(1.06416, 1.06416), Vector2(1.05131, 1.05131), Vector2(1.03716, 1.03716), Vector2(1.02333, 1.02333), Vector2(1.01145, 1.01145), Vector2(1.00313, 1.00313), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("panel_set/Panel_out_1/Image_DiamondMiaoShu:scale")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0.0, 0.01667, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.21667, 0.23333, 0.25, 0.26667, 0.28333, 0.3, 0.31667, 0.33333, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Vector2(0.2, 0.2), Vector2(0.37553, 0.37553), Vector2(0.52706, 0.52706), Vector2(0.65623, 0.65623), Vector2(0.76464, 0.76464), Vector2(0.85393, 0.85393), Vector2(0.92571, 0.92571), Vector2(0.9816, 0.9816), Vector2(1.02322, 1.02322), Vector2(1.0522, 1.0522), Vector2(1.07016, 1.07016), Vector2(1.07871, 1.07871), Vector2(1.07948, 1.07948), Vector2(1.07409, 1.07409), Vector2(1.06416, 1.06416), Vector2(1.05131, 1.05131), Vector2(1.03716, 1.03716), Vector2(1.02333, 1.02333), Vector2(1.01145, 1.01145), Vector2(1.00313, 1.00313), Vector2(1.0, 1.0), Vector2(1.0, 1.0)]}
+tracks/2/type = "value"
+tracks/2/path = NodePath("panel_set/Panel_out_1:modulate")
+tracks/2/interp = 1
+tracks/2/keys = {"times": PackedFloat32Array(0.0, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+tracks/3/type = "value"
+tracks/3/path = NodePath("panel_set/Panel_out:modulate")
+tracks/3/interp = 1
+tracks/3/keys = {"times": PackedFloat32Array(0.0, 0.03333, 0.05, 0.06667, 0.08333, 0.1, 0.11667, 0.13333, 0.15, 0.16667, 0.18333, 0.2, 0.41667), "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0.0), Color(1, 1, 1, 0.09091), Color(1, 1, 1, 0.18182), Color(1, 1, 1, 0.27273), Color(1, 1, 1, 0.36364), Color(1, 1, 1, 0.45455), Color(1, 1, 1, 0.54545), Color(1, 1, 1, 0.63636), Color(1, 1, 1, 0.72727), Color(1, 1, 1, 0.81818), Color(1, 1, 1, 0.90909), Color(1, 1, 1, 1.0), Color(1, 1, 1, 1.0)]}
+[sub_resource type="AnimationLibrary" id="Library"]
+_data = {
+"Start": SubResource("Anim_Start")
+}
+
+[node name="Layer" type="Control"]
+layout_mode = 0
+mouse_filter = 2
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = ExtResource("1")
+metadata/source_scene = "UI_Boxset"
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Layer"
+metadata/cocos_tag = 273
+metadata/action_tag = 0
+
+[node name="panel_set" type="Control" parent="."]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0002
+offset_top = 0.0
+offset_right = 1080.0002
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 1920.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "panel_set"
+metadata/cocos_tag = 292
+metadata/action_tag = -1429070927
+
+[node name="Panel_out_1" type="Control" parent="panel_set"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = -0.0002
+offset_top = 0.0003
+offset_right = 1079.9998
+offset_bottom = 1920.0003
+pivot_offset = Vector2(0.0, 1920.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_out_1"
+metadata/cocos_tag = 599
+metadata/action_tag = 784939522
+
+[node name="Image_GoldMiaoShu" type="NinePatchRect" parent="panel_set/Panel_out_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 63.09021
+offset_top = 329.6
+offset_right = 455.46461
+offset_bottom = 729.6
+pivot_offset = Vector2(63.91779, 400.0)
+scale = Vector2(0.2, 0.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_GoldMiaoShu"
+metadata/cocos_tag = 6649
+metadata/action_tag = 1432044463
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 90
+patch_margin_right = 90
+patch_margin_top = 66
+patch_margin_bottom = 113
+
+[node name="Ui_homeset0_149" type="TextureRect" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 156.0347
+offset_top = 332.0
+offset_right = 252.0347
+offset_bottom = 390.0
+pivot_offset = Vector2(48.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_homeset0_149"
+metadata/cocos_tag = 18305
+metadata/action_tag = -759639170
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_gift3_4" type="TextureRect" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 154.2502
+offset_top = 178.2209
+offset_right = 364.2502
+offset_bottom = 278.2209
+pivot_offset = Vector2(103.383, 100.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_gift3_4"
+metadata/cocos_tag = 754
+metadata/action_tag = 1187638701
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_gold_fronts" type="TextureRect" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 52.4617
+offset_top = -36.4367
+offset_right = 200.4617
+offset_bottom = 183.5633
+pivot_offset = Vector2(74.0, 110.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.34907
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_gold_fronts"
+metadata/cocos_tag = 790
+metadata/action_tag = 548308298
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_gold_bg" type="TextureRect" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 187.7654
+offset_top = -36.4201
+offset_right = 329.7654
+offset_bottom = 181.5799
+pivot_offset = Vector2(71.0, 109.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.34908
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_gold_bg"
+metadata/cocos_tag = 791
+metadata/action_tag = -1549464573
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_0_1" type="TextureRect" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 57.2945
+offset_top = 109.3487
+offset_right = 150.2945
+offset_bottom = 289.3487
+pivot_offset = Vector2(46.314, 144.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.64579
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_0_1"
+metadata/cocos_tag = 788
+metadata/action_tag = 554287565
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_gold_front" type="Label" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 66.944
+offset_top = 126.7795
+offset_right = 166.944
+offset_bottom = 166.7795
+pivot_offset = Vector2(50.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_gold_front"
+metadata/cocos_tag = 855
+metadata/action_tag = -211941175
+script = ExtResource("9")
+design_size = Vector2(100.0, 40.0)
+design_center = Vector2(116.944, 146.7795)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Fronts"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_gold_bg" type="Label" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 216.5225
+offset_top = 126.7795
+offset_right = 310.5225
+offset_bottom = 166.7795
+pivot_offset = Vector2(47.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_gold_bg"
+metadata/cocos_tag = 856
+metadata/action_tag = -192207491
+script = ExtResource("9")
+design_size = Vector2(94.0, 40.0)
+design_center = Vector2(263.5225, 146.7795)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Cards"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_gold_magic" type="Label" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 69.944
+offset_top = 272.5233
+offset_right = 163.944
+offset_bottom = 312.5233
+pivot_offset = Vector2(47.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_gold_magic"
+metadata/cocos_tag = 857
+metadata/action_tag = 11945783
+script = ExtResource("9")
+design_size = Vector2(94.0, 40.0)
+design_center = Vector2(116.944, 292.5233)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Magic"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_gold_bigwin" type="Label" parent="panel_set/Panel_out_1/Image_GoldMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 211.5225
+offset_top = 272.5233
+offset_right = 315.5225
+offset_bottom = 312.5233
+pivot_offset = Vector2(52.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_gold_bigwin"
+metadata/cocos_tag = 858
+metadata/action_tag = -1854321816
+script = ExtResource("9")
+design_size = Vector2(104.0, 40.0)
+design_center = Vector2(263.5225, 292.5233)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Bigwin"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Image_DiamondMiaoShu" type="NinePatchRect" parent="panel_set/Panel_out_1"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 555.63239
+offset_top = 329.6
+offset_right = 1056.35439
+offset_bottom = 729.6
+pivot_offset = Vector2(81.56761, 400.0)
+scale = Vector2(0.2, 0.2)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Image_DiamondMiaoShu"
+metadata/cocos_tag = 390
+metadata/action_tag = -1454926085
+texture = SubResource("atlas_sprite_2")
+patch_margin_left = 90
+patch_margin_right = 90
+patch_margin_top = 66
+patch_margin_bottom = 113
+
+[node name="Ui_homeset0_149" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 212.3754
+offset_top = 332.0
+offset_right = 308.3754
+offset_bottom = 390.0
+pivot_offset = Vector2(48.0, 0.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_homeset0_149"
+metadata/cocos_tag = 391
+metadata/action_tag = -804831023
+texture = SubResource("atlas_sprite_3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ui_gift3_4_0" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 154.7217
+offset_top = 178.2209
+offset_right = 364.7217
+offset_bottom = 278.2209
+pivot_offset = Vector2(103.383, 100.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "ui_gift3_4_0"
+metadata/cocos_tag = 859
+metadata/action_tag = 166576485
+texture = SubResource("atlas_sprite_4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_diamond_front" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 52.9319
+offset_top = -36.4365
+offset_right = 200.9319
+offset_bottom = 183.5635
+pivot_offset = Vector2(74.0, 110.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.34906
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_diamond_front"
+metadata/cocos_tag = 860
+metadata/action_tag = 1570386484
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="card_diamond_bg" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 188.2366
+offset_top = -36.4201
+offset_right = 330.2366
+offset_bottom = 181.5799
+pivot_offset = Vector2(71.0, 109.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.34908
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "card_diamond_bg"
+metadata/cocos_tag = 861
+metadata/action_tag = -1510210994
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Magic_0_1_0" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 57.7656
+offset_top = 113.3934
+offset_right = 150.7656
+offset_bottom = 293.3934
+pivot_offset = Vector2(46.314, 144.0)
+scale = Vector2(0.7, 0.7)
+rotation = 0.64579
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Magic_0_1_0"
+metadata/cocos_tag = 862
+metadata/action_tag = 110824300
+texture = SubResource("atlas_sprite_7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_diamond_front" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 67.4154
+offset_top = 130.8242
+offset_right = 167.4154
+offset_bottom = 170.8242
+pivot_offset = Vector2(50.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamond_front"
+metadata/cocos_tag = 863
+metadata/action_tag = 899316972
+script = ExtResource("9")
+design_size = Vector2(100.0, 40.0)
+design_center = Vector2(117.4154, 150.8242)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Fronts"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Ui_music_237" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 353.7872
+offset_top = 160.3999
+offset_right = 460.7872
+offset_bottom = 296.3999
+pivot_offset = Vector2(53.5, 68.0)
+scale = Vector2(0.8, 0.8)
+rotation = 0.40143
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Ui_music_237"
+metadata/cocos_tag = 939
+metadata/action_tag = 1470852323
+texture = SubResource("atlas_sprite_10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_diamond_bg" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 216.9938
+offset_top = 130.8242
+offset_right = 310.9938
+offset_bottom = 170.8242
+pivot_offset = Vector2(47.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamond_bg"
+metadata/cocos_tag = 864
+metadata/action_tag = -822068028
+script = ExtResource("9")
+design_size = Vector2(94.0, 40.0)
+design_center = Vector2(263.9938, 150.8242)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Cards"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_diamond_magic" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 70.4154
+offset_top = 272.5233
+offset_right = 164.4154
+offset_bottom = 312.5233
+pivot_offset = Vector2(47.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamond_magic"
+metadata/cocos_tag = 865
+metadata/action_tag = -1471071250
+script = ExtResource("9")
+design_size = Vector2(94.0, 40.0)
+design_center = Vector2(117.4154, 292.5233)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Magic"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_diamond_bigwin" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 211.9925
+offset_top = 272.5233
+offset_right = 315.9925
+offset_bottom = 312.5233
+pivot_offset = Vector2(52.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamond_bigwin"
+metadata/cocos_tag = 866
+metadata/action_tag = -1012676447
+script = ExtResource("9")
+design_size = Vector2(104.0, 40.0)
+design_center = Vector2(263.9925, 292.5233)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Bigwin"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="scene_diamond_bg" type="TextureRect" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 327.7064
+offset_top = -36.42
+offset_right = 469.7064
+offset_bottom = 181.58
+pivot_offset = Vector2(71.0, 109.0)
+scale = Vector2(0.5, 0.5)
+rotation = 0.34908
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "scene_diamond_bg"
+metadata/cocos_tag = 867
+metadata/action_tag = -1063388478
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Text_diamonnd_scene" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 342.0776
+offset_top = 130.8242
+offset_right = 459.0776
+offset_bottom = 170.8242
+pivot_offset = Vector2(58.5, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamonnd_scene"
+metadata/cocos_tag = 868
+metadata/action_tag = -2011276629
+script = ExtResource("9")
+design_size = Vector2(117.0, 40.0)
+design_center = Vector2(400.5776, 150.8242)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Scenes"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Text_diamond_music" type="Label" parent="panel_set/Panel_out_1/Image_DiamondMiaoShu"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 359.5848
+offset_top = 272.5233
+offset_right = 451.5848
+offset_bottom = 312.5233
+pivot_offset = Vector2(46.0, 20.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+modulate = Color(1, 1, 1, 1.0)
+self_modulate = Color(0.09804, 0.22353, 0.32941, 1.0)
+metadata/cocos_name = "Text_diamond_music"
+metadata/cocos_tag = 869
+metadata/action_tag = 360356771
+script = ExtResource("9")
+design_size = Vector2(92.0, 40.0)
+design_center = Vector2(405.5848, 292.5233)
+design_font_size = 35
+bitmap_font = false
+fit_box = false
+text = "Music"
+theme_override_fonts/font = ExtResource("8")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+grow_horizontal = 2
+grow_vertical = 2
+clip_text = false
+
+[node name="Panel_out" type="Control" parent="panel_set"]
+layout_mode = 0
+mouse_filter = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+pivot_offset = Vector2(0.0, 1920.0)
+scale = Vector2(1.0, 1.0)
+rotation = 0.0
+visible = false
+modulate = Color(1, 1, 1, 0.0)
+self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+metadata/cocos_name = "Panel_out"
+metadata/cocos_tag = 10408
+metadata/action_tag = -945700884
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {&"": SubResource("Library")}
+callback_mode_method = 1
